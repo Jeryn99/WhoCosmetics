@@ -1,0 +1,32 @@
+
+modLoader="javafml"
+
+loaderVersion="[28,)"
+
+issueTrackerURL="http://my.issue.tracker/"
+[[mods]]
+modId="whocosmetics"
+version="${file.jarVersion}"
+displayName="Who Cosmetics"
+updateJSONURL="http://myurl.me/"
+displayURL="http://example.com/"
+logoFile="whocosmetics.png"
+credits="random noobs"
+authors="Swirtzly, BellatorHD" #I wasn't sure what name you wanted to use
+description='''
+Adds different clothing from the series Doctor Who'''
+
+[[dependencies.whocosmetics]]
+    modId="forge"
+    mandatory=true
+    versionRange="[28,)"
+    ordering="NONE"
+
+    side="BOTH"
+
+[[dependencies.whocosmetics]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.14.4]"
+    ordering="NONE"
+    side="BOTH"
