@@ -33,7 +33,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod {
+                whocosmetics {
                     source sourceSets.main
                 }
             }
@@ -49,7 +49,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod {
+                whocosmetics {
                     source sourceSets.main
                 }
             }
@@ -64,10 +64,10 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/')
+            args '--mod', 'whocosmetics', '--all', '--output', file('src/generated/resources/')
 
             mods {
-                examplemod {
+                whocosmetics {
                     source sourceSets.main
                 }
             }
@@ -88,11 +88,11 @@ jar {
     manifest {
         attributes([
             "Specification-Title": "whocosmetics",
-            "Specification-Vendor": "examplemodsareus",
+            "Specification-Vendor": "whocosmeticssareus",
             "Specification-Version": "1", // We are version 1 of ourselves
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
-            "Implementation-Vendor" :"examplemodsareus",
+            "Implementation-Vendor" :"whocosmeticssareus",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
