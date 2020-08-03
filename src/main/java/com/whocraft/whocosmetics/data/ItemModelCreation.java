@@ -6,6 +6,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 import com.whocraft.whocosmetics.WhoCosmetics;
 import com.whocraft.whocosmetics.common.items.JSONClothingItem;
+import com.whocraft.whocosmetics.common.items.UmbrellaItem;
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DirectoryCache;
@@ -31,7 +32,7 @@ public class ItemModelCreation implements IDataProvider {
     @Override
     public void act(DirectoryCache cache) throws IOException {
         Path base = generator.getOutputFolder();
-        Predicate<Item> itemPredicate = item -> !(item instanceof JSONClothingItem) && item.getRegistryName().getNamespace().equals(WhoCosmetics.MODID);
+        Predicate<Item> itemPredicate = item -> !(item instanceof JSONClothingItem || item instanceof UmbrellaItem) && item.getRegistryName().getNamespace().equals(WhoCosmetics.MODID);
 
         for (Item item : ForgeRegistries.ITEMS.getValues()) {
             if (itemPredicate.test(item)) {
