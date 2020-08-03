@@ -58,7 +58,7 @@ public class ItemModelCreation implements IDataProvider {
         JsonObject tex = new JsonObject();
         int index = 0;
         for (String s : textures) {
-            tex.add("layer" + index, new JsonPrimitive("tardis:item/" + s));
+            tex.add("layer" + index, new JsonPrimitive("whocosmetics:item/" + s));
         }
         doc.add("textures", tex);
 

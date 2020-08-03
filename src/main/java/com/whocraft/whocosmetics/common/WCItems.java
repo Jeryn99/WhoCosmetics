@@ -15,16 +15,16 @@ public class WCItems {
 
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, WhoCosmetics.MODID);
 
-    static ItemGroup itemGroup = new ItemGroup("mainGroup") {
+    static ItemGroup itemGroup = new ItemGroup("wc_clothes") {
         @Override
         public ItemStack createIcon() {
             return new ItemStack(WCItems.FEZ.get());
         }
     };
 
-    private static Item.Properties properties = new Item.Properties().group(itemGroup);
+    public static Item.Properties properties = new Item.Properties().group(itemGroup);
 
-    public static final RegistryObject<Item> FEZ = ITEMS.register("fez", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.HEAD, properties));
-    public static final RegistryObject<Item> STETSON = ITEMS.register("stetson", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.HEAD, properties));
-    public static final RegistryObject<Item> FIRST_HAT = ITEMS.register("first_hat", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.HEAD, properties));
+    public static final RegistryObject<Item> FEZ = ITEMS.register("fez", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.HEAD, true));
+    public static final RegistryObject<Item> STETSON = ITEMS.register("stetson", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.HEAD));
+    public static final RegistryObject<Item> FIRST_HAT = ITEMS.register("first_hat", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.HEAD));
 }
