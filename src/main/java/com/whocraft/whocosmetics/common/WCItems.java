@@ -26,5 +26,5 @@ public class WCItems {
 
     public static final RegistryObject<Item> FEZ = ITEMS.register("fez", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.HEAD, properties));
     public static final RegistryObject<Item> STETSON = ITEMS.register("stetson", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.HEAD, properties));
-
+    public static final RegistryObject<Item> FIRST_HAT = ITEMS.register("first_hat", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.HEAD, properties));
 }
