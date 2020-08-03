@@ -1,6 +1,4 @@
-package com.whocraft.whocosmetics.client.models;// Made with Blockbench 3.6.5
-// Exported for Minecraft version 1.14
-// Paste this class into your mod and generate all required imports
+package com.whocraft.whocosmetics.client.models;
 
 
 import net.minecraft.client.renderer.entity.model.BipedModel;
@@ -34,6 +32,7 @@ public class FirstHatModel extends BipedModel {
 		tasel.cubeList.add(new ModelBox(tasel, 6, 7, -1.4F, 0.1F, -1.25F, 1, 1, 2, 0.0F, false));
 		tasel.cubeList.add(new ModelBox(tasel, 0, 9, 0.4F, 0.1F, 0.65F, 1, 3, 1, 0.0F, false));
 		tasel.cubeList.add(new ModelBox(tasel, 0, 9, -1.4F, 0.1F, 0.65F, 1, 3, 1, 0.0F, false));
+		bipedHead = first_fez;
 	}
 
 	@Override
