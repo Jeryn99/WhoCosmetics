@@ -17,7 +17,6 @@ public class FezModel extends BipedModel {
     private final RendererModel tasel;
 
     public FezModel() {
-        Predicate<RendererModel> isHead = m -> m == bipedHead;
         textureWidth = 16;
         textureHeight = 16;
 

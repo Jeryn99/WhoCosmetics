@@ -1,5 +1,6 @@
 {
+  "item.whocosmetics.astrakhan": "Astrakhan Hat",
   "item.whocosmetics.fez": "Fez",
-  "item.whocosmetics.first_hat": "Astrakhan Hat",
-  "item.whocosmetics.stetson": "Stetson"
+  "item.whocosmetics.stetson": "Stetson",
+  "itemGroup.wc_clothes": "Who-Cosmetics Clothing"
 }

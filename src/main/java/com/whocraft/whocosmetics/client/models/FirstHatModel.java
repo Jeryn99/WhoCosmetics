@@ -19,7 +19,6 @@ public class FirstHatModel extends BipedModel {
 
 		first_fez = new RendererModel(this);
 		first_fez.setRotationPoint(0.0F, 0.0F, 0.0F);
-		
 
 		first_hat = new RendererModel(this);
 		first_hat.setRotationPoint(0.25F, -8.25F, 0.5F);

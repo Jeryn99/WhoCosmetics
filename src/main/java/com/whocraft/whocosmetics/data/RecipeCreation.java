@@ -17,6 +17,7 @@ public class RecipeCreation extends RecipeProvider {
     protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
         ShapedRecipeBuilder.shapedRecipe(WCItems.FEZ.get()).patternLine("GGG").patternLine("G G").patternLine("G G").key('G', ItemTags.WOOL).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(WCItems.STETSON.get()).patternLine("BBB").patternLine("GGG").patternLine("B B").key('B', Blocks.BROWN_WOOL).key('G', Blocks.BLACK_WOOL).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(WCItems.ASTRAKHAN.get()).patternLine("BBB").patternLine("B B").patternLine("BBB").key('B', Blocks.BLACK_WOOL).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
     }
 
     @Override

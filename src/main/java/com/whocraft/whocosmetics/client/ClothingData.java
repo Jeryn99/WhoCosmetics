@@ -12,9 +12,9 @@ public class ClothingData {
     private BipedModel head, chest, legs, feet;
     private ResourceLocation modelTexture = null;
 
-    public ClothingData(Item item, String modelTexture) {
+    public ClothingData(Item item) {
         this.item = item;
-        this.modelTexture = new ResourceLocation(WhoCosmetics.MODID, "textures/entity/armor/"+modelTexture+".png");
+        this.modelTexture = new ResourceLocation(WhoCosmetics.MODID, "textures/entity/armor/"+item.getRegistryName().getPath()+".png");
     }
 
     public ClothingData setModelForSlot(BipedModel model, EquipmentSlotType type) {

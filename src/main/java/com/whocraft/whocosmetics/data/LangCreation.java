@@ -13,9 +13,14 @@ public class LangCreation extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
+        /* Items */
         add(WCItems.FEZ.get(), "Fez");
         add(WCItems.STETSON.get(), "Stetson");
-        add(WCItems.FIRST_HAT.get(), "Astrakhan Hat"); //Did you know the first Doctors hat was called this? I Didn't
+        add(WCItems.BOW_TIE.get(), "Bowtie");
+        add(WCItems.MONDAS.get(), "Mondas");
+        add(WCItems.ASTRAKHAN.get(), "Astrakhan Hat"); //Did you know the first Doctors hat was called this? I Didn't
 
+        /* Item Groups */
+        add("itemGroup.wc_clothes", "Who-Cosmetics Clothing");
     }
 }
