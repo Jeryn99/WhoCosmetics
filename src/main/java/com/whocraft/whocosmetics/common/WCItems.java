@@ -25,5 +25,6 @@ public class WCItems {
     private static Item.Properties properties = new Item.Properties().group(itemGroup);
 
     public static final RegistryObject<Item> FEZ = ITEMS.register("fez", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.HEAD, properties));
+    public static final RegistryObject<Item> STETSON = ITEMS.register("stetson", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.HEAD, properties));
 
 }
