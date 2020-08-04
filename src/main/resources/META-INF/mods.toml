@@ -11,9 +11,9 @@ displayName="Who Cosmetics"
 updateJSONURL="http://myurl.me/"
 displayURL="http://example.com/"
 logoFile="whocosmetics.png"
-#TODO
-authors="Swirtzly, BellatorHD" #Ur free to change lol, its your mod xD
-credits="EndPhoenix"
+
+authors="Swirtzly, BellatorHD"
+credits="EndPhoenix, Violet"
 description='''
 Adds different clothing from the series Doctor Who'''
 

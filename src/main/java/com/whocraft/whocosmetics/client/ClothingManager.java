@@ -1,9 +1,6 @@
 package com.whocraft.whocosmetics.client;
 
-import com.whocraft.whocosmetics.client.models.BowTieModel;
-import com.whocraft.whocosmetics.client.models.FezModel;
-import com.whocraft.whocosmetics.client.models.FirstHatModel;
-import com.whocraft.whocosmetics.client.models.StetsonModel;
+import com.whocraft.whocosmetics.client.models.*;
 import com.whocraft.whocosmetics.common.WCItems;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
@@ -18,6 +15,7 @@ public class ClothingManager {
         addData(WCItems.FEZ.get(), new ClothingData(WCItems.FEZ.get()).setModelForSlot(new FezModel(), EquipmentSlotType.HEAD));
         addData(WCItems.STETSON.get(), new ClothingData(WCItems.STETSON.get()).setModelForSlot(new StetsonModel(), EquipmentSlotType.HEAD));
         addData(WCItems.ASTRAKHAN.get(), new ClothingData(WCItems.ASTRAKHAN.get()).setModelForSlot(new FirstHatModel(), EquipmentSlotType.HEAD));
+        addData(WCItems.STRAW_HAT.get(), new ClothingData(WCItems.STRAW_HAT.get()).setModelForSlot(new StrawHatModel(), EquipmentSlotType.CHEST));
         addData(WCItems.BOW_TIE.get(), new ClothingData(WCItems.BOW_TIE.get()).setModelForSlot(new BowTieModel(), EquipmentSlotType.CHEST));
     }
 
