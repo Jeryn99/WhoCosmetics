@@ -1,0 +1,16 @@
+{
+  "overrides": [
+    {
+      "predicate": {
+        "is_open": 1
+      },
+      "model": "whocosmetics:item/umbrella_parts/umbrella_open"
+    },
+    {
+      "predicate": {
+        "is_open": 0
+      },
+      "model": "whocosmetics:item/umbrella_parts/umbrella_closed"
+    }
+  ]
+}

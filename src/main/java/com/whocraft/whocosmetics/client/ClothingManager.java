@@ -13,10 +13,13 @@ public class ClothingManager {
 
     public static void setup() {
         addData(WCItems.FEZ.get(), new ClothingData(WCItems.FEZ.get()).setModelForSlot(new FezModel(), EquipmentSlotType.HEAD));
+        addData(WCItems.BOW_TIE.get(), new ClothingData(WCItems.BOW_TIE.get()).setModelForSlot(new BowTieModel(), EquipmentSlotType.CHEST));
         addData(WCItems.STETSON.get(), new ClothingData(WCItems.STETSON.get()).setModelForSlot(new StetsonModel(), EquipmentSlotType.HEAD));
         addData(WCItems.ASTRAKHAN.get(), new ClothingData(WCItems.ASTRAKHAN.get()).setModelForSlot(new FirstHatModel(), EquipmentSlotType.HEAD));
         addData(WCItems.STRAW_HAT.get(), new ClothingData(WCItems.STRAW_HAT.get()).setModelForSlot(new StrawHatModel(), EquipmentSlotType.CHEST));
         addData(WCItems.BOW_TIE.get(), new ClothingData(WCItems.BOW_TIE.get()).setModelForSlot(new BowTieModel(), EquipmentSlotType.CHEST));
+        addData(WCItems.RAINBOW_SCARF.get(), new ClothingData(WCItems.RAINBOW_SCARF.get()).setModelForSlot(new ScarfModel(), EquipmentSlotType.CHEST));
+
     }
 
     public static ClothingData getDataForItem(Item item) {

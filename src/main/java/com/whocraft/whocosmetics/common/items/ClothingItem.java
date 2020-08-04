@@ -28,13 +28,20 @@ public class ClothingItem extends ArmorItem implements IDyeableArmorItem {
     public void fillItemGroup(ItemGroup itemGroup, NonNullList<ItemStack> items) {
         super.fillItemGroup(itemGroup, items);
 
-        if(isInGroup(itemGroup) && isColored){
+        if (isColored && itemGroup == WCItems.itemGroupDye) {
             for (DyeColor value : DyeColor.values()) {
                 ItemStack stack = new ItemStack(this);
                 setColor(stack, value.getColorValue());
                 items.add(stack);
             }
         }
+    }
+
+    @Override
+    public ItemStack getDefaultInstance() {
+        ItemStack itemStack = super.getDefaultInstance();
+        setColor(itemStack, DyeColor.RED.getColorValue());
+        return itemStack;
     }
 
     @Nullable
@@ -47,5 +54,9 @@ public class ClothingItem extends ArmorItem implements IDyeableArmorItem {
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
         return ClothingManager.getDataForItem(stack.getItem()).getModelTexture().toString();
+    }
+
+    public boolean isColored() {
+        return isColored;
     }
 }

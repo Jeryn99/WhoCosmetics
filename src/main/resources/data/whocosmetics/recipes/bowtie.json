@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "BBB",
+    "   "
+  ],
+  "key": {
+    "B": {
+      "tag": "minecraft:wool"
+    }
+  },
+  "result": {
+    "item": "whocosmetics:bowtie"
+  }
+}
