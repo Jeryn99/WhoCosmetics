@@ -1,7 +1,4 @@
-package com.whocraft.whocosmetics.client.models;// Made with Blockbench 3.5.4
-// Exported for Minecraft version 1.14
-// Paste this class into your mod and generate all required imports
-
+package com.whocraft.whocosmetics.client.models;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import net.minecraft.client.renderer.entity.model.BipedModel;

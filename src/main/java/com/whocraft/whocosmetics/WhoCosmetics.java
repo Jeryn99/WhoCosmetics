@@ -2,9 +2,16 @@ package com.whocraft.whocosmetics;
 
 import com.whocraft.whocosmetics.client.ClothingManager;
 import com.whocraft.whocosmetics.common.WCItems;
+import com.whocraft.whocosmetics.common.WCSounds;
+import com.whocraft.whocosmetics.common.items.UmbrellaItem;
 import com.whocraft.whocosmetics.data.ItemModelCreation;
 import com.whocraft.whocosmetics.data.LangCreation;
 import com.whocraft.whocosmetics.data.RecipeCreation;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.IItemPropertyGetter;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -16,6 +23,8 @@ import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import javax.annotation.Nullable;
 
 
 @Mod(WhoCosmetics.MODID)
@@ -36,6 +45,7 @@ public class WhoCosmetics
     public void onNewRegistries(RegistryEvent.NewRegistry e) {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         WCItems.ITEMS.register(eventBus);
+        WCSounds.SOUNDS.register(eventBus);
     }
 
     @SubscribeEvent
@@ -46,6 +56,9 @@ public class WhoCosmetics
     }
 
     public void doClientStuff(final FMLClientSetupEvent event) {
+
+        WCItems.UMBRELLA.get().addPropertyOverride(new ResourceLocation("whocosmetics:is_open"), (itemStack, world, livingEntity) -> UmbrellaItem.getIsOpen(itemStack) ? 1 : 0);
+
         ClothingManager.setup();
     }
 

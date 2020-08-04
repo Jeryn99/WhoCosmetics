@@ -1,22 +1,16 @@
 package com.whocraft.whocosmetics.common.items;
 
-import com.whocraft.whocosmetics.WhoCosmetics;
+import com.whocraft.whocosmetics.common.WCSounds;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.BowItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
 public class UmbrellaItem extends Item {
     public UmbrellaItem(Properties p_i48487_1_) {
         super(p_i48487_1_);
-
-        this.addPropertyOverride(new ResourceLocation(WhoCosmetics.MODID, "is_open"), (itemStack, world, livingEntity) -> {
-            return getIsOpen(itemStack) ? 1.0F : 0.0F;
-        });
     }
 
     @Override
@@ -31,6 +25,7 @@ public class UmbrellaItem extends Item {
         if (entity.isSneaking()) {
             ItemStack itemStack = entity.getHeldItemMainhand();
             setOpen(itemStack, !getIsOpen(itemStack));
+            entity.playSound(WCSounds.UMBRELLA_OPEN.get(), 1, 1);
         }
 
         return false;

@@ -1,0 +1,20 @@
+{
+  "umbrella_open": {
+    "category": "ambient",
+    "subtitle": "whocosmetics.subtitles.umbrella_open",
+    "sounds": [
+      {
+        "name": "whocosmetics:umbrella/umbrella_open",
+        "stream": false
+      },
+      {
+        "name": "whocosmetics:umbrella/umbrella_open_1",
+        "stream": false
+      },
+      {
+        "name": "whocosmetics:umbrella/umbrella_open_2",
+        "stream": false
+      }
+    ]
+  }
+}
