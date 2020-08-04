@@ -1,5 +1,6 @@
 package com.whocraft.whocosmetics.common.items;
 
+import com.whocraft.whocosmetics.WhoCosmetics;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BowItem;
@@ -11,8 +12,9 @@ import net.minecraft.world.World;
 
 public class UmbrellaItem extends Item {
     public UmbrellaItem(Properties p_i48487_1_) {
-        super(p_i48487_1_.maxStackSize(1));
-        this.addPropertyOverride(new ResourceLocation("is_open"), (itemStack, world, livingEntity) -> {
+        super(p_i48487_1_);
+
+        this.addPropertyOverride(new ResourceLocation(WhoCosmetics.MODID, "is_open"), (itemStack, world, livingEntity) -> {
             return getIsOpen(itemStack) ? 1.0F : 0.0F;
         });
     }
