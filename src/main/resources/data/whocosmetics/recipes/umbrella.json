@@ -1,19 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " S ",
-    "SSS",
-    "BBB"
+    "BBB",
+    " R ",
+    " R "
   ],
   "key": {
-    "S": {
-      "item": "minecraft:brown_wool"
-    },
     "B": {
       "item": "minecraft:black_wool"
+    },
+    "R": {
+      "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "whocosmetics:stetson"
+    "item": "whocosmetics:umbrella"
   }
 }
