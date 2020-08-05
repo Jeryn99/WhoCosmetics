@@ -32,5 +32,8 @@ public class LangCreation extends LanguageProvider {
         /* Item Groups */
         add("itemGroup.wc_clothes", "Who-Cosmetics Clothing");
         add("itemGroup.wc_clothes_dyeable", "Who-Cosmetics Clothing Dyed");
+
+        /* Lang */
+        add("whocosmetics.nbt.modeller", "Modeller: %s");
     }
 }

@@ -1,5 +1,6 @@
 package com.whocraft.whocosmetics.client;
 
+import com.whocraft.whocosmetics.Modeller;
 import com.whocraft.whocosmetics.WhoCosmetics;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -11,10 +12,20 @@ public class ClothingData {
     private final Item item;
     private BipedModel head, chest, legs, feet;
     private ResourceLocation modelTexture = null;
+    private Modeller modeller = Modeller.END;
 
     public ClothingData(Item item) {
         this.item = item;
         this.modelTexture = new ResourceLocation(WhoCosmetics.MODID, "textures/entity/armor/"+item.getRegistryName().getPath()+".png");
+    }
+
+    public ClothingData setModeller(Modeller modeller){
+        this.modeller = modeller;
+        return this;
+    }
+
+    public Modeller getModeller() {
+        return modeller;
     }
 
     public ClothingData setModelForSlot(BipedModel model, EquipmentSlotType type) {
@@ -61,4 +72,5 @@ public class ClothingData {
     public ResourceLocation getModelTexture() {
         return modelTexture;
     }
+
 }

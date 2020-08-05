@@ -20,7 +20,7 @@ public class ClothingManager {
         addData(WCItems.BOW_TIE.get(), new ClothingData(WCItems.BOW_TIE.get()).setModelForSlot(new BowTieModel(), EquipmentSlotType.CHEST));
         addData(WCItems.RAINBOW_SCARF.get(), new ClothingData(WCItems.RAINBOW_SCARF.get()).setModelForSlot(new RainbowScarfModel(), EquipmentSlotType.CHEST));
         addData(WCItems.CELERY.get(), new ClothingData(WCItems.CELERY.get()).setModelForSlot(new StickOfCeleryModel(), EquipmentSlotType.CHEST));
-        addData(WCItems.WINGS.get(), new ClothingData(WCItems.WINGS.get()).setModelForSlot(new WeepingAngelWingsModel(), EquipmentSlotType.CHEST));
+        addData(WCItems.WINGS.get(), new ClothingData(WCItems.WINGS.get()).setModelForSlot(new WeepingAngelWingsModel(), EquipmentSlotType.CHEST).setModeller(null));
         addData(WCItems.SCARF.get(), new ClothingData(WCItems.SCARF.get()).setModelForSlot(new ScarfModel(), EquipmentSlotType.CHEST));
         addData(WCItems.SATCHEL.get(), new ClothingData(WCItems.SATCHEL.get()).setModelForSlot(new SatchelModel(), EquipmentSlotType.CHEST));
     }

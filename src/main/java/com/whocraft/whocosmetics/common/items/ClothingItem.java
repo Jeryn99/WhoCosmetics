@@ -1,8 +1,11 @@
 package com.whocraft.whocosmetics.common.items;
 
+import com.whocraft.whocosmetics.WhoCosmetics;
+import com.whocraft.whocosmetics.client.ClothingData;
 import com.whocraft.whocosmetics.client.ClothingManager;
 import com.whocraft.whocosmetics.common.WCItems;
 import net.minecraft.client.renderer.entity.model.BipedModel;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -10,9 +13,12 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
+import java.util.List;
 
 public class ClothingItem extends ArmorItem implements IDyeableArmorItem {
 
@@ -63,6 +69,17 @@ public class ClothingItem extends ArmorItem implements IDyeableArmorItem {
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
         return ClothingManager.getDataForItem(stack.getItem()).getModelTexture().toString();
+    }
+
+    @Override
+    public void addInformation(ItemStack p_77624_1_, @Nullable World p_77624_2_, List<ITextComponent> p_77624_3_, ITooltipFlag p_77624_4_) {
+        super.addInformation(p_77624_1_, p_77624_2_, p_77624_3_, p_77624_4_);
+        ClothingData data = ClothingManager.getDataForItem(p_77624_1_.getItem());
+        if (data != null) {
+            if (data.getModeller() != null) {
+                p_77624_3_.add(new TranslationTextComponent(WhoCosmetics.MODID + ".nbt.modeller", data.getModeller().getModellerName()));
+            }
+        }
     }
 
     public boolean isColored() {

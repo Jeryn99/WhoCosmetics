@@ -3,7 +3,9 @@ package com.whocraft.whocosmetics.data;
 import com.whocraft.whocosmetics.common.WCItems;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.*;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
+import net.minecraftforge.common.Tags;
 
 import java.io.IOException;
 import java.util.function.Consumer;
@@ -20,6 +22,8 @@ public class RecipeCreation extends RecipeProvider {
         ShapedRecipeBuilder.shapedRecipe(WCItems.ASTRAKHAN.get()).patternLine("BBB").patternLine("B B").patternLine("BBB").key('B', Blocks.BLACK_WOOL).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(WCItems.BOW_TIE.get()).patternLine("   ").patternLine("BBB").patternLine("   ").key('B', ItemTags.WOOL).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(WCItems.RAINBOW_SCARF.get()).patternLine("B B").patternLine("B B").patternLine("B B").key('B', ItemTags.WOOL).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(WCItems.STRAW_HAT.get()).patternLine("SSS").patternLine("TTT").patternLine("SSS").key('T', Tags.Items.STRING).key('S', Blocks.HAY_BLOCK).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(WCItems.WINGS.get()).patternLine("S S").patternLine(" S ").patternLine(" S ").key('S', ItemTags.STONE_BRICKS).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
     }
 
     @Override
