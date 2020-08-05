@@ -24,7 +24,10 @@ public class LangCreation extends LanguageProvider {
         add(WCItems.STRAW_HAT.get(), "Straw Hat"); //Nope, I thought you made the name up lol, but did you know that Straw Hat is actually named Straw hat??? - Bell
         add(WCItems.WINGS.get(), "Weeping Angels Wings"); //Nope! I didn't! Remember not to blink!
         add(WCItems.CELERY.get(), "Stick of Celery"); //Remember to stay nourished though
-        add(WCItems.SCARF.get(), "Scarf");
+        add(WCItems.SCARF.get(), "Scarf"); //I will, Is it me or is it kinda cold outside?
+        add(WCItems.SATCHEL.get(), "Satchel");
+        add(WCItems.THREED_GLASSES.get(), "3D Glasses");
+        add(WCItems.MAGNOLI.get(),"Magnoli Clothiers Glasses"); //Long ass name for some glasses
 
         /* Item Groups */
         add("itemGroup.wc_clothes", "Who-Cosmetics Clothing");
