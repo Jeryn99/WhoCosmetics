@@ -4,8 +4,9 @@ package com.whocraft.whocosmetics.client.models;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
+import net.minecraft.entity.LivingEntity;
 
-public class RainbowScarfModel extends BipedModel {
+public class RainbowScarfModel extends BipedModel<LivingEntity> {
     private final RendererModel scarf;
     private final RendererModel fourth_scarf;
 

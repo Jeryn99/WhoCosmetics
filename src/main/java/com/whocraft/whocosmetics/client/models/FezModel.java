@@ -9,9 +9,8 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IDyeableArmorItem;
 
-import java.util.function.Predicate;
 
-public class FezModel extends BipedModel {
+public class FezModel extends BipedModel<LivingEntity> {
     private final RendererModel hat_fez;
     private final RendererModel fez_hat;
     private final RendererModel tasel;

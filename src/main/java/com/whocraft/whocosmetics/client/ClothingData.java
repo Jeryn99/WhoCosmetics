@@ -2,7 +2,9 @@ package com.whocraft.whocosmetics.client;
 
 import com.whocraft.whocosmetics.Modeller;
 import com.whocraft.whocosmetics.WhoCosmetics;
+
 import net.minecraft.client.renderer.entity.model.BipedModel;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
@@ -10,7 +12,7 @@ import net.minecraft.util.ResourceLocation;
 public class ClothingData {
 
     private final Item item;
-    private BipedModel head, chest, legs, feet;
+    private BipedModel<LivingEntity> head, chest, legs, feet;
     private ResourceLocation modelTexture = null;
     private Modeller modeller = Modeller.END;
 
@@ -28,7 +30,7 @@ public class ClothingData {
         return modeller;
     }
 
-    public ClothingData setModelForSlot(BipedModel model, EquipmentSlotType type) {
+    public ClothingData setModelForSlot(BipedModel<LivingEntity> model, EquipmentSlotType type) {
         switch (type) {
             case HEAD:
                 head = model;
@@ -48,7 +50,7 @@ public class ClothingData {
         return this;
     }
 
-    public BipedModel getModel(EquipmentSlotType equipmentSlotType) {
+    public BipedModel<LivingEntity> getModel(EquipmentSlotType equipmentSlotType) {
         switch (equipmentSlotType) {
             case HEAD:
                 return head;

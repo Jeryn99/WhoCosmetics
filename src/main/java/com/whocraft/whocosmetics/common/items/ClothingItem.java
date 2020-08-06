@@ -36,8 +36,8 @@ public class ClothingItem extends ArmorItem implements IDyeableArmorItem {
     }
 
     @Override
-    public void onCreated(ItemStack p_77622_1_, World p_77622_2_, PlayerEntity p_77622_3_) {
-        super.onCreated(p_77622_1_, p_77622_2_, p_77622_3_);
+    public void onCreated(ItemStack stack, World worldIn, PlayerEntity player) {
+        super.onCreated(stack, worldIn, player);
     }
 
     @Override
@@ -72,12 +72,12 @@ public class ClothingItem extends ArmorItem implements IDyeableArmorItem {
     }
 
     @Override
-    public void addInformation(ItemStack p_77624_1_, @Nullable World p_77624_2_, List<ITextComponent> p_77624_3_, ITooltipFlag p_77624_4_) {
-        super.addInformation(p_77624_1_, p_77624_2_, p_77624_3_, p_77624_4_);
-        ClothingData data = ClothingManager.getDataForItem(p_77624_1_.getItem());
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+        super.addInformation(stack, worldIn, tooltip, flagIn);
+        ClothingData data = ClothingManager.getDataForItem(stack.getItem());
         if (data != null) {
             if (data.getModeller() != null) {
-                p_77624_3_.add(new TranslationTextComponent(WhoCosmetics.MODID + ".nbt.modeller", data.getModeller().getModellerName()));
+                tooltip.add(new TranslationTextComponent(WhoCosmetics.MODID + ".nbt.modeller", data.getModeller().getModellerName()));
             }
         }
     }

@@ -5,7 +5,6 @@ import com.whocraft.whocosmetics.WhoCosmetics;
 import com.whocraft.whocosmetics.common.items.ClothingItem;
 import com.whocraft.whocosmetics.common.items.JSONClothingItem;
 import com.whocraft.whocosmetics.common.items.UmbrellaItem;
-import cpw.mods.modlauncher.LaunchPluginHandler;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;

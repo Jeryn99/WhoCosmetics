@@ -1,9 +1,15 @@
+package com.whocraft.whocosmetics.client.models;
+import net.minecraft.client.renderer.entity.model.EntityModel;
+import net.minecraft.client.renderer.entity.model.RendererModel;
+import net.minecraft.client.renderer.model.ModelBox;
+import net.minecraft.entity.LivingEntity;
+
 // Made with Blockbench 3.6.5
 // Exported for Minecraft version 1.14
 // Paste this class into your mod and generate all required imports
 
 
-public class custom_model extends EntityModel {
+public class RedCloakModelAlex extends EntityModel<LivingEntity> {
 	private final RendererModel torso;
 	private final RendererModel body;
 	private final RendererModel leg_skirt;
@@ -12,7 +18,7 @@ public class custom_model extends EntityModel {
 	private final RendererModel alex_left_arm;
 	private final RendererModel left;
 
-	public custom_model() {
+	public RedCloakModelAlex() {
 		textureWidth = 64;
 		textureHeight = 64;
 
@@ -58,10 +64,10 @@ public class custom_model extends EntityModel {
 	}
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		torso.render(f5);
-		alex_right_arm.render(f5);
-		alex_left_arm.render(f5);
+	public void render(LivingEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor) {
+		torso.render(scaleFactor);
+		alex_right_arm.render(scaleFactor);
+		alex_left_arm.render(scaleFactor);
 	}
 
 	public void setRotationAngle(RendererModel modelRenderer, float x, float y, float z) {
