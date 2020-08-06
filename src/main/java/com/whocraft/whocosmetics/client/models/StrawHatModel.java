@@ -6,7 +6,7 @@ import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
 import net.minecraft.entity.LivingEntity;
 
-public class StrawHatModel extends BipedModel {
+public class StrawHatModel extends BipedModel<LivingEntity> {
 	private final RendererModel seven_hat;
 	private final RendererModel seventh_hat;
 

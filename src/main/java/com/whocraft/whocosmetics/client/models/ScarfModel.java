@@ -11,7 +11,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IDyeableArmorItem;
 
-public class ScarfModel extends BipedModel {
+public class ScarfModel extends BipedModel<LivingEntity> {
     private final RendererModel first_scarf;
     private final RendererModel firsts_scarf;
 
@@ -39,16 +39,20 @@ public class ScarfModel extends BipedModel {
     }
 
     @Override
-    public void render(LivingEntity p_78088_1_, float p_78088_2_, float p_78088_3_, float p_78088_4_, float p_78088_5_, float p_78088_6_, float p_78088_7_) {
-        IDyeableArmorItem iDyeableArmorItem = (IDyeableArmorItem) p_78088_1_.getItemStackFromSlot(EquipmentSlotType.CHEST).getItem();
-        int color = iDyeableArmorItem.getColor(p_78088_1_.getItemStackFromSlot(EquipmentSlotType.CHEST));
+    public void render(LivingEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor) {
+        IDyeableArmorItem iDyeableArmorItem = (IDyeableArmorItem) entity.getItemStackFromSlot(EquipmentSlotType.CHEST).getItem();
+        int color = iDyeableArmorItem.getColor(entity.getItemStackFromSlot(EquipmentSlotType.CHEST));
         float red = (float) (color >> 16 & 255) / 255.0F;
         float green = (float) (color >> 8 & 255) / 255.0F;
         float blue = (float) (color & 255) / 255.0F;
         GlStateManager.color4f(1.0F * red, 1.0F * green, 1.0F * blue, 1.0F);
-        super.render(p_78088_1_, p_78088_2_, p_78088_3_, p_78088_4_, p_78088_5_, p_78088_6_, p_78088_7_);
         bipedHeadwear.isHidden = true;
         bipedLeftArm.isHidden = true;
         bipedRightArm.isHidden = true;
+        //Do not translate it down. If you do so, any head items will be translated down and a duplicate of this will be created
+//        if (entity.isSneaking()) {
+//            GlStateManager.translatef(0.0F, 0.2F, 0.0F);
+//        }
+        super.render(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scaleFactor);
     }
 }

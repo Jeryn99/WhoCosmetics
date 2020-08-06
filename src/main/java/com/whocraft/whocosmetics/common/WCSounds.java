@@ -1,6 +1,6 @@
 package com.whocraft.whocosmetics.common;
 
-import com.whocraft.whocosmetics.WhoCosmetics;
+
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.fml.RegistryObject;

@@ -47,15 +47,15 @@ public class JSONClothingItem extends Item {
         if (stack.isEmpty()) {
             playerEntity.setItemStackToSlot(equipmentSlotType, playerEntityHeldItem.copy());
             playerEntityHeldItem.setCount(0);
-            return new ActionResult(ActionResultType.SUCCESS, playerEntityHeldItem);
+            return new ActionResult<ItemStack>(ActionResultType.SUCCESS, playerEntityHeldItem);
         } else {
-            return new ActionResult(ActionResultType.FAIL, playerEntityHeldItem);
+            return new ActionResult<ItemStack>(ActionResultType.FAIL, playerEntityHeldItem);
         }
     }
 
     @Override
-    public void addInformation(ItemStack p_77624_1_, @Nullable World p_77624_2_, List<ITextComponent> p_77624_3_, ITooltipFlag p_77624_4_) {
-        super.addInformation(p_77624_1_, p_77624_2_, p_77624_3_, p_77624_4_);
-        p_77624_3_.add(new TranslationTextComponent(WhoCosmetics.MODID + ".nbt.modeller", modeller.getModellerName()));
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+        super.addInformation(stack, worldIn, tooltip, flagIn);
+        tooltip.add(new TranslationTextComponent(WhoCosmetics.MODID + ".nbt.modeller", modeller.getModellerName()));
     }
 }

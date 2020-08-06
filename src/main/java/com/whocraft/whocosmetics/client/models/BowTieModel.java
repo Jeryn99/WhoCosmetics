@@ -8,7 +8,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IDyeableArmorItem;
 
-public class BowTieModel extends BipedModel {
+public class BowTieModel extends BipedModel<LivingEntity> {
     private final RendererModel bowties;
     private final RendererModel bowtie;
     private final RendererModel angle2;

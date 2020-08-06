@@ -19,8 +19,8 @@ import java.util.List;
 public class UmbrellaItem extends Item {
     private Modeller modeller = Modeller.END;
 
-    public UmbrellaItem(Properties p_i48487_1_) {
-        super(p_i48487_1_);
+    public UmbrellaItem(Properties prop) {
+        super(prop);
     }
 
     @Override
@@ -47,14 +47,14 @@ public class UmbrellaItem extends Item {
             itemStack.setTag(new CompoundNBT());
         }
 
-        if (!itemStack.getTag().contains("isOpen")) {
-            itemStack.getTag().putBoolean("isOpen", false);
+        if (!itemStack.getTag().contains("is_open")) {
+            itemStack.getTag().putBoolean("is_open", false);
         }
-        return itemStack.getTag().getBoolean("isOpen");
+        return itemStack.getTag().getBoolean("is_open");
     }
 
     public static void setOpen(ItemStack itemStack, boolean isOpen) {
-        itemStack.getTag().putBoolean("isOpen", isOpen);
+        itemStack.getTag().putBoolean("is_open", isOpen);
     }
 
 
@@ -68,8 +68,8 @@ public class UmbrellaItem extends Item {
     }
 
     @Override
-    public void addInformation(ItemStack p_77624_1_, @Nullable World p_77624_2_, List<ITextComponent> p_77624_3_, ITooltipFlag p_77624_4_) {
-        super.addInformation(p_77624_1_, p_77624_2_, p_77624_3_, p_77624_4_);
-        p_77624_3_.add(new TranslationTextComponent(WhoCosmetics.MODID + ".nbt.modeller", modeller.getModellerName()));
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+        super.addInformation(stack, worldIn, tooltip, flagIn);
+        tooltip.add(new TranslationTextComponent(WhoCosmetics.MODID + ".nbt.modeller", modeller.getModellerName()));
     }
 }

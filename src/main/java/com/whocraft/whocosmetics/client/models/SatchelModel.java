@@ -6,8 +6,9 @@ package com.whocraft.whocosmetics.client.models;// Made with Blockbench 3.6.5
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
+import net.minecraft.entity.LivingEntity;
 
-public class SatchelModel extends BipedModel {
+public class SatchelModel extends BipedModel<LivingEntity> {
 	private final RendererModel side_bag;
 	private final RendererModel strap;
 
