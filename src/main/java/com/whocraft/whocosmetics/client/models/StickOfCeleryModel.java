@@ -3,8 +3,9 @@ package com.whocraft.whocosmetics.client.models;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
+import net.minecraft.entity.LivingEntity;
 
-public class StickOfCeleryModel extends BipedModel {
+public class StickOfCeleryModel extends BipedModel<LivingEntity> {
 
     private final RendererModel celery;
     private final RendererModel celery_stick;

@@ -6,7 +6,7 @@ import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
 import net.minecraft.entity.LivingEntity;
 
-public class StetsonModel extends BipedModel {
+public class StetsonModel extends BipedModel<LivingEntity> {
 	private final RendererModel stetson;
 	private final RendererModel hats;
 

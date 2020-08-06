@@ -15,5 +15,6 @@
   "item.whocosmetics.wings": "Weeping Angels Wings",
   "itemGroup.wc_clothes": "Who-Cosmetics Clothing",
   "itemGroup.wc_clothes_dyeable": "Who-Cosmetics Clothing Dyed",
-  "whocosmetics.nbt.modeller": "Modeller: %s"
+  "whocosmetics.nbt.modeller": "Modeller: %s",
+  "whocosmetics.subtitles.umbrella_open":"Umbrella Opens"
 }

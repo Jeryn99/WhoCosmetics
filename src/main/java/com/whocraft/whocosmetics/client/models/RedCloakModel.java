@@ -11,9 +11,9 @@ public class RedCloakModel extends BipedArmSupport {
 	private final RendererModel torso;
 	private final RendererModel body;
 	private final RendererModel steve_right_arm;
-	private final RendererModel right;
+	private RendererModel right;
 	private final RendererModel steve_left_arm;
-	private final RendererModel left;
+	private RendererModel left;
 	private final RendererModel leg_skirt;
 	private final RendererModel alex_right_arm;
 	private final RendererModel alex_left_arm;
@@ -85,11 +85,11 @@ public class RedCloakModel extends BipedArmSupport {
 	}
 
 	@Override
-	public void render(LivingEntity p_78088_1_, float p_78088_2_, float p_78088_3_, float p_78088_4_, float p_78088_5_, float p_78088_6_, float p_78088_7_) {
-		torso.render(f5);
-		steve_right_arm.render(f5);
-		steve_left_arm.render(f5);
-		leg_skirt.render(f5);
+	public void render(LivingEntity ent, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor) {
+		torso.render(scaleFactor);
+		steve_right_arm.render(scaleFactor);
+		steve_left_arm.render(scaleFactor);
+		leg_skirt.render(scaleFactor);
 	}
 
 	public void setRotationAngle(RendererModel modelRenderer, float x, float y, float z) {

@@ -35,7 +35,7 @@ public class RecipeCreation extends RecipeProvider {
     }
 
     @Override
-    public void act(DirectoryCache p_200398_1_) throws IOException {
-        super.act(p_200398_1_);
+    public void act(DirectoryCache cache) throws IOException {
+        super.act(cache);
     }
 }

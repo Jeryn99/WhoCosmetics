@@ -6,7 +6,8 @@ import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
 import net.minecraft.entity.LivingEntity;
 
-public class FirstHatModel extends BipedModel {
+
+public class FirstHatModel extends BipedModel<LivingEntity> {
 	private final RendererModel first_fez;
 	private final RendererModel first_hat;
 	private final RendererModel tasel;
@@ -35,8 +36,8 @@ public class FirstHatModel extends BipedModel {
 	}
 
 	@Override
-	public void render(LivingEntity p_78088_1_, float p_78088_2_, float p_78088_3_, float p_78088_4_, float p_78088_5_, float p_78088_6_, float p_78088_7_) {
-		super.render(p_78088_1_, p_78088_2_, p_78088_3_, p_78088_4_, p_78088_5_, p_78088_6_, p_78088_7_);
+	public void render(LivingEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor) {
+		super.render(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scaleFactor);
 		bipedHeadwear.isHidden = true;
 	}
 

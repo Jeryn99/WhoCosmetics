@@ -1,14 +1,15 @@
 package com.whocraft.whocosmetics.client.models;
 
 import com.mojang.blaze3d.platform.GlStateManager;
-import net.minecraft.client.Minecraft;
+
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.MathHelper;
 
-public class WeepingAngelWingsModel extends BipedModel {
+public class WeepingAngelWingsModel extends BipedModel<LivingEntity> {
 
     public RendererModel body;
     public RendererModel head;
@@ -83,41 +84,57 @@ public class WeepingAngelWingsModel extends BipedModel {
     }
 
     @Override
-    public void render(LivingEntity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float f5) {
+    public void render(LivingEntity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor) {
 
-        setRotationAngles(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, f5);
-        this.isChild = false;
-        GlStateManager.pushMatrix();
+        setRotationAngles(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scaleFactor);
+//        this.isChild = false; //Don't set this to false, because every tick isChild will be set to false, so it will always render it in full scale
+        GlStateManager.pushMatrix(); //Matrix 1
 
         if (this.isChild) {
+            //There appears to be duplicate rendering code here?
             GlStateManager.scalef(0.75F, 0.75F, 0.75F);
-            GlStateManager.translatef(0.0F, 16.0F * f5, 0.0F);
+            GlStateManager.translatef(0.0F, 16.0F * scaleFactor, 0.0F);
             if (entityIn.isSneaking()) {
                 GlStateManager.translatef(0.0F, 0.2F, 0.0F);
             }
+            GlStateManager.popMatrix();// End Matrix 1 if entity is child
 
-            GlStateManager.popMatrix();
-            GlStateManager.pushMatrix();
+            GlStateManager.pushMatrix();//Start Matrix 2
             GlStateManager.scalef(0.5F, 0.5F, 0.5F);
-            GlStateManager.translatef(0.0F, 24.0F * f5, 0.0F);
+            GlStateManager.translatef(0.0F, 24.0F * scaleFactor, 0.0F);
             if (entityIn.isSneaking()) {
                 GlStateManager.translatef(0.0F, 0.2F, 0.0F);
             }
-            renderWings(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, f5);
+            renderWings(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scaleFactor);
         } else {
-            if (entityIn.isSneaking()) {
-                GlStateManager.translatef(0.0F, 0.2F, 0.0F);
+            if (entityIn instanceof PlayerEntity) {
+                PlayerEntity player = (PlayerEntity)entityIn;
+                if (player.isSneaking()) {
+                    GlStateManager.translatef(0.0F, player.abilities.isFlying ? 0.0F : 0.2F, 0.0F); //Prevents translatation or rotatation if the player is sneaking whilst flying. (Player pose doesn't actually use sneak pose at this stage)
+                    GlStateManager.rotated(player.abilities.isFlying ? 0 : 30, 1, 0, 0);
+                }
+           }
+           else {
+                if (entityIn.isSneaking()) {
+                    GlStateManager.translatef(0.0F, 0.2F, 0.0F);
+                    GlStateManager.rotated(30, 1, 0, 0);
+                }
             }
-            renderWings(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, f5);
+            renderWings(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scaleFactor);
         }
 
-        GlStateManager.popMatrix();
+        GlStateManager.popMatrix(); // End Matrix 1 if not child or end matrix 2 if is child
     }
 
-    public void renderWings(Entity player, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float f5) {
+    public void renderWings(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor) {
         float motion = Math.abs(MathHelper.sin(limbSwing * 0.033F + (float) Math.PI) * 0.4F) * limbSwingAmount;
-       // boolean flapWings = player.world.isAirBlock(player.getPosition().down());
-        boolean flapWings = false;
+//       boolean flapWings = entity.world.isAirBlock(entity.getPosition().down());
+//       boolean flapWings = false;
+        boolean flapWings = entity.fallDistance > 2; //Make the wings flap if the entity is falling more than 2 blocks. This ensures it won't open when entity is jumping
+        if (entity != null && entity instanceof PlayerEntity) {
+            PlayerEntity player = (PlayerEntity)entity;
+            flapWings = entity.fallDistance > 2 || player.abilities.isFlying; //Also make wings flap if flying in creative mode
+        }
 
         float speed = 0.55f + 0.5f * motion;
         float y = MathHelper.sin(ageInTicks * 0.35F);
@@ -127,14 +144,14 @@ public class WeepingAngelWingsModel extends BipedModel {
         if (flapWings) {
             GlStateManager.rotated(flap * 20, 0, 1, 0);
         }
-        left_wing_1.render(f5);
+        left_wing_1.render(scaleFactor);
         GlStateManager.popMatrix();
 
         GlStateManager.pushMatrix();
         if (flapWings) {
             GlStateManager.rotated(-flap * 20, 0, 1, 0);
         }
-        right_wing_1.render(f5);
+        right_wing_1.render(scaleFactor);
         GlStateManager.popMatrix();
     }
 
