@@ -1,6 +1,7 @@
 package com.whocraft.whocosmetics;
 
 import com.whocraft.whocosmetics.client.ClothingManager;
+import com.whocraft.whocosmetics.common.WCBlocks;
 import com.whocraft.whocosmetics.common.WCItems;
 import com.whocraft.whocosmetics.common.WCSounds;
 import com.whocraft.whocosmetics.common.items.UmbrellaItem;
@@ -41,6 +42,7 @@ public class WhoCosmetics
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         WCItems.ITEMS.register(eventBus);
         WCSounds.SOUNDS.register(eventBus);
+        WCBlocks.BLOCKS.register(eventBus);
     }
 
     @SubscribeEvent

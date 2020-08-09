@@ -49,10 +49,6 @@ public class ScarfModel extends BipedModel<LivingEntity> {
         bipedHeadwear.isHidden = true;
         bipedLeftArm.isHidden = true;
         bipedRightArm.isHidden = true;
-        //Do not translate it down. If you do so, any head items will be translated down and a duplicate of this will be created
-//        if (entity.isSneaking()) {
-//            GlStateManager.translatef(0.0F, 0.2F, 0.0F);
-//        }
         super.render(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scaleFactor);
     }
 }

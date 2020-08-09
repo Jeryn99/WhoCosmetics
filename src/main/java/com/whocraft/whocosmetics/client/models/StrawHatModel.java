@@ -41,9 +41,5 @@ public class StrawHatModel extends BipedModel<LivingEntity> {
 		bipedHeadwear.isHidden = true;
 		GlStateManager.popMatrix();
 	}
-	public void setRotationAngle(RendererModel modelRenderer, float x, float y, float z) {
-		modelRenderer.rotateAngleX = x;
-		modelRenderer.rotateAngleY = y;
-		modelRenderer.rotateAngleZ = z;
-	}
+
 }

@@ -68,7 +68,7 @@ public class ClothingItem extends ArmorItem implements IDyeableArmorItem {
     @Nullable
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-        return ClothingManager.getDataForItem(stack.getItem()).getModelTexture().toString();
+        return ClothingManager.getDataForItem(stack.getItem()).getModelTexture(entity).toString();
     }
 
     @Override

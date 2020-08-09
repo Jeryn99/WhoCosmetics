@@ -87,7 +87,6 @@ public class WeepingAngelWingsModel extends BipedModel<LivingEntity> {
     public void render(LivingEntity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor) {
 
         setRotationAngles(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scaleFactor);
-//        this.isChild = false; //Don't set this to false, because every tick isChild will be set to false, so it will always render it in full scale
         GlStateManager.pushMatrix(); //Matrix 1
 
         if (this.isChild) {

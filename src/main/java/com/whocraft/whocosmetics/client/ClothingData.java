@@ -2,8 +2,10 @@ package com.whocraft.whocosmetics.client;
 
 import com.whocraft.whocosmetics.Modeller;
 import com.whocraft.whocosmetics.WhoCosmetics;
-
+import com.whocraft.whocosmetics.util.ClientUtil;
+import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
 import net.minecraft.client.renderer.entity.model.BipedModel;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
@@ -12,17 +14,25 @@ import net.minecraft.util.ResourceLocation;
 public class ClothingData {
 
     private final Item item;
+    private final ResourceLocation modelSteveTexture;
     private BipedModel<LivingEntity> head, chest, legs, feet;
     private ResourceLocation modelTexture = null;
     private Modeller modeller = Modeller.END;
+    private boolean supportsArms = false;
 
     public ClothingData(Item item) {
         this.item = item;
-        this.modelTexture = new ResourceLocation(WhoCosmetics.MODID, "textures/entity/armor/"+item.getRegistryName().getPath()+".png");
+        this.modelTexture = new ResourceLocation(WhoCosmetics.MODID, "textures/entity/armor/" + item.getRegistryName().getPath() + ".png");
+        this.modelSteveTexture = new ResourceLocation(WhoCosmetics.MODID, "textures/entity/armor/" + item.getRegistryName().getPath() + "_steve.png");
     }
 
-    public ClothingData setModeller(Modeller modeller){
+    public ClothingData setModeller(Modeller modeller) {
         this.modeller = modeller;
+        return this;
+    }
+
+    public ClothingData hasArmSupport() {
+        this.supportsArms = true;
         return this;
     }
 
@@ -71,7 +81,12 @@ public class ClothingData {
         return item;
     }
 
-    public ResourceLocation getModelTexture() {
+    public ResourceLocation getModelTexture(Entity livingEntity) {
+        if (livingEntity instanceof AbstractClientPlayerEntity) {
+            AbstractClientPlayerEntity playerEntity = (AbstractClientPlayerEntity) livingEntity;
+            boolean isSteve = ClientUtil.isSteve(playerEntity);
+            return isSteve ? modelSteveTexture : modelTexture;
+        }
         return modelTexture;
     }
 

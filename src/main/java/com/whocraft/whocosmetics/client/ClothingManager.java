@@ -23,6 +23,7 @@ public class ClothingManager {
         addData(WCItems.WINGS.get(), new ClothingData(WCItems.WINGS.get()).setModelForSlot(new WeepingAngelWingsModel(), EquipmentSlotType.CHEST).setModeller(null));
         addData(WCItems.SCARF.get(), new ClothingData(WCItems.SCARF.get()).setModelForSlot(new ScarfModel(), EquipmentSlotType.CHEST));
         addData(WCItems.SATCHEL.get(), new ClothingData(WCItems.SATCHEL.get()).setModelForSlot(new SatchelModel(), EquipmentSlotType.CHEST));
+        addData(WCItems.CLOAK.get(), new ClothingData(WCItems.CLOAK.get()).setModelForSlot(new RedCloakModel(), EquipmentSlotType.CHEST).hasArmSupport());
     }
 
     public static ClothingData getDataForItem(Item item) {
