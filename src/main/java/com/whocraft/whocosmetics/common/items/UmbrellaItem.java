@@ -54,7 +54,7 @@ public class UmbrellaItem extends Item {
     }
 
     public static void setOpen(ItemStack itemStack, boolean isOpen) {
-        itemStack.getTag().putBoolean("is_open", isOpen);
+        itemStack.getOrCreateTag().putBoolean("is_open", isOpen);
     }
 
 

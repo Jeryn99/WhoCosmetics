@@ -1,6 +1,10 @@
 package com.whocraft.whocosmetics.client;
 
+import com.whocraft.whocosmetics.Modeller;
 import com.whocraft.whocosmetics.client.models.*;
+import com.whocraft.whocosmetics.client.models.spacesuit.SpaceChestModel;
+import com.whocraft.whocosmetics.client.models.spacesuit.SpaceHelmetModel;
+import com.whocraft.whocosmetics.client.models.spacesuit.SpaceLegsModel;
 import com.whocraft.whocosmetics.common.WCItems;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
@@ -17,15 +21,18 @@ public class ClothingManager {
         addData(WCItems.STETSON.get(), new ClothingData(WCItems.STETSON.get()).setModelForSlot(new StetsonModel(), EquipmentSlotType.HEAD));
         addData(WCItems.ASTRAKHAN.get(), new ClothingData(WCItems.ASTRAKHAN.get()).setModelForSlot(new FirstHatModel(), EquipmentSlotType.HEAD));
         addData(WCItems.STRAW_HAT.get(), new ClothingData(WCItems.STRAW_HAT.get()).setModelForSlot(new StrawHatModel(), EquipmentSlotType.HEAD));
-        addData(WCItems.BOW_TIE.get(), new ClothingData(WCItems.BOW_TIE.get()).setModelForSlot(new BowTieModel(), EquipmentSlotType.CHEST));
         addData(WCItems.RAINBOW_SCARF.get(), new ClothingData(WCItems.RAINBOW_SCARF.get()).setModelForSlot(new RainbowScarfModel(), EquipmentSlotType.CHEST));
         addData(WCItems.CELERY.get(), new ClothingData(WCItems.CELERY.get()).setModelForSlot(new StickOfCeleryModel(), EquipmentSlotType.CHEST));
         addData(WCItems.WINGS.get(), new ClothingData(WCItems.WINGS.get()).setModelForSlot(new WeepingAngelWingsModel(), EquipmentSlotType.CHEST).setModeller(null));
         addData(WCItems.SCARF.get(), new ClothingData(WCItems.SCARF.get()).setModelForSlot(new ScarfModel(), EquipmentSlotType.CHEST));
         addData(WCItems.SATCHEL.get(), new ClothingData(WCItems.SATCHEL.get()).setModelForSlot(new SatchelModel(), EquipmentSlotType.CHEST));
-        addData(WCItems.CLOAK.get(), new ClothingData(WCItems.CLOAK.get()).setModelForSlot(new RedCloakModel(), EquipmentSlotType.CHEST).hasArmSupport());
-        addData(WCItems.CRICKET_JACKET.get(), new ClothingData(WCItems.CRICKET_JACKET.get()).setModelForSlot(new CricketJacketModel(), EquipmentSlotType.CHEST).hasArmSupport());
+        addData(WCItems.CRICKET_JACKET.get(), new ClothingData(WCItems.CRICKET_JACKET.get()).setModelForSlot(new CricketJacketModel(), EquipmentSlotType.CHEST).setModeller(Modeller.VESPA));
         addData(WCItems.CLOAK.get(), new ClothingData(WCItems.CLOAK.get()).setModelForSlot(new RedCloakModel(), EquipmentSlotType.CHEST));
+
+        addData(WCItems.SPACE_HELMET.get(), new ClothingData(WCItems.SPACE_HELMET.get(), "space_suit").setModelForSlot(new SpaceHelmetModel(), EquipmentSlotType.HEAD).setModeller(Modeller.VIOLET));
+        addData(WCItems.SPACE_CHEST.get(), new ClothingData(WCItems.SPACE_CHEST.get(), "space_suit").setModelForSlot(new SpaceChestModel(), EquipmentSlotType.CHEST).setModeller(Modeller.VIOLET));
+        addData(WCItems.SPACE_LEGS.get(), new ClothingData(WCItems.SPACE_LEGS.get(), "space_suit").setModelForSlot(new SpaceLegsModel(), EquipmentSlotType.LEGS).setModeller(Modeller.VIOLET));
+
     }
 
     public static ClothingData getDataForItem(Item item) {

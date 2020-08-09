@@ -26,6 +26,12 @@ public class ClothingData {
         this.modelSteveTexture = new ResourceLocation(WhoCosmetics.MODID, "textures/entity/armor/" + item.getRegistryName().getPath() + "_steve.png");
     }
 
+    public ClothingData(Item item, String texture) {
+        this.item = item;
+        this.modelTexture = new ResourceLocation(WhoCosmetics.MODID, "textures/entity/armor/" + texture + ".png");
+        this.modelSteveTexture = new ResourceLocation(WhoCosmetics.MODID, "textures/entity/armor/" + texture + "_steve.png");
+    }
+
     public ClothingData setModeller(Modeller modeller) {
         this.modeller = modeller;
         return this;
@@ -82,7 +88,7 @@ public class ClothingData {
     }
 
     public ResourceLocation getModelTexture(Entity livingEntity) {
-        if (livingEntity instanceof AbstractClientPlayerEntity) {
+        if (livingEntity instanceof AbstractClientPlayerEntity && supportsArms) {
             AbstractClientPlayerEntity playerEntity = (AbstractClientPlayerEntity) livingEntity;
             boolean isSteve = ClientUtil.isSteve(playerEntity);
             return isSteve ? modelSteveTexture : modelTexture;
