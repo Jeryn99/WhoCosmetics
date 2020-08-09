@@ -25,7 +25,7 @@ public class ClothingManager {
         addData(WCItems.SATCHEL.get(), new ClothingData(WCItems.SATCHEL.get()).setModelForSlot(new SatchelModel(), EquipmentSlotType.CHEST));
         addData(WCItems.CLOAK.get(), new ClothingData(WCItems.CLOAK.get()).setModelForSlot(new RedCloakModel(), EquipmentSlotType.CHEST).hasArmSupport());
         addData(WCItems.CRICKET_JACKET.get(), new ClothingData(WCItems.CRICKET_JACKET.get()).setModelForSlot(new CricketJacketModel(), EquipmentSlotType.CHEST).hasArmSupport());
-        addData(WCItems.RED_CLOAK.get(), new ClothingData(WCItems.RED_CLOAK.get()).setModelForSlot(new RedCloakModel(), EquipmentSlotType.CHEST));
+        addData(WCItems.CLOAK.get(), new ClothingData(WCItems.CLOAK.get()).setModelForSlot(new RedCloakModel(), EquipmentSlotType.CHEST));
     }
 
     public static ClothingData getDataForItem(Item item) {
