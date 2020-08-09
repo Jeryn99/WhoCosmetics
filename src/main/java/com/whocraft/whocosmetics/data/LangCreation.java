@@ -28,6 +28,7 @@ public class LangCreation extends LanguageProvider {
         add(WCItems.SATCHEL.get(), "Satchel");
         add(WCItems.THREED_GLASSES.get(), "3D Glasses");
         add(WCItems.MAGNOLI.get(),"Magnoli Clothiers Glasses"); //Long ass name for some glasses
+        add(WCItems.RED_CLOAK.get(), "Red Cloak");
 
         /* Item Groups */
         add("itemGroup.wc_clothes", "Who-Cosmetics Clothing");

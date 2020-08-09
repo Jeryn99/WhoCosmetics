@@ -48,5 +48,6 @@ public class WCItems {
     public static final RegistryObject<Item> UMBRELLA = ITEMS.register("umbrella", () -> new UmbrellaItem(properties));
     public static final RegistryObject<Item> WINGS = ITEMS.register("wings", () -> new ClothingItem(ArmorMaterial.GOLD, EquipmentSlotType.CHEST));
     public static final RegistryObject<Item> SCARF = ITEMS.register("scarf", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
+    public static final RegistryObject<Item> RED_CLOAK = ITEMS.register("red_cloak", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
 
 }
