@@ -8,13 +8,19 @@
   "item.whocosmetics.magnoli_clothiers": "Magnoli Clothiers Glasses",
   "item.whocosmetics.mondas": "Mondas",
   "item.whocosmetics.rainbow_scarf": "Rainbow Scarf",
+  "item.whocosmetics.red_cloak": "Red Cloak",
   "item.whocosmetics.satchel": "Satchel",
   "item.whocosmetics.scarf": "Scarf",
   "item.whocosmetics.stetson": "Stetson",
   "item.whocosmetics.straw_hat": "Straw Hat",
   "item.whocosmetics.umbrella": "Umbrella",
   "item.whocosmetics.wings": "Weeping Angels Wings",
+
   "itemGroup.wc_clothes": "Who-Cosmetics Clothing",
   "itemGroup.wc_clothes_dyeable": "Who-Cosmetics Clothing Dyed",
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7c7a22c2c5759cb23d3b88db76afa38c86dd7758
   "whocosmetics.nbt.modeller": "Modeller: %s"
 }
