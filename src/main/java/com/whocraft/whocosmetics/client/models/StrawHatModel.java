@@ -37,7 +37,7 @@ public class StrawHatModel extends BipedModel<LivingEntity> {
 	public void render(LivingEntity p_78088_1_, float p_78088_2_, float p_78088_3_, float p_78088_4_, float p_78088_5_, float p_78088_6_, float p_78088_7_) {
 		GlStateManager.pushMatrix();
 		GlStateManager.translatef(0F, 0.1F , 0F);
-		GlStateManager.scalef(1.2F, 1.2F, 1.2F);
+		GlStateManager.scalef(1.1F, 1.1F, 1.1F);
 		super.render(p_78088_1_, p_78088_2_, p_78088_3_, p_78088_4_, p_78088_5_, p_78088_6_, p_78088_7_);
 		bipedHeadwear.isHidden = true;
 		GlStateManager.popMatrix();

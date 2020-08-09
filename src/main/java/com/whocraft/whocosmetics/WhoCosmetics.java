@@ -4,16 +4,21 @@ import com.whocraft.whocosmetics.client.ClothingManager;
 import com.whocraft.whocosmetics.common.WCBlocks;
 import com.whocraft.whocosmetics.common.WCItems;
 import com.whocraft.whocosmetics.common.WCSounds;
+import com.whocraft.whocosmetics.common.WCTiles;
 import com.whocraft.whocosmetics.common.items.UmbrellaItem;
 import com.whocraft.whocosmetics.data.ItemModelCreation;
 import com.whocraft.whocosmetics.data.LangCreation;
 import com.whocraft.whocosmetics.data.RecipeCreation;
+import com.whocraft.whocosmetics.proxy.ClientProxy;
+import com.whocraft.whocosmetics.proxy.IProxy;
+import com.whocraft.whocosmetics.proxy.ServerProxy;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
@@ -27,7 +32,7 @@ import org.apache.logging.log4j.Logger;
 public class WhoCosmetics
 {
 
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static IProxy PROXY = DistExecutor.runForDist(() -> ClientProxy::new, () -> ServerProxy::new);
 
     public static final String MODID = "whocosmetics";
 
@@ -43,6 +48,7 @@ public class WhoCosmetics
         WCItems.ITEMS.register(eventBus);
         WCSounds.SOUNDS.register(eventBus);
         WCBlocks.BLOCKS.register(eventBus);
+        WCTiles.TILES.register(eventBus);
     }
 
     @SubscribeEvent
@@ -53,9 +59,7 @@ public class WhoCosmetics
     }
 
     public void doClientStuff(final FMLClientSetupEvent event) {
-
         WCItems.UMBRELLA.get().addPropertyOverride(new ResourceLocation("whocosmetics:is_open"), (itemStack, world, livingEntity) -> UmbrellaItem.getIsOpen(itemStack) ? 1 : 0);
-
         ClothingManager.setup();
     }
 

@@ -3,6 +3,7 @@
   "item.whocosmetics.astrakhan": "Astrakhan Hat",
   "item.whocosmetics.bowtie": "Bowtie",
   "item.whocosmetics.celery": "Stick of Celery",
+  "item.whocosmetics.cricket_jacket": "Cricket Jacket",
   "item.whocosmetics.fez": "Fez",
   "item.whocosmetics.magnoli_clothiers": "Magnoli Clothiers Glasses",
   "item.whocosmetics.mondas": "Mondas",
@@ -15,6 +16,5 @@
   "item.whocosmetics.wings": "Weeping Angels Wings",
   "itemGroup.wc_clothes": "Who-Cosmetics Clothing",
   "itemGroup.wc_clothes_dyeable": "Who-Cosmetics Clothing Dyed",
-  "whocosmetics.nbt.modeller": "Modeller: %s",
-  "whocosmetics.subtitles.umbrella_open":"Umbrella Opens"
+  "whocosmetics.nbt.modeller": "Modeller: %s"
 }

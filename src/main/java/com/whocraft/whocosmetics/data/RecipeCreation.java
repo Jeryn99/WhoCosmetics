@@ -31,6 +31,7 @@ public class RecipeCreation extends RecipeProvider {
         ShapedRecipeBuilder.shapedRecipe(WCItems.UMBRELLA.get()).patternLine("BBB").patternLine(" R ").patternLine(" R ").key('B', Blocks.BLACK_WOOL).key('R', Items.STICK).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(WCItems.MAGNOLI.get()).patternLine("S S").patternLine("BSB").patternLine("   ").key('S', Items.STICK).key('B', Blocks.GLASS_PANE).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(WCItems.STETSON.get()).patternLine(" S ").patternLine("SSS").patternLine("BBB").key('S', Blocks.BROWN_WOOL).key('B', Blocks.BLACK_WOOL).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(WCItems.CRICKET_JACKET.get()).patternLine("ZZZ").patternLine("ZAZ").patternLine("A A").key('Z', Blocks.YELLOW_WOOL).key('A', Items.RED_DYE).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
         ShapelessRecipeBuilder.shapelessRecipe(WCItems.CELERY.get()).addIngredient(ItemTags.SAPLINGS).addIngredient(Items.STICK).addIngredient(Items.STRING).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
     }
 
