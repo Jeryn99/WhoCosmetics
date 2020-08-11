@@ -1,5 +1,5 @@
 2599f330eda8aaa7fd1edb9fbd7d1ffda8099ffe assets\minecraft\models\item\air.json
-747925ae2ec2624e765939b395301a0ebe3c6d4e assets\whocosmetics\lang\en_us.json
+d6dc93d31193c808b979466ffb9ebfbdb8213338 assets\whocosmetics\lang\en_us.json
 44ea9578d114f7d65475ac6cc24b79f1471c5cf3 assets\whocosmetics\models\item\astrakhan.json
 8a2104aa3b07b8b0b0db7082429979265b347e47 assets\whocosmetics\models\item\bowtie.json
 826202e0d771337d44de39ad0db94534b7e9bb9f assets\whocosmetics\models\item\celery.json
@@ -14,6 +14,7 @@ ddf91ccb3421febbd290e148eae9a02e500cfa29 assets\whocosmetics\models\item\space_h
 0bdc32ca27fb1c3ed7dfe1882bf576e0c418135c assets\whocosmetics\models\item\space_legs.json
 5438c384328de5e2e149bc1e6fe2e780bf9f2487 assets\whocosmetics\models\item\stetson.json
 c1c230249a70634e37204c0355cd6d831e1f25d2 assets\whocosmetics\models\item\straw_hat.json
+4b4172681e7fc718adc23813698549b0ac6d2f60 assets\whocosmetics\models\item\velvet_coat.json
 110e48d729760c4a2ea8ab3a32a8a7bd6b34a918 assets\whocosmetics\models\item\wings.json
 d21587fcadbd9bd0c50c39a2ed2b53ff2a7e0ab5 data\whocosmetics\advancements\recipes\wc_clothes\3d_glasses.json
 9ff0e97773d7a6ae9271627cc6a73dba5fb88e17 data\whocosmetics\advancements\recipes\wc_clothes\astrakhan.json
@@ -29,6 +30,7 @@ e2f689e74849f152ac5b6fd722d3138d48f16ab9 data\whocosmetics\advancements\recipes\
 6bb5ee2b6879602bfa616ca43e5f0fe85fe7bd81 data\whocosmetics\advancements\recipes\wc_clothes\stetson.json
 98d2c3c1d57211001ac4d8ba50d2b92d3ce6f954 data\whocosmetics\advancements\recipes\wc_clothes\straw_hat.json
 df71c1c88f28ed1066d918ab0b21c411d9439185 data\whocosmetics\advancements\recipes\wc_clothes\umbrella.json
+66ed97192b5730f37741daa1a50b8ff353aa6d70 data\whocosmetics\advancements\recipes\wc_clothes\velvet_coat.json
 3f00d43841b421767f2098124d29c621c515e79f data\whocosmetics\advancements\recipes\wc_clothes\wings.json
 eb847364f5cd67c6b74045e89b6df443f09d0a19 data\whocosmetics\recipes\3d_glasses.json
 d4b7975152a6696ffd52bb7eb388394fc37485e1 data\whocosmetics\recipes\astrakhan.json
@@ -44,4 +46,5 @@ ea48a66f287c9816eb2ed557e12419b7264dbe8d data\whocosmetics\recipes\magnoli_cloth
 c796e43e420047eb7cc8c3bd1307fff1a4a1bb74 data\whocosmetics\recipes\stetson.json
 3cf3dc1de075e52294374ec69a63b05233cd079b data\whocosmetics\recipes\straw_hat.json
 47350c913f5e74b0edc47201d6df93ba56415347 data\whocosmetics\recipes\umbrella.json
+8b9ef5313b9047a19ae9bcc3a11994560390822a data\whocosmetics\recipes\velvet_coat.json
 3e471621bbf7a96d881283c0f19f6b41975ab116 data\whocosmetics\recipes\wings.json

@@ -33,6 +33,7 @@ public class LangCreation extends LanguageProvider {
         add(WCItems.SPACE_CHEST.get(), "Space suit - Chest");
         add(WCItems.SPACE_HELMET.get(), "Space suit - Helmet");
         add(WCItems.SPACE_LEGS.get(), "Space suit - Legs");
+        add(WCItems.VELVET_COAT.get(), "Velvet Coat");
 
         /* Item Groups */
         add("itemGroup.wc_clothes", "Who-Cosmetics Clothing");

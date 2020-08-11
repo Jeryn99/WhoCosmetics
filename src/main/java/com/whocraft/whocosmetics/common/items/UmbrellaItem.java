@@ -32,6 +32,10 @@ public class UmbrellaItem extends Item {
     @Override
     public boolean onEntitySwing(ItemStack stack, LivingEntity entity) {
 
+
+
+
+
         if (entity.isSneaking()) {
             ItemStack itemStack = entity.getHeldItemMainhand();
             setOpen(itemStack, !getIsOpen(itemStack));

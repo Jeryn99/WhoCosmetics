@@ -47,9 +47,9 @@ public class JSONClothingItem extends Item {
         if (stack.isEmpty()) {
             playerEntity.setItemStackToSlot(equipmentSlotType, playerEntityHeldItem.copy());
             playerEntityHeldItem.setCount(0);
-            return new ActionResult<ItemStack>(ActionResultType.SUCCESS, playerEntityHeldItem);
+            return new ActionResult<>(ActionResultType.SUCCESS, playerEntityHeldItem);
         } else {
-            return new ActionResult<ItemStack>(ActionResultType.FAIL, playerEntityHeldItem);
+            return new ActionResult<>(ActionResultType.FAIL, playerEntityHeldItem);
         }
     }
 
