@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " F ",
+    "ZZZ",
+    "Z Z"
+  ],
+  "key": {
+    "F": {
+      "item": "minecraft:apple"
+    },
+    "Z": {
+      "tag": "minecraft:wool"
+    }
+  },
+  "result": {
+    "item": "whocosmetics:fruit_hat"
+  }
+}

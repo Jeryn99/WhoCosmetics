@@ -62,7 +62,7 @@ public class ItemModelCreation implements IDataProvider {
         for (String s : textures) {
             tex.add("layer" + index, new JsonPrimitive("whocosmetics:item/" + s));
         }
-        doc.add("textures", tex);
+        doc.add("xtures", tex);
 
         IDataProvider.save(GSON, cache, doc, path);
 

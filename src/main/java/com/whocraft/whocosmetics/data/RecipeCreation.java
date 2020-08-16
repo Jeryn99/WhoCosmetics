@@ -33,6 +33,8 @@ public class RecipeCreation extends RecipeProvider {
         ShapedRecipeBuilder.shapedRecipe(WCItems.STETSON.get()).patternLine(" S ").patternLine("SSS").patternLine("BBB").key('S', Blocks.BROWN_WOOL).key('B', Blocks.BLACK_WOOL).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(WCItems.CRICKET_JACKET.get()).patternLine("ZZZ").patternLine("ZAZ").patternLine("A A").key('Z', Blocks.YELLOW_WOOL).key('A', Items.RED_DYE).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(WCItems.VELVET_COAT.get()).patternLine("ZZZ").patternLine("ZAZ").patternLine("A A").key('Z', Blocks.GREEN_WOOL).key('A', Items.GREEN_DYE).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(WCItems.FEATHER_HAT.get()).patternLine(" F ").patternLine("ZZZ").patternLine("Z Z").key('F', Items.FEATHER).key('Z', ItemTags.WOOL).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(WCItems.FRUIT_HAT.get()).patternLine(" F ").patternLine("ZZZ").patternLine("Z Z").key('F', Items.APPLE).key('Z', ItemTags.WOOL).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
         ShapelessRecipeBuilder.shapelessRecipe(WCItems.CELERY.get()).addIngredient(ItemTags.SAPLINGS).addIngredient(Items.STICK).addIngredient(Items.STRING).addCriterion("has_crafting_table", this.hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
     }
 
