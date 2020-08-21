@@ -26,17 +26,13 @@ public class ClothingManager {
         addData(WCItems.WINGS.get(), new ClothingData(WCItems.WINGS.get()).setModelForSlot(new WeepingAngelWingsModel(), EquipmentSlotType.CHEST).setModeller(null));
         addData(WCItems.SCARF.get(), new ClothingData(WCItems.SCARF.get()).setModelForSlot(new ScarfModel(), EquipmentSlotType.CHEST));
         addData(WCItems.SATCHEL.get(), new ClothingData(WCItems.SATCHEL.get()).setModelForSlot(new SatchelModel(), EquipmentSlotType.CHEST));
-        addData(WCItems.CRICKET_JACKET.get(), new ClothingData(WCItems.CRICKET_JACKET.get()).setModelForSlot(new CricketJacketModel(), EquipmentSlotType.CHEST).setModeller(Modeller.VESPA));
+        addData(WCItems.CRICKET_JACKET.get(), new ClothingData(WCItems.CRICKET_JACKET.get()).setModelForSlot(new GenericJacketModel(), EquipmentSlotType.CHEST).setModeller(Modeller.VIOLET));
         addData(WCItems.CLOAK.get(), new ClothingData(WCItems.CLOAK.get()).setModelForSlot(new RedCloakModel(), EquipmentSlotType.CHEST));
-        addData(WCItems.VELVET_COAT.get(), new ClothingData(WCItems.VELVET_COAT.get()).setModelForSlot(new VelvetCoatModel(), EquipmentSlotType.CHEST).setModeller(Modeller.VESPA));
+        addData(WCItems.VELVET_COAT.get(), new ClothingData(WCItems.VELVET_COAT.get()).setModelForSlot(new GenericJacketModel(), EquipmentSlotType.CHEST).setModeller(Modeller.VIOLET));
 
         addData(WCItems.SPACE_HELMET.get(), new ClothingData(WCItems.SPACE_HELMET.get(), "space_suit").setModelForSlot(new SpaceHelmetModel(), EquipmentSlotType.HEAD).setModeller(Modeller.VIOLET));
         addData(WCItems.SPACE_CHEST.get(), new ClothingData(WCItems.SPACE_CHEST.get(), "space_suit").setModelForSlot(new SpaceChestModel(), EquipmentSlotType.CHEST).setModeller(Modeller.VIOLET));
         addData(WCItems.SPACE_LEGS.get(), new ClothingData(WCItems.SPACE_LEGS.get(), "space_suit").setModelForSlot(new SpaceLegsModel(), EquipmentSlotType.LEGS).setModeller(Modeller.VIOLET));
-
-        addData(WCItems.FRUIT_HAT.get(), new ClothingData(WCItems.FRUIT_HAT.get()).setModelForSlot(new FruitHatModel(), EquipmentSlotType.HEAD).setModeller(Modeller.VIOLET));
-        addData(WCItems.FEATHER_HAT.get(), new ClothingData(WCItems.FEATHER_HAT.get()).setModelForSlot(new FeatherHatModel(), EquipmentSlotType.HEAD).setModeller(Modeller.VIOLET));
-
 
     }
 
