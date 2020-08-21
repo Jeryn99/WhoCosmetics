@@ -3,7 +3,8 @@ package com.whocraft.whocosmetics;
 public enum Modeller {
     END("End Phoenix"),
     VIOLET("Violet"),
-    VESPA("Vespa");
+    VESPA("Vespa"),
+    ANGELA("ItzAngela");
 
     private final String modellerName;
 
