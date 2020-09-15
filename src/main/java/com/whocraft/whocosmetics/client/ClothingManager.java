@@ -33,6 +33,7 @@ public class ClothingManager {
         addData(WCItems.SPACE_HELMET.get(), new ClothingData(WCItems.SPACE_HELMET.get(), "space_suit").setModelForSlot(new SpaceHelmetModel(), EquipmentSlotType.HEAD).setModeller(Modeller.VIOLET));
         addData(WCItems.SPACE_CHEST.get(), new ClothingData(WCItems.SPACE_CHEST.get(), "space_suit").setModelForSlot(new SpaceChestModel(), EquipmentSlotType.CHEST).setModeller(Modeller.VIOLET));
         addData(WCItems.SPACE_LEGS.get(), new ClothingData(WCItems.SPACE_LEGS.get(), "space_suit").setModelForSlot(new SpaceLegsModel(), EquipmentSlotType.LEGS).setModeller(Modeller.VIOLET));
+        addData(WCItems.SASH.get(), new ClothingData(WCItems.SASH.get()).setModelForSlot(new RassilonSashModel(), EquipmentSlotType.CHEST).setModeller(Modeller.END));
 
     }
 

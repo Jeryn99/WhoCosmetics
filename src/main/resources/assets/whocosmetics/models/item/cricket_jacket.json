@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
-  "xtures": {
+  "textures": {
     "layer0": "whocosmetics:item/cricket_jacket"
   }
 }

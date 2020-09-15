@@ -54,6 +54,7 @@ public class WCItems {
     public static final RegistryObject<Item> SPACE_CHEST = ITEMS.register("space_chest", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.CHEST));
     public static final RegistryObject<Item> SPACE_LEGS = ITEMS.register("space_legs", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.LEGS));
     public static final RegistryObject<Item> VELVET_COAT = ITEMS.register("velvet_coat", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
+    public static final RegistryObject<Item> SASH = ITEMS.register("sash", () -> new ClothingItem(ArmorMaterial.DIAMOND, EquipmentSlotType.CHEST));
 
     public static final RegistryObject<Item> FRUIT_HAT = ITEMS.register("fruit_hat", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.ANGELA));
     public static final RegistryObject<Item> FEATHER_HAT = ITEMS.register("feather_hat", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.ANGELA));
