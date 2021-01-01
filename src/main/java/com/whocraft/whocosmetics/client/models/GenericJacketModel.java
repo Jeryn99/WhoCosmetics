@@ -5,6 +5,7 @@ import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.entity.model.PlayerModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
+import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
 
 public class GenericJacketModel extends BipedModel<LivingEntity> {
@@ -18,7 +19,7 @@ public class GenericJacketModel extends BipedModel<LivingEntity> {
         textureWidth = 64;
         textureHeight = 64;
 
-        Body = new RendererModel(this);
+        Body = new ModelRenderer(this);
         Body.setRotationPoint(0.0F, 0.0F, 0.0F);
         Body.cubeList.add(new ModelBox(Body, 0, 0, -4.0F, 0.0F, -2.0F, 8, 12, 4, 0.35F, false));
 

@@ -14,7 +14,7 @@ import java.util.function.Supplier;
 
 public class WCTiles {
 
-    public static final DeferredRegister<TileEntityType<?>> TILES = new DeferredRegister<>(ForgeRegistries.TILE_ENTITIES, WhoCosmetics.MODID);
+    public static final DeferredRegister<TileEntityType<?>> TILES = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, WhoCosmetics.MODID);
 
     public static final RegistryObject<TileEntityType<GramphoneTile>> GRAMOPHONE = TILES.register("gramophone", () -> registerTiles(GramphoneTile::new, WCBlocks.GRAMOPHONE.get()));
 
