@@ -1,9 +1,11 @@
 package com.whocraft.whocosmetics.client.models;
 
+import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.platform.GlStateManager;
 
+import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.BipedModel;
-import net.minecraft.client.renderer.entity.model.RendererModel;
+import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -11,64 +13,64 @@ import net.minecraft.util.math.MathHelper;
 
 public class WeepingAngelWingsModel extends BipedModel<LivingEntity> {
 
-    public RendererModel body;
-    public RendererModel head;
-    public RendererModel left_wing_1;
-    public RendererModel right_wing_1;
-    public RendererModel left_wing_2;
-    public RendererModel left_wing_0;
-    public RendererModel left_wing_3;
-    public RendererModel left_wing_4;
-    public RendererModel right_wing_2;
-    public RendererModel right_wing_0;
-    public RendererModel right_wing_3;
-    public RendererModel right_wing_4;
+    public ModelRenderer body;
+    public ModelRenderer head;
+    public ModelRenderer left_wing_1;
+    public ModelRenderer right_wing_1;
+    public ModelRenderer left_wing_2;
+    public ModelRenderer left_wing_0;
+    public ModelRenderer left_wing_3;
+    public ModelRenderer left_wing_4;
+    public ModelRenderer right_wing_2;
+    public ModelRenderer right_wing_0;
+    public ModelRenderer right_wing_3;
+    public ModelRenderer right_wing_4;
 
     public WeepingAngelWingsModel() {
         this.textureWidth = 81;
         this.textureHeight = 34;
-        this.right_wing_2 = new RendererModel(this, 42, 0);
+        this.right_wing_2 = new ModelRenderer(this, 42, 0);
         this.right_wing_2.setRotationPoint(0.0F, 4.0F, -1.0F);
         this.right_wing_2.addBox(-1.0F, 0.0F, 0.0F, 2, 7, 2, 0.0F);
         this.setRotateAngle(right_wing_2, 1.2292353921796064F, 0.0F, 0.0F);
-        this.left_wing_3 = new RendererModel(this, 26, 0);
+        this.left_wing_3 = new ModelRenderer(this, 26, 0);
         this.left_wing_3.setRotationPoint(0.0F, 7.0F, 2.0F);
         this.left_wing_3.addBox(-1.0F, 0.0F, -2.0F, 2, 5, 2, 0.0F);
         this.setRotateAngle(left_wing_3, -1.2292353921796064F, 0.0F, 0.0F);
-        this.right_wing_1 = new RendererModel(this, 8, 0);
+        this.right_wing_1 = new ModelRenderer(this, 8, 0);
         this.right_wing_1.setRotationPoint(-2.4F, 2.0F, 1.5F);
         this.right_wing_1.addBox(-1.0F, 0.0F, -1.0F, 2, 4, 2, 0.0F);
         this.setRotateAngle(right_wing_1, 1.53588974175501F, -0.9424777960769379F, 0.0F);
-        this.left_wing_0 = new RendererModel(this, 6, 0);
+        this.left_wing_0 = new ModelRenderer(this, 6, 0);
         this.left_wing_0.setRotationPoint(2.4F, 2.0F, 1.5F);
         this.left_wing_0.addBox(-3.4F, -2.0F, -15.0F, 1, 11, 18, 0.0F);
-        this.right_wing_3 = new RendererModel(this, 50, 0);
+        this.right_wing_3 = new ModelRenderer(this, 50, 0);
         this.right_wing_3.setRotationPoint(0.0F, 7.0F, 2.0F);
         this.right_wing_3.addBox(-1.0F, 0.0F, -2.0F, 2, 5, 2, 0.0F);
         this.setRotateAngle(right_wing_3, -1.2292353921796064F, 0.0F, 0.0F);
-        this.left_wing_2 = new RendererModel(this, 16, 0);
+        this.left_wing_2 = new ModelRenderer(this, 16, 0);
         this.left_wing_2.setRotationPoint(0.0F, 4.0F, -1.0F);
         this.left_wing_2.addBox(-1.0F, 0.0F, 0.0F, 2, 7, 2, 0.0F);
         this.setRotateAngle(left_wing_2, 1.2292353921796064F, 0.0F, 0.0F);
-        this.body = new RendererModel(this, 0, 0);
+        this.body = new ModelRenderer(this, 0, 0);
         this.body.setRotationPoint(0.0F, 0.0F, 0.0F);
         this.body.addBox(0.0F, 0.0F, 0.0F, 0, 0, 0, 0.0F);
-        this.head = new RendererModel(this, 0, 34);
+        this.head = new ModelRenderer(this, 0, 34);
         this.head.setRotationPoint(0.0F, 0.0F, 0.0F);
         this.head.addBox(-4.0F, -8.0F, -4.0F, 0, 0, 0, 0.0F);
-        this.left_wing_1 = new RendererModel(this, 0, 0);
+        this.left_wing_1 = new ModelRenderer(this, 0, 0);
         this.left_wing_1.setRotationPoint(2.4F, 2.0F, 1.5F);
         this.left_wing_1.addBox(-1.0F, 0.0F, -1.0F, 2, 4, 2, 0.0F);
         this.setRotateAngle(left_wing_1, 1.53588974175501F, 0.9424777960769379F, 0.0F);
-        this.right_wing_4 = new RendererModel(this, 64, 0);
+        this.right_wing_4 = new ModelRenderer(this, 64, 0);
         this.right_wing_4.setRotationPoint(0.0F, 5.0F, 0.0F);
         this.right_wing_4.addBox(-1.0F, 0.0F, -2.0F, 2, 5, 2, 0.0F);
         this.setRotateAngle(right_wing_4, -1.1383037381507017F, 0.0F, 0.0F);
-        this.left_wing_4 = new RendererModel(this, 34, 0);
+        this.left_wing_4 = new ModelRenderer(this, 34, 0);
         this.left_wing_4.setRotationPoint(0.0F, 5.0F, 0.0F);
         this.left_wing_4.addBox(-1.0F, 0.0F, -2.0F, 2, 5, 2, 0.0F);
         this.setRotateAngle(left_wing_4, -1.1383037381507017F, 0.0F, 0.0F);
-        this.right_wing_0 = new RendererModel(this, 44, 0);
+        this.right_wing_0 = new ModelRenderer(this, 44, 0);
         this.right_wing_0.setRotationPoint(-2.4F, 2.0F, 1.5F);
         this.right_wing_0.addBox(2.4F, -2.0F, -15.0F, 1, 11, 18, 0.0F);
         this.right_wing_1.addChild(this.right_wing_2);
@@ -81,6 +83,11 @@ public class WeepingAngelWingsModel extends BipedModel<LivingEntity> {
         this.right_wing_3.addChild(this.right_wing_4);
         this.left_wing_3.addChild(this.left_wing_4);
         this.right_wing_1.addChild(this.right_wing_0);
+    }
+
+    @Override
+    public void render(MatrixStack matrixStackIn, IVertexBuilder bufferIn, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
+        super.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
     }
 
     @Override
@@ -158,7 +165,7 @@ public class WeepingAngelWingsModel extends BipedModel<LivingEntity> {
     /**
      * This is a helper function from Tabula to set the rotation of model parts
      */
-    public void setRotateAngle(RendererModel modelRenderer, float x, float y, float z) {
+    public void setRotateAngle(ModelRenderer modelRenderer, float x, float y, float z) {
         modelRenderer.rotateAngleX = x;
         modelRenderer.rotateAngleY = y;
         modelRenderer.rotateAngleZ = z;

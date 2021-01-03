@@ -6,17 +6,18 @@ package com.whocraft.whocosmetics.client.models;// Made with Blockbench 3.6.5
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
+import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
 
 public class SatchelModel extends BipedModel<LivingEntity> {
-	private final RendererModel side_bag;
-	private final RendererModel strap;
+	private final ModelRenderer side_bag;
+	private final ModelRenderer strap;
 
 	public SatchelModel() {
 		textureWidth = 32;
 		textureHeight = 32;
 
-		side_bag = new RendererModel(this);
+		side_bag = new ModelRenderer(this);
 		side_bag.setRotationPoint(0.0F, 0.0F, 0.0F);
 		side_bag.cubeList.add(new ModelBox(side_bag, 12, 0, 3.0F, -0.25F, -2.5F, 1, 1, 5, 0.0F, false));
 		side_bag.cubeList.add(new ModelBox(side_bag, 7, 12, -4.9F, 10.0F, -2.5F, 2, 7, 5, 0.0F, false));
