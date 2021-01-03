@@ -1,6 +1,8 @@
 package com.whocraft.whocosmetics.client.models;
 
 
+import com.mojang.blaze3d.matrix.MatrixStack;
+import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
@@ -27,12 +29,18 @@ public class SatchelModel extends BipedModel<LivingEntity> {
 		strap.setTextureOffset(0, 0).addBox(-0.3036F, 0.1228F, -0.5F, 1.0F, 12.0F, 5.0F, 0.0F, false);
 
         bipedBody = side_bag;
+    }
+
+    @Override
+    public void render(MatrixStack matrixStackIn, IVertexBuilder bufferIn, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
         bipedHeadwear.showModel = false;
         bipedLeftArm.showModel = false;
         bipedRightArm.showModel = false;
-
+        bipedHead.showModel = false;
+        bipedLeftLeg.showModel = false;
+        bipedRightLeg.showModel = false;
+        super.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
     }
-
 
     public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
         modelRenderer.rotateAngleX = x;

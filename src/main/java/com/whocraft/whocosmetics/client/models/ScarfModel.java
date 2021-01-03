@@ -2,7 +2,6 @@ package com.whocraft.whocosmetics.client.models;
 
 
 import com.mojang.blaze3d.matrix.MatrixStack;
-import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
@@ -42,15 +41,17 @@ public class ScarfModel extends BipedModel<LivingEntity> implements IClothingMod
 
     @Override
     public void render(MatrixStack matrixStackIn, IVertexBuilder bufferIn, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
-        IDyeableArmorItem iDyeableArmorItem = (IDyeableArmorItem) living.getItemStackFromSlot(EquipmentSlotType.CHEST).getItem();
-        int color = iDyeableArmorItem.getColor(living.getItemStackFromSlot(EquipmentSlotType.CHEST));
-        red = (float) (color >> 16 & 255) / 255.0F;
-        green = (float) (color >> 8 & 255) / 255.0F;
-        blue = (float) (color & 255) / 255.0F;
-        bipedHeadwear.showModel = false;
-        bipedLeftArm.showModel = false;
-        bipedRightArm.showModel = false;
-        super.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
+        if (living.getItemStackFromSlot(EquipmentSlotType.CHEST).getItem() instanceof IDyeableArmorItem) {
+            IDyeableArmorItem iDyeableArmorItem = (IDyeableArmorItem) living.getItemStackFromSlot(EquipmentSlotType.CHEST).getItem();
+            int color = iDyeableArmorItem.getColor(living.getItemStackFromSlot(EquipmentSlotType.CHEST));
+            red = (float) (color >> 16 & 255) / 255.0F;
+            green = (float) (color >> 8 & 255) / 255.0F;
+            blue = (float) (color & 255) / 255.0F;
+            bipedHeadwear.showModel = false;
+            bipedLeftArm.showModel = false;
+            bipedRightArm.showModel = false;
+            super.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
+        }
     }
 
     @Override

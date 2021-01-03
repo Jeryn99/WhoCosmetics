@@ -2,6 +2,7 @@ package com.whocraft.whocosmetics.common;
 
 import com.whocraft.whocosmetics.Modeller;
 import com.whocraft.whocosmetics.WhoCosmetics;
+import com.whocraft.whocosmetics.common.items.BreakoutBall;
 import com.whocraft.whocosmetics.common.items.ClothingItem;
 import com.whocraft.whocosmetics.common.items.JSONClothingItem;
 import com.whocraft.whocosmetics.common.items.UmbrellaItem;
@@ -32,8 +33,6 @@ public class WCItems {
 
     public static Item.Properties properties = new Item.Properties().group(itemGroup);
 
-    //If the line has // after it, it needs a recipe
-
     public static final RegistryObject<Item> FEZ = ITEMS.register("fez", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.HEAD, true, DyeColor.RED.getColorValue()));
     public static final RegistryObject<Item> BOW_TIE = ITEMS.register("bowtie", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST, true, DyeColor.RED.getColorValue()));
     public static final RegistryObject<Item> CELERY = ITEMS.register("celery", () -> new ClothingItem(ArmorMaterial.TURTLE, EquipmentSlotType.CHEST));
@@ -48,16 +47,18 @@ public class WCItems {
     public static final RegistryObject<Item> UMBRELLA = ITEMS.register("umbrella", () -> new UmbrellaItem(properties));
     public static final RegistryObject<Item> WINGS = ITEMS.register("wings", () -> new ClothingItem(ArmorMaterial.GOLD, EquipmentSlotType.CHEST));
     public static final RegistryObject<Item> SCARF = ITEMS.register("scarf", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST, false, DyeColor.GRAY.getColorValue()));
-    public static final RegistryObject<Item> CLOAK = ITEMS.register("cloak", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
+    //public static final RegistryObject<Item> CLOAK = ITEMS.register("cloak", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
     public static final RegistryObject<Item> CRICKET_JACKET = ITEMS.register("cricket_jacket", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
-    public static final RegistryObject<Item> SPACE_HELMET = ITEMS.register("space_helmet", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.HEAD));
+  /*  public static final RegistryObject<Item> SPACE_HELMET = ITEMS.register("space_helmet", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.HEAD));
     public static final RegistryObject<Item> SPACE_CHEST = ITEMS.register("space_chest", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.CHEST));
     public static final RegistryObject<Item> SPACE_LEGS = ITEMS.register("space_legs", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.LEGS));
-    public static final RegistryObject<Item> VELVET_COAT = ITEMS.register("velvet_coat", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
+ */   public static final RegistryObject<Item> VELVET_COAT = ITEMS.register("velvet_coat", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
+    public static final RegistryObject<Item> TENTH_COAT = ITEMS.register("tenth_coat", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
     public static final RegistryObject<Item> SASH = ITEMS.register("sash", () -> new ClothingItem(ArmorMaterial.DIAMOND, EquipmentSlotType.CHEST));
 
     public static final RegistryObject<Item> FRUIT_HAT = ITEMS.register("fruit_hat", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.ANGELA));
     public static final RegistryObject<Item> FEATHER_HAT = ITEMS.register("feather_hat", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.ANGELA));
+   // public static final RegistryObject<Item> BREAKOUT_BALL = ITEMS.register("breakout_ball", () -> new BreakoutBall(properties));
 
 
 }

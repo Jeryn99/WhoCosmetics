@@ -48,8 +48,8 @@ public class StetsonModel extends BipedModel<LivingEntity> implements IClothingM
     public void render(MatrixStack matrixStackIn, IVertexBuilder bufferIn, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
         matrixStackIn.push();
         matrixStackIn.scale(1.1F, 1.1F, 1.1F);
-        super.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
         bipedHeadwear.showModel = false;
+        super.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
         matrixStackIn.pop();
     }
 

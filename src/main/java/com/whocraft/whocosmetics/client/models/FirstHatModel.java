@@ -44,8 +44,8 @@ public class FirstHatModel extends BipedModel<LivingEntity> {
 
     @Override
     public void render(MatrixStack matrixStackIn, IVertexBuilder bufferIn, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
-        super.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
         bipedHeadwear.showModel = false;
+        super.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
     }
 
     public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {

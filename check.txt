@@ -1,0 +1,10 @@
+Celery = OK
+Glasses = OK
+Missy Feather = OK
+Missy Fruit = OK
+Sash of Rassilon = MISSING TEXTURE AND ICON (This might also be a issue in 1.14)
+Jackets = HAVE ROTATION PROBLEMS
+Fez = OK
+Bowtie = OK
+Satchel = OK
+Stetson = OK

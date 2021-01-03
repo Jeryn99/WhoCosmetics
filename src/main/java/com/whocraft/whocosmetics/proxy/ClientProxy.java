@@ -27,11 +27,11 @@ public class ClientProxy extends ServerProxy {
 
     @Override
     public void stopSound(SoundEvent soundEvent, SoundCategory soundCategory, BlockPos pos) {
-        WorldRenderer worldRender = Minecraft.getInstance().worldRenderer;
-        ISound isound = worldRender.mapSoundPositions.get(pos);
+    /*    WorldRenderer worldRender = Minecraft.getInstance().worldRenderer;
+    //    ISound isound = worldRender.mapSoundPositions.get(pos);
         if (isound != null) {
             Minecraft.getInstance().getSoundHandler().stop(isound);
-            worldRender.mapSoundPositions.remove(pos);
-        }
+           // worldRender.mapSoundPositions.remove(pos);
+        }*/
     }
 }

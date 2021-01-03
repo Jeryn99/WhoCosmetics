@@ -6,7 +6,7 @@ license = "https://raw.githubusercontent.com/WhoCraft/Regeneration/1.16.3/LICENS
 
 issueTrackerURL="https://github.com/WhoCraft/WhoCosmetics/issues"
 [[mods]]
-modId="who_cosmetics"
+modId="whocosmetics"
 version="${mod_version}"
 displayName="Who Cosmetics"
 #updateJSONURL="http://myurl.me/"

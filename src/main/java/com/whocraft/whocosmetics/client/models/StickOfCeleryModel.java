@@ -1,5 +1,7 @@
 package com.whocraft.whocosmetics.client.models;
 
+import com.mojang.blaze3d.matrix.MatrixStack;
+import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
@@ -30,9 +32,14 @@ public class StickOfCeleryModel extends BipedModel<LivingEntity> {
         celery_stick.setTextureOffset(3, 3).addBox(-0.5F, -1.45F, -0.4F, 1.0F, 2.0F, 1.0F, -0.25F, false);
 
         bipedBody = celery;
+    }
+
+    @Override
+    public void render(MatrixStack matrixStackIn, IVertexBuilder bufferIn, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
         bipedHeadwear.showModel = false;
         bipedLeftArm.showModel = false;
         bipedRightArm.showModel = false;
+        super.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
     }
 
     public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {

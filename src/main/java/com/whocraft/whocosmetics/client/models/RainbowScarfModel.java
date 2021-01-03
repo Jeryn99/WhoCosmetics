@@ -1,6 +1,8 @@
 package com.whocraft.whocosmetics.client.models;
 
 
+import com.mojang.blaze3d.matrix.MatrixStack;
+import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
@@ -28,10 +30,15 @@ public class RainbowScarfModel extends BipedModel<LivingEntity> {
         fourth_scarf.setTextureOffset(8, 0).addBox(-2.5F, -10.5F, 5.0F, 8.0F, 2.0F, 1.0F, 0.0F, false);
         fourth_scarf.setTextureOffset(16, 9).addBox(-2.75F, -10.75F, 1.5F, 2.0F, 2.0F, 4.0F, 0.0F, false);
         fourth_scarf.setTextureOffset(15, 3).addBox(3.75F, -10.75F, 1.5F, 2.0F, 2.0F, 4.0F, 0.0F, false);
-        fourth_scarf.setTextureOffset(22, 15).addBox(-1.0F, -2.0F, 0.0F, 5.0F, 2.0F, 1.0F, 0.0F, false);     bipedBody = scarf;
+        fourth_scarf.setTextureOffset(22, 15).addBox(-1.0F, -2.0F, 0.0F, 5.0F, 2.0F, 1.0F, 0.0F, false);
+        bipedBody = scarf;
+    }
+
+    @Override
+    public void render(MatrixStack matrixStackIn, IVertexBuilder bufferIn, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
         bipedHeadwear.showModel = false;
         bipedLeftArm.showModel = false;
         bipedRightArm.showModel = false;
+        super.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
     }
-
 }

@@ -18,6 +18,10 @@ public class ClientUtil {
                 map = Minecraft.getInstance().getSessionService().getTextures(Minecraft.getInstance().getSessionService().fillProfileProperties(player.getGameProfile(), false), false);
             }
             MinecraftProfileTexture profile = map.get(MinecraftProfileTexture.Type.SKIN);
+            if(profile == null){
+                return false;
+            }
+
             return profile.getMetadata("model") == null;
         }
         return false;

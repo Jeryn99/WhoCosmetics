@@ -3,6 +3,7 @@ package com.whocraft.whocosmetics.client.models;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
@@ -14,7 +15,7 @@ public class FezModel extends BipedModel<LivingEntity> implements IClothingModel
     private final ModelRenderer hat_fez;
     private final ModelRenderer fez_hat;
     private final ModelRenderer tasel;
-    private LivingEntity living;
+    private LivingEntity living = Minecraft.getInstance().player;
 
 
     public FezModel() {
@@ -43,13 +44,15 @@ public class FezModel extends BipedModel<LivingEntity> implements IClothingModel
 
     @Override
     public void render(MatrixStack matrixStackIn, IVertexBuilder bufferIn, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
-        IDyeableArmorItem iDyeableArmorItem = (IDyeableArmorItem) living.getItemStackFromSlot(EquipmentSlotType.CHEST).getItem();
-        int color = iDyeableArmorItem.getColor(living.getItemStackFromSlot(EquipmentSlotType.CHEST));
-        red = (float) (color >> 16 & 255) / 255.0F;
-        green = (float) (color >> 8 & 255) / 255.0F;
-        blue = (float) (color & 255) / 255.0F;
-        bipedHeadwear.showModel = false;
-        super.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
+        if(living.getItemStackFromSlot(EquipmentSlotType.HEAD).getItem() instanceof IDyeableArmorItem) {
+            IDyeableArmorItem iDyeableArmorItem = (IDyeableArmorItem) living.getItemStackFromSlot(EquipmentSlotType.HEAD).getItem();
+            int color = iDyeableArmorItem.getColor(living.getItemStackFromSlot(EquipmentSlotType.HEAD));
+            red = (float) (color >> 16 & 255) / 255.0F;
+            green = (float) (color >> 8 & 255) / 255.0F;
+            blue = (float) (color & 255) / 255.0F;
+            bipedHeadwear.showModel = false;
+            super.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
+        }
     }
 
     public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {

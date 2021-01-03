@@ -44,12 +44,13 @@ public class GenericJacketModel extends BipedModel<LivingEntity> implements IClo
 
     @Override
     public void render(MatrixStack matrixStackIn, IVertexBuilder bufferIn, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
+
         if (ClientUtil.isSteve(living)) {
-            bipedLeftArm.setRotationPoint(5.0F, 2.0F, 0.0F);
-            bipedRightArm.setRotationPoint(-5.0F, 2.0F, 0.0F);
+            bipedLeftArm.setRotationPoint(-5.0F, 1.5F, 0.0F);
+            bipedRightArm.setRotationPoint(5.0F, 1.5F, 0.0F);
         } else {
-            bipedLeftArm.setRotationPoint(-5, 2.5F, 0);
-            bipedRightArm.setRotationPoint(5, 2.5F, 0);
+            bipedLeftArm.setRotationPoint(5, 1.5F, 0);
+            bipedRightArm.setRotationPoint(-5, 1.5F, 0);
         }
         super.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
     }

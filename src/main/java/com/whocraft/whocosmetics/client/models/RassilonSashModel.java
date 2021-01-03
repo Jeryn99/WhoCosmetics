@@ -1,5 +1,7 @@
 package com.whocraft.whocosmetics.client.models;
 
+import com.mojang.blaze3d.matrix.MatrixStack;
+import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
@@ -91,8 +93,13 @@ public class RassilonSashModel extends BipedModel<LivingEntity>  {
         bone5.setTextureOffset(15, 6).addBox(-1.5F, -3.9483F, -2.5F, 3.0F, 1.0F, 1.0F, 0.0F, false);
         bone5.setTextureOffset(0, 0).addBox(-1.5F, -17.4483F, -2.5F, 3.0F, 14.0F, 1.0F, -0.25F, false);
         bipedBody = sash;
+    }
+
+    @Override
+    public void render(MatrixStack matrixStackIn, IVertexBuilder bufferIn, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
         bipedLeftArm.showModel = false;
         bipedRightArm.showModel = false;
+        super.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
     }
 
     public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
