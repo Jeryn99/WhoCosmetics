@@ -3,6 +3,7 @@ package com.whocraft.whocosmetics.common.items;
 import com.whocraft.whocosmetics.WhoCosmetics;
 import com.whocraft.whocosmetics.client.ClothingData;
 import com.whocraft.whocosmetics.client.ClothingManager;
+import com.whocraft.whocosmetics.client.models.IClothingModel;
 import com.whocraft.whocosmetics.common.WCItems;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.util.ITooltipFlag;
@@ -62,7 +63,12 @@ public class ClothingItem extends ArmorItem implements IDyeableArmorItem {
     @Nullable
     @Override
     public <A extends BipedModel<?>> A getArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
-        return (A) ClothingManager.getDataForItem(itemStack.getItem()).getModel(armorSlot);
+        A model = (A) ClothingManager.getDataForItem(itemStack.getItem()).getModel(armorSlot);
+        if(model instanceof IClothingModel){
+            IClothingModel iClothingModel = (IClothingModel) model;
+            iClothingModel.setLiving(entityLiving);
+        }
+        return model;
     }
 
     @Nullable

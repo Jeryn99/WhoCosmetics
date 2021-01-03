@@ -2,36 +2,36 @@ package com.whocraft.whocosmetics.client.models;
 
 
 import net.minecraft.client.renderer.entity.model.BipedModel;
-import net.minecraft.client.renderer.entity.model.RendererModel;
-import net.minecraft.client.renderer.model.ModelBox;
+import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
 
 public class RainbowScarfModel extends BipedModel<LivingEntity> {
-    private final RendererModel scarf;
-    private final RendererModel fourth_scarf;
+    private final ModelRenderer scarf;
+    private final ModelRenderer fourth_scarf;
 
     public RainbowScarfModel() {
+        super(0);
         textureWidth = 64;
         textureHeight = 64;
 
-        scarf = new RendererModel(this);
+        scarf = new ModelRenderer(this);
         scarf.setRotationPoint(0.0F, 0.0F, 0.0F);
 
-        fourth_scarf = new RendererModel(this);
+
+        fourth_scarf = new ModelRenderer(this);
         fourth_scarf.setRotationPoint(-1.5F, 10.5F, -3.5F);
         scarf.addChild(fourth_scarf);
-        fourth_scarf.cubeList.add(new ModelBox(fourth_scarf, 0, 0, -2.75F, -10.75F, 0.5F, 3, 24, 1, 0.0F, false));
-        fourth_scarf.cubeList.add(new ModelBox(fourth_scarf, 16, 16, -2.25F, -10.5F, 0.25F, 2, 12, 1, 0.0F, false));
-        fourth_scarf.cubeList.add(new ModelBox(fourth_scarf, 22, 22, 3.25F, -10.5F, 0.25F, 2, 10, 1, 0.0F, false));
-        fourth_scarf.cubeList.add(new ModelBox(fourth_scarf, 8, 8, 2.75F, -10.75F, 0.5F, 3, 21, 1, 0.0F, false));
-        fourth_scarf.cubeList.add(new ModelBox(fourth_scarf, 8, 0, -2.5F, -10.5F, 5.0F, 8, 2, 1, 0.0F, false));
-        fourth_scarf.cubeList.add(new ModelBox(fourth_scarf, 16, 9, -2.75F, -10.75F, 1.5F, 2, 2, 4, 0.0F, false));
-        fourth_scarf.cubeList.add(new ModelBox(fourth_scarf, 15, 3, 3.75F, -10.75F, 1.5F, 2, 2, 4, 0.0F, false));
-        fourth_scarf.cubeList.add(new ModelBox(fourth_scarf, 22, 15, -1.0F, -2.0F, 0.0F, 5, 2, 1, 0.0F, false));
-        bipedBody = scarf;
-        bipedHeadwear.isHidden = true;
-        bipedLeftArm.isHidden = true;
-        bipedRightArm.isHidden = true;
+        fourth_scarf.setTextureOffset(0, 0).addBox(-2.75F, -10.75F, 0.5F, 3.0F, 24.0F, 1.0F, 0.0F, false);
+        fourth_scarf.setTextureOffset(16, 16).addBox(-2.25F, -10.5F, 0.25F, 2.0F, 12.0F, 1.0F, 0.0F, false);
+        fourth_scarf.setTextureOffset(22, 22).addBox(3.25F, -10.5F, 0.25F, 2.0F, 10.0F, 1.0F, 0.0F, false);
+        fourth_scarf.setTextureOffset(8, 8).addBox(2.75F, -10.75F, 0.5F, 3.0F, 21.0F, 1.0F, 0.0F, false);
+        fourth_scarf.setTextureOffset(8, 0).addBox(-2.5F, -10.5F, 5.0F, 8.0F, 2.0F, 1.0F, 0.0F, false);
+        fourth_scarf.setTextureOffset(16, 9).addBox(-2.75F, -10.75F, 1.5F, 2.0F, 2.0F, 4.0F, 0.0F, false);
+        fourth_scarf.setTextureOffset(15, 3).addBox(3.75F, -10.75F, 1.5F, 2.0F, 2.0F, 4.0F, 0.0F, false);
+        fourth_scarf.setTextureOffset(22, 15).addBox(-1.0F, -2.0F, 0.0F, 5.0F, 2.0F, 1.0F, 0.0F, false);     bipedBody = scarf;
+        bipedHeadwear.showModel = false;
+        bipedLeftArm.showModel = false;
+        bipedRightArm.showModel = false;
     }
 
 }

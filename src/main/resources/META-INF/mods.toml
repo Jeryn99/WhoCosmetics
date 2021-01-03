@@ -2,10 +2,11 @@
 modLoader="javafml"
 
 loaderVersion="[28,)"
+license = "https://raw.githubusercontent.com/WhoCraft/Regeneration/1.16.3/LICENSE"
 
 issueTrackerURL="https://github.com/WhoCraft/WhoCosmetics/issues"
 [[mods]]
-modId="whocosmetics"
+modId="who_cosmetics"
 version="${mod_version}"
 displayName="Who Cosmetics"
 #updateJSONURL="http://myurl.me/"
@@ -28,6 +29,6 @@ Adds different clothing from the popular television series, Doctor Who'''
 [[dependencies.whocosmetics]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.14.4]"
+    versionRange="[1.16.3,]"
     ordering="NONE"
     side="BOTH"

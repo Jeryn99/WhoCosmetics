@@ -1,42 +1,39 @@
-package com.whocraft.whocosmetics.client.models;// Made with Blockbench 3.6.5
-// Exported for Minecraft version 1.14
-// Paste this class into your mod and generate all required imports
+package com.whocraft.whocosmetics.client.models;
 
 
-import com.mojang.blaze3d.platform.GlStateManager;
+import com.mojang.blaze3d.matrix.MatrixStack;
+import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.BipedModel;
-import net.minecraft.client.renderer.entity.model.RendererModel;
-import net.minecraft.client.renderer.model.ModelBox;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.client.renderer.model.ModelRenderer;
 
 public class StrawHatModel extends BipedModel {
-	private final RendererModel seventh_hat;
+    private final ModelRenderer seventh_hat;
 
-	public StrawHatModel() {
-		textureWidth = 64;
-		textureHeight = 64;
+    public StrawHatModel() {
+        super(0);
+        textureWidth = 64;
+        textureHeight = 64;
 
-		bipedHead = new RendererModel(this);
-		bipedHead.setRotationPoint(0.0F, 0.0F, 0.0F);
+        bipedHead = new ModelRenderer(this);
+        bipedHead.setRotationPoint(0.0F, 0.0F, 0.0F);
 
+        seventh_hat = new ModelRenderer(this);
+        seventh_hat.setRotationPoint(0.25F, -10.5F, -1.5F);
+        seventh_hat.setTextureOffset(0, 0).addBox(-5.25F, 3.5F, -3.5F, 10.0F, 1.0F, 10.0F, 0.0F, false);
+        seventh_hat.setTextureOffset(0, 11).addBox(-4.75F, 2.5F, -3.0F, 9.0F, 1.0F, 9.0F, 0.0F, false);
+        seventh_hat.setTextureOffset(24, 24).addBox(-4.25F, 1.75F, -2.5F, 8.0F, 1.0F, 8.0F, 0.0F, false);
+        seventh_hat.setTextureOffset(0, 21).addBox(-4.25F, 0.75F, -2.5F, 8.0F, 1.0F, 8.0F, 0.0F, false);
+        seventh_hat.setTextureOffset(27, 11).addBox(-3.25F, 0.5F, -2.5F, 6.0F, 1.0F, 8.0F, 0.0F, false);
+        seventh_hat.setTextureOffset(17, 33).addBox(2.75F, 0.5F, -1.5F, 1.0F, 1.0F, 6.0F, 0.0F, false);
+        seventh_hat.setTextureOffset(9, 30).addBox(-4.25F, 0.5F, -1.5F, 1.0F, 1.0F, 6.0F, 0.0F, false);
+        seventh_hat.setTextureOffset(30, 0).addBox(-0.75F, 0.0F, -2.0F, 1.0F, 1.0F, 7.0F, 0.0F, true);
+   		bipedHead.addChild(seventh_hat);
+    }
 
-		seventh_hat = new RendererModel(this);
-		seventh_hat.setRotationPoint(0.25F, -10.5F, -1.5F);
-		bipedHead.addChild(seventh_hat);
-		seventh_hat.cubeList.add(new ModelBox(seventh_hat, 0, 0, -5.25F, 3.5F, -3.5F, 10, 1, 10, 0.31F, false));
-		seventh_hat.cubeList.add(new ModelBox(seventh_hat, 0, 11, -4.75F, 2.5F, -3.0F, 9, 1, 9, 0.4F, false));
-		seventh_hat.cubeList.add(new ModelBox(seventh_hat, 24, 24, -4.25F, 1.75F, -2.5F, 8, 1, 8, 0.3F, false));
-		seventh_hat.cubeList.add(new ModelBox(seventh_hat, 0, 21, -4.25F, 0.75F, -2.5F, 8, 1, 8, 0.3F, false));
-		seventh_hat.cubeList.add(new ModelBox(seventh_hat, 27, 11, -3.25F, 0.5F, -2.5F, 6, 1, 8, 0.3F, false));
-		seventh_hat.cubeList.add(new ModelBox(seventh_hat, 17, 33, 2.75F, 0.5F, -1.5F, 1, 1, 6, 0.3F, false));
-		seventh_hat.cubeList.add(new ModelBox(seventh_hat, 9, 30, -4.25F, 0.5F, -1.5F, 1, 1, 6, 0.3F, false));
-		seventh_hat.cubeList.add(new ModelBox(seventh_hat, 30, 0, -0.75F, 0.0F, -2.0F, 1, 1, 7, 0.3F, true));
-	}
-
-	@Override
-	public void render(LivingEntity p_78088_1_, float p_78088_2_, float p_78088_3_, float p_78088_4_, float p_78088_5_, float p_78088_6_, float p_78088_7_) {
-		super.render(p_78088_1_, p_78088_2_, p_78088_3_, p_78088_4_, p_78088_5_, p_78088_6_, p_78088_7_);
-		bipedHeadwear.isHidden = true;
-	}
+    @Override
+    public void render(MatrixStack matrixStackIn, IVertexBuilder bufferIn, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
+        super.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
+        bipedHeadwear.showModel = false;
+    }
 
 }

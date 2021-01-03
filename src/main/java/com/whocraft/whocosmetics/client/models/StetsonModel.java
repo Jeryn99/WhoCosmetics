@@ -6,9 +6,10 @@ import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
 
-public class StetsonModel extends BipedModel<LivingEntity> {
+public class StetsonModel extends BipedModel<LivingEntity> implements IClothingModel{
     private final ModelRenderer stetson;
     private final ModelRenderer hats;
+    private LivingEntity living;
 
     public StetsonModel() {
         super(0);
@@ -52,4 +53,8 @@ public class StetsonModel extends BipedModel<LivingEntity> {
         matrixStackIn.pop();
     }
 
+    @Override
+    public void setLiving(LivingEntity livingEntity) {
+        this.living = livingEntity;
+    }
 }

@@ -26,9 +26,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
-
-@Mod(WhoCosmetics.MODID)
+@Mod("who_cosmetics")
 public class WhoCosmetics
 {
 
@@ -40,6 +38,7 @@ public class WhoCosmetics
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
         FMLJavaModLoadingContext.get().getModEventBus().register(this);
         MinecraftForge.EVENT_BUS.register(this);
+        System.out.println("I WAS FOUND WITH IT");
     }
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
@@ -59,7 +58,7 @@ public class WhoCosmetics
     }
 
     public void doClientStuff(final FMLClientSetupEvent event) {
-        WCItems.UMBRELLA.get().addPropertyOverride(new ResourceLocation("whocosmetics:is_open"), (itemStack, world, livingEntity) -> UmbrellaItem.getIsOpen(itemStack) ? 1 : 0);
+       //TODO WCItems.UMBRELLA.get().addPropertyOverride(new ResourceLocation("whocosmetics:is_open"), (itemStack, world, livingEntity) -> UmbrellaItem.getIsOpen(itemStack) ? 1 : 0);
         ClothingManager.setup();
     }
 

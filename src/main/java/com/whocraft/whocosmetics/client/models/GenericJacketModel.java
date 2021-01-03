@@ -1,22 +1,19 @@
 package com.whocraft.whocosmetics.client.models;
 
+import com.mojang.blaze3d.matrix.MatrixStack;
+import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.whocraft.whocosmetics.util.ClientUtil;
-import net.minecraft.client.renderer.entity.IEntityRenderer;
-import net.minecraft.client.renderer.entity.layers.BipedArmorLayer;
 import net.minecraft.client.renderer.entity.model.BipedModel;
-import net.minecraft.client.renderer.entity.model.EntityModel;
-import net.minecraft.client.renderer.entity.model.PlayerModel;
-import net.minecraft.client.renderer.entity.model.RendererModel;
-import net.minecraft.client.renderer.model.ModelBox;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
 
-public class GenericJacketModel extends BipedModel<LivingEntity> implements EntityModel {
+public class GenericJacketModel extends BipedModel<LivingEntity> implements IClothingModel {
 
     private final ModelRenderer Body;
     private final ModelRenderer JacketFlow;
     private final ModelRenderer RightArm;
     private final ModelRenderer LeftArm;
+    private LivingEntity living;
 
     public GenericJacketModel() {
         super(0);
@@ -46,21 +43,25 @@ public class GenericJacketModel extends BipedModel<LivingEntity> implements Enti
     }
 
     @Override
-    public void render(LivingEntity p_78088_1_, float p_78088_2_, float p_78088_3_, float p_78088_4_, float p_78088_5_, float p_78088_6_, float p_78088_7_) {
-        if (ClientUtil.isSteve(p_78088_1_)) {
+    public void render(MatrixStack matrixStackIn, IVertexBuilder bufferIn, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
+        if (ClientUtil.isSteve(living)) {
             bipedLeftArm.setRotationPoint(5.0F, 2.0F, 0.0F);
             bipedRightArm.setRotationPoint(-5.0F, 2.0F, 0.0F);
         } else {
             bipedLeftArm.setRotationPoint(-5, 2.5F, 0);
             bipedRightArm.setRotationPoint(5, 2.5F, 0);
         }
-
-        super.render(p_78088_1_, p_78088_2_, p_78088_3_, p_78088_4_, p_78088_5_, p_78088_6_, p_78088_7_);
+        super.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
     }
 
     public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
         modelRenderer.rotateAngleX = x;
         modelRenderer.rotateAngleY = y;
         modelRenderer.rotateAngleZ = z;
+    }
+
+    @Override
+    public void setLiving(LivingEntity livingEntity) {
+        this.living = livingEntity;
     }
 }
