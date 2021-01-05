@@ -31,11 +31,11 @@ public class GenericJacketModel extends BipedModel<LivingEntity> implements IClo
 
         RightArm = new ModelRenderer(this);
         RightArm.setRotationPoint(-5.0F, 2.0F, 0.0F);
-        RightArm.setTextureOffset(0, 16).addBox(-3.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.3F, false);
+        RightArm.setTextureOffset(0, 16).addBox(-3.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.5F, false);
 
         LeftArm = new ModelRenderer(this);
         LeftArm.setRotationPoint(5.0F, 2.0F, 0.0F);
-        LeftArm.setTextureOffset(16, 16).addBox(-1.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.3F, false);
+        LeftArm.setTextureOffset(16, 16).addBox(-1.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.5F, false);
 
         bipedLeftArm = LeftArm;
         bipedRightArm = RightArm;

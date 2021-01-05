@@ -22,7 +22,7 @@ public class LangCreation extends LanguageProvider {
         add(WCItems.UMBRELLA.get(), "Umbrella");
         add(WCItems.ASTRAKHAN.get(), "Astrakhan Hat"); //Did you know the first Doctors hat was called this? I Didn't - Swirtzly
         add(WCItems.STRAW_HAT.get(), "Straw Hat"); //Nope, I thought you made the name up lol, but did you know that Straw Hat is actually named Straw hat??? - Bell
-        add(WCItems.WINGS.get(), "Weeping Angels Wings"); //Nope! I didn't! Remember not to blink!
+       // add(WCItems.WINGS.get(), "Weeping Angels Wings"); //Nope! I didn't! Remember not to blink!
         add(WCItems.CELERY.get(), "Stick of Celery"); //Remember to stay nourished though
         add(WCItems.SCARF.get(), "Scarf"); //I will, Is it me or is it kinda cold outside?
         add(WCItems.SATCHEL.get(), "Satchel");
@@ -34,7 +34,7 @@ public class LangCreation extends LanguageProvider {
         add(WCItems.FRUIT_HAT.get(), "Fruit Hat");
         add(WCItems.FEATHER_HAT.get(), "Feather Hat");
         add(WCItems.SASH.get(), "Sash of Rassilon");
-
+        add(WCItems.TENTH_COAT.get(), "Trenchcoat");
         /* Item Groups */
         add("itemGroup.wc_clothes", "Who-Cosmetics Clothing");
         add("itemGroup.wc_clothes_dyeable", "Who-Cosmetics Clothing Dyed");

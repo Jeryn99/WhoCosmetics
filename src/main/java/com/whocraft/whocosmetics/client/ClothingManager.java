@@ -24,7 +24,7 @@ public class ClothingManager {
         addData(WCItems.SATCHEL.get(), new ClothingData(WCItems.SATCHEL.get()).setModelForSlot(new SatchelModel(), EquipmentSlotType.CHEST));
         addData(WCItems.CRICKET_JACKET.get(), new ClothingData(WCItems.CRICKET_JACKET.get()).setModelForSlot(new GenericJacketModel(), EquipmentSlotType.CHEST).setModeller(Modeller.VIOLET));
         addData(WCItems.VELVET_COAT.get(), new ClothingData(WCItems.VELVET_COAT.get()).setModelForSlot(new GenericJacketModel(), EquipmentSlotType.CHEST).setModeller(Modeller.VIOLET));
-        addData(WCItems.TENTH_COAT.get(), new ClothingData(WCItems.TENTH_COAT.get()).setModelForSlot(new GenericJacketModel(), EquipmentSlotType.CHEST).setModeller(Modeller.VIOLET).hasArmSupport());
+        addData(WCItems.TENTH_COAT.get(), new ClothingData(WCItems.TENTH_COAT.get()).setModelForSlot(new GenericJacketModel(), EquipmentSlotType.CHEST).setModeller(Modeller.VIOLET));
       //  addData(WCItems.CLOAK.get(), new ClothingData(WCItems.CLOAK.get()).setModelForSlot(new RedCloakModel(), EquipmentSlotType.CHEST).setModeller(Modeller.END));
 
        // addData(WCItems.SPACE_HELMET.get(), new ClothingData(WCItems.SPACE_HELMET.get(), "space_suit").setModelForSlot(new SpaceHelmetModel(), EquipmentSlotType.HEAD).setModeller(Modeller.VIOLET));
