@@ -2,7 +2,7 @@
 modLoader="javafml"
 
 loaderVersion="[28,)"
-license = "https://raw.githubusercontent.com/WhoCraft/Regeneration/1.16.3/LICENSE"
+license = "https://raw.githubusercontent.com/WhoCraft/WhoCosmetics/1.16/LICENSE"
 
 issueTrackerURL="https://github.com/WhoCraft/WhoCosmetics/issues"
 [[mods]]
