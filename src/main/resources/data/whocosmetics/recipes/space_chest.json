@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S S",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:iron_ingot"
+    },
+    "X": {
+      "item": "minecraft:red_wool"
+    }
+  },
+  "result": {
+    "item": "whocosmetics:space_chest"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XSX",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:red_wool"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "whocosmetics:red_scarf"
+  }
+}
