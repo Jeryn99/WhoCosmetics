@@ -41,38 +41,38 @@ public class SpaceSuitModel extends BipedModel< LivingEntity > implements Living
 
         Body = new ModelRenderer(this);
         Body.setRotationPoint(0.0F, 0.0F, 0.0F);
-        Body.setTextureOffset(16, 16).addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, 0.0F, false);
+        Body.setTextureOffset(16, 16).addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, 0F, false);
         Body.setTextureOffset(16, 32).addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, 0.25F, false);
 
         RightArm = new ModelRenderer(this);
         RightArm.setRotationPoint(-5.0F, 2.0F, 0.0F);
-        RightArm.setTextureOffset(40, 16).addBox(-2.0F, -2.0F, -2.0F, 3.0F, 12.0F, 4.0F, 0.0F, false);
+        RightArm.setTextureOffset(40, 16).addBox(-2.0F, -2.0F, -2.0F, 3.0F, 12.0F, 4.0F, 0F, false);
         RightArm.setTextureOffset(40, 32).addBox(-2.0F, -2.0F, -2.0F, 3.0F, 12.0F, 4.0F, 0.25F, false);
 
         LeftArm = new ModelRenderer(this);
         LeftArm.setRotationPoint(5.0F, 2.0F, 0.0F);
-        LeftArm.setTextureOffset(32, 48).addBox(-1.0F, -2.0F, -2.0F, 3.0F, 12.0F, 4.0F, 0.0F, false);
-        LeftArm.setTextureOffset(48, 48).addBox(-1.0F, -2.0F, -2.0F, 3.0F, 12.0F, 4.0F, 0.25F, false);
+        LeftArm.setTextureOffset(32, 48).addBox(-1.0F, -2.0F, -2.0F, 3.0F, 12.0F, 4.0F, 0F, false);
+        LeftArm.setTextureOffset(48, 48).addBox(-1.0F, -2.0F, -2.0F, 3.0F, 12.0F, 4.0F, 0F, false);
 
         RightLeg = new ModelRenderer(this);
         RightLeg.setRotationPoint(-1.9F, 12.0F, 0.0F);
-        RightLeg.setTextureOffset(0, 16).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.0F, false);
+        RightLeg.setTextureOffset(0, 16).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0F, false);
         RightLeg.setTextureOffset(0, 32).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.25F, false);
 
         LeftLeg = new ModelRenderer(this);
         LeftLeg.setRotationPoint(1.9F, 12.0F, 0.0F);
-        LeftLeg.setTextureOffset(16, 48).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.0F, false);
+        LeftLeg.setTextureOffset(16, 48).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0F, false);
         LeftLeg.setTextureOffset(0, 48).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.25F, false);
 
         RightArmSteve = new ModelRenderer(this);
-        RightArm.setRotationPoint(-5.0F, 2.0F, 0.0F);
-        RightArm.setTextureOffset(32, 48).addBox(-3.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.0F, true);
-        RightArm.setTextureOffset(48, 48).addBox(-3.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.25F, true);
+        RightArmSteve.setRotationPoint(-5.0F, 2.0F, 0.0F);
+        RightArmSteve.setTextureOffset(32, 48).addBox(-3.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0F, true);
+        RightArmSteve.setTextureOffset(48, 48).addBox(-3.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.25F, true);
 
         LeftArmSteve = new ModelRenderer(this);
-        LeftArm.setRotationPoint(5.0F, 2.0F, 0.0F);
-        LeftArm.setTextureOffset(32, 48).addBox(-1.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.0F, false);
-        LeftArm.setTextureOffset(48, 48).addBox(-1.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.25F, false);
+        LeftArmSteve.setRotationPoint(5.0F, 2.0F, 0.0F);
+        LeftArmSteve.setTextureOffset(32, 48).addBox(-1.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0F, false);
+        LeftArmSteve.setTextureOffset(48, 48).addBox(-1.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.25F, false);
 
         bipedHead = Head;
         bipedBody = Body;
@@ -83,37 +83,41 @@ public class SpaceSuitModel extends BipedModel< LivingEntity > implements Living
 
     }
 
-    public void updateArms(LivingEntity livingEntity){
-        if(livingEntity instanceof AbstractClientPlayerEntity){
+    public void updateArms(LivingEntity livingEntity) {
+        if (livingEntity instanceof AbstractClientPlayerEntity) {
             boolean isSteve = ClientUtil.isSteve(livingEntity);
-            if(!isSteve){
-                this.mainArmLeft = LeftArm;
-                this.mainArmRight = RightArm;
-            } else {
+            if (isSteve) {
                 this.mainArmLeft = LeftArmSteve;
                 this.mainArmRight = RightArmSteve;
+            } else {
+                this.mainArmLeft = LeftArm;
+                this.mainArmRight = RightArm;
             }
+
         } else {
             this.mainArmLeft = LeftArmSteve;
             this.mainArmRight = RightArmSteve;
-        }
-        bipedLeftArm = mainArmLeft;
-        bipedRightArm = mainArmRight;
+        }//bipedLeftArm = mainArmLeft;
+      //  bipedRightArm = mainArmRight;
     }
 
 
     @Override
-    public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
-        if(slot == EquipmentSlotType.HEAD) {
+    public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+        updateArms(livingEntity);
+        LeftArmSteve.copyModelAngles(bipedLeftArm);
+        RightArmSteve.copyModelAngles(bipedRightArm);
+        LeftArm.copyModelAngles(bipedLeftArm);
+        RightArm.copyModelAngles(bipedRightArm);
+        if (slot == EquipmentSlotType.HEAD) {
             Head.render(matrixStack, buffer, packedLight, packedOverlay);
         }
-        if(slot == EquipmentSlotType.CHEST) {
-            updateArms(getLiving());
+        if (slot == EquipmentSlotType.CHEST) {
             Body.render(matrixStack, buffer, packedLight, packedOverlay);
             mainArmRight.render(matrixStack, buffer, packedLight, packedOverlay);
             mainArmLeft.render(matrixStack, buffer, packedLight, packedOverlay);
         }
-        if(slot == EquipmentSlotType.LEGS) {
+        if (slot == EquipmentSlotType.LEGS) {
             RightLeg.render(matrixStack, buffer, packedLight, packedOverlay);
             LeftLeg.render(matrixStack, buffer, packedLight, packedOverlay);
         }

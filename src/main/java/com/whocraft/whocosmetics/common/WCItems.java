@@ -5,6 +5,7 @@ import com.whocraft.whocosmetics.WhoCosmetics;
 import com.whocraft.whocosmetics.common.items.ClothingItem;
 import com.whocraft.whocosmetics.common.items.JSONClothingItem;
 import com.whocraft.whocosmetics.common.items.UmbrellaItem;
+import cpw.mods.modlauncher.LaunchPluginHandler;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
@@ -43,20 +44,23 @@ public class WCItems {
     public static final RegistryObject< Item > THREED_GLASSES = ITEMS.register("3d_glasses", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.ANGELA));
     public static final RegistryObject< Item > MAGNOLI = ITEMS.register("magnoli_clothiers", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.ANGELA));
     public static final RegistryObject< Item > RAINBOW_SCARF = ITEMS.register("rainbow_scarf", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
+    public static final RegistryObject< Item > RED_SCARF = ITEMS.register("red_scarf", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
     public static final RegistryObject< Item > UMBRELLA = ITEMS.register("umbrella", () -> new UmbrellaItem(properties));
     public static final RegistryObject< Item > SCARF = ITEMS.register("scarf", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST, false, DyeColor.GRAY.getColorValue()));
     public static final RegistryObject< Item > CRICKET_JACKET = ITEMS.register("cricket_jacket", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
-    public static final RegistryObject< Item > SPACE_HELMET = ITEMS.register("space_helmet", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.HEAD));
-    public static final RegistryObject< Item > SPACE_CHEST = ITEMS.register("space_chest", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.CHEST));
-    public static final RegistryObject< Item > SPACE_LEGS = ITEMS.register("space_legs", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.LEGS));
-    public static final RegistryObject< Item > SPACE_FEET = ITEMS.register("space_feet", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.FEET));
 
+    public static final RegistryObject< Item > SECOND_JACKET = ITEMS.register("second_jacket", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
     public static final RegistryObject< Item > VELVET_COAT = ITEMS.register("velvet_coat", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
     public static final RegistryObject< Item > TENTH_COAT = ITEMS.register("tenth_coat", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
     public static final RegistryObject< Item > SASH = ITEMS.register("sash", () -> new ClothingItem(ArmorMaterial.DIAMOND, EquipmentSlotType.CHEST));
 
     public static final RegistryObject< Item > FRUIT_HAT = ITEMS.register("fruit_hat", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.ANGELA));
     public static final RegistryObject< Item > FEATHER_HAT = ITEMS.register("feather_hat", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.ANGELA));
+
+    public static final RegistryObject< Item > SPACE_HELMET = ITEMS.register("space_helmet", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.HEAD));
+    public static final RegistryObject< Item > SPACE_CHEST = ITEMS.register("space_chest", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.CHEST));
+    public static final RegistryObject< Item > SPACE_LEGS = ITEMS.register("space_legs", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.LEGS));
+    public static final RegistryObject< Item > SPACE_FEET = ITEMS.register("space_feet", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.FEET));
 
 
 }

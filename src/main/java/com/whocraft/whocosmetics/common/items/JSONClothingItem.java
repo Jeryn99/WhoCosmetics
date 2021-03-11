@@ -13,6 +13,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 
@@ -56,6 +57,6 @@ public class JSONClothingItem extends Item {
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         super.addInformation(stack, worldIn, tooltip, flagIn);
-        tooltip.add(new TranslationTextComponent(WhoCosmetics.MODID + ".nbt.modeller", modeller.getModellerName()));
+        tooltip.add(new TranslationTextComponent(WhoCosmetics.MODID + ".nbt.modeller", TextFormatting.DARK_PURPLE.toString() + modeller.getModellerName()));
     }
 }

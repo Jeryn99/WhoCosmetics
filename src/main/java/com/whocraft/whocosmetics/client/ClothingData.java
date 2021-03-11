@@ -15,10 +15,11 @@ public class ClothingData {
 
     private final Item item;
     private final ResourceLocation modelSteveTexture;
-    private BipedModel<LivingEntity> head, chest, legs, feet, chestSteve;
+    private BipedModel< LivingEntity > head, chest, legs, feet;
     private ResourceLocation modelTexture = null;
     private Modeller modeller = Modeller.END;
-    private boolean supportsArms = false;
+    private boolean hideWear = false;
+    private boolean ignoreSteveSupport = false;
 
     public ClothingData(Item item) {
         this.item = item;
@@ -32,6 +33,20 @@ public class ClothingData {
         this.modelSteveTexture = new ResourceLocation(WhoCosmetics.MODID, "textures/entity/armor/" + texture + "_steve.png");
     }
 
+    public ClothingData ignoreSteve() {
+        this.ignoreSteveSupport = true;
+        return this;
+    }
+
+    public ClothingData hideWear() {
+        this.hideWear = true;
+        return this;
+    }
+
+    public boolean isHideWear() {
+        return hideWear;
+    }
+
     public ClothingData setModeller(Modeller modeller) {
         this.modeller = modeller;
         return this;
@@ -41,7 +56,8 @@ public class ClothingData {
         return modeller;
     }
 
-    public ClothingData setModelForSlot(BipedModel<LivingEntity> model, EquipmentSlotType type) {
+
+    public ClothingData setModelForSlot(BipedModel< LivingEntity > model, EquipmentSlotType type) {
         switch (type) {
             case HEAD:
                 head = model;
@@ -61,7 +77,7 @@ public class ClothingData {
         return this;
     }
 
-    public BipedModel<LivingEntity> getModel(EquipmentSlotType equipmentSlotType) {
+    public BipedModel< LivingEntity > getModel(EquipmentSlotType equipmentSlotType) {
         switch (equipmentSlotType) {
             case HEAD:
                 return head;
@@ -83,12 +99,15 @@ public class ClothingData {
     }
 
     public ResourceLocation getModelTexture(Entity livingEntity) {
-        if (livingEntity instanceof AbstractClientPlayerEntity && supportsArms) {
+        if(ignoreSteveSupport){
+            return modelTexture;
+        }
+        if (livingEntity instanceof AbstractClientPlayerEntity) {
             AbstractClientPlayerEntity playerEntity = (AbstractClientPlayerEntity) livingEntity;
             boolean isSteve = ClientUtil.isSteve(playerEntity);
             return isSteve ? modelSteveTexture : modelTexture;
         }
-        return modelTexture;
+        return modelSteveTexture;
     }
 
 }

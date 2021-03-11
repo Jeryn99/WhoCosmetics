@@ -15,6 +15,7 @@ import net.minecraft.item.*;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 
@@ -83,7 +84,7 @@ public class ClothingItem extends ArmorItem implements IDyeableArmorItem {
         ClothingData data = ClothingManager.getDataForItem(stack.getItem());
         if (data != null) {
             if (data.getModeller() != null) {
-                tooltip.add(new TranslationTextComponent(WhoCosmetics.MODID + ".nbt.modeller", data.getModeller().getModellerName()));
+                tooltip.add(new TranslationTextComponent(WhoCosmetics.MODID + ".nbt.modeller", TextFormatting.DARK_PURPLE.toString() + data.getModeller().getModellerName()));
             }
         }
     }

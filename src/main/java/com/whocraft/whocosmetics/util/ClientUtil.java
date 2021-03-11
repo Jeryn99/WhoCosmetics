@@ -9,9 +9,14 @@ public class ClientUtil {
     public static boolean isSteve(LivingEntity livingEntity) {
         if (livingEntity instanceof AbstractClientPlayerEntity) {
             AbstractClientPlayerEntity player = (AbstractClientPlayerEntity) livingEntity;
-            return player.getSkinType().isEmpty();
+            if(player.getSkinType().isEmpty()){
+                return true;
+            }
+            if(player.getSkinType().equals("slim")){
+                return false;
+            }
         }
-        return false;
+        return true;
     }
 
 }
