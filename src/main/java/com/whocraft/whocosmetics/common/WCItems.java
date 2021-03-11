@@ -36,7 +36,7 @@ public class WCItems {
     public static final RegistryObject< Item > BOW_TIE = ITEMS.register("bowtie", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST, true, DyeColor.RED.getColorValue()));
     public static final RegistryObject< Item > CELERY = ITEMS.register("celery", () -> new ClothingItem(ArmorMaterial.TURTLE, EquipmentSlotType.CHEST));
     public static final RegistryObject< Item > SATCHEL = ITEMS.register("satchel", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
-    public static final RegistryObject< Item > STETSON = ITEMS.register("stetson", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.ANGELA));
+    public static final RegistryObject< Item > STETSON = ITEMS.register("stetson", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.HEAD));
     public static final RegistryObject< Item > ASTRAKHAN = ITEMS.register("astrakhan", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.HEAD));
     public static final RegistryObject< Item > STRAW_HAT = ITEMS.register("straw_hat", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.HEAD));
     public static final RegistryObject< Item > MONDAS = ITEMS.register("mondas", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.VIOLET));
@@ -49,6 +49,7 @@ public class WCItems {
     public static final RegistryObject< Item > SPACE_HELMET = ITEMS.register("space_helmet", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.HEAD));
     public static final RegistryObject< Item > SPACE_CHEST = ITEMS.register("space_chest", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.CHEST));
     public static final RegistryObject< Item > SPACE_LEGS = ITEMS.register("space_legs", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.LEGS));
+    public static final RegistryObject< Item > SPACE_FEET = ITEMS.register("space_feet", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.FEET));
 
     public static final RegistryObject< Item > VELVET_COAT = ITEMS.register("velvet_coat", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
     public static final RegistryObject< Item > TENTH_COAT = ITEMS.register("tenth_coat", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));

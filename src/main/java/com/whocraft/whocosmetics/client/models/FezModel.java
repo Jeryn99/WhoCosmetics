@@ -11,7 +11,7 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IDyeableArmorItem;
 
 
-public class FezModel extends BipedModel<LivingEntity> implements IClothingModel {
+public class FezModel extends BipedModel<LivingEntity> implements LivingArmor {
     private final ModelRenderer hat_fez;
     private final ModelRenderer fez_hat;
     private final ModelRenderer tasel;
@@ -64,5 +64,10 @@ public class FezModel extends BipedModel<LivingEntity> implements IClothingModel
     @Override
     public void setLiving(LivingEntity livingEntity) {
         this.living = livingEntity;
+    }
+
+    @Override
+    public LivingEntity getLiving() {
+        return living;
     }
 }

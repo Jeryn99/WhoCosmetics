@@ -8,7 +8,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IDyeableArmorItem;
 
-public class BowTieModel extends BipedModel<LivingEntity> implements IClothingModel {
+public class BowTieModel extends BipedModel<LivingEntity> implements LivingArmor {
     private final ModelRenderer bowties;
     private final ModelRenderer bowtie;
     private final ModelRenderer angle2;
@@ -69,5 +69,10 @@ public class BowTieModel extends BipedModel<LivingEntity> implements IClothingMo
     @Override
     public void setLiving(LivingEntity livingEntity) {
         this.living = livingEntity;
+    }
+
+    @Override
+    public LivingEntity getLiving() {
+        return living;
     }
 }

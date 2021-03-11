@@ -9,7 +9,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IDyeableArmorItem;
 
-public class ScarfModel extends BipedModel<LivingEntity> implements IClothingModel {
+public class ScarfModel extends BipedModel<LivingEntity> implements LivingArmor {
     private final ModelRenderer first_scarf;
     private final ModelRenderer firsts_scarf;
     private LivingEntity living;
@@ -57,5 +57,10 @@ public class ScarfModel extends BipedModel<LivingEntity> implements IClothingMod
     @Override
     public void setLiving(LivingEntity livingEntity) {
         this.living = livingEntity;
+    }
+
+    @Override
+    public LivingEntity getLiving() {
+        return living;
     }
 }

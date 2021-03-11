@@ -1,28 +1,15 @@
 package com.whocraft.whocosmetics.util;
 
-import com.mojang.authlib.minecraft.MinecraftProfileTexture;
-import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-
-import java.util.Map;
 
 public class ClientUtil {
 
 
     public static boolean isSteve(LivingEntity livingEntity) {
-        if(livingEntity instanceof PlayerEntity) {
-            PlayerEntity player = (PlayerEntity) livingEntity;
-            Map<MinecraftProfileTexture.Type, MinecraftProfileTexture> map = Minecraft.getInstance().getSkinManager().loadSkinFromCache(player.getGameProfile());
-            if (map.isEmpty()) {
-                map = Minecraft.getInstance().getSessionService().getTextures(Minecraft.getInstance().getSessionService().fillProfileProperties(player.getGameProfile(), false), false);
-            }
-            MinecraftProfileTexture profile = map.get(MinecraftProfileTexture.Type.SKIN);
-            if(profile == null){
-                return false;
-            }
-
-            return profile.getMetadata("model") == null;
+        if (livingEntity instanceof AbstractClientPlayerEntity) {
+            AbstractClientPlayerEntity player = (AbstractClientPlayerEntity) livingEntity;
+            return player.getSkinType().isEmpty();
         }
         return false;
     }

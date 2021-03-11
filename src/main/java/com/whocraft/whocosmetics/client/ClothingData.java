@@ -15,7 +15,7 @@ public class ClothingData {
 
     private final Item item;
     private final ResourceLocation modelSteveTexture;
-    private BipedModel<LivingEntity> head, chest, legs, feet;
+    private BipedModel<LivingEntity> head, chest, legs, feet, chestSteve;
     private ResourceLocation modelTexture = null;
     private Modeller modeller = Modeller.END;
     private boolean supportsArms = false;
@@ -34,11 +34,6 @@ public class ClothingData {
 
     public ClothingData setModeller(Modeller modeller) {
         this.modeller = modeller;
-        return this;
-    }
-
-    public ClothingData hasArmSupport() {
-        this.supportsArms = true;
         return this;
     }
 

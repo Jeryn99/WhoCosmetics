@@ -7,7 +7,7 @@ import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
 
-public class GenericJacketModel extends BipedModel<LivingEntity> implements IClothingModel {
+public class GenericJacketModel extends BipedModel<LivingEntity> implements LivingArmor {
 
     private final ModelRenderer Body;
     private final ModelRenderer JacketFlow;
@@ -64,5 +64,10 @@ public class GenericJacketModel extends BipedModel<LivingEntity> implements IClo
     @Override
     public void setLiving(LivingEntity livingEntity) {
         this.living = livingEntity;
+    }
+
+    @Override
+    public LivingEntity getLiving() {
+        return living;
     }
 }

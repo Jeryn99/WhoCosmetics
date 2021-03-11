@@ -25,11 +25,11 @@ public class ClothingManager {
         addData(WCItems.CRICKET_JACKET.get(), new ClothingData(WCItems.CRICKET_JACKET.get()).setModelForSlot(new GenericJacketModel(), EquipmentSlotType.CHEST).setModeller(Modeller.VIOLET));
         addData(WCItems.VELVET_COAT.get(), new ClothingData(WCItems.VELVET_COAT.get()).setModelForSlot(new GenericJacketModel(), EquipmentSlotType.CHEST).setModeller(Modeller.VIOLET));
         addData(WCItems.TENTH_COAT.get(), new ClothingData(WCItems.TENTH_COAT.get()).setModelForSlot(new GenericJacketModel(), EquipmentSlotType.CHEST).setModeller(Modeller.VIOLET));
-      //  addData(WCItems.CLOAK.get(), new ClothingData(WCItems.CLOAK.get()).setModelForSlot(new RedCloakModel(), EquipmentSlotType.CHEST).setModeller(Modeller.END));
 
-       // addData(WCItems.SPACE_HELMET.get(), new ClothingData(WCItems.SPACE_HELMET.get(), "space_suit").setModelForSlot(new SpaceHelmetModel(), EquipmentSlotType.HEAD).setModeller(Modeller.VIOLET));
-      //  addData(WCItems.SPACE_CHEST.get(), new ClothingData(WCItems.SPACE_CHEST.get(), "space_suit").setModelForSlot(new SpaceChestModel(), EquipmentSlotType.CHEST).setModeller(Modeller.VIOLET));
-      //  addData(WCItems.SPACE_LEGS.get(), new ClothingData(WCItems.SPACE_LEGS.get(), "space_suit").setModelForSlot(new SpaceLegsModel(), EquipmentSlotType.LEGS).setModeller(Modeller.VIOLET));
+        addData(WCItems.SPACE_HELMET.get(), new ClothingData(WCItems.SPACE_HELMET.get(), "space_suit").setModelForSlot(new SpaceSuitModel(EquipmentSlotType.HEAD), EquipmentSlotType.HEAD).setModeller(Modeller.ANGELA));
+        addData(WCItems.SPACE_CHEST.get(), new ClothingData(WCItems.SPACE_CHEST.get(), "space_suit").setModelForSlot(new SpaceSuitModel(EquipmentSlotType.CHEST), EquipmentSlotType.CHEST).setModeller(Modeller.ANGELA));
+        addData(WCItems.SPACE_LEGS.get(), new ClothingData(WCItems.SPACE_LEGS.get(), "space_suit").setModelForSlot(new SpaceSuitModel(EquipmentSlotType.LEGS), EquipmentSlotType.LEGS).setModeller(Modeller.ANGELA));
+        addData(WCItems.SPACE_FEET.get(), new ClothingData(WCItems.SPACE_FEET.get(), "space_suit").setModelForSlot(new EmptyModel(1), EquipmentSlotType.FEET).setModeller(Modeller.ANGELA));
         addData(WCItems.SASH.get(), new ClothingData(WCItems.SASH.get()).setModelForSlot(new RassilonSashModel(), EquipmentSlotType.CHEST).setModeller(Modeller.END));
 
     }
