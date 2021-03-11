@@ -1,7 +1,6 @@
 package me.suff.mc.wc.client;
 
 import me.suff.mc.wc.Modeller;
-import com.whocraft.whocosmetics.client.models.*;
 import me.suff.mc.wc.common.WCItems;
 import me.suff.mc.wc.client.models.*;
 import net.minecraft.inventory.EquipmentSlotType;

@@ -7,7 +7,7 @@ license = "https://raw.githubusercontent.com/WhoCraft/WhoCosmetics/1.16/LICENSE"
 issueTrackerURL="https://github.com/WhoCraft/WhoCosmetics/issues"
 [[mods]]
 modId="whocosmetics"
-version="${mod_version}"
+version="1.0.2"
 displayName="Who Cosmetics"
 logoFile="whocosmetics.png"
 
