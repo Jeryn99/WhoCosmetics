@@ -21,9 +21,11 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 
+import net.minecraft.block.AbstractBlock;
+
 public class GramophoneBlock extends JukeboxBlock {
     public GramophoneBlock() {
-        super(Block.Properties.create(Material.WOOD));
+        super(AbstractBlock.Properties.create(Material.WOOD));
     }
 
     @Override

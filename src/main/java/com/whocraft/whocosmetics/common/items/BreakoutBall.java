@@ -14,6 +14,8 @@ import net.minecraftforge.event.entity.living.LivingFallEvent;
 import static net.minecraft.block.Blocks.AIR;
 import static net.minecraft.block.Blocks.TNT;
 
+import net.minecraft.item.Item.Properties;
+
 public class BreakoutBall extends Item {
     public BreakoutBall(Properties properties) {
         super(properties);
