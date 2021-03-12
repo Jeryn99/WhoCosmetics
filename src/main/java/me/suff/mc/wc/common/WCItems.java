@@ -61,5 +61,7 @@ public class WCItems {
     public static final RegistryObject< Item > SPACE_LEGS = ITEMS.register("space_legs", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.LEGS));
     public static final RegistryObject< Item > SPACE_FEET = ITEMS.register("space_feet", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.FEET));
 
+    public static final RegistryObject< Item > ANTLERS = ITEMS.register("antlers", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.ANGELA));
+
 
 }

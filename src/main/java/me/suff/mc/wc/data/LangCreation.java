@@ -39,6 +39,7 @@ public class LangCreation extends LanguageProvider {
         add(WCItems.SASH.get(), "Sash of Rassilon");
         add(WCItems.TENTH_COAT.get(), "Trenchcoat");
         add(WCItems.RED_SCARF.get(), "Red Scarf");
+        add(WCItems.ANTLERS.get(), "Antlers");
         /* Item Groups */
         add("itemGroup.wc_clothes", "Who-Cosmetics Clothing");
         add("itemGroup.wc_clothes_dyeable", "Who-Cosmetics Clothing (Dyed)");

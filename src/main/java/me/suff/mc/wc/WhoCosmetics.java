@@ -13,6 +13,7 @@ import me.suff.mc.wc.data.RecipeCreation;
 import me.suff.mc.wc.proxy.ClientProxy;
 import me.suff.mc.wc.proxy.IProxy;
 import me.suff.mc.wc.proxy.ServerProxy;
+import me.suff.mc.wc.util.ClientUtil;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.*;
@@ -41,8 +42,10 @@ public class WhoCosmetics {
     public static final String MODID = "whocosmetics";
 
     public WhoCosmetics() {
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doItemColor);
+        DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> {
+            FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+            FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doItemColor);
+        });
         FMLJavaModLoadingContext.get().getModEventBus().register(this);
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -63,26 +66,17 @@ public class WhoCosmetics {
         e.getGenerator().addProvider(new LangCreation(e.getGenerator()));
     }
 
-    private static final Predicate<Item> isColoredWc = item -> item instanceof ClothingItem && item.getRegistryName().getNamespace().equals(MODID);
+    private static final Predicate< Item > isColoredWc = item -> item instanceof ClothingItem && item.getRegistryName().getNamespace().equals(MODID);
 
     public void doItemColor(final ColorHandlerEvent.Item event) {
-        for (Item item : ForgeRegistries.ITEMS.getValues()) {
-            if (isColoredWc.test(item)) {
-                ClothingItem coloredItem = (ClothingItem) item;
-                if (coloredItem.isColored()) {
-                    DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> event.getItemColors().register((p_getColor_1_, p_getColor_2_) -> p_getColor_2_ > 0 ? -1 : ((IDyeableArmorItem) p_getColor_1_.getItem()).getColor(p_getColor_1_), item));
-                }
-            }
-        }
+        DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> {
+            ClientUtil.doItemColor(event);
+        });
     }
 
     public void doClientStuff(final FMLClientSetupEvent event) {
-        ClothingManager.setup();
-        ItemModelsProperties.registerProperty(WCItems.UMBRELLA.get(), new ResourceLocation("whocosmetics:is_open"), new IItemPropertyGetter() {
-            @Override
-            public float call(ItemStack itemStack, ClientWorld clientWorld, LivingEntity livingEntity) {
-                return UmbrellaItem.getIsOpen(itemStack) ? 1 : 0;
-            }
+        DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> {
+            ClientUtil.doClientStuff(event);
         });
     }
 
