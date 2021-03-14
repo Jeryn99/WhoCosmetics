@@ -1,10 +1,7 @@
 package me.suff.mc.wc;
 
 import me.suff.mc.wc.client.ClothingManager;
-import me.suff.mc.wc.common.WCBlocks;
-import me.suff.mc.wc.common.WCItems;
-import me.suff.mc.wc.common.WCSounds;
-import me.suff.mc.wc.common.WCTiles;
+import me.suff.mc.wc.common.*;
 import me.suff.mc.wc.common.items.ClothingItem;
 import me.suff.mc.wc.common.items.UmbrellaItem;
 import me.suff.mc.wc.data.ItemModelCreation;
@@ -56,7 +53,9 @@ public class WhoCosmetics {
         WCItems.ITEMS.register(eventBus);
         WCSounds.SOUNDS.register(eventBus);
         WCBlocks.BLOCKS.register(eventBus);
+        WCBlocks.BLOCK_ITEMS.register(eventBus);
         WCTiles.TILES.register(eventBus);
+        WCContainers.CONTAINERS.register(eventBus);
     }
 
     @SubscribeEvent
@@ -65,8 +64,6 @@ public class WhoCosmetics {
         e.getGenerator().addProvider(new RecipeCreation(e.getGenerator()));
         e.getGenerator().addProvider(new LangCreation(e.getGenerator()));
     }
-
-    private static final Predicate< Item > isColoredWc = item -> item instanceof ClothingItem && item.getRegistryName().getNamespace().equals(MODID);
 
     public void doItemColor(final ColorHandlerEvent.Item event) {
         DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> {

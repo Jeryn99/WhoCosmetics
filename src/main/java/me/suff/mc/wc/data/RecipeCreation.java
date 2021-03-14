@@ -1,5 +1,6 @@
 package me.suff.mc.wc.data;
 
+import me.suff.mc.wc.common.WCBlocks;
 import me.suff.mc.wc.common.WCItems;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.*;
@@ -42,6 +43,7 @@ public class RecipeCreation extends RecipeProvider {
         ShapedRecipeBuilder.shapedRecipe(WCItems.SPACE_CHEST.get()).patternLine("S S").patternLine("XXX").patternLine("XXX").key('S', Items.IRON_INGOT).key('X', Blocks.RED_WOOL).addCriterion("has_crafting_table", hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(WCItems.SPACE_LEGS.get()).patternLine("XXX").patternLine("X X").patternLine("S S").key('S', Items.IRON_INGOT).key('X', Blocks.RED_WOOL).addCriterion("has_crafting_table", hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
         ShapedRecipeBuilder.shapedRecipe(WCItems.SPACE_FEET.get()).patternLine("X X").patternLine("S S").patternLine("   ").key('S', Items.IRON_INGOT).key('X', Blocks.RED_WOOL).addCriterion("has_crafting_table", hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(WCBlocks.WARDROBE.get()).patternLine("WWW").patternLine("D D").patternLine("WWW").key('W', ItemTags.PLANKS).key('D', ItemTags.WOODEN_DOORS).addCriterion("has_crafting_table", hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
 
         ShapelessRecipeBuilder.shapelessRecipe(WCItems.CELERY.get()).addIngredient(ItemTags.SAPLINGS).addIngredient(Items.STICK).addIngredient(Items.STRING).addCriterion("has_crafting_table", hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
     }

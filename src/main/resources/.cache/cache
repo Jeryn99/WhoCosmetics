@@ -1,4 +1,4 @@
-1b306e2b21c65fa66e4e782ec966f4dd0c8411ad assets/whocosmetics/lang/en_us.json
+2b0e2b81bff7c3644f72e172cd5364f1bdad04a6 assets/whocosmetics/lang/en_us.json
 44ea9578d114f7d65475ac6cc24b79f1471c5cf3 assets/whocosmetics/models/item/astrakhan.json
 8a2104aa3b07b8b0b0db7082429979265b347e47 assets/whocosmetics/models/item/bowtie.json
 826202e0d771337d44de39ad0db94534b7e9bb9f assets/whocosmetics/models/item/celery.json
@@ -18,6 +18,7 @@ ddf91ccb3421febbd290e148eae9a02e500cfa29 assets/whocosmetics/models/item/space_h
 c1c230249a70634e37204c0355cd6d831e1f25d2 assets/whocosmetics/models/item/straw_hat.json
 d5a0e7695fab556ce77172f0e70dfb631de973e6 assets/whocosmetics/models/item/tenth_coat.json
 4b4172681e7fc718adc23813698549b0ac6d2f60 assets/whocosmetics/models/item/velvet_coat.json
+5dc0b43be03ac12bb8413a4862d18101144a353a assets/whocosmetics/models/item/wardrobe.json
 d21587fcadbd9bd0c50c39a2ed2b53ff2a7e0ab5 data/whocosmetics/advancements/recipes/wc_clothes/3d_glasses.json
 9ff0e97773d7a6ae9271627cc6a73dba5fb88e17 data/whocosmetics/advancements/recipes/wc_clothes/astrakhan.json
 71c4712fc845e30521c8cc66b3c1e7b5fa57865b data/whocosmetics/advancements/recipes/wc_clothes/bowtie.json
@@ -42,6 +43,7 @@ af9bc784f4f860b9bbbaa761fc231e24bf022b86 data/whocosmetics/advancements/recipes/
 9f77bc523c2a5edf8865dd56b56c6cd17d2b8ec3 data/whocosmetics/advancements/recipes/wc_clothes/tenth_coat.json
 df71c1c88f28ed1066d918ab0b21c411d9439185 data/whocosmetics/advancements/recipes/wc_clothes/umbrella.json
 66ed97192b5730f37741daa1a50b8ff353aa6d70 data/whocosmetics/advancements/recipes/wc_clothes/velvet_coat.json
+eb6d3a9a18524ac79b3fbd3ee7c7d17d39379d40 data/whocosmetics/advancements/recipes/wc_clothes/wardrobe.json
 eb847364f5cd67c6b74045e89b6df443f09d0a19 data/whocosmetics/recipes/3d_glasses.json
 d4b7975152a6696ffd52bb7eb388394fc37485e1 data/whocosmetics/recipes/astrakhan.json
 0b6e7043cdd46030dc2a67e893155c12754c79b7 data/whocosmetics/recipes/bowtie.json
@@ -66,3 +68,4 @@ c796e43e420047eb7cc8c3bd1307fff1a4a1bb74 data/whocosmetics/recipes/stetson.json
 8dad56df1b97016f544ab2285a10d0b96e23f453 data/whocosmetics/recipes/tenth_coat.json
 47350c913f5e74b0edc47201d6df93ba56415347 data/whocosmetics/recipes/umbrella.json
 8b9ef5313b9047a19ae9bcc3a11994560390822a data/whocosmetics/recipes/velvet_coat.json
+364cda4281f89861cc3fe3ba6553802c1d08d45d data/whocosmetics/recipes/wardrobe.json

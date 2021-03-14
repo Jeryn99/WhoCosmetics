@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    "D D",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "tag": "minecraft:planks"
+    },
+    "D": {
+      "tag": "minecraft:wooden_doors"
+    }
+  },
+  "result": {
+    "item": "whocosmetics:wardrobe"
+  }
+}

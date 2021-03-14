@@ -1,6 +1,7 @@
 package me.suff.mc.wc.data;
 
 import me.suff.mc.wc.WhoCosmetics;
+import me.suff.mc.wc.common.WCBlocks;
 import me.suff.mc.wc.common.WCItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -40,6 +41,7 @@ public class LangCreation extends LanguageProvider {
         add(WCItems.TENTH_COAT.get(), "Trenchcoat");
         add(WCItems.RED_SCARF.get(), "Red Scarf");
         add(WCItems.ANTLERS.get(), "Antlers");
+        add(WCBlocks.WARDROBE.get(), "Wardrobe");
         /* Item Groups */
         add("itemGroup.wc_clothes", "Who-Cosmetics Clothing");
         add("itemGroup.wc_clothes_dyeable", "Who-Cosmetics Clothing (Dyed)");
