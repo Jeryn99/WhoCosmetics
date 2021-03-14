@@ -30,6 +30,12 @@ public class WardrobeScreen extends ContainerScreen< WardrobeContainer > impleme
     }
 
     @Override
+    protected void drawGuiContainerForegroundLayer(MatrixStack matrixStack, int x, int y) {
+        this.font.drawString(matrixStack, "=== Coat Hangers ===", 35, 8, -12829636);
+        this.font.drawString(matrixStack, "=== Boot & Shoes ===", 35, 45, -12829636);
+    }
+
+    @Override
     protected void drawGuiContainerBackgroundLayer(MatrixStack matrixStack, float partialTicks, int x, int y) {
         RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
         this.minecraft.getTextureManager().bindTexture(texture);

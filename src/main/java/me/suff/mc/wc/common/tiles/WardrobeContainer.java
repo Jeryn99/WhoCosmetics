@@ -1,18 +1,14 @@
 package me.suff.mc.wc.common.tiles;
 
 import me.suff.mc.wc.common.WCContainers;
-import me.suff.mc.wc.common.items.ClothingItem;
-import me.suff.mc.wc.common.items.JSONClothingItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.item.ArmorStandEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.Slot;
-import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.tileentity.TileEntity;
@@ -40,7 +36,7 @@ public class WardrobeContainer extends Container implements Supplier< Map< Integ
         super(WCContainers.WARDROBE.get(), id);
         this.entity = inv.player;
         this.world = inv.player.world;
-        this.internal = new ItemStackHandler(9);
+        this.internal = new ItemStackHandler(13);
         BlockPos pos = null;
         if (extraData != null) {
             pos = extraData.readBlockPos();
@@ -78,61 +74,89 @@ public class WardrobeContainer extends Container implements Supplier< Map< Integ
                 }
             }
         }
-        this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 7, 8) {
+        this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 7, 26) {
+
             @Override
             public boolean isItemValid(ItemStack stack) {
-                return isValid(stack);
+                return isValid(stack, EquipmentSlotType.CHEST);
             }
         }));
-        this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 43, 8) {
+        this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 25, 26) {
             @Override
             public boolean isItemValid(ItemStack stack) {
-                return isValid(stack);
+                return isValid(stack, EquipmentSlotType.CHEST);
             }
         }));
-        this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 79, 8) {
+        this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 43, 26) {
             @Override
             public boolean isItemValid(ItemStack stack) {
-                return isValid(stack);
+                return isValid(stack, EquipmentSlotType.CHEST);
             }
         }));
-        this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 115, 8) {
+        this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 61, 26) {
             @Override
             public boolean isItemValid(ItemStack stack) {
-                return isValid(stack);
+                return isValid(stack, EquipmentSlotType.CHEST);
             }
         }));
-        this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 151, 8) {
+        this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 79, 26) {
             @Override
             public boolean isItemValid(ItemStack stack) {
-                return isValid(stack);
+                return isValid(stack, EquipmentSlotType.CHEST);
             }
         }));
-        this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 25, 26) {
+        this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 97, 26) {
             @Override
             public boolean isItemValid(ItemStack stack) {
-                return isValid(stack);
+                return isValid(stack, EquipmentSlotType.CHEST);
             }
         }));
-        this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 61, 26) {
+        this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 115, 26) {
             @Override
             public boolean isItemValid(ItemStack stack) {
-                return isValid(stack);
+                return isValid(stack, EquipmentSlotType.CHEST);
             }
         }));
-        this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 97, 26) {
+        this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 133, 26) {
             @Override
             public boolean isItemValid(ItemStack stack) {
-                return isValid(stack);
+                return isValid(stack, EquipmentSlotType.CHEST);
             }
         }));
 
-        this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 133, 26) {
+        this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 151, 26) {
             @Override
             public boolean isItemValid(ItemStack stack) {
-                return isValid(stack);
+                return isValid(stack, EquipmentSlotType.CHEST);
             }
         }));
+
+        this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 25, 62) {
+            @Override
+            public boolean isItemValid(ItemStack stack) {
+                return isValid(stack, EquipmentSlotType.LEGS);
+            }
+        }));
+        this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 43, 62) {
+            @Override
+            public boolean isItemValid(ItemStack stack) {
+                return isValid(stack, EquipmentSlotType.FEET);
+            }
+        }));
+        this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 115, 62) {
+            @Override
+            public boolean isItemValid(ItemStack stack) {
+                return isValid(stack, EquipmentSlotType.LEGS);
+            }
+        }));
+        this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 133, 62) {
+            @Override
+            public boolean isItemValid(ItemStack stack) {
+                return isValid(stack, EquipmentSlotType.FEET);
+            }
+        }));
+
+
 
         int si;
         int sj;
@@ -147,11 +171,14 @@ public class WardrobeContainer extends Container implements Supplier< Map< Integ
         return customSlots;
     }
 
-    public static boolean isValid(ItemStack stack){
+    public static boolean isValid(ItemStack stack, EquipmentSlotType... slotType) {
         EquipmentSlotType slot = MobEntity.getSlotForItemStack(stack);
-        return slot != EquipmentSlotType.MAINHAND && slot != EquipmentSlotType.OFFHAND;
+        for (EquipmentSlotType equipmentSlotType : slotType) {
+            return slot == equipmentSlotType;
+        }
+        return false;
     }
-    
+
     @Override
     public boolean canInteractWith(PlayerEntity player) {
         return true;
@@ -286,4 +313,6 @@ public class WardrobeContainer extends Container implements Supplier< Map< Integ
             }
         }
     }
+
+
 }

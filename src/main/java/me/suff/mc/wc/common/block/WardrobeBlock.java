@@ -23,10 +23,7 @@ import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tileentity.ChestTileEntity;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Hand;
-import net.minecraft.util.Mirror;
-import net.minecraft.util.Rotation;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.MathHelper;
@@ -46,7 +43,7 @@ public class WardrobeBlock extends Block {
 
 
     public WardrobeBlock() {
-        super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).notSolid());
+        super(Block.Properties.create(Material.ROCK).sound(SoundType.WOOD).hardnessAndResistance(1f, 10f).notSolid());
     }
 
     @Override
@@ -106,6 +103,7 @@ public class WardrobeBlock extends Block {
                 }, new BlockPos(x, y, z));
             } else {
                 wardrobeTile.setOpen(!wardrobeTile.isOpen());
+                world.playSound(null, pos.getX()+0.5D, (double)pos.getY() + 0.5D, pos.getZ()+0.5D, wardrobeTile.isOpen() ? SoundEvents.BLOCK_CHEST_OPEN : SoundEvents.BLOCK_CHEST_CLOSE, SoundCategory.BLOCKS, 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
                 wardrobeTile.markDirty();
             }
 
@@ -133,7 +131,7 @@ public class WardrobeBlock extends Block {
     public boolean eventReceived(BlockState state, World world, BlockPos pos, int eventID, int eventParam) {
         super.eventReceived(state, world, pos, eventID, eventParam);
         TileEntity tileentity = world.getTileEntity(pos);
-        return tileentity == null ? false : tileentity.receiveClientEvent(eventID, eventParam);
+        return tileentity != null && tileentity.receiveClientEvent(eventID, eventParam);
     }
 
     @Override

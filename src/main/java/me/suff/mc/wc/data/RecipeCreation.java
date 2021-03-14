@@ -47,9 +47,4 @@ public class RecipeCreation extends RecipeProvider {
 
         ShapelessRecipeBuilder.shapelessRecipe(WCItems.CELERY.get()).addIngredient(ItemTags.SAPLINGS).addIngredient(Items.STICK).addIngredient(Items.STRING).addCriterion("has_crafting_table", hasItem(Blocks.CRAFTING_TABLE)).build(consumer);
     }
-
-    @Override
-    public void act(DirectoryCache cache) throws IOException {
-        super.act(cache);
-    }
 }

@@ -12,10 +12,12 @@ import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.network.play.server.SUpdateTileEntityPacket;
+import net.minecraft.tileentity.ChestTileEntity;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.LockableLootTileEntity;
 import net.minecraft.util.Direction;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraftforge.common.capabilities.Capability;
@@ -28,7 +30,7 @@ import javax.annotation.Nullable;
 import java.util.stream.IntStream;
 
 public class WardrobeTile extends LockableLootTileEntity implements ISidedInventory, ITickableTileEntity {
-    private NonNullList< ItemStack > stacks = NonNullList.withSize(9, ItemStack.EMPTY);
+    private NonNullList< ItemStack > stacks = NonNullList.withSize(13, ItemStack.EMPTY);
     private float openAmount = 0.0F;
     private boolean isOpen = false;
 
@@ -48,6 +50,12 @@ public class WardrobeTile extends LockableLootTileEntity implements ISidedInvent
     public void setOpen(boolean open) {
         isOpen = open;
         sendUpdates();
+    }
+
+    @Override
+    public AxisAlignedBB getRenderBoundingBox() {
+        return super.getRenderBoundingBox().expand(8,8,8);
+
     }
 
     public void sendUpdates() {
@@ -101,7 +109,7 @@ public class WardrobeTile extends LockableLootTileEntity implements ISidedInvent
 
     @Override
     protected ITextComponent getDefaultName() {
-        return null;
+        return getDisplayName();
     }
 
     @Override
