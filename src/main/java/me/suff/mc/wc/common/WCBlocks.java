@@ -1,6 +1,7 @@
 package me.suff.mc.wc.common;
 
 import me.suff.mc.wc.WhoCosmetics;
+import me.suff.mc.wc.common.block.HatStandBlock;
 import me.suff.mc.wc.common.block.WardrobeBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -20,6 +21,7 @@ public class WCBlocks {
 
 
     public static final RegistryObject< Block > WARDROBE = BLOCKS.register("wardrobe", WardrobeBlock::new);
+    public static final RegistryObject< Block > HAT_STAND = BLOCKS.register("hat_stand", HatStandBlock::new);
 
 
     private static void genBlockItems(Block... blocks) {
@@ -30,6 +32,6 @@ public class WCBlocks {
 
     @SubscribeEvent
     public static void regBlockItems(RegistryEvent.Register< Item > e) {
-        genBlockItems(WARDROBE.get());
+        genBlockItems(WARDROBE.get(), HAT_STAND.get());
     }
 }

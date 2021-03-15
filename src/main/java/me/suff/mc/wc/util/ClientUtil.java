@@ -2,20 +2,17 @@ package me.suff.mc.wc.util;
 
 import me.suff.mc.wc.WhoCosmetics;
 import me.suff.mc.wc.client.ClothingManager;
-import me.suff.mc.wc.client.RenderWardrobe;
+import me.suff.mc.wc.client.tiles.RenderHatstand;
+import me.suff.mc.wc.client.tiles.RenderWardrobe;
 import me.suff.mc.wc.client.screen.WardrobeScreen;
 import me.suff.mc.wc.common.WCContainers;
 import me.suff.mc.wc.common.WCItems;
 import me.suff.mc.wc.common.WCTiles;
 import me.suff.mc.wc.common.items.ClothingItem;
 import me.suff.mc.wc.common.items.UmbrellaItem;
-import me.suff.mc.wc.common.tiles.WardrobeContainer;
 import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
 import net.minecraft.client.gui.ScreenManager;
-import net.minecraft.client.gui.screen.inventory.ContainerScreen;
-import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.inventory.container.Container;
 import net.minecraft.item.*;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
@@ -66,6 +63,7 @@ public class ClientUtil {
         DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(WCContainers.WARDROBE.get(), WardrobeScreen::new));
 
         ClientRegistry.bindTileEntityRenderer(WCTiles.WARDROBE.get(), RenderWardrobe::new);
+        ClientRegistry.bindTileEntityRenderer(WCTiles.HAT_STAND.get(), RenderHatstand::new);
 
     }
 

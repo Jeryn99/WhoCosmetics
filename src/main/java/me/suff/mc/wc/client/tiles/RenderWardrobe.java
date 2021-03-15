@@ -1,4 +1,4 @@
-package me.suff.mc.wc.client;
+package me.suff.mc.wc.client.tiles;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import me.suff.mc.wc.WhoCosmetics;

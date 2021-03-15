@@ -41,6 +41,7 @@ public class LangCreation extends LanguageProvider {
         add(WCItems.TENTH_COAT.get(), "Trenchcoat");
         add(WCItems.RED_SCARF.get(), "Red Scarf");
         add(WCItems.ANTLERS.get(), "Antlers");
+        add(WCItems.GASMASK.get(), "Gasmask");
         add(WCBlocks.WARDROBE.get(), "Wardrobe");
         /* Item Groups */
         add("itemGroup.wc_clothes", "Who-Cosmetics Clothing");
