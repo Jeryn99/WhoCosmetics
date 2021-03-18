@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 import me.suff.mc.wc.WhoCosmetics;
+import me.suff.mc.wc.common.block.WardrobeBlock;
 import me.suff.mc.wc.common.items.JSONClothingItem;
 import me.suff.mc.wc.common.items.UmbrellaItem;
 import net.minecraft.block.Block;

@@ -45,6 +45,7 @@ public class WCItems {
     public static final RegistryObject< Item > RAINBOW_SCARF = ITEMS.register("rainbow_scarf", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
     public static final RegistryObject< Item > RED_SCARF = ITEMS.register("red_scarf", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
     public static final RegistryObject< Item > UMBRELLA = ITEMS.register("umbrella", () -> new UmbrellaItem(properties));
+   // public static final RegistryObject< Item > UMBRELLA_MISSY = ITEMS.register("m_umbrella", () -> new UmbrellaItem(properties));
     public static final RegistryObject< Item > SCARF = ITEMS.register("scarf", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST, false, DyeColor.GRAY.getColorValue()));
     public static final RegistryObject< Item > CRICKET_JACKET = ITEMS.register("cricket_jacket", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
 
