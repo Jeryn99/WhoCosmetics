@@ -40,8 +40,8 @@ public class WCItems {
     public static final RegistryObject< Item > ASTRAKHAN = ITEMS.register("astrakhan", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.HEAD));
     public static final RegistryObject< Item > STRAW_HAT = ITEMS.register("straw_hat", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.HEAD));
     public static final RegistryObject< Item > MONDAS = ITEMS.register("mondas", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.VIOLET));
-    public static final RegistryObject< Item > THREED_GLASSES = ITEMS.register("3d_glasses", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.ANGELA));
-    public static final RegistryObject< Item > MAGNOLI = ITEMS.register("magnoli_clothiers", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.ANGELA));
+    public static final RegistryObject< Item > THREED_GLASSES = ITEMS.register("3d_glasses", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.JAMIE));
+    public static final RegistryObject< Item > MAGNOLI = ITEMS.register("magnoli_clothiers", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.JAMIE));
     public static final RegistryObject< Item > RAINBOW_SCARF = ITEMS.register("rainbow_scarf", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
     public static final RegistryObject< Item > RED_SCARF = ITEMS.register("red_scarf", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
     public static final RegistryObject< Item > UMBRELLA = ITEMS.register("umbrella", () -> new UmbrellaItem(properties));
@@ -54,16 +54,17 @@ public class WCItems {
     public static final RegistryObject< Item > TENTH_COAT = ITEMS.register("tenth_coat", () -> new ClothingItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST));
     public static final RegistryObject< Item > SASH = ITEMS.register("sash", () -> new ClothingItem(ArmorMaterial.DIAMOND, EquipmentSlotType.CHEST));
 
-    public static final RegistryObject< Item > FRUIT_HAT = ITEMS.register("fruit_hat", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.ANGELA));
-    public static final RegistryObject< Item > FEATHER_HAT = ITEMS.register("feather_hat", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.ANGELA));
+    public static final RegistryObject< Item > FRUIT_HAT = ITEMS.register("fruit_hat", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.JAMIE));
+    public static final RegistryObject< Item > FEATHER_HAT = ITEMS.register("feather_hat", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.JAMIE));
 
     public static final RegistryObject< Item > SPACE_HELMET = ITEMS.register("space_helmet", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.HEAD));
     public static final RegistryObject< Item > SPACE_CHEST = ITEMS.register("space_chest", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.CHEST));
     public static final RegistryObject< Item > SPACE_LEGS = ITEMS.register("space_legs", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.LEGS));
     public static final RegistryObject< Item > SPACE_FEET = ITEMS.register("space_feet", () -> new ClothingItem(ArmorMaterial.IRON, EquipmentSlotType.FEET));
 
-    public static final RegistryObject< Item > ANTLERS = ITEMS.register("antlers", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.ANGELA));
+    public static final RegistryObject< Item > ANTLERS = ITEMS.register("antlers", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.JAMIE));
     public static final RegistryObject< Item > GASMASK = ITEMS.register("gas_mask", () -> new ClothingItem(ArmorMaterial.CHAIN, EquipmentSlotType.HEAD));
+    public static final RegistryObject< Item > EYE_STALK = ITEMS.register("eye_stalk", () -> new JSONClothingItem(EquipmentSlotType.HEAD).setModeller(Modeller.JAMIE));
 
 
 }

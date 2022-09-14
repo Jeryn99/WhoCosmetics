@@ -4,7 +4,7 @@ public enum Modeller {
     END("End Phoenix"),
     VIOLET("Violet"),
     VESPA("Vespa"),
-    ANGELA("ItzAngela");
+    JAMIE("Jamie");
 
     private final String modellerName;
 
