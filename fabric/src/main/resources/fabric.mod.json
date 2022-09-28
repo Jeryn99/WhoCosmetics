@@ -17,6 +17,9 @@
   "entrypoints": {
     "main": [
       "me.craig.software.cosmetics.fabric.WhoCosmeticsFabric"
+    ],
+    "client": [
+      "me.craig.software.cosmetics.fabric.WhoCosmeticsClientFabric"
     ]
   },
   "mixins": [

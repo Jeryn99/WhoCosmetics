@@ -1,18 +1,12 @@
 package me.craig.software.cosmetics;
 
-import com.google.common.base.Suppliers;
-import net.minecraft.core.Registry;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-
-import java.util.function.Supplier;
+import me.craig.software.cosmetics.common.WCItems;
 
 public class WhoCosmetics {
     public static final String MOD_ID = "whocosmetics";
-    
-    public static void init() {
+    public static final String MAPPING_ERROR = "Something has went terribly wrong with expect platform";
 
+    public static void init() {
+        WCItems.ITEMS.register();
     }
 }
