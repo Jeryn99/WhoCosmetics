@@ -10,6 +10,7 @@ import net.minecraft.world.item.ItemStack;
 public class ArmorModelManager implements ResourceManagerReloadListener {
 
     public static <T extends LivingEntity> HumanoidModel<?> getArmorModel(ItemStack itemStack, T livingEntity, EquipmentSlot equipmentSlot) {
+        ClientUtil.clothingModels(); //TODO
         return ClientUtil.getArmorModel(itemStack, livingEntity);
     }
 

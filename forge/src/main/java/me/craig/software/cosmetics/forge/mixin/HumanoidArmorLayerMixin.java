@@ -1,5 +1,6 @@
 package me.craig.software.cosmetics.forge.mixin;
 
+import me.craig.software.cosmetics.client.ArmorModelManager;
 import me.craig.software.cosmetics.common.items.ICustomArmorTexture;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.Model;
@@ -39,7 +40,7 @@ public abstract class HumanoidArmorLayerMixin<T extends LivingEntity, M extends 
     @SuppressWarnings({"unchecked", "rawtypes"})
     @Inject(at = @At("HEAD"), method = "getArmorModelHook", cancellable = true, remap = false)
     private void getArmorModelHook(LivingEntity entity, ItemStack itemStack, EquipmentSlot slot, HumanoidModel<?> model, CallbackInfoReturnable<Model> ci) {
-        HumanoidModel m = null; //TODO ArmorModelManager.getArmorModel(itemStack, entity, slot);
+        HumanoidModel m = ArmorModelManager.getArmorModel(itemStack, entity, slot);
 
         if(m == null) return;
 

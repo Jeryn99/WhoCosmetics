@@ -2,6 +2,7 @@ package me.craig.software.cosmetics.fabric.mixin;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import me.craig.software.cosmetics.client.ArmorModelManager;
 import me.craig.software.cosmetics.common.items.ICustomArmorTexture;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -16,6 +17,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.DyeableArmorItem;
+import net.minecraft.world.item.DyeableLeatherItem;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
@@ -47,7 +49,7 @@ public abstract class HumanoidArmorLayerMixin<T extends LivingEntity, M extends 
         if (itemStack.getItem() instanceof ICustomArmorTexture) {
             ArmorItem armorItem = (ArmorItem) itemStack.getItem();
 
-            HumanoidModel<?> model = null;//TODO ArmorModelManager.getArmorModel(itemStack, livingEntity, equipmentSlot);
+            HumanoidModel<?> model = ArmorModelManager.getArmorModel(itemStack, livingEntity, equipmentSlot);
 
             if (model != null) {
                 humanoidModel = (A) model;
@@ -58,8 +60,8 @@ public abstract class HumanoidArmorLayerMixin<T extends LivingEntity, M extends 
                 this.setPartVisibility(humanoidModel, equipmentSlot);
                 boolean bl = this.usesInnerModel(equipmentSlot);
                 boolean bl2 = itemStack.hasFoil();
-                if (armorItem instanceof DyeableArmorItem) {
-                    int j = ((DyeableArmorItem) armorItem).getColor(itemStack);
+                if (armorItem instanceof DyeableLeatherItem) {
+                    int j = ((DyeableLeatherItem) armorItem).getColor(itemStack);
                     float f = (float) (j >> 16 & 255) / 255.0F;
                     float g = (float) (j >> 8 & 255) / 255.0F;
                     float h = (float) (j & 255) / 255.0F;
