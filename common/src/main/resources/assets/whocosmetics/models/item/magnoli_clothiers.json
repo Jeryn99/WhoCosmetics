@@ -1,0 +1,65 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"1": "whocosmetics:item/magnoli_clothiers"
+	},
+	"elements": [
+		{
+			"name": "Head",
+			"from": [3.75, 23.5, 3.75],
+			"to": [12.25, 32, 12.25],
+			"faces": {
+				"north": {"uv": [4, 12, 8, 16], "texture": "#1"},
+				"east": {"uv": [0, 12, 4, 16], "texture": "#1"},
+				"south": {"uv": [12, 12, 16, 16], "texture": "#1"},
+				"west": {"uv": [8, 12, 12, 16], "texture": "#1"},
+				"up": {"uv": [8, 12, 4, 8], "texture": "#1"},
+				"down": {"uv": [12, 8, 8, 12], "texture": "#1"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, 90, 0],
+			"translation": [1, -12.75, -2.5],
+			"scale": [0.56, 0.56, 0.56]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 90, 0],
+			"translation": [1, -12.75, -2.5],
+			"scale": [0.56, 0.56, 0.56]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 90, 0],
+			"translation": [4.75, -16, -2]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 90, 0],
+			"translation": [4.75, -16, -2]
+		},
+		"ground": {
+			"translation": [0, -20.5, 0]
+		},
+		"gui": {
+			"rotation": [19, 138, 0],
+			"translation": [3, -29, 0],
+			"scale": [1.64, 1.67, 1.67]
+		},
+		"head": {
+			"translation": [0, -31.5, 0],
+			"scale": [1.6, 1.6, 1.6]
+		},
+		"fixed": {
+			"translation": [0, -30.5, 6.25],
+			"scale": [1.62, 1.62, 1.62]
+		}
+	},
+	"groups": [
+		{
+			"name": "Head",
+			"origin": [0, 24, 0],
+			"children": [0]
+		}
+	]
+}
