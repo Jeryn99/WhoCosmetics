@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "whocosmetics",
+  "version": "${version}",
+  "name": "Example Mod",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-whocosmetics"
+  },
+  "license": "Insert License Here",
+  "icon": "assets/whocosmetics/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.craig.software.cosmetics.fabric.WhoCosmeticsFabric"
+    ]
+  },
+  "mixins": [
+    "whocosmetics.mixins.json",
+    "whocosmetics.common.mixins.json"
+  ],
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.19.2"
+  }
+}
