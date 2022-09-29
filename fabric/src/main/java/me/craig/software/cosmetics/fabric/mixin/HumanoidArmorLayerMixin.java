@@ -1,8 +1,10 @@
 package me.craig.software.cosmetics.fabric.mixin;
 
+import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import me.craig.software.cosmetics.client.ArmorModelManager;
+import me.craig.software.cosmetics.common.items.ClothingItem;
 import me.craig.software.cosmetics.common.items.ICustomArmorTexture;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -16,7 +18,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.DyeableArmorItem;
 import net.minecraft.world.item.DyeableLeatherItem;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.Nullable;
@@ -60,13 +61,13 @@ public abstract class HumanoidArmorLayerMixin<T extends LivingEntity, M extends 
                 this.setPartVisibility(humanoidModel, equipmentSlot);
                 boolean bl = this.usesInnerModel(equipmentSlot);
                 boolean bl2 = itemStack.hasFoil();
-                if (armorItem instanceof DyeableLeatherItem) {
-                    int j = ((DyeableLeatherItem) armorItem).getColor(itemStack);
+                if (armorItem instanceof ClothingItem clothingItem && clothingItem.isColored()) {
+                    int j = clothingItem.getColor(itemStack);
                     float f = (float) (j >> 16 & 255) / 255.0F;
                     float g = (float) (j >> 8 & 255) / 255.0F;
                     float h = (float) (j & 255) / 255.0F;
+                    RenderSystem.setShaderFogColor(f, g, h);
                     this.renderModel(poseStack, multiBufferSource, i, livingEntity, itemStack, equipmentSlot, bl2, humanoidModel, bl, f, g, h, null);
-                    this.renderModel(poseStack, multiBufferSource, i, livingEntity, itemStack, equipmentSlot, bl2, humanoidModel, bl, 1.0F, 1.0F, 1.0F, "overlay");
                 } else {
                     this.renderModel(poseStack, multiBufferSource, i, livingEntity, itemStack, equipmentSlot, bl2, humanoidModel, bl, 1.0F, 1.0F, 1.0F, null);
                 }

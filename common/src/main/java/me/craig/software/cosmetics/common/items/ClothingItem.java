@@ -40,7 +40,7 @@ public class ClothingItem extends ArmorItem implements DyeableLeatherItem, ICust
     public void fillItemCategory(CreativeModeTab category, NonNullList<ItemStack> items) {
         super.fillItemCategory(category, items);
 
-        if (isColored) {
+        if (isColored && getItemCategory() == category) {
             for (DyeColor value : DyeColor.values()) {
                 ItemStack stack = new ItemStack(this);
                 setColor(stack, value.getMaterialColor().col);

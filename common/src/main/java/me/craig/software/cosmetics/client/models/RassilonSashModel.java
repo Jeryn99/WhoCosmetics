@@ -3,25 +3,33 @@ package me.craig.software.cosmetics.client.models;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.EntityModel;
+import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.world.entity.Entity;
 
 
-public class RassilonSashModel<T extends Entity> extends EntityModel<T> {
-    private final ModelPart sash;
+public class RassilonSashModel<T extends Entity> extends HumanoidModel {
 
-    public RassilonSashModel(ModelPart root) {
-        this.sash = root.getChild("sash");
+    public RassilonSashModel(ModelPart modelPart) {
+        super(modelPart);
     }
 
     public static LayerDefinition createBodyLayer() {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
 
-        PartDefinition sash = partdefinition.addOrReplaceChild("sash", CubeListBuilder.create().texOffs(23, 0).addBox(-0.2775F, 6.5517F, -2.5F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+        PartDefinition sash = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(23, 0).addBox(-0.2775F, 6.5517F, -2.5F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(24, 21).addBox(-1.7416F, 6.5517F, -2.5F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+
+        partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+        partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+        partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+        partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+        partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+        partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+
 
         PartDefinition fourth_scarf = sash.addOrReplaceChild("fourth_scarf", CubeListBuilder.create().texOffs(23, 10).addBox(3.5F, -10.5F, 5.0F, 2.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(8, 8).addBox(-1.5F, -10.5F, 5.0F, 6.0F, 2.0F, 1.0F, new CubeDeformation(-0.25F))
@@ -68,13 +76,4 @@ public class RassilonSashModel<T extends Entity> extends EntityModel<T> {
         return LayerDefinition.create(meshdefinition, 32, 32);
     }
 
-    @Override
-    public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-
-    }
-
-    @Override
-    public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-        sash.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-    }
 }

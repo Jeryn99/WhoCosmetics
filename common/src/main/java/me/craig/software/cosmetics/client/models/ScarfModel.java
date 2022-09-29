@@ -4,23 +4,31 @@ package me.craig.software.cosmetics.client.models;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.EntityModel;
+import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.world.entity.Entity;
 
-public class ScarfModel<T extends Entity> extends EntityModel<T> {
-	private final ModelPart first_scarf;
+public class ScarfModel<T extends Entity> extends HumanoidModel {
 
-	public ScarfModel(ModelPart root) {
-		this.first_scarf = root.getChild("first_scarf");
+	public ScarfModel(ModelPart modelPart) {
+		super(modelPart);
 	}
 
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
-		PartDefinition first_scarf = partdefinition.addOrReplaceChild("first_scarf", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+		PartDefinition first_scarf = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+
+		partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+		partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+		partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+		partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+		partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+		partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+
 
 		PartDefinition firsts_scarf = first_scarf.addOrReplaceChild("firsts_scarf", CubeListBuilder.create().texOffs(0, 3).addBox(-2.75F, -10.75F, 0.5F, 3.0F, 10.0F, 1.0F, new CubeDeformation(0.0F))
 		.texOffs(8, 6).addBox(-2.75F, -0.75F, 1.0F, 3.0F, 2.0F, 0.0F, new CubeDeformation(0.0F))
@@ -36,13 +44,4 @@ public class ScarfModel<T extends Entity> extends EntityModel<T> {
 		return LayerDefinition.create(meshdefinition, 32, 32);
 	}
 
-	@Override
-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-
-	}
-
-	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-		first_scarf.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-	}
 }
