@@ -1,1 +1,2 @@
 accessWidener   v2  named
+accessible field net/minecraft/client/player/AbstractClientPlayer playerInfo Lnet/minecraft/client/multiplayer/PlayerInfo;

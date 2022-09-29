@@ -31,24 +31,22 @@ public class WCItems {
     public static final RegistrySupplier<Item> MAGNOLI = ITEMS.register("magnoli_clothiers", () -> new JSONClothingItem(EquipmentSlot.HEAD));
     public static final RegistrySupplier<Item> RAINBOW_SCARF = ITEMS.register("rainbow_scarf", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST));
     public static final RegistrySupplier<Item> RED_SCARF = ITEMS.register("red_scarf", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST));
-    // public static final RegistrySupplier< Item > UMBRELLA = ITEMS.register("umbrella", () -> new UmbrellaItem(properties));
-    // public static final RegistrySupplier< Item > UMBRELLA_MISSY = ITEMS.register("m_umbrella", () -> new UmbrellaItem(properties));
     public static final RegistrySupplier<Item> SCARF = ITEMS.register("scarf", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST, false, DyeColor.GRAY.getMaterialColor().col));
-    public static final RegistrySupplier<Item> CRICKET_JACKET = ITEMS.register("cricket_jacket", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST));
+    public static final RegistrySupplier<Item> CRICKET_JACKET = ITEMS.register("cricket_jacket", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST).enableAlexSupport());
 
-    public static final RegistrySupplier<Item> SECOND_JACKET = ITEMS.register("second_jacket", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST));
-    public static final RegistrySupplier<Item> VELVET_COAT = ITEMS.register("velvet_coat", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST));
-    public static final RegistrySupplier<Item> TENTH_COAT = ITEMS.register("tenth_coat", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST));
+    public static final RegistrySupplier<Item> SECOND_JACKET = ITEMS.register("second_jacket", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST).enableAlexSupport());
+    public static final RegistrySupplier<Item> VELVET_COAT = ITEMS.register("velvet_coat", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST).enableAlexSupport());
+    public static final RegistrySupplier<Item> TENTH_COAT = ITEMS.register("tenth_coat", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST).enableAlexSupport());
     public static final RegistrySupplier<Item> SASH = ITEMS.register("sash", () -> new ClothingItem(ArmorMaterials.DIAMOND, EquipmentSlot.CHEST));
 
     public static final RegistrySupplier<Item> FRUIT_HAT = ITEMS.register("fruit_hat", () -> new JSONClothingItem(EquipmentSlot.HEAD));
     public static final RegistrySupplier<Item> FEATHER_HAT = ITEMS.register("feather_hat", () -> new JSONClothingItem(EquipmentSlot.HEAD));
 
-    public static final RegistrySupplier<Item> SPACE_HELMET = ITEMS.register("space_helmet", () -> new ClothingItem(ArmorMaterials.IRON, EquipmentSlot.HEAD));
+   /* public static final RegistrySupplier<Item> SPACE_HELMET = ITEMS.register("space_helmet", () -> new ClothingItem(ArmorMaterials.IRON, EquipmentSlot.HEAD));
     public static final RegistrySupplier<Item> SPACE_CHEST = ITEMS.register("space_chest", () -> new ClothingItem(ArmorMaterials.IRON, EquipmentSlot.CHEST));
     public static final RegistrySupplier<Item> SPACE_LEGS = ITEMS.register("space_legs", () -> new ClothingItem(ArmorMaterials.IRON, EquipmentSlot.LEGS));
     public static final RegistrySupplier<Item> SPACE_FEET = ITEMS.register("space_feet", () -> new ClothingItem(ArmorMaterials.IRON, EquipmentSlot.FEET));
-
+*/
     public static final RegistrySupplier<Item> ANTLERS = ITEMS.register("antlers", () -> new JSONClothingItem(EquipmentSlot.HEAD));
     public static final RegistrySupplier<Item> GASMASK = ITEMS.register("gas_mask", () -> new ClothingItem(ArmorMaterials.CHAIN, EquipmentSlot.HEAD));
     public static final RegistrySupplier<Item> EYE_STALK = ITEMS.register("eye_stalk", () -> new JSONClothingItem(EquipmentSlot.HEAD));
