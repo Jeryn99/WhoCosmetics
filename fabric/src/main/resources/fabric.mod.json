@@ -16,10 +16,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "me.craig.software.cosmetics.fabric.WhoCosmeticsFabric"
+      "mc.craig.software.cosmetics.fabric.fabric.WhoCosmeticsFabric"
     ],
     "client": [
-      "me.craig.software.cosmetics.fabric.WhoCosmeticsClientFabric"
+      "mc.craig.software.cosmetics.fabric.fabric.WhoCosmeticsClientFabric"
     ]
   },
   "mixins": [

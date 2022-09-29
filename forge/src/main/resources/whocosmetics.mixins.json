@@ -1,9 +1,9 @@
 {
   "required": true,
-  "package": "me.craig.software.cosmetics.forge.mixin",
+  "package": "mc.craig.software.cosmetics.forge.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [
-    "HumanoidArmorLayerMixin"
+    "mc.craig.software.cosmetics.forge.mixin.HumanoidArmorLayerMixin"
   ],
   "mixins": [
   ],
