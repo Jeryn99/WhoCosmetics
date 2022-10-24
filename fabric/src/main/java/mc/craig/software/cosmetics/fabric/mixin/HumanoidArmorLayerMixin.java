@@ -1,4 +1,4 @@
-package mc.craig.software.cosmetics.fabric.fabric.mixin;
+package mc.craig.software.cosmetics.fabric.mixin;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;

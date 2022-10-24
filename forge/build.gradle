@@ -14,7 +14,7 @@ loom {
         convertAccessWideners = true
         extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
 
-        mixinConfig "whocosmetics-common.mixins.json"
+        mixinConfig "whocosmetics.common.mixins.json"
         mixinConfig "whocosmetics.mixins.json"
     }
 }

@@ -20,11 +20,11 @@ public class ClientUtil {
 
     public static <T extends LivingEntity> HumanoidModel<?> getArmorModel(ItemStack itemStack, T livingEntity) {
 
-        if(!ClientUtil.isAlex(livingEntity) && ARMOR_MODELS_STEVE.containsKey(itemStack.getItem())){
+        if (!ClientUtil.isAlex(livingEntity) && ARMOR_MODELS_STEVE.containsKey(itemStack.getItem())) {
             return ARMOR_MODELS_STEVE.get(itemStack.getItem());
         }
 
-        if(ARMOR_MODELS.containsKey(itemStack.getItem())){
+        if (ARMOR_MODELS.containsKey(itemStack.getItem())) {
             return ARMOR_MODELS.get(itemStack.getItem());
         }
         return null;
