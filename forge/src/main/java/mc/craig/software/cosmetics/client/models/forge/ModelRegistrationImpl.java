@@ -14,7 +14,6 @@ public class ModelRegistrationImpl {
     public static final Map<ModelLayerLocation, Supplier<LayerDefinition>> DEFINITIONS = new ConcurrentHashMap<>();
 
     public static ModelLayerLocation register(ModelLayerLocation location, com.google.common.base.Supplier<LayerDefinition> definition) {
-        System.out.println(location);
         DEFINITIONS.put(location, definition);
         return location;
     }
