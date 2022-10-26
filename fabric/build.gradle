@@ -52,6 +52,11 @@ jar {
     classifier "dev"
 }
 
+sourceSets.main.resources {
+    srcDir project(":forge").file("src/generated/resources").absolutePath
+}
+
+
 sourcesJar {
     def commonSources = project(":common").sourcesJar
     dependsOn commonSources

@@ -3,6 +3,7 @@ package mc.craig.software.cosmetics.fabric.mixin;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import mc.craig.software.cosmetics.client.ClientUtil;
 import mc.craig.software.cosmetics.common.items.ClothingItem;
 import mc.craig.software.cosmetics.client.ArmorModelManager;
 import mc.craig.software.cosmetics.common.items.ICustomArmorTexture;
@@ -48,6 +49,8 @@ public abstract class HumanoidArmorLayerMixin<T extends LivingEntity, M extends 
         ItemStack itemStack = livingEntity.getItemBySlot(equipmentSlot);
         if (itemStack.getItem() instanceof ICustomArmorTexture) {
             ArmorItem armorItem = (ArmorItem) itemStack.getItem();
+
+            ClientUtil.clothingModels();
 
             HumanoidModel<?> model = ArmorModelManager.getArmorModel(itemStack, livingEntity, equipmentSlot);
 

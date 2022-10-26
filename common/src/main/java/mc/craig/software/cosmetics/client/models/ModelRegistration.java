@@ -23,7 +23,6 @@ public class ModelRegistration {
         STETSON = register(new ModelLayerLocation(new ResourceLocation(WhoCosmetics.MOD_ID, "model"), "stetson"), StetsonModel::createBodyLayer);
         JACKET = register(new ModelLayerLocation(new ResourceLocation(WhoCosmetics.MOD_ID, "model"), "jacket"), () -> GenericJacketModel.createBodyLayer(false));
         JACKET_SLIM = register(new ModelLayerLocation(new ResourceLocation(WhoCosmetics.MOD_ID, "model"), "jacket_slim"), () -> GenericJacketModel.createBodyLayer(true));
-
     }
 
     @ExpectPlatform
