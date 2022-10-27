@@ -4,7 +4,9 @@ import mc.craig.software.cosmetics.client.models.*;
 import mc.craig.software.cosmetics.common.WCItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.model.PlayerModel;
 import net.minecraft.client.model.geom.EntityModelSet;
+import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -54,6 +56,9 @@ public class ClientUtil {
 
         ARMOR_MODELS.put(WCItems.VELVET_COAT.get(), new GenericJacketModel<>(entityModels.bakeLayer(ModelRegistration.JACKET_SLIM)));
         ARMOR_MODELS_STEVE.put(WCItems.VELVET_COAT.get(), new GenericJacketModel<>(entityModels.bakeLayer(ModelRegistration.JACKET)));
+
+        ARMOR_MODELS.put(WCItems.RAINBOW_COAT.get(), new ArmorPlayerModel(entityModels.bakeLayer(ModelLayers.PLAYER), false));
+        ARMOR_MODELS_STEVE.put(WCItems.RAINBOW_COAT.get(), new ArmorPlayerModel(entityModels.bakeLayer(ModelLayers.PLAYER), true));
 
         ARMOR_MODELS.put(WCItems.CRICKET_JACKET.get(), new GenericJacketModel<>(entityModels.bakeLayer(ModelRegistration.JACKET_SLIM)));
         ARMOR_MODELS_STEVE.put(WCItems.CRICKET_JACKET.get(), new GenericJacketModel<>(entityModels.bakeLayer(ModelRegistration.JACKET)));

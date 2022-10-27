@@ -12,6 +12,7 @@
   "item.whocosmetics.gas_mask": "Gasmask",
   "item.whocosmetics.magnoli_clothiers": "Magnoli Glasses",
   "item.whocosmetics.mondas": "Mondas Cyber-Helmet",
+  "item.whocosmetics.rainbow_coat": "Rainbow Coat",
   "item.whocosmetics.rainbow_scarf": "Rainbow Scarf",
   "item.whocosmetics.red_scarf": "Red Scarf",
   "item.whocosmetics.sash": "Sash of Rassilon",
@@ -21,5 +22,7 @@
   "item.whocosmetics.stetson": "Stetson",
   "item.whocosmetics.straw_hat": "Straw Hat",
   "item.whocosmetics.tenth_coat": "Trenchcoat",
-  "item.whocosmetics.velvet_coat": "Velvet Jacket"
+  "item.whocosmetics.velvet_coat": "Velvet Jacket",
+  "itemGroup.whocosmetics": "WhoCosmetics",
+  "itemGroup.whocosmetics.whocosmetics": "WhoCosmetics"
 }
