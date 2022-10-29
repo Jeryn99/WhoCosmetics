@@ -55,8 +55,21 @@ public class ClientUtil {
         ARMOR_MODELS.put(WCItems.VELVET_COAT.get(), new GenericJacketModel<>(entityModels.bakeLayer(ModelRegistration.JACKET_SLIM)));
         ARMOR_MODELS_STEVE.put(WCItems.VELVET_COAT.get(), new GenericJacketModel<>(entityModels.bakeLayer(ModelRegistration.JACKET)));
 
+
+
         ARMOR_MODELS.put(WCItems.CRICKET_JACKET.get(), new GenericJacketModel<>(entityModels.bakeLayer(ModelRegistration.JACKET_SLIM)));
         ARMOR_MODELS_STEVE.put(WCItems.CRICKET_JACKET.get(), new GenericJacketModel<>(entityModels.bakeLayer(ModelRegistration.JACKET)));
+
+
+
+        ARMOR_MODELS.put(WCItems.SPACE_HELMET.get(), new SpaceSuitModel(entityModels.bakeLayer(ModelRegistration.SPACE_SUIT)));
+        ARMOR_MODELS_STEVE.put(WCItems.SPACE_HELMET.get(), new SpaceSuitModel(entityModels.bakeLayer(ModelRegistration.JACKET)));
+        ARMOR_MODELS.put(WCItems.SPACE_CHEST.get(), new SpaceSuitModel(entityModels.bakeLayer(ModelRegistration.SPACE_SUIT)));
+        ARMOR_MODELS_STEVE.put(WCItems.SPACE_CHEST.get(), new SpaceSuitModel(entityModels.bakeLayer(ModelRegistration.JACKET)));
+        ARMOR_MODELS.put(WCItems.SPACE_LEGS.get(), new SpaceSuitModel(entityModels.bakeLayer(ModelRegistration.SPACE_SUIT)));
+        ARMOR_MODELS_STEVE.put(WCItems.SPACE_LEGS.get(), new SpaceSuitModel(entityModels.bakeLayer(ModelRegistration.JACKET)));
+        ARMOR_MODELS.put(WCItems.SPACE_FEET.get(), new SpaceSuitModel(entityModels.bakeLayer(ModelRegistration.SPACE_SUIT)));
+        ARMOR_MODELS_STEVE.put(WCItems.SPACE_FEET.get(), new SpaceSuitModel(entityModels.bakeLayer(ModelRegistration.JACKET)));
 
 
         ARMOR_MODELS.put(WCItems.RAINBOW_SCARF.get(), new GenericJacketModel<>(entityModels.bakeLayer(ModelRegistration.JACKET_SLIM)));

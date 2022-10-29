@@ -8,7 +8,7 @@ import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.resources.ResourceLocation;
 
 public class ModelRegistration {
-    public static ModelLayerLocation JACKET, JACKET_SLIM, BOWTIE, STETSON, FIRST_HAT, GASMASK, RASSILON_SASH, FEZ, SATCHEL, SCARF, STRAW_HAT, CELERY_STICK;
+    public static ModelLayerLocation SPACE_SUIT, JACKET, JACKET_SLIM, BOWTIE, STETSON, FIRST_HAT, GASMASK, RASSILON_SASH, FEZ, SATCHEL, SCARF, STRAW_HAT, CELERY_STICK;
 
     public static void init() {
         BOWTIE = register(new ModelLayerLocation(new ResourceLocation(WhoCosmetics.MOD_ID, "model"), "bowtie"), BowTieModel::createBodyLayer);
@@ -23,6 +23,7 @@ public class ModelRegistration {
         STETSON = register(new ModelLayerLocation(new ResourceLocation(WhoCosmetics.MOD_ID, "model"), "stetson"), StetsonModel::createBodyLayer);
         JACKET = register(new ModelLayerLocation(new ResourceLocation(WhoCosmetics.MOD_ID, "model"), "jacket"), () -> GenericJacketModel.createBodyLayer(false));
         JACKET_SLIM = register(new ModelLayerLocation(new ResourceLocation(WhoCosmetics.MOD_ID, "model"), "jacket_slim"), () -> GenericJacketModel.createBodyLayer(true));
+        SPACE_SUIT = register(new ModelLayerLocation(new ResourceLocation(WhoCosmetics.MOD_ID, "model"), "space_suit"), SpaceSuitModel::createbodyLayer);
 
     }
 
