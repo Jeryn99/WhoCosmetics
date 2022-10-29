@@ -24,12 +24,9 @@ public class WhoCosmeticsForge {
         ModelRegistration.init();
     }
 
-
     public void onGatherData(GatherDataEvent e) {
         DataGenerator generator = e.getGenerator();
         ExistingFileHelper existingFileHelper = e.getExistingFileHelper();
         generator.addProvider(true, new LangProviderEnglish(generator));
     }
-
-
 }

@@ -16,6 +16,7 @@ public class ClothingItem extends ArmorItem implements DyeableLeatherItem, ICust
 
     private final int defaultColor;
     private boolean isColored = false, alexSupport = false;
+    private String overrideTexture = null;
 
     public ClothingItem(ArmorMaterial armorMaterial, EquipmentSlot EquipmentSlot) {
         this(armorMaterial, EquipmentSlot, false, DyeColor.RED.getMaterialColor().col);
@@ -27,18 +28,26 @@ public class ClothingItem extends ArmorItem implements DyeableLeatherItem, ICust
         this.isColored = isColored;
     }
 
-    public Item enableAlexSupport() {
+    public ClothingItem setTextureOverride(String overrideTexture){
+        this.overrideTexture = overrideTexture;
+        return this;
+    }
+
+    public ClothingItem enableAlexSupport() {
         alexSupport = true;
         return this;
     }
 
     @Override
     public ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-        ResourceLocation baseResourceLocation = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/entity/armor/" + Registry.ITEM.getKey(stack.getItem()).getPath() + ".png");
+
+        String textureLocation = overrideTexture == null ? Registry.ITEM.getKey(stack.getItem()).getPath() : overrideTexture;
+
+        ResourceLocation baseResourceLocation = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/entity/armor/" + textureLocation + ".png");
 
         if(alexSupport){
-            ResourceLocation steveLocation = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/entity/armor/steve_" + Registry.ITEM.getKey(stack.getItem()).getPath() + ".png");
-            ResourceLocation alexLocation = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/entity/armor/slim_" + Registry.ITEM.getKey(stack.getItem()).getPath() + ".png");
+            ResourceLocation steveLocation = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/entity/armor/steve_" + textureLocation + ".png");
+            ResourceLocation alexLocation = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/entity/armor/slim_" + textureLocation + ".png");
             return ClientUtil.isAlex(entity) ? alexLocation : steveLocation;
         }
 
