@@ -28,12 +28,12 @@ public class ClothingItem extends ArmorItem implements DyeableLeatherItem, ICust
         this.isColored = isColored;
     }
 
-    public Item setTextureOverride(String overrideTexture){
+    public ClothingItem setTextureOverride(String overrideTexture){
         this.overrideTexture = overrideTexture;
         return this;
     }
 
-    public Item enableAlexSupport() {
+    public ClothingItem enableAlexSupport() {
         alexSupport = true;
         return this;
     }
