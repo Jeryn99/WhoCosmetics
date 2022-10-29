@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "id": "whocosmetics",
   "version": "${version}",
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "WhoCosmetics",
+  "description": "Adds different clothing from the popular television series, Doctor Who",
   "authors": [
-    "Me!"
+    "EndPhoenix, Violet, Vespa, Teacup"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-whocosmetics"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/whocosmetics",
+    "sources": "https://github.com/Suff99/WhoCosmetics"
   },
-  "license": "Insert License Here",
+  "license": "https://github.com/Suff99/WhoCosmetics/blob/master/LICENSE",
   "icon": "assets/whocosmetics/icon.png",
   "environment": "*",
   "entrypoints": {

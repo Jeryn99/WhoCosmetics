@@ -40,4 +40,8 @@ public class BowTieModel<T extends Entity> extends HumanoidModel<LivingEntity> {
         return LayerDefinition.create(meshdefinition, 16, 16);
     }
 
+    @Override
+    public void renderToBuffer(PoseStack poseStack, VertexConsumer buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+        super.renderToBuffer(poseStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+    }
 }

@@ -1,15 +1,15 @@
 modLoader = "javafml"
 loaderVersion = "[43,)"
 #issueTrackerURL = ""
-license = "Insert License Here"
+license = "https://github.com/Suff99/WhoCosmetics/blob/master/LICENSE"
 
 [[mods]]
 modId = "whocosmetics"
 version = "${version}"
-displayName = "Example Mod"
-authors = "Me!"
+displayName = "WhoCosmetics"
+authors = "EndPhoenix, Violet, Vespa, Teacup"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+Adds different clothing from the popular television series, Doctor Who
 '''
 #logoFile = ""
 

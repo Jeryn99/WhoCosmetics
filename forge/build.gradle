@@ -16,6 +16,16 @@ loom {
 
         mixinConfig "whocosmetics.common.mixins.json"
         mixinConfig "whocosmetics.mixins.json"
+
+        dataGen {
+            mod "whocosmetics"
+        }
+    }
+
+    launches {
+        data {
+            arg "--existing", project(":common").file("src/main/resources/").absolutePath
+        }
     }
 }
 

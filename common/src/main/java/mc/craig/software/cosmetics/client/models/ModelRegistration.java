@@ -24,7 +24,6 @@ public class ModelRegistration {
         JACKET = register(new ModelLayerLocation(new ResourceLocation(WhoCosmetics.MOD_ID, "model"), "jacket"), () -> GenericJacketModel.createBodyLayer(false));
         JACKET_SLIM = register(new ModelLayerLocation(new ResourceLocation(WhoCosmetics.MOD_ID, "model"), "jacket_slim"), () -> GenericJacketModel.createBodyLayer(true));
         SPACE_SUIT = register(new ModelLayerLocation(new ResourceLocation(WhoCosmetics.MOD_ID, "model"), "space_suit"), SpaceSuitModel::createbodyLayer);
-
     }
 
     @ExpectPlatform

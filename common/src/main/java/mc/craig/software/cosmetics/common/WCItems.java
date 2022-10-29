@@ -37,6 +37,7 @@ public class WCItems {
     public static final RegistrySupplier<Item> SECOND_JACKET = ITEMS.register("second_jacket", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST).enableAlexSupport());
     public static final RegistrySupplier<Item> VELVET_COAT = ITEMS.register("velvet_coat", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST).enableAlexSupport());
     public static final RegistrySupplier<Item> TENTH_COAT = ITEMS.register("tenth_coat", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST).enableAlexSupport());
+    public static final RegistrySupplier<Item> RAINBOW_COAT = ITEMS.register("rainbow_coat", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST).enableAlexSupport());
     public static final RegistrySupplier<Item> SASH = ITEMS.register("sash", () -> new ClothingItem(ArmorMaterials.DIAMOND, EquipmentSlot.CHEST));
 
     public static final RegistrySupplier<Item> FRUIT_HAT = ITEMS.register("fruit_hat", () -> new JSONClothingItem(EquipmentSlot.HEAD));
