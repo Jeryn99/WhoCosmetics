@@ -3,10 +3,10 @@
   "package": "mc.craig.software.cosmetics.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [
-
   ],
   "mixins": [
-    "LivingEntityMixin"
+    "LivingEntityMixin",
+    "MultiPlayerGameModeMixin"
   ],
   "injectors": {
     "defaultRequire": 1

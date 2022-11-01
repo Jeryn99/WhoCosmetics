@@ -4,6 +4,7 @@ import dev.architectury.injectables.annotations.ExpectPlatform;
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.common.items.ClothingItem;
 import mc.craig.software.cosmetics.common.items.JSONClothingItem;
+import mc.craig.software.cosmetics.common.items.UmbrellaItem;
 import mc.craig.software.cosmetics.registry.DeferredRegistry;
 import mc.craig.software.cosmetics.registry.RegistrySupplier;
 import net.minecraft.core.Registry;
@@ -48,7 +49,11 @@ public class WCItems {
     public static final RegistrySupplier<Item> ANTLERS = ITEMS.register("antlers", () -> new JSONClothingItem(EquipmentSlot.HEAD));
     public static final RegistrySupplier<Item> GASMASK = ITEMS.register("gas_mask", () -> new ClothingItem(ArmorMaterials.CHAIN, EquipmentSlot.HEAD));
     public static final RegistrySupplier<Item> EYE_STALK = ITEMS.register("eye_stalk", () -> new JSONClothingItem(EquipmentSlot.HEAD));
-    public static final RegistrySupplier<Item> ACES_BAT = ITEMS.register("aces_bat", () ->  new SwordItem(Tiers.IRON, 3, -2.4F, (new Item.Properties()).tab(MAIN)));
+    public static final RegistrySupplier<Item> ACES_BAT = ITEMS.register("aces_bat", () -> new SwordItem(Tiers.IRON, 3, -2.4F, (new Item.Properties()).tab(MAIN)));
+
+    public static final RegistrySupplier<Item> UMBRELLA = ITEMS.register("umbrella", () -> new UmbrellaItem(GENERIC_PROPERTIES));
+
+    public static final RegistrySupplier<Item> UMBRELLA_MISSY = ITEMS.register("missy_umbrella", () -> new UmbrellaItem(GENERIC_PROPERTIES));
 
     @ExpectPlatform
     private static CreativeModeTab getCreativeTab() {

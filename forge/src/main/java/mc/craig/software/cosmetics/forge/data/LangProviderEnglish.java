@@ -38,6 +38,8 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCItems.TENTH_COAT.get(), "Trenchcoat");
         add(WCItems.RAINBOW_COAT.get(), "Rainbow Coat");
         add(WCItems.ACES_BAT.get(), "Ace's Bat");
+        add(WCItems.UMBRELLA_MISSY.get(), "Umbrella");
+        add(WCItems.UMBRELLA.get(), "Umbrella");
 
         add("itemGroup.whocosmetics.whocosmetics", "WhoCosmetics");
         add("itemGroup.whocosmetics", "WhoCosmetics");

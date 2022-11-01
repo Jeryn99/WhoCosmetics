@@ -6,7 +6,10 @@ import mc.craig.software.cosmetics.client.ClientUtil;
 import mc.craig.software.cosmetics.client.models.forge.ModelRegistrationImpl;
 import mc.craig.software.cosmetics.common.WCItems;
 import mc.craig.software.cosmetics.common.items.ClothingItem;
+import mc.craig.software.cosmetics.common.items.UmbrellaItem;
 import net.minecraft.client.color.item.ItemColor;
+import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -33,6 +36,9 @@ public class ClientModBus {
             }
             return -1;
         }, WCItems.BOW_TIE.get(), WCItems.FEZ.get());
+
+        ItemProperties.register(WCItems.UMBRELLA.get(), new ResourceLocation("whocosmetics:is_open"), (itemStack, clientWorld, livingEntity, unused) -> UmbrellaItem.getIsOpen(itemStack) ? 1 : 0);
+        ItemProperties.register(WCItems.UMBRELLA_MISSY.get(), new ResourceLocation("whocosmetics:is_open"), (itemStack, clientWorld, livingEntity, unused) -> UmbrellaItem.getIsOpen(itemStack) ? 1 : 0);
     }
 
     @SubscribeEvent

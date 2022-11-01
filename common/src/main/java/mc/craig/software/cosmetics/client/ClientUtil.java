@@ -1,5 +1,7 @@
 package mc.craig.software.cosmetics.client;
 
+import dev.architectury.injectables.annotations.ExpectPlatform;
+import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.client.models.*;
 import mc.craig.software.cosmetics.common.WCItems;
 import net.minecraft.client.Minecraft;
@@ -7,6 +9,9 @@ import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.player.AbstractClientPlayer;
+import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
+import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;

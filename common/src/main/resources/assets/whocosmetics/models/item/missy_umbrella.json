@@ -1,0 +1,17 @@
+{
+  "parent": "item/generated",
+  "overrides": [
+    {
+      "predicate": {
+        "whocosmetics:is_open": 0.0
+      },
+      "model": "whocosmetics:item/umbrella_parts/missy/umbrella_closed"
+    },
+    {
+      "predicate": {
+        "whocosmetics:is_open": 1.0
+      },
+      "model": "whocosmetics:item/umbrella_parts/missy/umbrella_open"
+    }
+  ]
+}
