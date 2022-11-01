@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:hay_block"
+    },
+    "T": {
+      "tag": "forge:string"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "TTT",
+    "SSS"
+  ],
+  "result": {
+    "item": "whocosmetics:straw_hat"
+  }
+}

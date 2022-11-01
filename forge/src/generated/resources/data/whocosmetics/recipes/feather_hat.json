@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "Z": {
+      "tag": "minecraft:wool"
+    }
+  },
+  "pattern": [
+    " F ",
+    "ZZZ",
+    "Z Z"
+  ],
+  "result": {
+    "item": "whocosmetics:feather_hat"
+  }
+}

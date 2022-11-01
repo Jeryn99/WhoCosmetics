@@ -3,6 +3,7 @@ package mc.craig.software.cosmetics.forge;
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.client.models.ModelRegistration;
 import mc.craig.software.cosmetics.forge.data.LangProviderEnglish;
+import mc.craig.software.cosmetics.forge.data.RecipeProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -28,5 +29,6 @@ public class WhoCosmeticsForge {
         DataGenerator generator = e.getGenerator();
         ExistingFileHelper existingFileHelper = e.getExistingFileHelper();
         generator.addProvider(true, new LangProviderEnglish(generator));
+        generator.addProvider(true, new RecipeProvider(generator));
     }
 }

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:blue_stained_glass_pane"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "R": {
+      "item": "minecraft:red_stained_glass_pane"
+    }
+  },
+  "pattern": [
+    "P P",
+    "BPR",
+    "   "
+  ],
+  "result": {
+    "item": "whocosmetics:3d_glasses"
+  }
+}

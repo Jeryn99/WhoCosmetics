@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "minecraft:red_dye"
+    },
+    "Z": {
+      "item": "minecraft:yellow_wool"
+    }
+  },
+  "pattern": [
+    "ZZZ",
+    "ZAZ",
+    "A A"
+  ],
+  "result": {
+    "item": "whocosmetics:cricket_jacket"
+  }
+}
