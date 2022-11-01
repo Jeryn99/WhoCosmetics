@@ -37,6 +37,7 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCItems.SCARF.get(), "Scarf");
         add(WCItems.TENTH_COAT.get(), "Trenchcoat");
         add(WCItems.RAINBOW_COAT.get(), "Rainbow Coat");
+        add(WCItems.ACES_BAT.get(), "Ace's Bat");
 
         add("itemGroup.whocosmetics.whocosmetics", "WhoCosmetics");
         add("itemGroup.whocosmetics", "WhoCosmetics");

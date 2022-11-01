@@ -8,10 +8,7 @@ import mc.craig.software.cosmetics.registry.DeferredRegistry;
 import mc.craig.software.cosmetics.registry.RegistrySupplier;
 import net.minecraft.core.Registry;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.item.ArmorMaterials;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 
 public class WCItems {
 
@@ -51,6 +48,7 @@ public class WCItems {
     public static final RegistrySupplier<Item> ANTLERS = ITEMS.register("antlers", () -> new JSONClothingItem(EquipmentSlot.HEAD));
     public static final RegistrySupplier<Item> GASMASK = ITEMS.register("gas_mask", () -> new ClothingItem(ArmorMaterials.CHAIN, EquipmentSlot.HEAD));
     public static final RegistrySupplier<Item> EYE_STALK = ITEMS.register("eye_stalk", () -> new JSONClothingItem(EquipmentSlot.HEAD));
+    public static final RegistrySupplier<Item> ACES_BAT = ITEMS.register("aces_bat", () ->  new SwordItem(Tiers.IRON, 3, -2.4F, (new Item.Properties()).tab(MAIN)));
 
     @ExpectPlatform
     private static CreativeModeTab getCreativeTab() {
