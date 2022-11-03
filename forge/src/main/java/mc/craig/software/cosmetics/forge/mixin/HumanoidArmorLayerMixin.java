@@ -5,7 +5,6 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import mc.craig.software.cosmetics.client.ArmorModelManager;
 import mc.craig.software.cosmetics.common.items.ClothingItem;
-import mc.craig.software.cosmetics.common.items.ICustomArmorTexture;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.Model;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -44,7 +43,7 @@ public abstract class HumanoidArmorLayerMixin<T extends LivingEntity, M extends 
 
     @Inject(at = @At("HEAD"), method = "getArmorResource", cancellable = true, remap = false)
     private void getArmorResource(Entity entity, ItemStack stack, EquipmentSlot slot, @Nullable String type, CallbackInfoReturnable<ResourceLocation> callbackInfoReturnable) {
-        if (stack.getItem() instanceof ICustomArmorTexture customArmorTexture) {
+        if (stack.getItem() instanceof ClothingItem customArmorTexture) {
             callbackInfoReturnable.setReturnValue(customArmorTexture.getArmorTexture(stack, entity, slot, type));
         }
     }
@@ -67,21 +66,19 @@ public abstract class HumanoidArmorLayerMixin<T extends LivingEntity, M extends 
     @Inject(at = @At("HEAD"), method = "renderArmorPiece", cancellable = true)
     private void renderArmorPiece(PoseStack poseStack, MultiBufferSource multiBufferSource, T livingEntity, EquipmentSlot equipmentSlot, int i, A humanoidModel, CallbackInfo callbackInfo) {
         ItemStack itemStack = livingEntity.getItemBySlot(equipmentSlot);
-        if (itemStack.getItem() instanceof ICustomArmorTexture) {
-            ArmorItem armorItem = (ArmorItem) itemStack.getItem();
-
+        if (itemStack.getItem() instanceof ClothingItem clothingItem) {
             HumanoidModel<?> model = ArmorModelManager.getArmorModel(itemStack, livingEntity, equipmentSlot);
 
             if (model != null) {
                 humanoidModel = (A) model;
             }
 
-            if (armorItem.getSlot() == equipmentSlot) {
+            if (clothingItem.getSlot() == equipmentSlot) {
                 this.getParentModel().copyPropertiesTo(humanoidModel);
                 this.setPartVisibility(humanoidModel, equipmentSlot);
                 boolean bl = this.usesInnerModel(equipmentSlot);
                 boolean bl2 = itemStack.hasFoil();
-                if (armorItem instanceof ClothingItem clothingItem && clothingItem.isColored()) {
+                if (clothingItem.isColored()) {
                     int j = clothingItem.getColor(itemStack);
                     float f = (float) (j >> 16 & 255) / 255.0F;
                     float g = (float) (j >> 8 & 255) / 255.0F;
@@ -98,8 +95,10 @@ public abstract class HumanoidArmorLayerMixin<T extends LivingEntity, M extends 
     }
 
     private void renderModel(PoseStack poseStack, MultiBufferSource multiBufferSource, int i, T livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, boolean bl, A humanoidModel, boolean bl2, float f, float g, float h, @org.jetbrains.annotations.Nullable String string) {
-        ResourceLocation texture = ((ICustomArmorTexture) itemStack.getItem()).getArmorTexture(itemStack, livingEntity, equipmentSlot, string);
-        VertexConsumer vertexConsumer = ItemRenderer.getArmorFoilBuffer(multiBufferSource, RenderType.armorCutoutNoCull(texture), false, bl);
-        humanoidModel.renderToBuffer(poseStack, vertexConsumer, i, OverlayTexture.NO_OVERLAY, f, g, h, 1.0F);
+        if (itemStack.getItem() instanceof ClothingItem clothingItem) {
+            ResourceLocation texture = clothingItem.getArmorTexture(itemStack, livingEntity, equipmentSlot, string);
+            VertexConsumer vertexConsumer = ItemRenderer.getArmorFoilBuffer(multiBufferSource, RenderType.armorCutoutNoCull(texture), false, bl);
+            humanoidModel.renderToBuffer(poseStack, vertexConsumer, i, OverlayTexture.NO_OVERLAY, f, g, h, 1.0F);
+        }
     }
 }

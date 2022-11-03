@@ -68,11 +68,17 @@ public class ClientUtil {
         ARMOR_MODELS.put(WCItems.CRICKET_JACKET.get(), new GenericJacketModel<>(entityModels.bakeLayer(ModelRegistration.JACKET_SLIM)));
         ARMOR_MODELS_STEVE.put(WCItems.CRICKET_JACKET.get(), new GenericJacketModel<>(entityModels.bakeLayer(ModelRegistration.JACKET)));
 
-        ARMOR_MODELS.put(WCItems.SPACE_HELMET.get(), new SteveSpaceSuitModel(entityModels.bakeLayer(ModelRegistration.SPACE_SUIT)));
-        ARMOR_MODELS.put(WCItems.SPACE_CHEST.get(), new SteveSpaceSuitModel(entityModels.bakeLayer(ModelRegistration.SPACE_SUIT_SLIM)));
-        ARMOR_MODELS_STEVE.put(WCItems.SPACE_CHEST.get(), new SteveSpaceSuitModel(entityModels.bakeLayer(ModelRegistration.SPACE_SUIT)));
-        ARMOR_MODELS.put(WCItems.SPACE_LEGS.get(), new SteveSpaceSuitModel(entityModels.bakeLayer(ModelRegistration.SPACE_SUIT)));
-        ARMOR_MODELS.put(WCItems.SPACE_FEET.get(), new SteveSpaceSuitModel(entityModels.bakeLayer(ModelRegistration.SPACE_SUIT_FEET)));
+        ARMOR_MODELS.put(WCItems.SPACE_HELMET.get(), new SlimSpaceSuitModel<>(entityModels.bakeLayer(ModelRegistration.SPACE_SUIT_SLIM)));
+        ARMOR_MODELS_STEVE.put(WCItems.SPACE_HELMET.get(), new SteveSpaceSuitModel<>(entityModels.bakeLayer(ModelRegistration.SPACE_SUIT)));
+
+        ARMOR_MODELS.put(WCItems.SPACE_CHEST.get(), new SlimSpaceSuitModel<>(entityModels.bakeLayer(ModelRegistration.SPACE_SUIT_SLIM)));
+        ARMOR_MODELS_STEVE.put(WCItems.SPACE_CHEST.get(), new SteveSpaceSuitModel<>(entityModels.bakeLayer(ModelRegistration.SPACE_SUIT)));
+
+        ARMOR_MODELS.put(WCItems.SPACE_LEGS.get(), new SlimSpaceSuitModel<>(entityModels.bakeLayer(ModelRegistration.SPACE_SUIT_SLIM)));
+        ARMOR_MODELS_STEVE.put(WCItems.SPACE_LEGS.get(), new SteveSpaceSuitModel<>(entityModels.bakeLayer(ModelRegistration.SPACE_SUIT)));
+
+        ARMOR_MODELS.put(WCItems.SPACE_FEET.get(), new SlimSpaceSuitModel<>(entityModels.bakeLayer(ModelRegistration.SPACE_SUIT_FEET_SLIM)));
+        ARMOR_MODELS_STEVE.put(WCItems.SPACE_FEET.get(), new SteveSpaceSuitModel<>(entityModels.bakeLayer(ModelRegistration.SPACE_SUIT_FEET)));
 
 
         ARMOR_MODELS.put(WCItems.RAINBOW_SCARF.get(), new GenericJacketModel<>(entityModels.bakeLayer(ModelRegistration.JACKET_SLIM)));
