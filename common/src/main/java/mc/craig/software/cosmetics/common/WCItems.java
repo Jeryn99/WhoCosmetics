@@ -4,6 +4,7 @@ import dev.architectury.injectables.annotations.ExpectPlatform;
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.common.items.ClothingItem;
 import mc.craig.software.cosmetics.common.items.JSONClothingItem;
+import mc.craig.software.cosmetics.common.items.SonicItem;
 import mc.craig.software.cosmetics.common.items.UmbrellaItem;
 import mc.craig.software.cosmetics.registry.DeferredRegistry;
 import mc.craig.software.cosmetics.registry.RegistrySupplier;
@@ -54,6 +55,12 @@ public class WCItems {
     public static final RegistrySupplier<Item> UMBRELLA = ITEMS.register("umbrella", () -> new UmbrellaItem(GENERIC_PROPERTIES));
 
     public static final RegistrySupplier<Item> UMBRELLA_MISSY = ITEMS.register("missy_umbrella", () -> new UmbrellaItem(GENERIC_PROPERTIES));
+
+    public static final RegistrySupplier<Item> SONIC_10 = ITEMS.register("sonic_10", () -> new SonicItem(GENERIC_PROPERTIES));
+    public static final RegistrySupplier<Item> SONIC_12 = ITEMS.register("sonic_12", () -> new SonicItem(GENERIC_PROPERTIES));
+    public static final RegistrySupplier<Item> SONIC_13 = ITEMS.register("sonic_13", () -> new SonicItem(GENERIC_PROPERTIES));
+    public static final RegistrySupplier<Item> SONIC_TROWEL = ITEMS.register("sonic_trowel", () -> new SonicItem(GENERIC_PROPERTIES));
+    public static final RegistrySupplier<Item> SONIC_RIVER = ITEMS.register("sonic_river", () -> new SonicItem(GENERIC_PROPERTIES));
 
     @ExpectPlatform
     private static CreativeModeTab getCreativeTab() {
