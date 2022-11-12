@@ -20,6 +20,8 @@ public class WCItems {
 
     public static final RegistrySupplier<Item> FEZ = ITEMS.register("fez", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD, true, DyeColor.RED.getMaterialColor().col));
     public static final RegistrySupplier<Item> BOW_TIE = ITEMS.register("bowtie", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST, true, DyeColor.RED.getMaterialColor().col));
+    public static final RegistrySupplier<Item> TOP_HAT = ITEMS.register("top_hat", () -> new JSONClothingItem(EquipmentSlot.HEAD, true, DyeColor.BLUE.getMaterialColor().col));
+
     public static final RegistrySupplier<Item> CELERY = ITEMS.register("celery", () -> new ClothingItem(ArmorMaterials.TURTLE, EquipmentSlot.CHEST));
     public static final RegistrySupplier<Item> SATCHEL = ITEMS.register("satchel", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST));
     public static final RegistrySupplier<Item> STETSON = ITEMS.register("stetson", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD));
@@ -61,6 +63,7 @@ public class WCItems {
     public static final RegistrySupplier<Item> SONIC_13 = ITEMS.register("sonic_13", () -> new SonicItem(GENERIC_PROPERTIES));
     public static final RegistrySupplier<Item> SONIC_TROWEL = ITEMS.register("sonic_trowel", () -> new SonicItem(GENERIC_PROPERTIES));
     public static final RegistrySupplier<Item> SONIC_RIVER = ITEMS.register("sonic_river", () -> new SonicItem(GENERIC_PROPERTIES));
+
 
     @ExpectPlatform
     private static CreativeModeTab getCreativeTab() {
