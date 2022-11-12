@@ -41,6 +41,19 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCItems.UMBRELLA_MISSY.get(), "Umbrella");
         add(WCItems.UMBRELLA.get(), "Umbrella");
 
+        add(WCItems.SONIC_10.get(), "Sonic Screwdriver");
+        add(WCItems.SONIC_12.get(), "Sonic Screwdriver");
+        add(WCItems.SONIC_13.get(), "Sonic Screwdriver");
+        add(WCItems.SONIC_RIVER.get(), "Sonic Screwdriver");
+        add(WCItems.SONIC_TROWEL.get(), "Sonic Trowel");
+        add(WCItems.TOP_HAT.get(), "Top Hat");
+
+        add(WCItems.SPACE_FEET.get(), "Spacesuit (Feet)");
+        add(WCItems.SPACE_HELMET.get(), "Spacesuit (Helmet)");
+        add(WCItems.SPACE_LEGS.get(), "Spacesuit (Legs)");
+        add(WCItems.SPACE_CHEST.get(), "Spacesuit (Chest)");
+
+
         add("itemGroup.whocosmetics.whocosmetics", "WhoCosmetics");
         add("itemGroup.whocosmetics", "WhoCosmetics");
     }
