@@ -16,6 +16,7 @@ public class RenderDavrosChair extends MobRenderer<DavrosChair, DavrosChairModel
 
     @Override
     public ResourceLocation getTextureLocation(DavrosChair entity) {
-        return new ResourceLocation(WhoCosmetics.MOD_ID, "textures/entity/davros_chair.png");
+        DavrosChair.Variant variant = entity.getVariantEnum();
+        return new ResourceLocation(WhoCosmetics.MOD_ID, "textures/entity/" + variant.getTexture() + ".png");
     }
 }

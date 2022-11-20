@@ -1,9 +1,13 @@
 package mc.craig.software.cosmetics.common.entity;
 
-import com.mojang.math.Vector3d;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
@@ -22,9 +26,70 @@ import org.jetbrains.annotations.Nullable;
 
 public class DavrosChair extends Mob {
 
+
+    private static final EntityDataAccessor<Integer> DATA_VARIANT_ID = SynchedEntityData.defineId(DavrosChair.class, EntityDataSerializers.INT);
+
+
+    @Override
+    public void positionRider(Entity passenger) {
+        if (this.hasPassenger(passenger)) {
+            double d = this.getY() + this.getPassengersRidingOffset() + passenger.getMyRidingOffset();
+            passenger.setPos(position().x, d, position().z);
+        }
+    }
+
     public DavrosChair(EntityType entityType, Level level) {
         super(entityType, level);
     }
+
+    public enum Variant {
+        GOLD("davros_chair_gold"), BLACK("davros_chair");
+
+        private final String texture;
+
+        Variant(String texture) {
+            this.texture = texture;
+        }
+
+        public String getTexture() {
+            return texture;
+        }
+    }
+
+    public int getVariant() {
+        return Mth.clamp(this.entityData.get(DATA_VARIANT_ID), 0, 1);
+    }
+
+    public Variant getVariantEnum(){
+        return Variant.values()[getVariant()];
+    }
+
+    public void setVariant(Variant variant) {
+        this.entityData.set(DATA_VARIANT_ID, variant.ordinal());
+    }
+
+    public void setVariant(int variant) {
+        this.entityData.set(DATA_VARIANT_ID, variant);
+    }
+
+    @Override
+    public void addAdditionalSaveData(CompoundTag compound) {
+        super.addAdditionalSaveData(compound);
+        compound.putInt("Variant", this.getVariant());
+    }
+
+    @Override
+    public void readAdditionalSaveData(CompoundTag compound) {
+        super.readAdditionalSaveData(compound);
+        this.setVariant(compound.getInt("Variant"));
+    }
+
+    @Override
+    protected void defineSynchedData() {
+        super.defineSynchedData();
+        this.entityData.define(DATA_VARIANT_ID, random.nextBoolean() ? Variant.GOLD.ordinal() : Variant.BLACK.ordinal());
+    }
+
 
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes().
@@ -99,6 +164,7 @@ public class DavrosChair extends Mob {
     }
 
 
+    // Closest Vanilla sound to a Dalek being hit, should find some custom ones though as other mods also do this
     @Nullable
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSource) {
