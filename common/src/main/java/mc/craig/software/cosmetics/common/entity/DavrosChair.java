@@ -13,6 +13,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -128,38 +129,37 @@ public class DavrosChair extends Mob {
 
     @Override
     public void travel(Vec3 travelVector) {
+        if (this.isAlive()) {
+            if (getControllingPassenger() instanceof LivingEntity livingEntity) {
+                if (this.isVehicle() && livingEntity != null) {
+                    this.setYRot(livingEntity.getYRot());
+                    this.yRotO = this.getYRot();
+                    this.setXRot(livingEntity.getXRot() * 0.5F);
+                    this.setRot(this.getYRot(), this.getXRot());
+                    this.yBodyRot = this.getYRot();
+                    this.yHeadRot = this.yBodyRot;
+                    float f = livingEntity.xxa * 0.5F;
+                    float g = livingEntity.zza;
 
-        Entity entity = getControllingPassenger();
-        if (isVehicle() && entity instanceof Player) {
-            setYRot(entity.getYRot());
-            yRotO = getYRot();
-            setXRot(entity.getXRot() * 0.5F);
-            setRot(getYRot(), getXRot());
-            yBodyRot = getYRot();
-            yHeadRot = getYRot();
-            maxUpStep = 1.0F;
-            flyingSpeed = getSpeed() * 0.1F;
+                    if (g <= 0.0F) {
+                        g *= 0.25F;
+                    }
 
-            if (isControlledByLocalInstance()) {
+                    this.flyingSpeed = this.getSpeed() * 0.1F;
+                    if (this.isControlledByLocalInstance()) {
+                        this.setSpeed((float) this.getAttributeValue(Attributes.MOVEMENT_SPEED));
+                        super.travel(new Vec3(f, travelVector.y, g));
+                    } else if (livingEntity instanceof Player) {
+                        this.setDeltaMovement(Vec3.ZERO);
+                    }
 
-                float forward = ((Player) entity).zza;
-                if (forward <= 0.0F) {
-                    forward *= 0.25F;
+                    this.calculateEntityAnimation(this, false);
+                    this.tryCheckInsideBlocks();
+                } else {
+                    this.flyingSpeed = 0.02F;
+                    super.travel(travelVector);
                 }
-
-                setSpeed(0.2F);
-                super.travel(new Vec3(0, getDeltaMovement().y, forward));
-
-            } else {
-                calculateEntityAnimation(this, false);
-                setDeltaMovement(Vec3.ZERO);
             }
-
-            tryCheckInsideBlocks();
-        } else {
-            maxUpStep = 0.5F;
-            flyingSpeed = 0.02F;
-            super.travel(travelVector);
         }
     }
 
