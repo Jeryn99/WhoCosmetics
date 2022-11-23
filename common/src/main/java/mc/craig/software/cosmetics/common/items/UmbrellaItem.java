@@ -1,6 +1,7 @@
 package mc.craig.software.cosmetics.common.items;
 
 
+import mc.craig.software.cosmetics.common.WCSounds;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -19,7 +20,13 @@ public class UmbrellaItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand) {
         if (!player.getItemInHand(usedHand).isEmpty() && player.isCrouching()) {
             ItemStack stack = player.getItemInHand(usedHand);
+
+            if(!getIsOpen(stack)){
+                player.playSound(WCSounds.UMBRELLA_OPEN.get());
+            }
+
             setOpen(player.getItemInHand(usedHand), !getIsOpen(stack));
+
         }
         return super.use(level, player, usedHand);
     }

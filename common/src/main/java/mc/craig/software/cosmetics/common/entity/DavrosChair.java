@@ -1,6 +1,7 @@
 package mc.craig.software.cosmetics.common.entity;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -125,13 +126,28 @@ public class DavrosChair extends Mob {
     @Override
     public void tick() {
         super.tick();
+        if (getHealth() < 5) {
+            this.level.addParticle(ParticleTypes.FLAME, this.getRandomX(0.5), this.getRandomY(), this.getRandomZ(0.5), 0, 0, 0);
+            this.level.addParticle(ParticleTypes.SMOKE, this.getRandomX(0.5), this.getRandomY(), this.getRandomZ(0.5), 0, 0, 0);
+
+            if (this.random.nextInt(24) == 0 && !this.isSilent()) {
+                this.level.playLocalSound(this.getX() + 0.5, this.getY() + 0.5, this.getZ() + 0.5, SoundEvents.BLAZE_BURN, this.getSoundSource(), 1.0F + this.random.nextFloat(), this.random.nextFloat() * 0.7F + 0.3F, false);
+            }
+        }
+    }
+
+    @Override
+    public boolean isColliding(BlockPos pos, BlockState state) {
+        this.level.addParticle(ParticleTypes.POOF, this.getRandomX(0.5), this.getRandomY(), this.getRandomZ(0.5), 0, 0, 0);
+        return super.isColliding(pos, state);
     }
 
     @Override
     public void travel(Vec3 travelVector) {
+        maxUpStep = 1;
         if (this.isAlive()) {
             if (getControllingPassenger() instanceof LivingEntity livingEntity) {
-                if (this.isVehicle() && livingEntity != null) {
+                if (this.isVehicle()) {
                     this.setYRot(livingEntity.getYRot());
                     this.yRotO = this.getYRot();
                     this.setXRot(livingEntity.getXRot() * 0.5F);
