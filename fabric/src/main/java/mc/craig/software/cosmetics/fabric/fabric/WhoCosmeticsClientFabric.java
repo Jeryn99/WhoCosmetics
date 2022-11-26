@@ -13,6 +13,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
+import net.minecraft.client.renderer.entity.NoopRenderer;
 
 public class WhoCosmeticsClientFabric implements ClientModInitializer {
     @Override
@@ -21,6 +22,7 @@ public class WhoCosmeticsClientFabric implements ClientModInitializer {
         ModelRegistration.init();
         ClientUtil.clothingModels();
         EntityRendererRegistry.register(Entities.DAVROS_CHAIR.get(), RenderDavrosChair::new);
+        EntityRendererRegistry.register(Entities.CHAIR.get(), NoopRenderer::new);
         BlockEntityRendererRegistry.register(WCBlockEntities.CORAL_CHAIR.get(), RenderCoralChair::new);
     }
 }
