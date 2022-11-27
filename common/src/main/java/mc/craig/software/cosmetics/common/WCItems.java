@@ -4,14 +4,13 @@ import dev.architectury.injectables.annotations.ExpectPlatform;
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.common.items.ClothingItem;
 import mc.craig.software.cosmetics.common.items.JSONClothingItem;
+import mc.craig.software.cosmetics.common.items.SonicItem;
+import mc.craig.software.cosmetics.common.items.UmbrellaItem;
 import mc.craig.software.cosmetics.registry.DeferredRegistry;
 import mc.craig.software.cosmetics.registry.RegistrySupplier;
 import net.minecraft.core.Registry;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.item.ArmorMaterials;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 
 public class WCItems {
 
@@ -21,6 +20,8 @@ public class WCItems {
 
     public static final RegistrySupplier<Item> FEZ = ITEMS.register("fez", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD, true, DyeColor.RED.getMaterialColor().col));
     public static final RegistrySupplier<Item> BOW_TIE = ITEMS.register("bowtie", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST, true, DyeColor.RED.getMaterialColor().col));
+    public static final RegistrySupplier<Item> TOP_HAT = ITEMS.register("top_hat", () -> new JSONClothingItem(EquipmentSlot.HEAD, true, DyeColor.BLUE.getMaterialColor().col));
+
     public static final RegistrySupplier<Item> CELERY = ITEMS.register("celery", () -> new ClothingItem(ArmorMaterials.TURTLE, EquipmentSlot.CHEST));
     public static final RegistrySupplier<Item> SATCHEL = ITEMS.register("satchel", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST));
     public static final RegistrySupplier<Item> STETSON = ITEMS.register("stetson", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD));
@@ -51,6 +52,18 @@ public class WCItems {
     public static final RegistrySupplier<Item> ANTLERS = ITEMS.register("antlers", () -> new JSONClothingItem(EquipmentSlot.HEAD));
     public static final RegistrySupplier<Item> GASMASK = ITEMS.register("gas_mask", () -> new ClothingItem(ArmorMaterials.CHAIN, EquipmentSlot.HEAD));
     public static final RegistrySupplier<Item> EYE_STALK = ITEMS.register("eye_stalk", () -> new JSONClothingItem(EquipmentSlot.HEAD));
+    public static final RegistrySupplier<Item> ACES_BAT = ITEMS.register("aces_bat", () -> new SwordItem(Tiers.IRON, 3, -2.4F, (new Item.Properties()).tab(MAIN)));
+
+    public static final RegistrySupplier<Item> UMBRELLA = ITEMS.register("umbrella", () -> new UmbrellaItem(GENERIC_PROPERTIES));
+
+    public static final RegistrySupplier<Item> UMBRELLA_MISSY = ITEMS.register("missy_umbrella", () -> new UmbrellaItem(GENERIC_PROPERTIES));
+
+    public static final RegistrySupplier<Item> SONIC_10 = ITEMS.register("sonic_10", () -> new SonicItem(GENERIC_PROPERTIES));
+    public static final RegistrySupplier<Item> SONIC_12 = ITEMS.register("sonic_12", () -> new SonicItem(GENERIC_PROPERTIES));
+    public static final RegistrySupplier<Item> SONIC_13 = ITEMS.register("sonic_13", () -> new SonicItem(GENERIC_PROPERTIES));
+    public static final RegistrySupplier<Item> SONIC_TROWEL = ITEMS.register("sonic_trowel", () -> new SonicItem(GENERIC_PROPERTIES));
+    public static final RegistrySupplier<Item> SONIC_RIVER = ITEMS.register("sonic_river", () -> new SonicItem(GENERIC_PROPERTIES));
+
 
     @ExpectPlatform
     private static CreativeModeTab getCreativeTab() {

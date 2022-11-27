@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:black_wool"
+    },
+    "S": {
+      "item": "minecraft:brown_wool"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SSS",
+    "BBB"
+  ],
+  "result": {
+    "item": "whocosmetics:stetson"
+  }
+}

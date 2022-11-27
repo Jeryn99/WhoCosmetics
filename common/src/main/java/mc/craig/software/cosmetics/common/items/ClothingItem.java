@@ -12,7 +12,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 
-public class ClothingItem extends ArmorItem implements DyeableLeatherItem, ICustomArmorTexture {
+public class ClothingItem extends ArmorItem implements DyeableLeatherItem {
 
     private final int defaultColor;
     private boolean isColored = false, alexSupport = false;
@@ -38,9 +38,7 @@ public class ClothingItem extends ArmorItem implements DyeableLeatherItem, ICust
         return this;
     }
 
-    @Override
     public ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-
         String textureLocation = overrideTexture == null ? Registry.ITEM.getKey(stack.getItem()).getPath() : overrideTexture;
 
         ResourceLocation baseResourceLocation = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/entity/armor/" + textureLocation + ".png");
@@ -50,7 +48,6 @@ public class ClothingItem extends ArmorItem implements DyeableLeatherItem, ICust
             ResourceLocation alexLocation = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/entity/armor/slim_" + textureLocation + ".png");
             return ClientUtil.isAlex(entity) ? alexLocation : steveLocation;
         }
-
         return baseResourceLocation;
     }
 

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:black_wool"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "B B",
+    "BBB"
+  ],
+  "result": {
+    "item": "whocosmetics:astrakhan"
+  }
+}

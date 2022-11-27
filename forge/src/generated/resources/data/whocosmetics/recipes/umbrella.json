@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:black_wool"
+    },
+    "R": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "BBB",
+    " R ",
+    " R "
+  ],
+  "result": {
+    "item": "whocosmetics:umbrella"
+  }
+}

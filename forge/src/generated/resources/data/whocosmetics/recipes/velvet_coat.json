@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "minecraft:green_dye"
+    },
+    "Z": {
+      "item": "minecraft:green_wool"
+    }
+  },
+  "pattern": [
+    "ZZZ",
+    "ZAZ",
+    "A A"
+  ],
+  "result": {
+    "item": "whocosmetics:velvet_coat"
+  }
+}

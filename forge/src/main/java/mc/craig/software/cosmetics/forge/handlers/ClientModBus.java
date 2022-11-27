@@ -2,12 +2,20 @@ package mc.craig.software.cosmetics.forge.handlers;
 
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.client.ArmorModelManager;
-import mc.craig.software.cosmetics.client.ClientUtil;
 import mc.craig.software.cosmetics.client.models.forge.ModelRegistrationImpl;
+import mc.craig.software.cosmetics.client.renderer.RenderCoralChair;
+import mc.craig.software.cosmetics.client.renderer.RenderDavrosChair;
+import mc.craig.software.cosmetics.common.WCBlockEntities;
 import mc.craig.software.cosmetics.common.WCItems;
+import mc.craig.software.cosmetics.common.entity.Entities;
 import mc.craig.software.cosmetics.common.items.ClothingItem;
-import net.minecraft.client.color.item.ItemColor;
-import net.minecraft.world.item.ItemStack;
+import mc.craig.software.cosmetics.common.items.JSONClothingItem;
+import mc.craig.software.cosmetics.common.items.UmbrellaItem;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.NoopRenderer;
+import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterClientReloadListenersEvent;
@@ -33,12 +41,27 @@ public class ClientModBus {
             }
             return -1;
         }, WCItems.BOW_TIE.get(), WCItems.FEZ.get());
+
+        item.register((arg, index) -> {
+            if (arg.getItem() instanceof JSONClothingItem clothingItem && index == 0) {
+                if (clothingItem.isColored()) {
+                    return clothingItem.getColor(arg);
+                }
+            }
+            return -1;
+        }, WCItems.TOP_HAT.get());
+
+        ItemProperties.register(WCItems.UMBRELLA.get(), new ResourceLocation("whocosmetics:is_open"), (itemStack, clientWorld, livingEntity, unused) -> UmbrellaItem.getIsOpen(itemStack) ? 1 : 0);
+        ItemProperties.register(WCItems.UMBRELLA_MISSY.get(), new ResourceLocation("whocosmetics:is_open"), (itemStack, clientWorld, livingEntity, unused) -> UmbrellaItem.getIsOpen(itemStack) ? 1 : 0);
     }
 
     @SubscribeEvent
     public static void event(EntityRenderersEvent.RegisterLayerDefinitions event) {
         ModelRegistrationImpl.registerToGame(event);
-    }
 
+        EntityRenderers.register(Entities.DAVROS_CHAIR.get(), RenderDavrosChair::new);
+        EntityRenderers.register(Entities.CHAIR.get(), NoopRenderer::new);
+        BlockEntityRenderers.register(WCBlockEntities.CORAL_CHAIR.get(), RenderCoralChair::new);
+    }
 
 }

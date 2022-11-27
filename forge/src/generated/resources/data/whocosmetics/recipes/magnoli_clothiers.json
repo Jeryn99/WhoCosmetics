@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:glass_pane"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "S S",
+    "BSB",
+    "   "
+  ],
+  "result": {
+    "item": "whocosmetics:magnoli_clothiers"
+  }
+}

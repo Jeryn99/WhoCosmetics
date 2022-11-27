@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:glass_pane"
+    },
+    "X": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "XSX",
+    "XXX"
+  ],
+  "result": {
+    "item": "whocosmetics:space_helmet"
+  }
+}
