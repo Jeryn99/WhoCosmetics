@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:black_wool"
+    },
+    "C": {
+      "item": "minecraft:black_carpet"
+    },
+    "R": {
+      "item": "minecraft:red_wool"
+    }
+  },
+  "pattern": [
+    "   ",
+    " B ",
+    "CRC"
+  ],
+  "result": {
+    "item": "whocosmetics:top_hat"
+  }
+}

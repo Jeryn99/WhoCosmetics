@@ -30,8 +30,6 @@ public class WhoCosmeticsForge {
         generator.addProvider(true, new RecipeProvider(generator));
         generator.addProvider(true, new ModelProviderBlock(generator, existingFileHelper));
         generator.addProvider(true, new ModelProviderItem(generator, existingFileHelper));
-        IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
-        modBus.addListener(this::clientSetup);
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {

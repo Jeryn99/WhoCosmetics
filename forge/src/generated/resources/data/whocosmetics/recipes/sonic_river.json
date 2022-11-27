@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "G": {
+      "item": "minecraft:red_stained_glass"
+    },
+    "S": {
+      "item": "whocosmetics:sonic_10"
+    },
+    "V": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    " G ",
+    " S ",
+    " V "
+  ],
+  "result": {
+    "item": "whocosmetics:sonic_river"
+  }
+}

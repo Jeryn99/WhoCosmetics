@@ -55,6 +55,8 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCItems.SPACE_CHEST.get(), "Spacesuit (Chest)");
 
         add(WCBlocks.CORAL_CHAIR.get(), "Coral Chair");
+        add(WCItems.DAVROS_BLACK.get(), "Davros Chair (Black)");
+        add(WCItems.DAVROS_GOLD.get(), "Davros Chair (Gold)");
 
 
         add("itemGroup.whocosmetics.whocosmetics", "WhoCosmetics");

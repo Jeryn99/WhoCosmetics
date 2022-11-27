@@ -2,10 +2,8 @@ package mc.craig.software.cosmetics.common;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import mc.craig.software.cosmetics.WhoCosmetics;
-import mc.craig.software.cosmetics.common.items.ClothingItem;
-import mc.craig.software.cosmetics.common.items.JSONClothingItem;
-import mc.craig.software.cosmetics.common.items.SonicItem;
-import mc.craig.software.cosmetics.common.items.UmbrellaItem;
+import mc.craig.software.cosmetics.common.entity.DavrosChair;
+import mc.craig.software.cosmetics.common.items.*;
 import mc.craig.software.cosmetics.registry.DeferredRegistry;
 import mc.craig.software.cosmetics.registry.RegistrySupplier;
 import net.minecraft.core.Registry;
@@ -43,6 +41,10 @@ public class WCItems {
 
     public static final RegistrySupplier<Item> FRUIT_HAT = ITEMS.register("fruit_hat", () -> new JSONClothingItem(EquipmentSlot.HEAD));
     public static final RegistrySupplier<Item> FEATHER_HAT = ITEMS.register("feather_hat", () -> new JSONClothingItem(EquipmentSlot.HEAD));
+
+    public static final RegistrySupplier<Item> DAVROS_GOLD = ITEMS.register("davros_gold", () -> new DavrosSpawnerItem(WCItems.GENERIC_PROPERTIES, DavrosChair.Variant.GOLD));
+    public static final RegistrySupplier<Item> DAVROS_BLACK = ITEMS.register("davros_black", () -> new DavrosSpawnerItem(WCItems.GENERIC_PROPERTIES, DavrosChair.Variant.BLACK));
+
 
     public static final RegistrySupplier<Item> SPACE_HELMET = ITEMS.register("space_helmet", () -> new ClothingItem(ArmorMaterials.IRON, EquipmentSlot.HEAD).enableAlexSupport().setTextureOverride("space_suit"));
     public static final RegistrySupplier<Item> SPACE_CHEST = ITEMS.register("space_chest", () -> new ClothingItem(ArmorMaterials.IRON, EquipmentSlot.CHEST).enableAlexSupport().setTextureOverride("space_suit"));

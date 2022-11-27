@@ -2,6 +2,7 @@ package mc.craig.software.cosmetics.forge.data;
 
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.common.WCBlocks;
+import mc.craig.software.cosmetics.common.WCItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -22,6 +23,8 @@ public class ModelProviderItem extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(WCBlocks.CORAL_CHAIR.get().asItem())));
+        basicItem(WCItems.DAVROS_BLACK.get());
+        basicItem(WCItems.DAVROS_GOLD.get());
     }
 
     public ItemModelBuilder toolItem(Item item) {

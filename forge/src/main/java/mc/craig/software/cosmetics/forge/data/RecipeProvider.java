@@ -1,5 +1,6 @@
 package mc.craig.software.cosmetics.forge.data;
 
+import mc.craig.software.cosmetics.common.WCBlocks;
 import mc.craig.software.cosmetics.common.WCItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -46,6 +47,26 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
         //TODO ShapedRecipeBuilder.shaped(WCBlocks.WARDROBE.get()).pattern("WWW").pattern("D D").pattern("WWW").define('W', ItemTags.PLANKS).define('D', ItemTags.WOODEN_DOORS).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
         ShapedRecipeBuilder.shaped(WCItems.GASMASK.get()).pattern("WWW").pattern("WWW").pattern("WDW").define('W', ItemTags.WOOL).define('D', Items.LEATHER).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
 
+
+        ShapedRecipeBuilder.shaped(WCBlocks.CORAL_CHAIR.get()).pattern("LWL").pattern(" L ").pattern(" I ").define('W', ItemTags.PLANKS).define('L', Items.LEATHER).define('I', Items.IRON_INGOT).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCItems.RAINBOW_COAT.get()).pattern("W W").pattern("WWW").pattern("WWW").define('W', ItemTags.WOOL).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCItems.UMBRELLA_MISSY.get()).pattern(" W ").pattern("WSW").pattern(" S ").define('S', Items.STICK).define('W', ItemTags.WOOL).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCItems.ACES_BAT.get()).pattern(" I ").pattern(" I ").pattern(" G ").define('I', Items.IRON_INGOT).define('G', Items.STICK).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCItems.SONIC_10.get()).pattern(" G ").pattern(" C ").pattern(" I ").define('I', Items.IRON_INGOT).define('G', Blocks.BLUE_STAINED_GLASS).define('C', Blocks.SANDSTONE).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCItems.ANTLERS.get()).pattern("   ").pattern("B B").pattern("BOB").define('B', Items.BONE).define('O', Blocks.BONE_BLOCK).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCItems.SONIC_13.get()).pattern("   ").pattern(" IO").pattern("I  ").define('I', Items.IRON_INGOT).define('O', Blocks.SHROOMLIGHT).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCItems.SONIC_TROWEL.get()).pattern(" S ").pattern("BR ").pattern(" I ").define('I', Items.IRON_INGOT).define('R', Blocks.REDSTONE_WIRE).define('S', Items.STONE_SHOVEL).define('B', ItemTags.BUTTONS).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+
+        ShapedRecipeBuilder.shaped(WCItems.SONIC_RIVER.get()).pattern(" G ").pattern(" S ").pattern(" V ").define('G', Blocks.RED_STAINED_GLASS).define('S', WCItems.SONIC_10.get()).define('V', Items.GOLD_INGOT).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCItems.SECOND_JACKET.get()).pattern("W W").pattern("WSW").pattern("WWW").define('W', ItemTags.WOOL).define('S', Items.LEAD).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCItems.TOP_HAT.get()).pattern("   ").pattern(" B ").pattern("CRC").define('B', Blocks.BLACK_WOOL).define('R', Blocks.RED_WOOL).define('C', Blocks.BLACK_CARPET).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCItems.SONIC_12.get()).pattern(" G ").pattern(" L ").pattern(" V ").define('G', Items.BLUE_STAINED_GLASS).define('L', Items.LAPIS_LAZULI).define('V', Items.GOLD_INGOT).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+
+
+        ShapedRecipeBuilder.shaped(WCItems.DAVROS_BLACK.get()).pattern(" I ").pattern("LIC").pattern("III").define('I', Items.IRON_INGOT).define('L', Blocks.LEVER).define('C', Items.LEATHER).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCItems.DAVROS_GOLD.get()).pattern(" I ").pattern("LIC").pattern("III").define('I', Items.GOLD_INGOT).define('L', Blocks.LEVER).define('C', Items.LEATHER).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(WCItems.EYE_STALK.get()).requires(Blocks.REDSTONE_WIRE).requires(Items.IRON_HELMET).requires(Items.SPYGLASS).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
         ShapelessRecipeBuilder.shapeless(WCItems.CELERY.get()).requires(ItemTags.SAPLINGS).requires(Items.STICK).requires(Items.STRING).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
     }
 }
