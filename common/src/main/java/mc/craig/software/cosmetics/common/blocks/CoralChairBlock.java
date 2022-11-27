@@ -60,11 +60,8 @@ public class CoralChairBlock extends Block implements EntityBlock {
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if(hand == InteractionHand.MAIN_HAND){
-
             if(level.getBlockEntity(pos) instanceof CoralChairBlockEntity blockChair){
                 Chair chair = null;
-
-
                 if (blockChair.getChairEntity() == null || !blockChair.chairEntity.isAlive()) {
                     chair = new Chair(Entities.CHAIR.get(), level);
                     chair.moveTo(pos, state.getValue(FACING).toYRot(), player.xRotO);
@@ -74,7 +71,9 @@ public class CoralChairBlock extends Block implements EntityBlock {
                     chair = blockChair.getChairEntity();
                 }
 
-                player.startRiding(chair);
+                if (!chair.hasPassenger(player)) {
+                    player.startRiding(chair);
+                }
 
             }
         }
