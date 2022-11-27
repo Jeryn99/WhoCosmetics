@@ -4,7 +4,6 @@ import mc.craig.software.cosmetics.common.blockentity.CoralChairBlockEntity;
 import mc.craig.software.cosmetics.common.entity.Chair;
 import mc.craig.software.cosmetics.common.entity.Entities;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -65,9 +64,11 @@ public class CoralChairBlock extends Block implements EntityBlock {
             if(level.getBlockEntity(pos) instanceof CoralChairBlockEntity blockChair){
                 Chair chair = null;
 
-                if(blockChair.getChairEntity() == null) {
-                    chair = new Chair(Entities.CHAIR.get(), level);;
+
+                if (blockChair.getChairEntity() == null || !blockChair.chairEntity.isAlive()) {
+                    chair = new Chair(Entities.CHAIR.get(), level);
                     chair.moveTo(pos, state.getValue(FACING).toYRot(), player.xRotO);
+                    blockChair.setChairEntity(chair);
                     level.addFreshEntity(chair);
                 } else {
                     chair = blockChair.getChairEntity();

@@ -1,6 +1,7 @@
 package mc.craig.software.cosmetics.forge.data;
 
 import mc.craig.software.cosmetics.WhoCosmetics;
+import mc.craig.software.cosmetics.common.WCBlocks;
 import mc.craig.software.cosmetics.common.WCItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -52,6 +53,8 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCItems.SPACE_HELMET.get(), "Spacesuit (Helmet)");
         add(WCItems.SPACE_LEGS.get(), "Spacesuit (Legs)");
         add(WCItems.SPACE_CHEST.get(), "Spacesuit (Chest)");
+
+        add(WCBlocks.CORAL_CHAIR.get(), "Coral Chair");
 
 
         add("itemGroup.whocosmetics.whocosmetics", "WhoCosmetics");

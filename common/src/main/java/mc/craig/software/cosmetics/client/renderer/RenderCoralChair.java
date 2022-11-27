@@ -20,7 +20,7 @@ import org.jetbrains.annotations.NotNull;
 public class RenderCoralChair implements BlockEntityRenderer<CoralChairBlockEntity>, BlockEntityRendererProvider<CoralChairBlockEntity> {
 
 
-    private static final ResourceLocation TEXTURE = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/block/tenth_chair.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/block/coral_chair.png");
     private final TenthDoctorChairModel chair;
 
     public RenderCoralChair(Context context) {
