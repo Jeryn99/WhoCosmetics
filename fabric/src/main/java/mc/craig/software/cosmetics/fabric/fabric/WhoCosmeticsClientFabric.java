@@ -5,14 +5,11 @@ import mc.craig.software.cosmetics.client.models.ModelRegistration;
 import mc.craig.software.cosmetics.client.renderer.RenderCoralChair;
 import mc.craig.software.cosmetics.client.renderer.RenderDavrosChair;
 import mc.craig.software.cosmetics.common.WCBlockEntities;
-import mc.craig.software.cosmetics.common.blockentity.CoralChairBlockEntity;
 import mc.craig.software.cosmetics.common.entity.Entities;
 import mc.craig.software.cosmetics.fabric.fabric.handles.ClientEvents;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
-import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 
 public class WhoCosmeticsClientFabric implements ClientModInitializer {
