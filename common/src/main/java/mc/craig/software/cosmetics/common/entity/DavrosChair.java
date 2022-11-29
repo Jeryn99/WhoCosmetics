@@ -137,12 +137,6 @@ public class DavrosChair extends Mob {
     }
 
     @Override
-    public boolean isColliding(BlockPos pos, BlockState state) {
-        this.level.addParticle(ParticleTypes.POOF, this.getRandomX(0.5), this.getRandomY(), this.getRandomZ(0.5), 0, 0, 0);
-        return super.isColliding(pos, state);
-    }
-
-    @Override
     public void travel(Vec3 travelVector) {
         maxUpStep = 1;
         if (this.isAlive()) {
@@ -196,6 +190,5 @@ public class DavrosChair extends Mob {
     public boolean isVehicle() {
         return true;
     }
-
 
 }

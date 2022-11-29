@@ -1,19 +1,13 @@
 package mc.craig.software.cosmetics.common.blocks;
 
-import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.common.blockentity.CoralChairBlockEntity;
 import mc.craig.software.cosmetics.common.entity.Chair;
 import mc.craig.software.cosmetics.common.entity.Entities;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Registry;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.item.crafting.CraftingRecipe;
-import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -24,10 +18,6 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Predicate;
 
 public class CoralChairBlock extends Block implements EntityBlock {
 
@@ -70,7 +60,7 @@ public class CoralChairBlock extends Block implements EntityBlock {
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
 
-        List<Item> items = new ArrayList<>();
+  /*      List<Item> items = new ArrayList<>();
 
         Registry.ITEM.forEach(item -> {
             if(Registry.ITEM.getKey(item).getNamespace().matches(WhoCosmetics.MOD_ID)){
@@ -89,7 +79,7 @@ public class CoralChairBlock extends Block implements EntityBlock {
             }
 
             System.exit(1);
-        }
+        }*/
 
         if(hand == InteractionHand.MAIN_HAND){
             if(level.getBlockEntity(pos) instanceof CoralChairBlockEntity blockChair){
