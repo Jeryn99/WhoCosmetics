@@ -5,6 +5,7 @@ import mc.craig.software.cosmetics.common.WCBlocks;
 import mc.craig.software.cosmetics.common.WCItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -22,9 +23,17 @@ public class ModelProviderItem extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        basicItem(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(WCBlocks.CORAL_CHAIR.get().asItem())));
         basicItem(WCItems.DAVROS_BLACK.get());
         basicItem(WCItems.DAVROS_GOLD.get());
+
+        for (Item value : ForgeRegistries.ITEMS.getValues()) {
+            if(value instanceof BlockItem && ForgeRegistries.ITEMS.getKey(value).getNamespace().matches(WhoCosmetics.MOD_ID)){
+                blockItem(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(value.asItem())));
+            }
+        }
+
+        basicItem(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(WCBlocks.CORAL_CHAIR.get().asItem())));
+
     }
 
     public ItemModelBuilder toolItem(Item item) {

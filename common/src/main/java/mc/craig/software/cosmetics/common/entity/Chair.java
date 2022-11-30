@@ -67,6 +67,7 @@ public class Chair extends Entity {
 
     @Override
     public void tick() {
+        super.tick();
         if (getPassengers().isEmpty()) {
             remove(RemovalReason.DISCARDED);
         }
