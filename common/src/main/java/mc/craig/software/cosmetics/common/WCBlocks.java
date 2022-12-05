@@ -2,6 +2,7 @@ package mc.craig.software.cosmetics.common;
 
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.common.blocks.CoralChairBlock;
+import mc.craig.software.cosmetics.common.blocks.FacingEntityBlock;
 import mc.craig.software.cosmetics.registry.DeferredRegistry;
 import mc.craig.software.cosmetics.registry.RegistrySupplier;
 import net.minecraft.core.Registry;
@@ -24,6 +25,7 @@ public class WCBlocks {
     public static final DeferredRegistry<Block> BLOCKS = DeferredRegistry.create(WhoCosmetics.MOD_ID, Registry.BLOCK_REGISTRY);
 
     public static final RegistrySupplier<Block> CORAL_CHAIR = register("coral_chair", () -> new CoralChairBlock(BlockBehaviour.Properties.of(Material.STONE)), MAIN);
+    public static final RegistrySupplier<Block> TOYOTA_ROTOR = register("toyota_rotor", () -> new FacingEntityBlock(BlockBehaviour.Properties.of(Material.STONE)), MAIN);
     public static final RegistrySupplier<Block> roundel_black = register("roundel_black", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SAND).requiresCorrectToolForDrops().strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
     public static final RegistrySupplier<Block> roundel_black_electrical = register("roundel_black_electrical", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SAND).requiresCorrectToolForDrops().strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
     public static final RegistrySupplier<Block> roundel_electrical = register("roundel_electrical", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SAND).requiresCorrectToolForDrops().strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);

@@ -62,7 +62,7 @@ public class DavrosChair extends Mob {
         return Mth.clamp(this.entityData.get(DATA_VARIANT_ID), 0, 1);
     }
 
-    public Variant getVariantEnum(){
+    public Variant getVariantEnum() {
         return Variant.values()[getVariant()];
     }
 
@@ -101,7 +101,6 @@ public class DavrosChair extends Mob {
                 add(Attributes.MAX_HEALTH, 20D).
                 add(Attributes.ARMOR, 2.0D);
     }
-
 
 
     @Override
@@ -148,17 +147,17 @@ public class DavrosChair extends Mob {
                     this.setRot(this.getYRot(), this.getXRot());
                     this.yBodyRot = this.getYRot();
                     this.yHeadRot = this.yBodyRot;
-                    float f = livingEntity.xxa * 0.5F;
-                    float g = livingEntity.zza;
+                    float horizontalSpeed = livingEntity.xxa * 0.5F;
+                    float verticalSpeed = livingEntity.zza;
 
-                    if (g <= 0.0F) {
-                        g *= 0.25F;
+                    if (verticalSpeed <= 0.0F) {
+                        verticalSpeed *= 0.25F;
                     }
 
                     this.flyingSpeed = this.getSpeed() * 0.1F;
                     if (this.isControlledByLocalInstance()) {
                         this.setSpeed((float) this.getAttributeValue(Attributes.MOVEMENT_SPEED));
-                        super.travel(new Vec3(f, travelVector.y, g));
+                        super.travel(new Vec3(horizontalSpeed, travelVector.y, verticalSpeed));
                     } else if (livingEntity instanceof Player) {
                         this.setDeltaMovement(Vec3.ZERO);
                     }
