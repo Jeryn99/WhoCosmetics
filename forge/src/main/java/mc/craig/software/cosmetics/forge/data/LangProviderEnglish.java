@@ -62,6 +62,10 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCItems.DAVROS_BLACK.get(), "Davros Chair (Black)");
         add(WCItems.DAVROS_GOLD.get(), "Davros Chair (Gold)");
 
+        add(WCItems.UNIT_BERRET_R.get(), "Unit Berret");
+        add(WCItems.UNIT_BERRET_G.get(), "Unit Berret");
+        add(WCItems.UNIT_BERRET_B.get(), "Unit Berret");
+
         add(WCBlocks.TOYOTA_ROTOR.get(), "Toyota Rotor");
         add(WCBlocks.VICTORIAN_MONITOR.get(), "Victorian Monitor");
         for (RegistrySupplier<Block> blocksEntry : WCBlocks.BLOCKS.getEntries()) {
