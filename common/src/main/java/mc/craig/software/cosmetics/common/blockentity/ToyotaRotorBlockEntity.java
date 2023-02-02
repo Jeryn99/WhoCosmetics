@@ -8,6 +8,9 @@ import net.minecraft.world.level.block.state.BlockState;
 public class ToyotaRotorBlockEntity extends BlockEntity {
 
     public ToyotaRotorBlockEntity(BlockPos blockPos, BlockState blockState) {
-        super(WCBlockEntities.TOYOTA_ROUNDEL.get(), blockPos, blockState);
+        super(WCBlockEntities.TOYOTA_ROTOR.get(), blockPos, blockState);
     }
+
+
+
 }

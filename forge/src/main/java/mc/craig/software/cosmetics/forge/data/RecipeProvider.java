@@ -8,6 +8,8 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 
@@ -68,5 +70,28 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
 
         ShapelessRecipeBuilder.shapeless(WCItems.EYE_STALK.get()).requires(Blocks.REDSTONE_WIRE).requires(Items.IRON_HELMET).requires(Items.SPYGLASS).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
         ShapelessRecipeBuilder.shapeless(WCItems.CELERY.get()).requires(ItemTags.SAPLINGS).requires(Items.STICK).requires(Items.STRING).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(WCItems.UNIT_BERRET_R.get()).requires(Ingredient.of(Items.STRING), 2).requires(Items.RED_WOOL, 2).requires(Items.BLACK_WOOL, 2).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(WCItems.UNIT_BERRET_G.get()).requires(Ingredient.of(Items.STRING), 2).requires(Items.GREEN_WOOL, 2).requires(Items.BLACK_WOOL, 2).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(WCItems.UNIT_BERRET_B.get()).requires(Ingredient.of(Items.STRING), 2).requires(Items.BLUE_WOOL, 2).requires(Items.BLACK_WOOL, 2).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+
+        ShapedRecipeBuilder.shaped(WCBlocks.ROUNDEL_GREY.get(), 8).pattern("XXX").pattern("XSX").pattern("XXX").define('X', Blocks.QUARTZ_SLAB).define('S', Blocks.WHITE_CONCRETE).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCBlocks.ROUNDEL_GOLD_INNER.get(), 8).pattern("XXX").pattern("XSX").pattern("XXX").define('X', Blocks.SANDSTONE_SLAB).define('S', Blocks.WHITE_CONCRETE).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCBlocks.ROUNDEL_FIRE.get(), 8).pattern("XXX").pattern("XSX").pattern("XXX").define('X', Items.GOLD_NUGGET).define('S', Blocks.WHITE_CONCRETE).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCBlocks.ROUNDEL_BLACK_ELECTRICAL.get(), 8).pattern("XXX").pattern("XSX").pattern("XXX").define('X', Items.GOLD_NUGGET).define('S', Blocks.GRAY_CONCRETE).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCBlocks.ROUNDEL_BLACK.get(), 8).pattern("XXX").pattern("XSX").pattern("XXX").define('X', Blocks.QUARTZ_SLAB).define('S', Blocks.GRAY_CONCRETE).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCBlocks.ROUNDEL_CORAL.get(), 8).pattern("XXX").pattern("XSX").pattern("XXX").define('X', Items.GLOWSTONE_DUST).define('S', Blocks.SANDSTONE).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCBlocks.ROUNDEL_CRYSTAL.get(), 8).pattern("BBB").pattern("B B").pattern("BBB").define('B', Blocks.POLISHED_BLACKSTONE).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCBlocks.ROUNDEL_GREY_HEX.get(), 5).pattern(" A ").pattern("AAA").pattern(" A ").define('A', WCBlocks.ROUNDEL_GREY.get()).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCBlocks.ROUNDEL_GOLD_HEX.get(), 5).pattern(" A ").pattern("AAA").pattern(" A ").define('A', WCBlocks.ROUNDEL_GOLD_INNER.get()).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCBlocks.ROUNDEL_GOLD_BOXED.get(), 5).pattern(" A ").pattern("AAA").pattern(" A ").define('A', WCBlocks.ROUNDEL_FIRE.get()).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCBlocks.ROUNDEL_GREY_CIRCULAR.get(), 4).pattern(" A ").pattern("A A").pattern(" A ").define('A', WCBlocks.ROUNDEL_GREY.get()).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCBlocks.ROUNDEL_GREY_CIRCULAR_2.get(), 5).pattern("A A").pattern(" A ").pattern("A A").define('A', WCBlocks.ROUNDEL_GREY.get()).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCBlocks.ROUNDEL_ELECTRICAL.get(), 6).pattern("A A").pattern("A A").pattern("A A").define('A', WCBlocks.ROUNDEL_BLACK_ELECTRICAL.get()).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCBlocks.ROUNDEL_TIME.get(), 6).pattern("A A").pattern("A A").pattern("A A").define('A', WCBlocks.ROUNDEL_FIRE.get()).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+      /*  ShapedRecipeBuilder.shaped(WCBlocks.CLASSIC_DOORS.get(), 8).pattern("AA ").pattern("AA ").pattern("AA ").define('A', WCBlocks.ROUNDEL_GREY.get()).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+        ShapedRecipeBuilder.shaped(WCBlocks.TOYOTA_ROTOR.get(), 8).pattern(" W ").pattern(" A ").pattern(" W ").define('A', Blocks.ORANGE_STAINED_GLASS).define('W', Blocks.LIGHT_GRAY_CONCRETE).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
+*/
+
     }
 }

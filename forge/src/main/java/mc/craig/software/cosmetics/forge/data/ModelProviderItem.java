@@ -32,7 +32,12 @@ public class ModelProviderItem extends ItemModelProvider {
             }
         }
 
+
+
         basicItem(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(WCBlocks.CORAL_CHAIR.get().asItem())));
+
+        basicItem(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(WCBlocks.TOYOTA_ROTOR.get().asItem())));
+
 
     }
 

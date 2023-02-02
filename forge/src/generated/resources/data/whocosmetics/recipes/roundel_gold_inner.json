@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:white_concrete"
+    },
+    "X": {
+      "item": "minecraft:sandstone_slab"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "XSX",
+    "XXX"
+  ],
+  "result": {
+    "count": 8,
+    "item": "whocosmetics:roundel_gold_inner"
+  }
+}

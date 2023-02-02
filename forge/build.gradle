@@ -70,6 +70,10 @@ unifiedPublishing {
     }
 }
 
+sourceSets.main.resources {
+    srcDir project(":forge").file("src/generated/resources").absolutePath
+}
+
 
 dependencies {
     forge "net.minecraftforge:forge:${rootProject.forge_version}"

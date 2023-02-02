@@ -56,6 +56,11 @@ public class WCItems {
     public static final RegistrySupplier<Item> EYE_STALK = ITEMS.register("eye_stalk", () -> new JSONClothingItem(EquipmentSlot.HEAD));
     public static final RegistrySupplier<Item> ACES_BAT = ITEMS.register("aces_bat", () -> new SwordItem(Tiers.IRON, 3, -2.4F, (new Item.Properties()).tab(MAIN)));
 
+    public static final RegistrySupplier<Item> UNIT_BERRET_R = ITEMS.register("unit_berret_red", () -> new JSONClothingItem(EquipmentSlot.HEAD));
+    public static final RegistrySupplier<Item> UNIT_BERRET_G = ITEMS.register("unit_berret_green", () -> new JSONClothingItem(EquipmentSlot.HEAD));
+    public static final RegistrySupplier<Item> UNIT_BERRET_B = ITEMS.register("unit_berret_blue", () -> new JSONClothingItem(EquipmentSlot.HEAD));
+
+
     public static final RegistrySupplier<Item> UMBRELLA = ITEMS.register("umbrella", () -> new UmbrellaItem(GENERIC_PROPERTIES));
 
     public static final RegistrySupplier<Item> UMBRELLA_MISSY = ITEMS.register("missy_umbrella", () -> new UmbrellaItem(GENERIC_PROPERTIES));

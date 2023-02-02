@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "whocosmetics:roundel_gold_inner"
+    }
+  },
+  "pattern": [
+    " A ",
+    "AAA",
+    " A "
+  ],
+  "result": {
+    "count": 5,
+    "item": "whocosmetics:roundel_gold_hex"
+  }
+}

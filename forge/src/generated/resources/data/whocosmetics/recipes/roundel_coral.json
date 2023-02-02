@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:sandstone"
+    },
+    "X": {
+      "item": "minecraft:glowstone_dust"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "XSX",
+    "XXX"
+  ],
+  "result": {
+    "count": 8,
+    "item": "whocosmetics:roundel_coral"
+  }
+}

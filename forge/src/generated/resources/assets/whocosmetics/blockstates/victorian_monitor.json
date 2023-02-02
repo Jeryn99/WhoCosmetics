@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "whocosmetics:block/victorian_monitor",
+      "y": 180
+    },
+    "facing=north": {
+      "model": "whocosmetics:block/victorian_monitor",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "whocosmetics:block/victorian_monitor",
+      "y": -90
+    },
+    "facing=west": {
+      "model": "whocosmetics:block/victorian_monitor"
+    }
+  }
+}

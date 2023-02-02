@@ -15,12 +15,12 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class RenderBlockEntityBase implements BlockEntityRenderer<ToyotaRotorBlockEntity>, BlockEntityRendererProvider<ToyotaRotorBlockEntity> {
+public class RenderToyotaRotor implements BlockEntityRenderer<ToyotaRotorBlockEntity>, BlockEntityRendererProvider<ToyotaRotorBlockEntity> {
 
     private static final ResourceLocation TEXTURE = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/block/toyota_rotor.png");
     private final ToyotaRotorModel toyotaRotorModel;
 
-    public RenderBlockEntityBase(Context context) {
+    public RenderToyotaRotor(Context context) {
         toyotaRotorModel = new ToyotaRotorModel(context.bakeLayer(ModelRegistration.TOYOTA_ROTOR));
     }
 
@@ -39,6 +39,6 @@ public class RenderBlockEntityBase implements BlockEntityRenderer<ToyotaRotorBlo
 
     @Override
     public BlockEntityRenderer<ToyotaRotorBlockEntity> create(Context context) {
-        return new RenderBlockEntityBase(context);
+        return new RenderToyotaRotor(context);
     }
 }

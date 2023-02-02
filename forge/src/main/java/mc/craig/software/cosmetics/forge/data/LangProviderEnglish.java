@@ -3,7 +3,11 @@ package mc.craig.software.cosmetics.forge.data;
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.common.WCBlocks;
 import mc.craig.software.cosmetics.common.WCItems;
+import mc.craig.software.cosmetics.common.blocks.MonitorBlock;
+import mc.craig.software.cosmetics.registry.RegistrySupplier;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraftforge.common.data.LanguageProvider;
 
 public class LangProviderEnglish extends LanguageProvider {
@@ -58,6 +62,13 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCItems.DAVROS_BLACK.get(), "Davros Chair (Black)");
         add(WCItems.DAVROS_GOLD.get(), "Davros Chair (Gold)");
 
+        add(WCBlocks.TOYOTA_ROTOR.get(), "Toyota Rotor");
+        add(WCBlocks.VICTORIAN_MONITOR.get(), "Victorian Monitor");
+        for (RegistrySupplier<Block> blocksEntry : WCBlocks.BLOCKS.getEntries()) {
+            if(blocksEntry.get() instanceof RotatedPillarBlock rotatedPillarBlock && !(blocksEntry.get() instanceof MonitorBlock)){
+                add(rotatedPillarBlock, "Roundel");
+            }
+        }
 
         add("itemGroup.whocosmetics.whocosmetics", "WhoCosmetics");
         add("itemGroup.whocosmetics", "WhoCosmetics");
