@@ -1,4 +1,4 @@
-/*
+
 package mc.craig.software.cosmetics.common.blocks;
 
 import mc.craig.software.cosmetics.common.blockentity.ClassicDoorsBlockEntity;
@@ -9,10 +9,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.*;
@@ -47,6 +44,7 @@ public class ClassicDoorsBlock extends Block implements EntityBlock {
     }
 
 
+
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (this.material == Material.METAL) {
@@ -56,6 +54,15 @@ public class ClassicDoorsBlock extends Block implements EntityBlock {
             level.setBlock(pos, state, 10);
             level.gameEvent(player, this.isOpen(state) ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, pos);
             boolean open = isOpen(state);
+
+            if(open && level.getBlockState(pos.above()).getBlock() == Blocks.BARRIER){
+                level.removeBlock(pos.above(), false);
+            }
+
+            if(!open && level.getBlockState(pos.above()).getBlock() == Blocks.AIR){
+                level.setBlock(pos.above(), Blocks.BARRIER.defaultBlockState(), Block.UPDATE_ALL);
+            }
+
 
             if (level.getBlockEntity(pos) instanceof ClassicDoorsBlockEntity classicDoorsBlockEntity) {
 
@@ -96,4 +103,4 @@ public class ClassicDoorsBlock extends Block implements EntityBlock {
         return new ClassicDoorsBlockEntity(pos, state);
     }
 }
-*/
+

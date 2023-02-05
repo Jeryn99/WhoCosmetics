@@ -1,7 +1,6 @@
 package mc.craig.software.cosmetics.common.blockentity;
 
 import mc.craig.software.cosmetics.common.WCBlockEntities;
-import mc.craig.software.cosmetics.common.entity.Chair;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -12,15 +11,10 @@ public class ClassicDoorsBlockEntity extends BlockEntity {
 
     public AnimationState ANIM_OPEN = new AnimationState(), ANIM_CLOSE = new AnimationState();
 
-    public ClassicDoorsBlockEntity(BlockEntityType<?> blockEntityType, BlockPos blockPos, BlockState blockState) {
-        super(blockEntityType, blockPos, blockState);
-    }
-
-/*
     public ClassicDoorsBlockEntity(BlockPos blockPos, BlockState blockState) {
         super(WCBlockEntities.CLASSIC_DOORS.get(), blockPos, blockState);
     }
-*/
+
 
 
 }

@@ -68,6 +68,9 @@ public class LangProviderEnglish extends LanguageProvider {
 
         add(WCBlocks.TOYOTA_ROTOR.get(), "Toyota Rotor");
         add(WCBlocks.VICTORIAN_MONITOR.get(), "Victorian Monitor");
+        add(WCBlocks.CLASSIC_DOORS.get(), "Classic Doors");
+        add(WCBlocks.CLASSIC_ROTOR.get(), "Classic Rotor");
+
         for (RegistrySupplier<Block> blocksEntry : WCBlocks.BLOCKS.getEntries()) {
             if(blocksEntry.get() instanceof RotatedPillarBlock rotatedPillarBlock && !(blocksEntry.get() instanceof MonitorBlock)){
                 add(rotatedPillarBlock, "Roundel");

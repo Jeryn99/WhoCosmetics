@@ -1,10 +1,14 @@
 package mc.craig.software.cosmetics.common.blocks;
 
+import mc.craig.software.cosmetics.common.blockentity.AnimatedBlockEntityBase;
 import mc.craig.software.cosmetics.common.blockentity.ToyotaRotorBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -12,13 +16,15 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class FacingEntityBlock extends Block implements EntityBlock {
+public class FacingEntityBlock extends BaseEntityBlock {
 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    private final TileBlock tileBlock;
 
 
-    public FacingEntityBlock(Properties properties) {
+    public FacingEntityBlock(Properties properties, TileBlock tileBlock) {
         super(properties.noOcclusion());
+        this.tileBlock = tileBlock;
     }
 
     @Override
@@ -51,7 +57,21 @@ public class FacingEntityBlock extends Block implements EntityBlock {
 
     @Nullable
     @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
+        return (level1, blockPos, blockState, blockEntity) -> {
+            if(blockEntity instanceof AnimatedBlockEntityBase animatedBlockEntityBase){
+                animatedBlockEntityBase.tick(level1, blockPos, state, blockEntity);
+            }
+        };
+    }
+
+    @Nullable
+    @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new ToyotaRotorBlockEntity(pos, state);
+        return tileBlock.newBlockEntity(pos, state);
+    }
+
+    public interface TileBlock {
+        BlockEntity newBlockEntity(BlockPos pos, BlockState state);
     }
 }

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "minecraft:orange_stained_glass"
+    },
+    "W": {
+      "item": "minecraft:light_gray_concrete"
+    }
+  },
+  "pattern": [
+    " W ",
+    " A ",
+    " W "
+  ],
+  "result": {
+    "count": 8,
+    "item": "whocosmetics:toyota_rotor"
+  }
+}

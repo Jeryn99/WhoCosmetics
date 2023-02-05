@@ -4,7 +4,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Vector3f;
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.client.models.ModelRegistration;
-import mc.craig.software.cosmetics.client.models.ToyotaRotorModel;
+import mc.craig.software.cosmetics.client.models.block.ToyotaRotorModel;
 import mc.craig.software.cosmetics.common.blockentity.ToyotaRotorBlockEntity;
 import mc.craig.software.cosmetics.common.blocks.CoralChairBlock;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -32,7 +32,7 @@ public class RenderToyotaRotor implements BlockEntityRenderer<ToyotaRotorBlockEn
         BlockState blockstate = blockEntity.getBlockState();
         poseStack.mulPose(Vector3f.ZP.rotationDegrees(180));
         poseStack.mulPose(Vector3f.YP.rotationDegrees(-blockstate.getValue(CoralChairBlock.FACING).toYRot()));
-        toyotaRotorModel.renderToBuffer(poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(TEXTURE)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
+        toyotaRotorModel.renderToBuffer(blockEntity, poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(TEXTURE)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
         poseStack.popPose();
     }
 

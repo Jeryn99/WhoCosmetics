@@ -3,9 +3,7 @@ package mc.craig.software.cosmetics.forge.handlers;
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.client.ArmorModelManager;
 import mc.craig.software.cosmetics.client.models.forge.ModelRegistrationImpl;
-import mc.craig.software.cosmetics.client.renderer.RenderToyotaRotor;
-import mc.craig.software.cosmetics.client.renderer.RenderCoralChair;
-import mc.craig.software.cosmetics.client.renderer.RenderDavrosChair;
+import mc.craig.software.cosmetics.client.renderer.*;
 import mc.craig.software.cosmetics.common.WCBlockEntities;
 import mc.craig.software.cosmetics.common.WCItems;
 import mc.craig.software.cosmetics.common.entity.Entities;
@@ -63,9 +61,8 @@ public class ClientModBus {
         EntityRenderers.register(Entities.DAVROS_CHAIR.get(), RenderDavrosChair::new);
         EntityRenderers.register(Entities.CHAIR.get(), NoopRenderer::new);
         BlockEntityRenderers.register(WCBlockEntities.CORAL_CHAIR.get(), RenderCoralChair::new);
-/*
+        BlockEntityRenderers.register(WCBlockEntities.CLASSIC_ROTOR.get(), RenderClassicRotor::new);
         BlockEntityRenderers.register(WCBlockEntities.CLASSIC_DOORS.get(), RenderClassicDoors::new);
-*/
         BlockEntityRenderers.register(WCBlockEntities.TOYOTA_ROTOR.get(), RenderToyotaRotor::new);
     }
 

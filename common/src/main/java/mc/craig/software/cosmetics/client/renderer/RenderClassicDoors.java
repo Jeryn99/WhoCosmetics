@@ -1,12 +1,13 @@
-/*
+
 package mc.craig.software.cosmetics.client.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Vector3f;
 import mc.craig.software.cosmetics.WhoCosmetics;
-import mc.craig.software.cosmetics.client.models.ClassicDoorsModel;
+import mc.craig.software.cosmetics.client.models.block.ClassicDoorsModel;
 import mc.craig.software.cosmetics.client.models.ModelRegistration;
 import mc.craig.software.cosmetics.common.blockentity.ClassicDoorsBlockEntity;
+import mc.craig.software.cosmetics.common.blocks.ClassicDoorsBlock;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
@@ -31,12 +32,14 @@ public class RenderClassicDoors implements BlockEntityRenderer<ClassicDoorsBlock
         if (blockEntity.getBlockState().hasProperty(DoorBlock.HALF) && blockEntity.getBlockState().getValue(DoorBlock.HALF) == DoubleBlockHalf.UPPER)
             return;
         poseStack.pushPose();
-        poseStack.translate(0.5D, 1.5, 0.5D);
 
         BlockState blockstate = blockEntity.getBlockState();
-        poseStack.translate(0, 0, -0.4);
+
+        poseStack.translate(0.5,1.5,-0.5);
+
         poseStack.mulPose(Vector3f.ZP.rotationDegrees(180));
         poseStack.mulPose(Vector3f.YP.rotationDegrees(-blockstate.getValue(ClassicDoorsBlock.FACING).toYRot()));
+
         classicDoorsModel.renderToBuffer(blockEntity, poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(TEXTURE)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
         poseStack.popPose();
     }
@@ -47,4 +50,4 @@ public class RenderClassicDoors implements BlockEntityRenderer<ClassicDoorsBlock
         return new RenderClassicDoors(context);
     }
 }
-*/
+

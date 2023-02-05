@@ -1,6 +1,8 @@
 package mc.craig.software.cosmetics.client;
 
 import mc.craig.software.cosmetics.client.models.*;
+import mc.craig.software.cosmetics.client.models.clothing.*;
+import mc.craig.software.cosmetics.client.models.vehicle.*;
 import mc.craig.software.cosmetics.common.WCItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;

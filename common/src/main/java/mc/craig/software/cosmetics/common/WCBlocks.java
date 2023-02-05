@@ -1,6 +1,9 @@
 package mc.craig.software.cosmetics.common;
 
 import mc.craig.software.cosmetics.WhoCosmetics;
+import mc.craig.software.cosmetics.common.blockentity.ClassicRotorBlockEntity;
+import mc.craig.software.cosmetics.common.blockentity.ToyotaRotorBlockEntity;
+import mc.craig.software.cosmetics.common.blocks.ClassicDoorsBlock;
 import mc.craig.software.cosmetics.common.blocks.CoralChairBlock;
 import mc.craig.software.cosmetics.common.blocks.FacingEntityBlock;
 import mc.craig.software.cosmetics.common.blocks.MonitorBlock;
@@ -40,9 +43,14 @@ public class WCBlocks {
     public static final RegistrySupplier<Block> ROUNDEL_TIME = register("roundel_time", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SAND).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
     public static final RegistrySupplier<Block> ROUNDEL_CORAL = register("roundel_coral", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SAND).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
     public static final RegistrySupplier<Block> ROUNDEL_CRYSTAL = register("roundel_crystal", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SAND).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
-    /*
-        public static final RegistrySupplier<Block> CLASSIC_DOORS = register("classic_doors", () -> new ClassicDoorsBlock(BlockBehaviour.Properties.of(Material.STONE)), MAIN);
-    */    public static final RegistrySupplier<Block> TOYOTA_ROTOR = register("toyota_rotor", () -> new FacingEntityBlock(BlockBehaviour.Properties.of(Material.STONE)), MAIN);
+    public static final RegistrySupplier<Block> ROUNDEL_CLASSIC = register("roundel_classic", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SAND).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
+
+    public static final RegistrySupplier<Block> ROUNDEL_CLASSIC_HALF = register("roundel_classic_half", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SAND).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
+
+    public static final RegistrySupplier<Block> CLASSIC_DOORS = register("classic_doors", () -> new ClassicDoorsBlock(BlockBehaviour.Properties.of(Material.STONE)), MAIN);
+
+    public static final RegistrySupplier<Block> TOYOTA_ROTOR = register("toyota_rotor", () -> new FacingEntityBlock(BlockBehaviour.Properties.of(Material.STONE), ToyotaRotorBlockEntity::new), MAIN);
+    public static final RegistrySupplier<Block> CLASSIC_ROTOR = register("classic_rotor", () -> new FacingEntityBlock(BlockBehaviour.Properties.of(Material.STONE), ClassicRotorBlockEntity::new), MAIN);
 
     public static final RegistrySupplier<Block> VICTORIAN_MONITOR = register("victorian_monitor", () -> new MonitorBlock(BlockBehaviour.Properties.of(Material.DECORATION)), MAIN);
 
@@ -55,6 +63,8 @@ public class WCBlocks {
         WCItems.ITEMS.register(id, () -> new BlockItem(RegistrySupplier.get(), new Item.Properties().tab(itemGroup)));
         return RegistrySupplier;
     }
+
+
 
     /**
      * Registers a Block without a BlockItem

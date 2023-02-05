@@ -2,6 +2,7 @@ package mc.craig.software.cosmetics.common;
 
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.common.blockentity.ClassicDoorsBlockEntity;
+import mc.craig.software.cosmetics.common.blockentity.ClassicRotorBlockEntity;
 import mc.craig.software.cosmetics.common.blockentity.CoralChairBlockEntity;
 import mc.craig.software.cosmetics.common.blockentity.ToyotaRotorBlockEntity;
 import mc.craig.software.cosmetics.registry.DeferredRegistry;
@@ -16,8 +17,9 @@ public class WCBlockEntities {
     public static final DeferredRegistry<BlockEntityType<?>> TILES = DeferredRegistry.create(WhoCosmetics.MOD_ID, Registry.BLOCK_ENTITY_TYPE_REGISTRY);
 
     public static final RegistrySupplier<BlockEntityType<CoralChairBlockEntity>> CORAL_CHAIR = TILES.register("coral_chair", () -> registerTiles(CoralChairBlockEntity::new, WCBlocks.CORAL_CHAIR.get()));
-  /*  public static final RegistrySupplier<BlockEntityType<ClassicDoorsBlockEntity>> CLASSIC_DOORS = TILES.register("classic_doors", () -> registerTiles(ClassicDoorsBlockEntity::new, WCBlocks.CLASSIC_DOORS.get()));
-   */    public static final RegistrySupplier<BlockEntityType<ToyotaRotorBlockEntity>> TOYOTA_ROTOR = TILES.register("toyota_rotor", () -> registerTiles(ToyotaRotorBlockEntity::new, WCBlocks.TOYOTA_ROTOR.get()));
+    public static final RegistrySupplier<BlockEntityType<ClassicDoorsBlockEntity>> CLASSIC_DOORS = TILES.register("classic_doors", () -> registerTiles(ClassicDoorsBlockEntity::new, WCBlocks.CLASSIC_DOORS.get()));
+    public static final RegistrySupplier<BlockEntityType<ToyotaRotorBlockEntity>> TOYOTA_ROTOR = TILES.register("toyota_rotor", () -> registerTiles(ToyotaRotorBlockEntity::new, WCBlocks.TOYOTA_ROTOR.get()));
+    public static final RegistrySupplier<BlockEntityType<ClassicRotorBlockEntity>> CLASSIC_ROTOR = TILES.register("classic_rotor", () -> registerTiles(ClassicRotorBlockEntity::new, WCBlocks.CLASSIC_ROTOR.get()));
 
 
     private static <T extends BlockEntity> BlockEntityType<T> registerTiles(BlockEntityType.BlockEntitySupplier<T> tile, Block validBlock) {
