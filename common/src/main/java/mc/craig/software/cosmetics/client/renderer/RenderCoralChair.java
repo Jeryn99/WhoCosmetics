@@ -7,6 +7,7 @@ import mc.craig.software.cosmetics.client.models.ModelRegistration;
 import mc.craig.software.cosmetics.client.models.block.TenthDoctorChairModel;
 import mc.craig.software.cosmetics.common.blockentity.CoralChairBlockEntity;
 import mc.craig.software.cosmetics.common.blocks.CoralChairBlock;
+import mc.craig.software.cosmetics.common.blocks.FacingEntityBlock;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;

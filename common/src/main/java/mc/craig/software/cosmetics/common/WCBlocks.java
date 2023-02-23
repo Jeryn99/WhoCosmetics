@@ -3,12 +3,11 @@ package mc.craig.software.cosmetics.common;
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.common.blockentity.ClassicRotorBlockEntity;
 import mc.craig.software.cosmetics.common.blockentity.ToyotaRotorBlockEntity;
-import mc.craig.software.cosmetics.common.blocks.ClassicDoorsBlock;
-import mc.craig.software.cosmetics.common.blocks.CoralChairBlock;
-import mc.craig.software.cosmetics.common.blocks.FacingEntityBlock;
-import mc.craig.software.cosmetics.common.blocks.MonitorBlock;
+import mc.craig.software.cosmetics.common.blockentity.WhirlygigBlockEntity;
+import mc.craig.software.cosmetics.common.blocks.*;
 import mc.craig.software.cosmetics.registry.DeferredRegistry;
 import mc.craig.software.cosmetics.registry.RegistrySupplier;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -16,7 +15,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 
@@ -51,8 +52,10 @@ public class WCBlocks {
 
     public static final RegistrySupplier<Block> TOYOTA_ROTOR = register("toyota_rotor", () -> new FacingEntityBlock(BlockBehaviour.Properties.of(Material.STONE), ToyotaRotorBlockEntity::new), MAIN);
     public static final RegistrySupplier<Block> CLASSIC_ROTOR = register("classic_rotor", () -> new FacingEntityBlock(BlockBehaviour.Properties.of(Material.STONE), ClassicRotorBlockEntity::new), MAIN);
+    public static final RegistrySupplier<Block> WHIRLY_GIG = register("whirly_gig", () -> new FacingEntityBlock(BlockBehaviour.Properties.of(Material.STONE), WhirlygigBlockEntity::new), MAIN);
 
     public static final RegistrySupplier<Block> VICTORIAN_MONITOR = register("victorian_monitor", () -> new MonitorBlock(BlockBehaviour.Properties.of(Material.DECORATION)), MAIN);
+    public static final RegistrySupplier<Block> TUBE_LIGHT = register("tube_light", () -> new HorizontalBlockWC(BlockBehaviour.Properties.of(Material.DECORATION).noOcclusion()), MAIN);
 
 
     /**

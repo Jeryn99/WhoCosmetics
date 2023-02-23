@@ -2,6 +2,8 @@ package mc.craig.software.cosmetics.forge.data;
 
 import com.google.gson.JsonObject;
 import mc.craig.software.cosmetics.WhoCosmetics;
+import mc.craig.software.cosmetics.common.WCBlocks;
+import mc.craig.software.cosmetics.common.blocks.FacingEntityBlock;
 import mc.craig.software.cosmetics.common.blocks.MonitorBlock;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -28,7 +30,19 @@ public class ModelProviderBlock extends BlockStateProvider {
 
                 if (value instanceof MonitorBlock monitorBlock) {
                     ResourceLocation vicMon = new ResourceLocation(WhoCosmetics.MOD_ID, "block/victorian_monitor");
-                    threeDeeRotating(monitorBlock, vicMon);
+                    ResourceLocation vicMonHanging = new ResourceLocation(WhoCosmetics.MOD_ID, "block/victorian_monitor_hanging");
+                    threeDeeRotatingHanging(monitorBlock, vicMon, vicMonHanging);
+                    continue;
+                }
+
+                if (value instanceof FacingEntityBlock facingEntityBlock) {
+                    ResourceLocation texture = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath());
+                    continue;
+                }
+
+                if(value instanceof HorizontalDirectionalBlock directionalBlock){
+                    ResourceLocation texture = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath());
+                    threeDeeRotating(directionalBlock, texture);
                     continue;
                 }
 
@@ -44,7 +58,18 @@ public class ModelProviderBlock extends BlockStateProvider {
     // Paul McGann is...
     public JsonObject threeDeeRotating(Block block, ResourceLocation location) {
         return getVariantBuilder(block).forAllStates(
-                state -> ConfiguredModel.builder().modelFile(new ModelFile.UncheckedModelFile(location)).rotationY((int) state.getValue(HorizontalDirectionalBlock.FACING).toYRot() - 90).build()).toJson();
+                state -> ConfiguredModel.builder().modelFile(new ModelFile.UncheckedModelFile(location)).rotationY((int) state.getValue(HorizontalDirectionalBlock.FACING).toYRot()).build()).toJson();
+    }
+
+    public JsonObject threeDeeRotatingHanging(Block block, ResourceLocation location, ResourceLocation hanging) {
+        return getVariantBuilder(block).forAllStates(
+                state -> ConfiguredModel.builder().modelFile(new ModelFile.UncheckedModelFile(state.getValue(MonitorBlock.HANGING) ? hanging : location)).rotationY((int) state.getValue(HorizontalDirectionalBlock.FACING).toYRot()).build()).toJson();
+    }
+
+
+    public JsonObject fourDRotating(Block block, ResourceLocation location) {
+        return getVariantBuilder(block).forAllStates(
+                state -> ConfiguredModel.builder().modelFile(new ModelFile.UncheckedModelFile(location)).rotationY((int) (state.getValue(FacingEntityBlock.ROTATION) * 90F)).build()).toJson();
 
     }
 

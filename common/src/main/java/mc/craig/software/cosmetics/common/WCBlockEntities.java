@@ -1,10 +1,7 @@
 package mc.craig.software.cosmetics.common;
 
 import mc.craig.software.cosmetics.WhoCosmetics;
-import mc.craig.software.cosmetics.common.blockentity.ClassicDoorsBlockEntity;
-import mc.craig.software.cosmetics.common.blockentity.ClassicRotorBlockEntity;
-import mc.craig.software.cosmetics.common.blockentity.CoralChairBlockEntity;
-import mc.craig.software.cosmetics.common.blockentity.ToyotaRotorBlockEntity;
+import mc.craig.software.cosmetics.common.blockentity.*;
 import mc.craig.software.cosmetics.registry.DeferredRegistry;
 import mc.craig.software.cosmetics.registry.RegistrySupplier;
 import net.minecraft.core.Registry;
@@ -20,6 +17,7 @@ public class WCBlockEntities {
     public static final RegistrySupplier<BlockEntityType<ClassicDoorsBlockEntity>> CLASSIC_DOORS = TILES.register("classic_doors", () -> registerTiles(ClassicDoorsBlockEntity::new, WCBlocks.CLASSIC_DOORS.get()));
     public static final RegistrySupplier<BlockEntityType<ToyotaRotorBlockEntity>> TOYOTA_ROTOR = TILES.register("toyota_rotor", () -> registerTiles(ToyotaRotorBlockEntity::new, WCBlocks.TOYOTA_ROTOR.get()));
     public static final RegistrySupplier<BlockEntityType<ClassicRotorBlockEntity>> CLASSIC_ROTOR = TILES.register("classic_rotor", () -> registerTiles(ClassicRotorBlockEntity::new, WCBlocks.CLASSIC_ROTOR.get()));
+    public static final RegistrySupplier<BlockEntityType<WhirlygigBlockEntity>> WHIRLYGIG = TILES.register("whirlygig", () -> registerTiles(WhirlygigBlockEntity::new, WCBlocks.WHIRLY_GIG.get()));
 
 
     private static <T extends BlockEntity> BlockEntityType<T> registerTiles(BlockEntityType.BlockEntitySupplier<T> tile, Block validBlock) {

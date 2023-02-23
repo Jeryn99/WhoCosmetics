@@ -64,6 +64,7 @@ public class ClientModBus {
         BlockEntityRenderers.register(WCBlockEntities.CLASSIC_ROTOR.get(), RenderClassicRotor::new);
         BlockEntityRenderers.register(WCBlockEntities.CLASSIC_DOORS.get(), RenderClassicDoors::new);
         BlockEntityRenderers.register(WCBlockEntities.TOYOTA_ROTOR.get(), RenderToyotaRotor::new);
+        BlockEntityRenderers.register(WCBlockEntities.WHIRLYGIG.get(), RenderWhirlyGig::new);
     }
 
 }

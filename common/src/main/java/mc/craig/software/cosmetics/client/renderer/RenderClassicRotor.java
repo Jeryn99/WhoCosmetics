@@ -9,6 +9,7 @@ import mc.craig.software.cosmetics.client.models.block.ToyotaRotorModel;
 import mc.craig.software.cosmetics.common.blockentity.ClassicRotorBlockEntity;
 import mc.craig.software.cosmetics.common.blockentity.ClassicRotorBlockEntity;
 import mc.craig.software.cosmetics.common.blocks.CoralChairBlock;
+import mc.craig.software.cosmetics.common.blocks.FacingEntityBlock;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
@@ -33,7 +34,7 @@ public class RenderClassicRotor implements BlockEntityRenderer<ClassicRotorBlock
 
         BlockState blockstate = blockEntity.getBlockState();
         poseStack.mulPose(Vector3f.ZP.rotationDegrees(180));
-        poseStack.mulPose(Vector3f.YP.rotationDegrees(-blockstate.getValue(CoralChairBlock.FACING).toYRot()));
+        poseStack.mulPose(Vector3f.YP.rotationDegrees(blockstate.getValue(FacingEntityBlock.ROTATION).floatValue() * 22.5F));
         classicRotorModel.renderToBuffer(blockEntity, poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(TEXTURE)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
         poseStack.popPose();
     }

@@ -1,4 +1,4 @@
-// 1.19.2	2023-02-05T17:09:12.9344628	LootTables
+// 1.19.2	2023-02-19T11:48:08.5781538	LootTables
 19506f30551a40bd2f33bebbc2c94d7914884115 data/whocosmetics/loot_tables/blocks/classic_doors.json
 57c0f0ef6f46e639d0ff3989e9b7aeb9283ebb1b data/whocosmetics/loot_tables/blocks/classic_rotor.json
 5a2ff0d012b8a35f552efaf3451522141c1ea23f data/whocosmetics/loot_tables/blocks/coral_chair.json
@@ -19,4 +19,5 @@ b5c07a41ddbfd3e71493dc2c198369ed910952e3 data/whocosmetics/loot_tables/blocks/ro
 8da2d081d8b602101045cd6dba882c5f29a6be50 data/whocosmetics/loot_tables/blocks/roundel_grey_hex.json
 637aa26eb636fc29906fb0d765475077f0093d92 data/whocosmetics/loot_tables/blocks/roundel_time.json
 3c470ad24630423d0d545a7261e03d8f843d3495 data/whocosmetics/loot_tables/blocks/toyota_rotor.json
+29b9ab844fc02b7f47affb6c18d27a1bebe25a11 data/whocosmetics/loot_tables/blocks/tube_light.json
 86e64249cad7a62e14efadf961fd14e22760d95f data/whocosmetics/loot_tables/blocks/victorian_monitor.json

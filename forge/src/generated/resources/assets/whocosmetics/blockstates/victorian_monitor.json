@@ -1,19 +1,64 @@
 {
   "variants": {
-    "facing=east": {
+    "facing=east,hanging=false,waterlogged=false": {
+      "model": "whocosmetics:block/victorian_monitor",
+      "y": 270
+    },
+    "facing=east,hanging=false,waterlogged=true": {
+      "model": "whocosmetics:block/victorian_monitor",
+      "y": 270
+    },
+    "facing=east,hanging=true,waterlogged=false": {
+      "model": "whocosmetics:block/victorian_monitor_hanging",
+      "y": 270
+    },
+    "facing=east,hanging=true,waterlogged=true": {
+      "model": "whocosmetics:block/victorian_monitor_hanging",
+      "y": 270
+    },
+    "facing=north,hanging=false,waterlogged=false": {
       "model": "whocosmetics:block/victorian_monitor",
       "y": 180
     },
-    "facing=north": {
+    "facing=north,hanging=false,waterlogged=true": {
+      "model": "whocosmetics:block/victorian_monitor",
+      "y": 180
+    },
+    "facing=north,hanging=true,waterlogged=false": {
+      "model": "whocosmetics:block/victorian_monitor_hanging",
+      "y": 180
+    },
+    "facing=north,hanging=true,waterlogged=true": {
+      "model": "whocosmetics:block/victorian_monitor_hanging",
+      "y": 180
+    },
+    "facing=south,hanging=false,waterlogged=false": {
+      "model": "whocosmetics:block/victorian_monitor"
+    },
+    "facing=south,hanging=false,waterlogged=true": {
+      "model": "whocosmetics:block/victorian_monitor"
+    },
+    "facing=south,hanging=true,waterlogged=false": {
+      "model": "whocosmetics:block/victorian_monitor_hanging"
+    },
+    "facing=south,hanging=true,waterlogged=true": {
+      "model": "whocosmetics:block/victorian_monitor_hanging"
+    },
+    "facing=west,hanging=false,waterlogged=false": {
       "model": "whocosmetics:block/victorian_monitor",
       "y": 90
     },
-    "facing=south": {
+    "facing=west,hanging=false,waterlogged=true": {
       "model": "whocosmetics:block/victorian_monitor",
-      "y": -90
+      "y": 90
     },
-    "facing=west": {
-      "model": "whocosmetics:block/victorian_monitor"
+    "facing=west,hanging=true,waterlogged=false": {
+      "model": "whocosmetics:block/victorian_monitor_hanging",
+      "y": 90
+    },
+    "facing=west,hanging=true,waterlogged=true": {
+      "model": "whocosmetics:block/victorian_monitor_hanging",
+      "y": 90
     }
   }
 }

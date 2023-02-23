@@ -23,5 +23,6 @@ public class WhoCosmeticsClientFabric implements ClientModInitializer {
         BlockEntityRendererRegistry.register(WCBlockEntities.CLASSIC_ROTOR.get(), RenderClassicRotor::new);
         BlockEntityRendererRegistry.register(WCBlockEntities.CLASSIC_DOORS.get(), RenderClassicDoors::new);
         BlockEntityRendererRegistry.register(WCBlockEntities.TOYOTA_ROTOR.get(), RenderToyotaRotor::new);
+        BlockEntityRendererRegistry.register(WCBlockEntities.WHIRLYGIG.get(), RenderWhirlyGig::new);
     }
 }

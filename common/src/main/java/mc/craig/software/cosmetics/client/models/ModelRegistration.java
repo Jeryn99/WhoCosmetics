@@ -3,10 +3,7 @@ package mc.craig.software.cosmetics.client.models;
 import com.google.common.base.Supplier;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import mc.craig.software.cosmetics.WhoCosmetics;
-import mc.craig.software.cosmetics.client.models.block.ClassicDoorsModel;
-import mc.craig.software.cosmetics.client.models.block.ClassicRotorModel;
-import mc.craig.software.cosmetics.client.models.block.TenthDoctorChairModel;
-import mc.craig.software.cosmetics.client.models.block.ToyotaRotorModel;
+import mc.craig.software.cosmetics.client.models.block.*;
 import mc.craig.software.cosmetics.client.models.clothing.*;
 import mc.craig.software.cosmetics.client.models.vehicle.*;
 import net.minecraft.client.model.geom.ModelLayerLocation;
@@ -14,7 +11,7 @@ import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.resources.ResourceLocation;
 
 public class ModelRegistration {
-    public static ModelLayerLocation CLASSIC_ROTOR, CLASSIC_DOOR, TOYOTA_ROTOR, TENTH_CHAIR, DAVROS_CHAIR, SPACE_SUIT_FEET_SLIM, SPACE_SUIT_SLIM, SPACE_SUIT, SPACE_SUIT_FEET, JACKET, JACKET_SLIM, BOWTIE, STETSON, FIRST_HAT, GASMASK, RASSILON_SASH, FEZ, SATCHEL, SCARF, STRAW_HAT, CELERY_STICK;
+    public static ModelLayerLocation WHIRLYGIG, CLASSIC_ROTOR, CLASSIC_DOOR, TOYOTA_ROTOR, TENTH_CHAIR, DAVROS_CHAIR, SPACE_SUIT_FEET_SLIM, SPACE_SUIT_SLIM, SPACE_SUIT, SPACE_SUIT_FEET, JACKET, JACKET_SLIM, BOWTIE, STETSON, FIRST_HAT, GASMASK, RASSILON_SASH, FEZ, SATCHEL, SCARF, STRAW_HAT, CELERY_STICK;
 
     public static void init() {
         BOWTIE = register(new ModelLayerLocation(new ResourceLocation(WhoCosmetics.MOD_ID, "model"), "bowtie"), BowTieModel::createBodyLayer);
@@ -38,6 +35,7 @@ public class ModelRegistration {
         TOYOTA_ROTOR = register(new ModelLayerLocation(new ResourceLocation(WhoCosmetics.MOD_ID, "model"), "toyota_rotor"), ToyotaRotorModel::createBodyLayer);
         CLASSIC_DOOR = register(new ModelLayerLocation(new ResourceLocation(WhoCosmetics.MOD_ID, "model"), "classic_door"), ClassicDoorsModel::createBodyLayer);
         CLASSIC_ROTOR = register(new ModelLayerLocation(new ResourceLocation(WhoCosmetics.MOD_ID, "model"), "classic_rotor"), ClassicRotorModel::createBodyLayer);
+        WHIRLYGIG = register(new ModelLayerLocation(new ResourceLocation(WhoCosmetics.MOD_ID, "model"), "whirlygig"), WhirlyGigModel::createBodyLayer);
     }
 
     @ExpectPlatform
