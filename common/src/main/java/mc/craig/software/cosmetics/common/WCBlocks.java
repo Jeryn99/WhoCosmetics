@@ -52,7 +52,7 @@ public class WCBlocks {
 
     public static final RegistrySupplier<Block> TOYOTA_ROTOR = register("toyota_rotor", () -> new FacingEntityBlock(BlockBehaviour.Properties.of(Material.STONE), ToyotaRotorBlockEntity::new), MAIN);
     public static final RegistrySupplier<Block> CLASSIC_ROTOR = register("classic_rotor", () -> new FacingEntityBlock(BlockBehaviour.Properties.of(Material.STONE), ClassicRotorBlockEntity::new), MAIN);
-    public static final RegistrySupplier<Block> WHIRLY_GIG = register("whirly_gig", () -> new FacingEntityBlock(BlockBehaviour.Properties.of(Material.STONE), WhirlygigBlockEntity::new), MAIN);
+    public static final RegistrySupplier<Block> WHIRLY_GIG = register("whirlygig", () -> new FacingEntityBlock(BlockBehaviour.Properties.of(Material.STONE), WhirlygigBlockEntity::new), MAIN);
 
     public static final RegistrySupplier<Block> VICTORIAN_MONITOR = register("victorian_monitor", () -> new MonitorBlock(BlockBehaviour.Properties.of(Material.DECORATION)), MAIN);
     public static final RegistrySupplier<Block> TUBE_LIGHT = register("tube_light", () -> new HorizontalBlockWC(BlockBehaviour.Properties.of(Material.DECORATION).noOcclusion()), MAIN);

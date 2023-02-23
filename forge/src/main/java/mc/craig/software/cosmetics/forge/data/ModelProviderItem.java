@@ -37,6 +37,7 @@ public class ModelProviderItem extends ItemModelProvider {
         basicItem(Objects.requireNonNull(getKey(WCBlocks.TOYOTA_ROTOR.get().asItem())));
         basicItem(Objects.requireNonNull(getKey(WCBlocks.CLASSIC_ROTOR.get().asItem())));
         basicItem(Objects.requireNonNull(getKey(WCBlocks.CLASSIC_DOORS.get().asItem())));
+        basicItem(Objects.requireNonNull(getKey(WCBlocks.WHIRLY_GIG.get().asItem())));
 
 
     }
