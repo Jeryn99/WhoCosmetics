@@ -1,5 +1,6 @@
 package mc.craig.software.cosmetics.forge.data;
 
+import mc.craig.software.cosmetics.Platform;
 import mc.craig.software.cosmetics.common.WCBlocks;
 import mc.craig.software.cosmetics.common.WCItems;
 import net.minecraft.data.DataGenerator;
@@ -7,10 +8,18 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeManager;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CraftingTableBlock;
+import net.minecraftforge.client.RecipeBookManager;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.crafting.CraftingHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Consumer;
 
@@ -92,6 +101,6 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
         ShapedRecipeBuilder.shaped(WCBlocks.ROUNDEL_TIME.get(), 6).pattern("A A").pattern("A A").pattern("A A").define('A', WCBlocks.ROUNDEL_FIRE.get()).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
         ShapedRecipeBuilder.shaped(WCBlocks.CLASSIC_DOORS.get(), 8).pattern("AA ").pattern("AA ").pattern("AA ").define('A', WCBlocks.ROUNDEL_GREY.get()).unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(consumer);
 
-
     }
+
 }

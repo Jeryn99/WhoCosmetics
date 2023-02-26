@@ -1,6 +1,8 @@
 package mc.craig.software.cosmetics.common.items;
 
+import mc.craig.software.cosmetics.common.WCItems;
 import mc.craig.software.cosmetics.common.entity.Grenade;
+import mc.craig.software.cosmetics.common.util.GeneralUtil;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -24,6 +26,8 @@ public class GrenadeItem extends Item {
             grenade.setItem(itemStack);
             grenade.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 1.0F);
             level.addFreshEntity(grenade);
+            player.getCooldowns().addCooldown(WCItems.GRENADE.get(), 100);
+            GeneralUtil.checkAllRecipes();
         }
 
         player.awardStat(Stats.ITEM_USED.get(this));

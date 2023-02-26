@@ -16,5 +16,15 @@
         "stream": false
       }
     ]
+  },
+  "sonic": {
+    "category": "ambient",
+    "subtitle": "whocosmetics.subtitles.sonic",
+    "sounds": [
+      {
+        "name": "whocosmetics:sonic/sonic",
+        "stream": false
+      }
+    ]
   }
 }

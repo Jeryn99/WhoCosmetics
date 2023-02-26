@@ -124,6 +124,9 @@ public class DavrosChair extends Mob {
 
     @Override
     public void tick() {
+
+
+
         super.tick();
         if (getHealth() < 5) {
             this.level.addParticle(ParticleTypes.FLAME, this.getRandomX(0.5), this.getRandomY(), this.getRandomZ(0.5), 0, 0, 0);
