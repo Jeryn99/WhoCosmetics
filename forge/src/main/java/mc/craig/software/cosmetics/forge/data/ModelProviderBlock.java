@@ -35,11 +35,6 @@ public class ModelProviderBlock extends BlockStateProvider {
                     continue;
                 }
 
-                if (value instanceof FacingEntityBlock facingEntityBlock) {
-                    ResourceLocation texture = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath());
-                    continue;
-                }
-
                 if(value instanceof HorizontalDirectionalBlock directionalBlock){
                     ResourceLocation texture = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath());
                     threeDeeRotating(directionalBlock, texture);

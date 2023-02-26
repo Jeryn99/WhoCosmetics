@@ -61,6 +61,7 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCBlocks.CORAL_CHAIR.get(), "Coral Chair");
         add(WCItems.DAVROS_BLACK.get(), "Davros Chair (Black)");
         add(WCItems.DAVROS_GOLD.get(), "Davros Chair (Gold)");
+        add(WCItems.GRENADE.get(), "Grenade");
 
         add(WCItems.UNIT_BERRET_R.get(), "Unit Berret");
         add(WCItems.UNIT_BERRET_G.get(), "Unit Berret");

@@ -19,6 +19,7 @@ public class WhoCosmeticsClientFabric implements ClientModInitializer {
         ClientUtil.clothingModels();
         EntityRendererRegistry.register(Entities.DAVROS_CHAIR.get(), RenderDavrosChair::new);
         EntityRendererRegistry.register(Entities.CHAIR.get(), NoopRenderer::new);
+        EntityRendererRegistry.register(Entities.GRENADE.get(), RenderGrenade::new);
         BlockEntityRendererRegistry.register(WCBlockEntities.CORAL_CHAIR.get(), RenderCoralChair::new);
         BlockEntityRendererRegistry.register(WCBlockEntities.CLASSIC_ROTOR.get(), RenderClassicRotor::new);
         BlockEntityRendererRegistry.register(WCBlockEntities.CLASSIC_DOORS.get(), RenderClassicDoors::new);
