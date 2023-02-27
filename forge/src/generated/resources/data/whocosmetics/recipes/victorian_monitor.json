@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "minecraft:black_concrete"
+    },
+    "F": {
+      "item": "minecraft:chain"
+    },
+    "W": {
+      "item": "minecraft:brown_concrete"
+    }
+  },
+  "pattern": [
+    " F ",
+    "WAW",
+    "WAW"
+  ],
+  "result": {
+    "count": 8,
+    "item": "whocosmetics:victorian_monitor"
+  }
+}

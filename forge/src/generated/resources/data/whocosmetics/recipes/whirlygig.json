@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:redstone_lamp"
+    },
+    "X": {
+      "item": "minecraft:iron_ingot"
+    },
+    "Z": {
+      "item": "minecraft:stone_slab"
+    }
+  },
+  "pattern": [
+    "XSX",
+    "XXX",
+    " Z "
+  ],
+  "result": {
+    "item": "whocosmetics:whirlygig"
+  }
+}
