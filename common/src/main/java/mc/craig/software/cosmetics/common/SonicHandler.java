@@ -16,8 +16,11 @@ import net.minecraft.world.level.block.piston.PistonBaseBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.properties.RailShape;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.material.Material;
+
+import static net.minecraft.world.level.block.PoweredRailBlock.POWERED;
 
 
 public class SonicHandler {
@@ -25,6 +28,11 @@ public class SonicHandler {
     public static InteractionResult onSonic(Player serverPlayer, Level level, BlockPos blockPos) {
         BlockState blockState = level.getBlockState(blockPos);
         BlockEntity blockEntity = level.getBlockEntity(blockPos);
+
+        //Disable for release
+        if(true) {
+            return InteractionResult.FAIL;
+        }
 
         if (blockState.getMaterial() == Material.WOOD) {
             return InteractionResult.FAIL;
@@ -63,7 +71,10 @@ public class SonicHandler {
             return InteractionResult.SUCCESS;
         }
 
-
+        if(blockState.getBlock() instanceof PoweredRailBlock poweredRailBlock){
+            level.setBlock(blockPos, blockState.setValue(POWERED, true), Block.UPDATE_ALL);
+            return InteractionResult.SUCCESS;
+        }
 
         if (blockState.getBlock() instanceof SculkSensorBlock) {
             level.gameEvent(serverPlayer, GameEvent.BLOCK_ACTIVATE, blockPos);
