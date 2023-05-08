@@ -86,7 +86,13 @@ public class ClientUtil {
     }
 
     public static boolean isAlex(Entity entity) {
+        if(entity == null) return false;
         if (entity instanceof AbstractClientPlayer abstractClientPlayer) {
+
+            if(abstractClientPlayer.playerInfo == null){
+                return false;
+            }
+
             if (abstractClientPlayer.playerInfo.getModelName().isEmpty()) {
                 return false;
             }

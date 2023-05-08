@@ -34,7 +34,7 @@ public class SonicItem extends Item {
             player.swing(context.getHand());
             player.playSound(WCSounds.SONIC.get());
             level.gameEvent(player, GameEvent.ITEM_INTERACT_FINISH, blockPos);
-        //    ParticleUtils.spawnParticlesOnBlockFaces(level, blockPos, ParticleTypes.WAX_OFF, UniformInt.of(3, 5));
+            ParticleUtils.spawnParticlesOnBlockFaces(level, blockPos, ParticleTypes.WAX_OFF, UniformInt.of(3, 5));
             player.getCooldowns().addCooldown(this, 100);
         }
 
