@@ -73,6 +73,7 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCBlocks.CLASSIC_ROTOR.get(), "Classic Rotor");
         add(WCBlocks.WHIRLY_GIG.get(), "Whirlygig");
         add(WCBlocks.TUBE_LIGHT.get(), "Tube Light");
+        add(WCBlocks.NITRO_9.get(), "Nitro 9");
 
         for (RegistrySupplier<Block> blocksEntry : WCBlocks.BLOCKS.getEntries()) {
             if(blocksEntry.get() instanceof RotatedPillarBlock rotatedPillarBlock && !(blocksEntry.get() instanceof MonitorBlock)){

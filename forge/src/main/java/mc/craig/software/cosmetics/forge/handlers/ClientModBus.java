@@ -64,6 +64,7 @@ public class ClientModBus {
         EntityRenderers.register(Entities.DAVROS_CHAIR.get(), RenderDavrosChair::new);
         EntityRenderers.register(Entities.CHAIR.get(), NoopRenderer::new);
         EntityRenderers.register(Entities.GRENADE.get(), RenderGrenade::new);
+        EntityRenderers.register(Entities.NITRO_9.get(), RenderNitro9::new);
         BlockEntityRenderers.register(WCBlockEntities.CORAL_CHAIR.get(), RenderCoralChair::new);
         BlockEntityRenderers.register(WCBlockEntities.CLASSIC_ROTOR.get(), RenderClassicRotor::new);
         BlockEntityRenderers.register(WCBlockEntities.CLASSIC_DOORS.get(), RenderClassicDoors::new);

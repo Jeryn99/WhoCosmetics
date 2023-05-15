@@ -1,7 +1,8 @@
-// 1.19.2	2023-02-23T23:48:31.6215374	LootTables
+// 1.19.2	2023-05-15T11:59:32.1128098	LootTables
 19506f30551a40bd2f33bebbc2c94d7914884115 data/whocosmetics/loot_tables/blocks/classic_doors.json
 57c0f0ef6f46e639d0ff3989e9b7aeb9283ebb1b data/whocosmetics/loot_tables/blocks/classic_rotor.json
 5a2ff0d012b8a35f552efaf3451522141c1ea23f data/whocosmetics/loot_tables/blocks/coral_chair.json
+3eafe2e502d54fe75dd71f03d898e544ba3021cc data/whocosmetics/loot_tables/blocks/nitro_9.json
 3186c7c4a3504e7893762280f2e19c2fd6b6c835 data/whocosmetics/loot_tables/blocks/roundel_black.json
 f6790b7dae094cca39e070995e64423671327384 data/whocosmetics/loot_tables/blocks/roundel_black_electrical.json
 da5277c6b17d0f2bcddd9e18a256412c78419df3 data/whocosmetics/loot_tables/blocks/roundel_classic.json

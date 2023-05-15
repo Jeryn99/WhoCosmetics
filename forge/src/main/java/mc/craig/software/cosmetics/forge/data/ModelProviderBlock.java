@@ -5,6 +5,7 @@ import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.common.WCBlocks;
 import mc.craig.software.cosmetics.common.blocks.FacingEntityBlock;
 import mc.craig.software.cosmetics.common.blocks.MonitorBlock;
+import mc.craig.software.cosmetics.common.blocks.Nitro9Block;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -38,6 +39,11 @@ public class ModelProviderBlock extends BlockStateProvider {
                 if(value instanceof HorizontalDirectionalBlock directionalBlock){
                     ResourceLocation texture = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath());
                     threeDeeRotating(directionalBlock, texture);
+                    continue;
+                }
+
+                if(value instanceof Nitro9Block nitro9Block){
+                    customLocation(nitro9Block, new ResourceLocation(WhoCosmetics.MOD_ID, "block/nitro_9"));
                     continue;
                 }
 

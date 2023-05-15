@@ -15,6 +15,7 @@ public class WCItems {
     public static final DeferredRegistry<Item> ITEMS = DeferredRegistry.create(WhoCosmetics.MOD_ID, Registry.ITEM_REGISTRY);
     public static CreativeModeTab MAIN = getCreativeTab();
     public static Item.Properties GENERIC_PROPERTIES = new Item.Properties().tab(MAIN).stacksTo(1);
+    public static Item.Properties GRENADE_PROP = new Item.Properties().tab(MAIN).stacksTo(8);
 
     public static final RegistrySupplier<Item> FEZ = ITEMS.register("fez", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD, true, DyeColor.RED.getMaterialColor().col));
     public static final RegistrySupplier<Item> BOW_TIE = ITEMS.register("bowtie", () -> new ClothingItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST, true, DyeColor.RED.getMaterialColor().col));
@@ -70,7 +71,7 @@ public class WCItems {
     public static final RegistrySupplier<Item> SONIC_13 = ITEMS.register("sonic_13", () -> new SonicItem(GENERIC_PROPERTIES));
     public static final RegistrySupplier<Item> SONIC_TROWEL = ITEMS.register("sonic_trowel", () -> new SonicItem(GENERIC_PROPERTIES));
     public static final RegistrySupplier<Item> SONIC_RIVER = ITEMS.register("sonic_river", () -> new SonicItem(GENERIC_PROPERTIES));
-    public static final RegistrySupplier<Item> GRENADE = ITEMS.register("grenade", () -> new GrenadeItem(GENERIC_PROPERTIES.stacksTo(8)));
+    public static final RegistrySupplier<Item> GRENADE = ITEMS.register("grenade", () -> new GrenadeItem(GRENADE_PROP));
 
 
     @ExpectPlatform

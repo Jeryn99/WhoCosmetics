@@ -56,6 +56,7 @@ public class WCBlocks {
 
     public static final RegistrySupplier<Block> VICTORIAN_MONITOR = register("victorian_monitor", () -> new MonitorBlock(BlockBehaviour.Properties.of(Material.DECORATION)), MAIN);
     public static final RegistrySupplier<Block> TUBE_LIGHT = register("tube_light", () -> new HorizontalBlockWC(BlockBehaviour.Properties.of(Material.DECORATION).noOcclusion()), MAIN);
+    public static final RegistrySupplier<Block> NITRO_9 = register("nitro_9", () -> new Nitro9Block(BlockBehaviour.Properties.of(Material.DECORATION).noOcclusion()), MAIN);
 
 
     /**
