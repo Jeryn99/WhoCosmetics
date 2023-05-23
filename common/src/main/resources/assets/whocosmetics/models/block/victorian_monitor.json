@@ -6,6 +6,7 @@
 		"0": "whocosmetics:block/victorian_monitor",
 		"particle": "whocosmetics:block/victorian_monitor"
 	},
+	"render_type" : "cutout",
 	"elements": [
 		{
 			"from": [6.5, 12, 8],

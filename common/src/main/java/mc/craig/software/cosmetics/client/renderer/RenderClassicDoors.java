@@ -36,7 +36,7 @@ public class RenderClassicDoors implements BlockEntityRenderer<ClassicDoorsBlock
 
         BlockState blockstate = blockEntity.getBlockState();
 
-        poseStack.translate(0.5,1.5,-0.5);
+       // poseStack.translate(0.5,1.5,-0.5);
 
         poseStack.mulPose(Vector3f.ZP.rotationDegrees(180));
         poseStack.mulPose(Vector3f.YP.rotationDegrees(-blockstate.getValue(ClassicDoorsBlock.FACING).toYRot()));

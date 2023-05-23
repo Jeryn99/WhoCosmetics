@@ -5,6 +5,7 @@
 		"0": "whocosmetics:block/nitro_9",
 		"particle": "whocosmetics:block/nitro_9"
 	},
+	"render_type" : "cutout",
 	"elements": [
 		{
 			"from": [4.5, 0, 4.5],
