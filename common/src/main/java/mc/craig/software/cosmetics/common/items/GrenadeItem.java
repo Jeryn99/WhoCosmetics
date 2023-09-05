@@ -26,7 +26,7 @@ public class GrenadeItem extends Item {
             grenade.setItem(itemStack);
             grenade.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 1.0F);
             level.addFreshEntity(grenade);
-            player.getCooldowns().addCooldown(WCItems.GRENADE.get(), 50);
+            player.getCooldowns().addCooldown(WCItems.GRENADE.get(), 30);
             GeneralUtil.checkAllRecipes();
         }
 
