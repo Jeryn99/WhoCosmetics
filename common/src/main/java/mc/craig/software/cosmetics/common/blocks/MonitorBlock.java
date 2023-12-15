@@ -51,7 +51,7 @@ public class MonitorBlock extends HorizontalDirectionalBlock implements SimpleWa
 
         if (Platform.isModLoaded("tardis_refined")) {
             if (player instanceof ServerPlayer serverPlayer && level instanceof ServerLevel serverLevel) {
-                TardisRefinedCompat.openMonitor(serverPlayer, serverLevel);
+               //TODO TardisRefinedCompat.openMonitor(serverPlayer, serverLevel);
                 return InteractionResult.SUCCESS;
             }
         }

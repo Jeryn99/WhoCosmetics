@@ -18,7 +18,7 @@ subprojects {
         minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
         mappings loom.layered() {
             officialMojangMappings()
-            parchment("org.parchmentmc.data:parchment-${rootProject.mappings}")
+          //  parchment("org.parchmentmc.data:parchment-${rootProject.mappings}")
         }
     }
 }
@@ -54,10 +54,6 @@ allprojects {
             url = 'https://ladysnake.jfrog.io/artifactory/mods'
         }
 
-
-        flatDir {
-            dirs '../libs'
-        }
     }
 
     tasks.withType(JavaCompile) {

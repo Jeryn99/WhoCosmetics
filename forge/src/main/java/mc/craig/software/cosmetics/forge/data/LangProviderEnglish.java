@@ -49,6 +49,7 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCItems.SONIC_10.get(), "Sonic Screwdriver");
         add(WCItems.SONIC_12.get(), "Sonic Screwdriver");
         add(WCItems.SONIC_13.get(), "Sonic Screwdriver");
+        add(WCItems.SONIC_14.get(), "Sonic Screwdriver");
         add(WCItems.SONIC_RIVER.get(), "Sonic Screwdriver");
         add(WCItems.SONIC_TROWEL.get(), "Sonic Trowel");
         add(WCItems.TOP_HAT.get(), "Top Hat");
