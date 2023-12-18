@@ -73,7 +73,7 @@ public class WCItems {
     public static final RegistrySupplier<Item> SONIC_RIVER = ITEMS.register("sonic_river", () -> new SonicItem(GENERIC_PROPERTIES));
     public static final RegistrySupplier<Item> SONIC_14 = ITEMS.register("sonic_14", () -> new SonicItem(GENERIC_PROPERTIES));
     public static final RegistrySupplier<Item> GRENADE = ITEMS.register("grenade", () -> new GrenadeItem(GRENADE_PROP));
-
+    public static final RegistrySupplier<Item> DALEK_BLASTER = ITEMS.register("dalek_blaster", () -> new BowItem(GENERIC_PROPERTIES));
 
     @ExpectPlatform
     private static CreativeModeTab getCreativeTab() {

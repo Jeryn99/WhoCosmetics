@@ -53,6 +53,7 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCItems.SONIC_RIVER.get(), "Sonic Screwdriver");
         add(WCItems.SONIC_TROWEL.get(), "Sonic Trowel");
         add(WCItems.TOP_HAT.get(), "Top Hat");
+        add(WCItems.DALEK_BLASTER.get(), "Dalek Blaster");
 
         add(WCItems.SPACE_FEET.get(), "Spacesuit (Feet)");
         add(WCItems.SPACE_HELMET.get(), "Spacesuit (Helmet)");
@@ -75,6 +76,7 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCBlocks.WHIRLY_GIG.get(), "Whirlygig");
         add(WCBlocks.TUBE_LIGHT.get(), "Tube Light");
         add(WCBlocks.NITRO_9.get(), "Nitro 9");
+
 
         for (RegistrySupplier<Block> blocksEntry : WCBlocks.BLOCKS.getEntries()) {
             if(blocksEntry.get() instanceof RotatedPillarBlock rotatedPillarBlock && !(blocksEntry.get() instanceof MonitorBlock)){
