@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "whocosmetics:block/tube_light",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "whocosmetics:block/tube_light",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "whocosmetics:block/tube_light"
+    },
+    "facing=west": {
+      "model": "whocosmetics:block/tube_light",
+      "y": 90
+    }
+  }
+}

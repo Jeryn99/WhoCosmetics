@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "G": {
+      "item": "minecraft:blue_stained_glass"
+    },
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "V": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    " G ",
+    " L ",
+    " V "
+  ],
+  "result": {
+    "item": "whocosmetics:sonic_12"
+  }
+}

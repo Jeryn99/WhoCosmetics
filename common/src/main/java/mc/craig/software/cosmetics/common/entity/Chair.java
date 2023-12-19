@@ -7,12 +7,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientboundAddEntityPacket;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.monster.Drowned;
-import net.minecraft.world.entity.monster.Husk;
-import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.level.Level;
-
-import java.util.Iterator;
 
 public class Chair extends Entity {
 
@@ -44,29 +39,44 @@ public class Chair extends Entity {
     }
 
 
+    /**
+     * Positions the given passenger on the vehicle.
+     *
+     * @param passenger the passenger to position on the vehicle
+     */
     @Override
     public void positionRider(Entity passenger) {
+        // Calculate the mount offset based on the vehicle's and passenger's positions
         double mountOffset = this.getY() + this.getPassengersRidingOffset() + passenger.getMyRidingOffset();
 
+        // Determine the direction the vehicle is facing
         Direction rotation = getDirection();
+
+        // Calculate the block positions to the left and right of the vehicle
         BlockPos leftPos = blockPosition().relative(rotation.getClockWise());
         BlockPos rightPos = blockPosition().relative(rotation.getCounterClockWise());
 
+        // Check if the passenger is actually a passenger on the vehicle
+        if (!getPassengers().contains(passenger)) {
+            return;
+        }
 
-        if (getPassengers().size() > 0 && getPassengers().get(0) == passenger) {
+        // Position the passenger based on their position in the list of passengers
+        if (getPassengers().indexOf(passenger) == 0) {
+            // If the passenger is the first in the list, call the parent method to position them
             super.positionRider(passenger);
-        }
-        if (getPassengers().size() > 1 && getPassengers().get(1) == passenger) {
+        } else if (getPassengers().indexOf(passenger) == 1) {
+            // If the passenger is the second in the list, position them to the left of the vehicle
             passenger.setPos(leftPos.getX() + 0.5, mountOffset, leftPos.getZ() + 0.5);
-        }
-        if (getPassengers().size() > 2 && getPassengers().get(2) == passenger) {
+        } else if (getPassengers().indexOf(passenger) == 2) {
+            // If the passenger is the third in the list, position them to the right of the vehicle
             passenger.setPos(rightPos.getX() + 0.5, mountOffset, rightPos.getZ() + 0.5);
         }
-
     }
 
     @Override
     public void tick() {
+        super.tick();
         if (getPassengers().isEmpty()) {
             remove(RemovalReason.DISCARDED);
         }

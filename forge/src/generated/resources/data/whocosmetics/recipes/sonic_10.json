@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": {
+      "item": "minecraft:sandstone"
+    },
+    "G": {
+      "item": "minecraft:blue_stained_glass"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    " G ",
+    " C ",
+    " I "
+  ],
+  "result": {
+    "item": "whocosmetics:sonic_10"
+  }
+}

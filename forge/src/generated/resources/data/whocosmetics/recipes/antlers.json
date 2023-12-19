@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:bone"
+    },
+    "O": {
+      "item": "minecraft:bone_block"
+    }
+  },
+  "pattern": [
+    "   ",
+    "B B",
+    "BOB"
+  ],
+  "result": {
+    "item": "whocosmetics:antlers"
+  }
+}

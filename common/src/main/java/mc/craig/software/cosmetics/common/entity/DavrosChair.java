@@ -62,7 +62,7 @@ public class DavrosChair extends Mob {
         return Mth.clamp(this.entityData.get(DATA_VARIANT_ID), 0, 1);
     }
 
-    public Variant getVariantEnum(){
+    public Variant getVariantEnum() {
         return Variant.values()[getVariant()];
     }
 
@@ -103,7 +103,6 @@ public class DavrosChair extends Mob {
     }
 
 
-
     @Override
     public AttributeMap getAttributes() {
         return new AttributeMap(createAttributes().build());
@@ -125,6 +124,9 @@ public class DavrosChair extends Mob {
 
     @Override
     public void tick() {
+
+
+
         super.tick();
         if (getHealth() < 5) {
             this.level.addParticle(ParticleTypes.FLAME, this.getRandomX(0.5), this.getRandomY(), this.getRandomZ(0.5), 0, 0, 0);
@@ -134,12 +136,6 @@ public class DavrosChair extends Mob {
                 this.level.playLocalSound(this.getX() + 0.5, this.getY() + 0.5, this.getZ() + 0.5, SoundEvents.BLAZE_BURN, this.getSoundSource(), 1.0F + this.random.nextFloat(), this.random.nextFloat() * 0.7F + 0.3F, false);
             }
         }
-    }
-
-    @Override
-    public boolean isColliding(BlockPos pos, BlockState state) {
-        this.level.addParticle(ParticleTypes.POOF, this.getRandomX(0.5), this.getRandomY(), this.getRandomZ(0.5), 0, 0, 0);
-        return super.isColliding(pos, state);
     }
 
     @Override
@@ -154,17 +150,17 @@ public class DavrosChair extends Mob {
                     this.setRot(this.getYRot(), this.getXRot());
                     this.yBodyRot = this.getYRot();
                     this.yHeadRot = this.yBodyRot;
-                    float f = livingEntity.xxa * 0.5F;
-                    float g = livingEntity.zza;
+                    float horizontalSpeed = livingEntity.xxa * 0.5F;
+                    float verticalSpeed = livingEntity.zza;
 
-                    if (g <= 0.0F) {
-                        g *= 0.25F;
+                    if (verticalSpeed <= 0.0F) {
+                        verticalSpeed *= 0.25F;
                     }
 
                     this.flyingSpeed = this.getSpeed() * 0.1F;
                     if (this.isControlledByLocalInstance()) {
                         this.setSpeed((float) this.getAttributeValue(Attributes.MOVEMENT_SPEED));
-                        super.travel(new Vec3(f, travelVector.y, g));
+                        super.travel(new Vec3(horizontalSpeed, travelVector.y, verticalSpeed));
                     } else if (livingEntity instanceof Player) {
                         this.setDeltaMovement(Vec3.ZERO);
                     }
@@ -196,6 +192,5 @@ public class DavrosChair extends Mob {
     public boolean isVehicle() {
         return true;
     }
-
 
 }

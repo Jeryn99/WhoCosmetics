@@ -5,6 +5,7 @@
 		"1": "whocosmetics:block/recored",
 		"2": "whocosmetics:block/gramaphone"
 	},
+	"render_type" : "cutout",
 	"elements": [
 		{
 			"from": [4.49, 10.40583, 2.15],

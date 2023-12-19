@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "whocosmetics:roundel_grey"
+    }
+  },
+  "pattern": [
+    " A ",
+    "A A",
+    " A "
+  ],
+  "result": {
+    "count": 4,
+    "item": "whocosmetics:roundel_grey_circurlar"
+  }
+}

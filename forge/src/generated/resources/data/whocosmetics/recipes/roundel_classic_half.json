@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "whocosmetics:roundel_classic"
+    }
+  },
+  "pattern": [
+    "   ",
+    " S ",
+    "   "
+  ],
+  "result": {
+    "count": 8,
+    "item": "whocosmetics:roundel_classic_half"
+  }
+}

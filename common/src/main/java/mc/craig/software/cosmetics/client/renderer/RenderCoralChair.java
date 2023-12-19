@@ -7,15 +7,14 @@ import mc.craig.software.cosmetics.client.models.ModelRegistration;
 import mc.craig.software.cosmetics.client.models.block.TenthDoctorChairModel;
 import mc.craig.software.cosmetics.common.blockentity.CoralChairBlockEntity;
 import mc.craig.software.cosmetics.common.blocks.CoralChairBlock;
+import mc.craig.software.cosmetics.common.blocks.FacingEntityBlock;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
-import org.jetbrains.annotations.NotNull;
 
 public class RenderCoralChair implements BlockEntityRenderer<CoralChairBlockEntity>, BlockEntityRendererProvider<CoralChairBlockEntity> {
 

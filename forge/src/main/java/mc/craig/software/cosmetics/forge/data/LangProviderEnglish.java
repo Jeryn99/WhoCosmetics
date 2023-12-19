@@ -3,7 +3,11 @@ package mc.craig.software.cosmetics.forge.data;
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.common.WCBlocks;
 import mc.craig.software.cosmetics.common.WCItems;
+import mc.craig.software.cosmetics.common.blocks.MonitorBlock;
+import mc.craig.software.cosmetics.registry.RegistrySupplier;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraftforge.common.data.LanguageProvider;
 
 public class LangProviderEnglish extends LanguageProvider {
@@ -45,6 +49,7 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCItems.SONIC_10.get(), "Sonic Screwdriver");
         add(WCItems.SONIC_12.get(), "Sonic Screwdriver");
         add(WCItems.SONIC_13.get(), "Sonic Screwdriver");
+        add(WCItems.SONIC_14.get(), "Sonic Screwdriver");
         add(WCItems.SONIC_RIVER.get(), "Sonic Screwdriver");
         add(WCItems.SONIC_TROWEL.get(), "Sonic Trowel");
         add(WCItems.TOP_HAT.get(), "Top Hat");
@@ -55,7 +60,27 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCItems.SPACE_CHEST.get(), "Spacesuit (Chest)");
 
         add(WCBlocks.CORAL_CHAIR.get(), "Coral Chair");
+        add(WCItems.DAVROS_BLACK.get(), "Davros Chair (Black)");
+        add(WCItems.DAVROS_GOLD.get(), "Davros Chair (Gold)");
+        add(WCItems.GRENADE.get(), "Grenade");
 
+        add(WCItems.UNIT_BERRET_R.get(), "Unit Berret");
+        add(WCItems.UNIT_BERRET_G.get(), "Unit Berret");
+        add(WCItems.UNIT_BERRET_B.get(), "Unit Berret");
+
+        add(WCBlocks.TOYOTA_ROTOR.get(), "Toyota Rotor");
+        add(WCBlocks.VICTORIAN_MONITOR.get(), "Victorian Monitor");
+        add(WCBlocks.CLASSIC_DOORS.get(), "Classic Doors");
+        add(WCBlocks.CLASSIC_ROTOR.get(), "Classic Rotor");
+        add(WCBlocks.WHIRLY_GIG.get(), "Whirlygig");
+        add(WCBlocks.TUBE_LIGHT.get(), "Tube Light");
+        add(WCBlocks.NITRO_9.get(), "Nitro 9");
+
+        for (RegistrySupplier<Block> blocksEntry : WCBlocks.BLOCKS.getEntries()) {
+            if(blocksEntry.get() instanceof RotatedPillarBlock rotatedPillarBlock && !(blocksEntry.get() instanceof MonitorBlock)){
+                add(rotatedPillarBlock, "Roundel");
+            }
+        }
 
         add("itemGroup.whocosmetics.whocosmetics", "WhoCosmetics");
         add("itemGroup.whocosmetics", "WhoCosmetics");

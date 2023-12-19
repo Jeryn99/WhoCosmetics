@@ -1,7 +1,7 @@
 package mc.craig.software.cosmetics.client.renderer;
 
 import mc.craig.software.cosmetics.WhoCosmetics;
-import mc.craig.software.cosmetics.client.models.DavrosChairModel;
+import mc.craig.software.cosmetics.client.models.vehicle.DavrosChairModel;
 import mc.craig.software.cosmetics.client.models.ModelRegistration;
 import mc.craig.software.cosmetics.common.entity.DavrosChair;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;

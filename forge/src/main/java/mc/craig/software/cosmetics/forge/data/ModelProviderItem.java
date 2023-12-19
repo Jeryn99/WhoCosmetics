@@ -2,14 +2,17 @@ package mc.craig.software.cosmetics.forge.data;
 
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.common.WCBlocks;
+import mc.craig.software.cosmetics.common.WCItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
 
@@ -21,11 +24,26 @@ public class ModelProviderItem extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        basicItem(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(WCBlocks.CORAL_CHAIR.get().asItem())));
+        basicItem(WCItems.DAVROS_BLACK.get());
+        basicItem(WCItems.DAVROS_GOLD.get());
+
+        for (Item value : ForgeRegistries.ITEMS.getValues()) {
+            if(value instanceof BlockItem && getKey(value).getNamespace().matches(WhoCosmetics.MOD_ID)){
+                blockItem(Objects.requireNonNull(getKey(value.asItem())));
+            }
+        }
+
+        basicItem(Objects.requireNonNull(getKey(WCBlocks.CORAL_CHAIR.get().asItem())));
+        basicItem(Objects.requireNonNull(getKey(WCBlocks.TOYOTA_ROTOR.get().asItem())));
+        basicItem(Objects.requireNonNull(getKey(WCBlocks.CLASSIC_ROTOR.get().asItem())));
+        basicItem(Objects.requireNonNull(getKey(WCBlocks.CLASSIC_DOORS.get().asItem())));
+        basicItem(Objects.requireNonNull(getKey(WCBlocks.WHIRLY_GIG.get().asItem())));
+
+
     }
 
-    public ItemModelBuilder toolItem(Item item) {
-        return toolItem(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item)));
+    public @Nullable ResourceLocation getKey(Item item) {
+        return ForgeRegistries.ITEMS.getKey(item);
     }
 
     public ItemModelBuilder toolItem(ResourceLocation item) {
