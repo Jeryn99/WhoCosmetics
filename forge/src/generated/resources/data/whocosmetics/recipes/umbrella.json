@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "B": {
       "item": "minecraft:black_wool"
@@ -15,5 +16,6 @@
   ],
   "result": {
     "item": "whocosmetics:umbrella"
-  }
+  },
+  "show_notification": true
 }

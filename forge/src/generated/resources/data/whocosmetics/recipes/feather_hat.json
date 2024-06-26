@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "F": {
       "item": "minecraft:feather"
@@ -15,5 +16,6 @@
   ],
   "result": {
     "item": "whocosmetics:feather_hat"
-  }
+  },
+  "show_notification": true
 }

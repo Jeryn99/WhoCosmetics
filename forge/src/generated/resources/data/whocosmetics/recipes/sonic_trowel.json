@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "B": {
       "tag": "minecraft:buttons"
@@ -21,5 +22,6 @@
   ],
   "result": {
     "item": "whocosmetics:sonic_trowel"
-  }
+  },
+  "show_notification": true
 }

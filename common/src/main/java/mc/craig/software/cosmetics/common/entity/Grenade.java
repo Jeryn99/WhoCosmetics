@@ -46,7 +46,7 @@ public class Grenade extends ThrowableItemProjectile {
 
 
     private void explode() {
-        this.level.explode(this, this.getX(), this.getY(0.0625), this.getZ(), 2.0F, Explosion.BlockInteraction.BREAK);
+        this.level().explode(this, this.getX(), this.getY(0.0625), this.getZ(), 2.0F, Level.ExplosionInteraction.BLOCK);
         remove(RemovalReason.DISCARDED);
     }
 

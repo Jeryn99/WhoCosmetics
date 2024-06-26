@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "A": {
       "item": "minecraft:black_concrete"
@@ -19,5 +20,6 @@
   "result": {
     "count": 8,
     "item": "whocosmetics:victorian_monitor"
-  }
+  },
+  "show_notification": true
 }

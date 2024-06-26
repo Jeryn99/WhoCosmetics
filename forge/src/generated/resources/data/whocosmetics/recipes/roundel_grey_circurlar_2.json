@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "A": {
       "item": "whocosmetics:roundel_grey"
@@ -13,5 +14,6 @@
   "result": {
     "count": 5,
     "item": "whocosmetics:roundel_grey_circurlar_2"
-  }
+  },
+  "show_notification": true
 }

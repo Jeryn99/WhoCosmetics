@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "B": {
       "item": "minecraft:black_wool"
@@ -12,5 +13,6 @@
   ],
   "result": {
     "item": "whocosmetics:astrakhan"
-  }
+  },
+  "show_notification": true
 }

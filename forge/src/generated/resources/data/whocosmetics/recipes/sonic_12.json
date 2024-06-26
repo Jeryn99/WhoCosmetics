@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "G": {
       "item": "minecraft:blue_stained_glass"
@@ -18,5 +19,6 @@
   ],
   "result": {
     "item": "whocosmetics:sonic_12"
-  }
+  },
+  "show_notification": true
 }

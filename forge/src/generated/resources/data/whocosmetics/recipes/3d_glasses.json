@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "B": {
       "item": "minecraft:blue_stained_glass_pane"
@@ -18,5 +19,6 @@
   ],
   "result": {
     "item": "whocosmetics:3d_glasses"
-  }
+  },
+  "show_notification": true
 }

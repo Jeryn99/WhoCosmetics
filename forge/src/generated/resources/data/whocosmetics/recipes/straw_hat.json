@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "S": {
       "item": "minecraft:hay_block"
@@ -15,5 +16,6 @@
   ],
   "result": {
     "item": "whocosmetics:straw_hat"
-  }
+  },
+  "show_notification": true
 }

@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "S": {
       "item": "minecraft:sandstone_slab"
@@ -16,5 +17,6 @@
   "result": {
     "count": 8,
     "item": "whocosmetics:roundel_gold_inner"
-  }
+  },
+  "show_notification": true
 }

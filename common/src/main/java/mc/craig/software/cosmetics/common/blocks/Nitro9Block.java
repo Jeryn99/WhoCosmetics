@@ -42,7 +42,6 @@ public class Nitro9Block extends Block {
             Block.box(6, 13, 6, 10, 15, 10),
             Block.box(4.5, 0, 4.5, 11.5, 13, 11.5)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
-    ;
 
 
     public Nitro9Block(BlockBehaviour.Properties properties) {
@@ -93,7 +92,7 @@ public class Nitro9Block extends Block {
     @Override
     public void wasExploded(Level level, BlockPos pos, Explosion explosion) {
         if (!level.isClientSide) {
-            Nitro9Entity nitro9Entity = new Nitro9Entity(level, (double) pos.getX() + 0.5, pos.getY(), (double) pos.getZ() + 0.5, explosion.getSourceMob());
+            Nitro9Entity nitro9Entity = new Nitro9Entity(level, (double) pos.getX() + 0.5, pos.getY(), (double) pos.getZ() + 0.5, explosion.getIndirectSourceEntity());
             int i = nitro9Entity.getFuse();
             nitro9Entity.setFuse((short) (level.random.nextInt(i / 4) + i / 8));
             level.addFreshEntity(nitro9Entity);

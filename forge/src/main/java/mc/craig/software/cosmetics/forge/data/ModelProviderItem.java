@@ -19,7 +19,7 @@ import java.util.Objects;
 public class ModelProviderItem extends ItemModelProvider {
 
     public ModelProviderItem(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, WhoCosmetics.MOD_ID, existingFileHelper);
+        super(generator.getPackOutput(), WhoCosmetics.MOD_ID, existingFileHelper);
     }
 
     @Override

@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "A": {
       "item": "minecraft:red_dye"
@@ -15,5 +16,6 @@
   ],
   "result": {
     "item": "whocosmetics:cricket_jacket"
-  }
+  },
+  "show_notification": true
 }

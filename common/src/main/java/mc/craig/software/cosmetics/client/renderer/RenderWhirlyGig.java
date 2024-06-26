@@ -1,7 +1,7 @@
 package mc.craig.software.cosmetics.client.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Vector3f;
+import com.mojang.math.Axis;
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.client.models.ModelRegistration;
 import mc.craig.software.cosmetics.client.models.block.ToyotaRotorModel;
@@ -34,8 +34,8 @@ public class RenderWhirlyGig implements BlockEntityRenderer<WhirlygigBlockEntity
     public void render(WhirlygigBlockEntity blockEntity, float partialTick, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, int packedOverlay) {
         poseStack.pushPose();
         poseStack.translate(0.5D, 1.5, 0.5D);
-        poseStack.mulPose(Vector3f.ZP.rotationDegrees(180));
-      //  poseStack.mulPose(Vector3f.YP.rotationDegrees(blockstate.getValue(FacingEntityBlock.ROTATION).floatValue() * 22.5F));
+        poseStack.mulPose(Axis.ZP.rotationDegrees(180));
+      //  poseStack.mulPose(Axis.YP.rotationDegrees(blockstate.getValue(FacingEntityBlock.ROTATION).floatValue() * 22.5F));
         whirlyGigModel.renderToBuffer(blockEntity, poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(TEXTURE)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
 
         poseStack.pushPose();

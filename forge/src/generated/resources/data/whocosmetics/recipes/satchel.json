@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "L": {
       "item": "minecraft:leather"
@@ -15,5 +16,6 @@
   ],
   "result": {
     "item": "whocosmetics:satchel"
-  }
+  },
+  "show_notification": true
 }

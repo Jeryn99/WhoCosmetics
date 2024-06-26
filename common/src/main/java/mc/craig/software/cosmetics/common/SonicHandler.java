@@ -2,6 +2,7 @@ package mc.craig.software.cosmetics.common;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -13,7 +14,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.gameevent.GameEvent;
-import net.minecraft.world.level.material.Material;
 
 import static net.minecraft.world.level.block.PoweredRailBlock.POWERED;
 
@@ -29,7 +29,7 @@ public class SonicHandler {
             return InteractionResult.FAIL;
         }*/
 
-        if (blockState.getMaterial() == Material.WOOD) {
+        if (isWood(blockState)) {
             return InteractionResult.FAIL;
         }
 
@@ -98,5 +98,26 @@ public class SonicHandler {
 
         return InteractionResult.FAIL;
     }
+
+    private static boolean isWood(BlockState blockState) {
+        return blockState.is(BlockTags.WOODEN_BUTTONS)
+                || blockState.is(BlockTags.WOODEN_DOORS)
+                || blockState.is(BlockTags.WOODEN_STAIRS)
+                || blockState.is(BlockTags.WOODEN_SLABS)
+                || blockState.is(BlockTags.WOODEN_FENCES)
+                || blockState.is(BlockTags.WOODEN_PRESSURE_PLATES)
+                || blockState.is(BlockTags.WOODEN_TRAPDOORS)
+                || blockState.is(BlockTags.LOGS)
+                || blockState.is(BlockTags.PLANKS)
+                || blockState.is(BlockTags.WOODEN_PRESSURE_PLATES)
+                || blockState.is(BlockTags.WOODEN_SLABS)
+                || blockState.is(BlockTags.WOODEN_STAIRS)
+                || blockState.is(BlockTags.WOODEN_TRAPDOORS)
+                || blockState.is(BlockTags.WOODEN_FENCES)
+                || blockState.is(BlockTags.SAPLINGS)
+                || blockState.is(BlockTags.WOODEN_BUTTONS)
+                || blockState.is(BlockTags.WOODEN_DOORS);
+    }
+
 
 }

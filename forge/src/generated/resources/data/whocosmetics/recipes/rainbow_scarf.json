@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "B": {
       "tag": "minecraft:wool"
@@ -12,5 +13,6 @@
   ],
   "result": {
     "item": "whocosmetics:rainbow_scarf"
-  }
+  },
+  "show_notification": true
 }

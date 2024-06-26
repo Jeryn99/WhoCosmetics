@@ -13,7 +13,7 @@ import net.minecraftforge.common.data.LanguageProvider;
 public class LangProviderEnglish extends LanguageProvider {
 
     public LangProviderEnglish(DataGenerator gen) {
-        super(gen, WhoCosmetics.MOD_ID, "en_us");
+        super(gen.getPackOutput(), WhoCosmetics.MOD_ID, "en_us");
     }
 
     @Override

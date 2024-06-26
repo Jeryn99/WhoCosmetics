@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "A": {
       "item": "whocosmetics:roundel_fire"
@@ -13,5 +14,6 @@
   "result": {
     "count": 5,
     "item": "whocosmetics:roundel_gold_boxed"
-  }
+  },
+  "show_notification": true
 }

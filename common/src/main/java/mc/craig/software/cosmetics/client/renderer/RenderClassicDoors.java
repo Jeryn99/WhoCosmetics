@@ -2,7 +2,7 @@
 package mc.craig.software.cosmetics.client.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Vector3f;
+import com.mojang.math.Axis;
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.client.models.block.ClassicDoorsModel;
 import mc.craig.software.cosmetics.client.models.ModelRegistration;
@@ -38,8 +38,8 @@ public class RenderClassicDoors implements BlockEntityRenderer<ClassicDoorsBlock
 
         poseStack.translate(0,1.5,0);
 
-        poseStack.mulPose(Vector3f.ZP.rotationDegrees(180));
-        poseStack.mulPose(Vector3f.YP.rotationDegrees(-blockstate.getValue(ClassicDoorsBlock.FACING).toYRot()));
+        poseStack.mulPose(Axis.ZP.rotationDegrees(180));
+        poseStack.mulPose(Axis.YP.rotationDegrees(-blockstate.getValue(ClassicDoorsBlock.FACING).toYRot()));
 
         classicDoorsModel.renderToBuffer(blockEntity, poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(TEXTURE)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
         poseStack.popPose();

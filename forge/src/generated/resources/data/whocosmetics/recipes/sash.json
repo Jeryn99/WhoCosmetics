@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "G": {
       "item": "minecraft:gold_ingot"
@@ -15,5 +16,6 @@
   ],
   "result": {
     "item": "whocosmetics:sash"
-  }
+  },
+  "show_notification": true
 }

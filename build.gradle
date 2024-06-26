@@ -1,6 +1,6 @@
 plugins {
     id "architectury-plugin" version "3.4-SNAPSHOT"
-    id "dev.architectury.loom" version "0.12.0-SNAPSHOT" apply false
+    id "dev.architectury.loom" version "1.5+" apply false
 }
 
 architectury {
@@ -43,7 +43,34 @@ allprojects {
     repositories {
 
         maven {
+            name = "Fuzs Mod Resources"
+            url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+        }
+
+        maven {
+            name = 'Ladysnake Mods'
+            url = 'https://maven.ladysnake.org/releases'
+        }
+
+        maven {
             url "https://cursemaven.com"
+        }
+
+
+
+        // the repository for ImmPtl
+        maven { url 'https://jitpack.io' }
+
+// the repository for Cloth Config
+        maven { url 'https://maven.shedaniel.me' }
+
+        maven {
+            url "https://cursemaven.com"
+        }
+
+        maven {
+            name = 'Ladysnake Mods'
+            url = 'https://maven.ladysnake.org/releases'
         }
 
         maven {
@@ -51,10 +78,15 @@ allprojects {
             url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
         }
 
+        maven { url = "https://pkgs.dev.azure.com/djtheredstoner/DevAuth/_packaging/public/maven/v1" }
+
+        maven { url "https://maven.shedaniel.me/" }
+
         maven {
-            name = 'Ladysnake Mods'
-            url = 'https://ladysnake.jfrog.io/artifactory/mods'
+            name = "Mod Menu Maven"
+            url = "https://maven.terraformersmc.com/"
         }
+
 
     }
 

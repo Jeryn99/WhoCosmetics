@@ -6,6 +6,8 @@ import mc.craig.software.cosmetics.client.ClientUtil;
 import mc.craig.software.cosmetics.common.WCItems;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
@@ -18,12 +20,17 @@ public class ClothingItem extends ArmorItem implements DyeableLeatherItem {
     private boolean isColored = false, alexSupport = false;
     private String overrideTexture = null;
 
-    public ClothingItem(ArmorMaterial armorMaterial, EquipmentSlot EquipmentSlot) {
-        this(armorMaterial, EquipmentSlot, false, DyeColor.RED.getMaterialColor().col);
+    public ClothingItem(ArmorMaterial armorMaterial, ArmorItem.Type EquipmentSlot) {
+        this(armorMaterial, EquipmentSlot, false, DyeColor.RED.getMapColor().col);
     }
 
-    public ClothingItem(ArmorMaterial armorMaterial, EquipmentSlot EquipmentSlot, boolean isColored, int defaultColor) {
-        super(armorMaterial, EquipmentSlot, WCItems.GENERIC_PROPERTIES);
+    @Override
+    public EquipmentSlot getEquipmentSlot() {
+        return super.getEquipmentSlot();
+    }
+
+    public ClothingItem(ArmorMaterial armorMaterial, ArmorItem.Type equipmentSlot, boolean isColored, int defaultColor) {
+        super(armorMaterial, equipmentSlot, WCItems.GENERIC_PROPERTIES);
         this.defaultColor = defaultColor;
         this.isColored = isColored;
     }
@@ -39,7 +46,7 @@ public class ClothingItem extends ArmorItem implements DyeableLeatherItem {
     }
 
     public ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-        String textureLocation = overrideTexture == null ? Registry.ITEM.getKey(stack.getItem()).getPath() : overrideTexture;
+        String textureLocation = overrideTexture == null ? BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath() : overrideTexture;
 
         ResourceLocation baseResourceLocation = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/entity/armor/" + textureLocation + ".png");
 
@@ -51,7 +58,9 @@ public class ClothingItem extends ArmorItem implements DyeableLeatherItem {
         return baseResourceLocation;
     }
 
-    @Override
+    //TODO
+
+/*    @Override
     public void fillItemCategory(CreativeModeTab category, NonNullList<ItemStack> items) {
         super.fillItemCategory(category, items);
 
@@ -62,7 +71,7 @@ public class ClothingItem extends ArmorItem implements DyeableLeatherItem {
                 items.add(stack);
             }
         }
-    }
+    }*/
 
     @Override
     public int getColor(ItemStack itemStack) {

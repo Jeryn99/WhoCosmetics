@@ -1,7 +1,7 @@
 package mc.craig.software.cosmetics.client.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Vector3f;
+import com.mojang.math.Axis;
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.client.models.ModelRegistration;
 import mc.craig.software.cosmetics.client.models.block.TenthDoctorChairModel;
@@ -32,8 +32,8 @@ public class RenderCoralChair implements BlockEntityRenderer<CoralChairBlockEnti
         poseStack.translate(0.5D, 1.5, 0.5D);
 
         BlockState blockstate = blockEntity.getBlockState();
-        poseStack.mulPose(Vector3f.ZP.rotationDegrees(180));
-        poseStack.mulPose(Vector3f.YP.rotationDegrees(-blockstate.getValue(CoralChairBlock.FACING).toYRot()));
+        poseStack.mulPose(Axis.ZP.rotationDegrees(180));
+        poseStack.mulPose(Axis.YP.rotationDegrees(-blockstate.getValue(CoralChairBlock.FACING).toYRot()));
         chair.renderToBuffer(poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(TEXTURE)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
         poseStack.popPose();
     }

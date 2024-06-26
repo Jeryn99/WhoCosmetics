@@ -31,12 +31,11 @@ public class DavrosChair extends Mob {
 
     private static final EntityDataAccessor<Integer> DATA_VARIANT_ID = SynchedEntityData.defineId(DavrosChair.class, EntityDataSerializers.INT);
 
-
     @Override
-    public void positionRider(Entity passenger) {
-        if (this.hasPassenger(passenger)) {
-            double d = this.getY() + this.getPassengersRidingOffset() + passenger.getMyRidingOffset();
-            passenger.setPos(position().x, d, position().z);
+    protected void positionRider(Entity entity, MoveFunction moveFunction) {
+        if (this.hasPassenger(entity)) {
+            double d = this.getY() + this.getPassengersRidingOffset() + entity.getMyRidingOffset();
+            entity.setPos(position().x, d, position().z);
         }
     }
 
@@ -108,15 +107,20 @@ public class DavrosChair extends Mob {
         return new AttributeMap(createAttributes().build());
     }
 
-    @Nullable
     @Override
-    public Entity getControllingPassenger() {
-        return this.getFirstPassenger();
+    public LivingEntity getControllingPassenger() {
+        Entity firstPassenger = this.getFirstPassenger();
+        if (firstPassenger instanceof LivingEntity) {
+            return (LivingEntity) firstPassenger;
+        } else {
+            return null;
+        }
     }
+
 
     @Override
     protected InteractionResult mobInteract(Player player, InteractionHand hand) {
-        if (!this.level.isClientSide) {
+        if (!this.level().isClientSide) {
             return player.startRiding(this) ? InteractionResult.CONSUME : InteractionResult.PASS;
         }
         return super.mobInteract(player, hand);
@@ -125,24 +129,29 @@ public class DavrosChair extends Mob {
     @Override
     public void tick() {
 
-
+        Level level = level();
 
         super.tick();
         if (getHealth() < 5) {
-            this.level.addParticle(ParticleTypes.FLAME, this.getRandomX(0.5), this.getRandomY(), this.getRandomZ(0.5), 0, 0, 0);
-            this.level.addParticle(ParticleTypes.SMOKE, this.getRandomX(0.5), this.getRandomY(), this.getRandomZ(0.5), 0, 0, 0);
+            level.addParticle(ParticleTypes.FLAME, this.getRandomX(0.5), this.getRandomY(), this.getRandomZ(0.5), 0, 0, 0);
+            level.addParticle(ParticleTypes.SMOKE, this.getRandomX(0.5), this.getRandomY(), this.getRandomZ(0.5), 0, 0, 0);
 
             if (this.random.nextInt(24) == 0 && !this.isSilent()) {
-                this.level.playLocalSound(this.getX() + 0.5, this.getY() + 0.5, this.getZ() + 0.5, SoundEvents.BLAZE_BURN, this.getSoundSource(), 1.0F + this.random.nextFloat(), this.random.nextFloat() * 0.7F + 0.3F, false);
+                level.playLocalSound(this.getX() + 0.5, this.getY() + 0.5, this.getZ() + 0.5, SoundEvents.BLAZE_BURN, this.getSoundSource(), 1.0F + this.random.nextFloat(), this.random.nextFloat() * 0.7F + 0.3F, false);
             }
         }
     }
 
     @Override
+    public float maxUpStep() {
+        return 1;
+    }
+
+    @Override
     public void travel(Vec3 travelVector) {
-        maxUpStep = 1;
+
         if (this.isAlive()) {
-            if (getControllingPassenger() instanceof LivingEntity livingEntity) {
+            LivingEntity livingEntity = getControllingPassenger();
                 if (this.isVehicle()) {
                     this.setYRot(livingEntity.getYRot());
                     this.yRotO = this.getYRot();
@@ -157,7 +166,7 @@ public class DavrosChair extends Mob {
                         verticalSpeed *= 0.25F;
                     }
 
-                    this.flyingSpeed = this.getSpeed() * 0.1F;
+                    //TODO? this.flyingSpeed = this.getSpeed() * 0.1F;
                     if (this.isControlledByLocalInstance()) {
                         this.setSpeed((float) this.getAttributeValue(Attributes.MOVEMENT_SPEED));
                         super.travel(new Vec3(horizontalSpeed, travelVector.y, verticalSpeed));
@@ -165,13 +174,12 @@ public class DavrosChair extends Mob {
                         this.setDeltaMovement(Vec3.ZERO);
                     }
 
-                    this.calculateEntityAnimation(this, false);
+                    this.calculateEntityAnimation(false);
                     this.tryCheckInsideBlocks();
                 } else {
-                    this.flyingSpeed = 0.02F;
+                   //TODO? this.flyingSpeed = 0.02F;
                     super.travel(travelVector);
                 }
-            }
         }
     }
 

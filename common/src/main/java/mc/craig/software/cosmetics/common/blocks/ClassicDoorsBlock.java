@@ -15,7 +15,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.*;
 import net.minecraft.world.level.gameevent.GameEvent;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
 
@@ -55,9 +54,6 @@ public class ClassicDoorsBlock extends Block implements EntityBlock {
 
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (this.material == Material.METAL) {
-            return InteractionResult.PASS;
-        } else {
             state = state.cycle(OPEN);
             level.setBlock(pos, state, 10);
             level.gameEvent(player, this.isOpen(state) ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, pos);
@@ -86,7 +82,6 @@ public class ClassicDoorsBlock extends Block implements EntityBlock {
             }
 
             return InteractionResult.sidedSuccess(level.isClientSide);
-        }
     }
 
     @Nullable

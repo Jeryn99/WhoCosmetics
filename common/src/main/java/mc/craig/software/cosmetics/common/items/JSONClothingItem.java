@@ -14,25 +14,26 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 
 public class JSONClothingItem extends Item implements DyeableLeatherItem {
-    private final EquipmentSlot slotType;
+    private final ArmorItem.Type slotType;
     private final boolean isColored;
     private final int defaultColor;
 
-    public JSONClothingItem(EquipmentSlot slot, boolean isColored, int defaultColor) {
+    public JSONClothingItem(ArmorItem.Type slot, boolean isColored, int defaultColor) {
         super(WCItems.GENERIC_PROPERTIES);
         this.slotType = slot;
         this.isColored = isColored;
         this.defaultColor = defaultColor;
     }
 
-    public JSONClothingItem(EquipmentSlot slot) {
+    public JSONClothingItem(ArmorItem.Type slot) {
         super(WCItems.GENERIC_PROPERTIES);
         this.slotType = slot;
         this.isColored = false;
         this.defaultColor = 0;
     }
 
-    @Override
+    //TODO
+/*    @Override
     public void fillItemCategory(CreativeModeTab category, NonNullList<ItemStack> items) {
         super.fillItemCategory(category, items);
 
@@ -43,7 +44,9 @@ public class JSONClothingItem extends Item implements DyeableLeatherItem {
                 items.add(stack);
             }
         }
-    }
+    }*/
+
+
 
     @Override
     public int getColor(ItemStack itemStack) {
@@ -74,6 +77,6 @@ public class JSONClothingItem extends Item implements DyeableLeatherItem {
     }
 
     public EquipmentSlot getSlot() {
-        return slotType;
+        return slotType.getSlot();
     }
 }

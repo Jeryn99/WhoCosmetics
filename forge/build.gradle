@@ -23,9 +23,9 @@ loom {
         }
     }
 
-    launches {
+    runs {
         data {
-            arg "--existing", project(":common").file("src/main/resources/").absolutePath
+            programArgs "--existing", project(":common").file("src/main/resources/").absolutePath
         }
     }
 }
@@ -43,7 +43,7 @@ unifiedPublishing {
         displayName = "[Forge] - WhoCosmetics - $rootProject.minecraft_version - v$project.version"
         releaseType = "release"
         changelog = new File("${rootProject.projectDir}/changelog.html").text
-        gameVersions = ["1.19.2"]
+        gameVersions = ["1.20.1"]
         mainPublication tasks.remapJar
         gameLoaders = ["forge"]
         relations {
@@ -55,7 +55,7 @@ unifiedPublishing {
             curseforge {
                 token = CURSE_API_KEY
                 id = "401678"
-                gameVersions.addAll "Java 17", "1.19.2"
+                gameVersions.addAll "Java 17", "1.20.1"
             }
         }
 
@@ -90,17 +90,17 @@ shadowJar {
     exclude "whocosmetics.common.json"
 
     configurations = [project.configurations.shadowCommon]
-    classifier "dev-shadow"
+    archiveClassifier = "dev-shadow"
 }
 
 remapJar {
     input.set shadowJar.archiveFile
     dependsOn shadowJar
-    classifier "forge"
+    archiveClassifier = "forge"
 }
 
 jar {
-    classifier "dev"
+    archiveClassifier = "dev"
 }
 
 sourcesJar {

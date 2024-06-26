@@ -4,6 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundAddEntityPacket;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -45,7 +46,7 @@ public class Chair extends Entity {
      * @param passenger the passenger to position on the vehicle
      */
     @Override
-    public void positionRider(Entity passenger) {
+    protected void positionRider(Entity passenger, MoveFunction moveFunction) {
         // Calculate the mount offset based on the vehicle's and passenger's positions
         double mountOffset = this.getY() + this.getPassengersRidingOffset() + passenger.getMyRidingOffset();
 
@@ -83,7 +84,7 @@ public class Chair extends Entity {
     }
 
     @Override
-    public Packet<?> getAddEntityPacket() {
+    public Packet<ClientGamePacketListener> getAddEntityPacket() {
         return new ClientboundAddEntityPacket(this);
     }
 }

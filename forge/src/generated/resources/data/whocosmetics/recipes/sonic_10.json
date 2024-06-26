@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "C": {
       "item": "minecraft:sandstone"
@@ -18,5 +19,6 @@
   ],
   "result": {
     "item": "whocosmetics:sonic_10"
-  }
+  },
+  "show_notification": true
 }

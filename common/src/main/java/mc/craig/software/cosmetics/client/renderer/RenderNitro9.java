@@ -1,7 +1,7 @@
 package mc.craig.software.cosmetics.client.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Vector3f;
+import com.mojang.math.Axis;
 import mc.craig.software.cosmetics.common.WCBlocks;
 import mc.craig.software.cosmetics.common.entity.Nitro9Entity;
 import net.fabricmc.api.EnvType;
@@ -41,13 +41,13 @@ public class RenderNitro9 extends EntityRenderer<Nitro9Entity> {
             matrixStack.scale(g, g, g);
         }
 
-        matrixStack.mulPose(Vector3f.YP.rotationDegrees(-90.0F));
+        matrixStack.mulPose(Axis.YP.rotationDegrees(-90.0F));
 
         // Calculate the amount of translation along the Y-axis
         float yOffset = (float)Math.sin(entity.tickCount + partialTicks) * 0.05f;
         matrixStack.translate(-0.5, -0.5 + yOffset, 0.5); // Move the matrix along the Y-axis based on the calculated offset
 
-        matrixStack.mulPose(Vector3f.YP.rotationDegrees(90.0F));
+        matrixStack.mulPose(Axis.YP.rotationDegrees(90.0F));
         TntMinecartRenderer.renderWhiteSolidBlock(this.blockRenderer, WCBlocks.NITRO_9.get().defaultBlockState(), matrixStack, buffer, packedLight, fuseTime / 5 % 2 == 0);
         matrixStack.popPose();
         super.render(entity, entityYaw, partialTicks, matrixStack, buffer, packedLight);

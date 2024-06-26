@@ -20,7 +20,7 @@ import org.jetbrains.annotations.Nullable;
 public class ModelProviderBlock extends BlockStateProvider {
 
     public ModelProviderBlock(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, WhoCosmetics.MOD_ID, existingFileHelper);
+        super(generator.getPackOutput(), WhoCosmetics.MOD_ID, existingFileHelper);
     }
 
     @Override
