@@ -76,13 +76,13 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCBlocks.TUBE_LIGHT.get(), "Tube Light");
         add(WCBlocks.NITRO_9.get(), "Nitro 9");
 
+
         for (RegistrySupplier<Block> blocksEntry : WCBlocks.BLOCKS.getEntries()) {
             if(blocksEntry.get() instanceof RotatedPillarBlock rotatedPillarBlock && !(blocksEntry.get() instanceof MonitorBlock)){
                 add(rotatedPillarBlock, "Roundel");
             }
         }
 
-        add("itemGroup.whocosmetics.whocosmetics", "WhoCosmetics");
-        add("itemGroup.whocosmetics", "WhoCosmetics");
+        add(WCItems.CREATIVE_TAB, "WhoCosmetics");
     }
 }

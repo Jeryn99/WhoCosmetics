@@ -54,6 +54,7 @@ public class Chair extends Entity {
         Direction rotation = getDirection();
 
         // Calculate the block positions to the left and right of the vehicle
+        BlockPos blockPos = blockPosition();
         BlockPos leftPos = blockPosition().relative(rotation.getClockWise());
         BlockPos rightPos = blockPosition().relative(rotation.getCounterClockWise());
 
@@ -65,7 +66,7 @@ public class Chair extends Entity {
         // Position the passenger based on their position in the list of passengers
         if (getPassengers().indexOf(passenger) == 0) {
             // If the passenger is the first in the list, call the parent method to position them
-            super.positionRider(passenger);
+            passenger.setPos(blockPos.getX() + 0.5, mountOffset, blockPos.getZ() + 0.5);
         } else if (getPassengers().indexOf(passenger) == 1) {
             // If the passenger is the second in the list, position them to the left of the vehicle
             passenger.setPos(leftPos.getX() + 0.5, mountOffset, leftPos.getZ() + 0.5);

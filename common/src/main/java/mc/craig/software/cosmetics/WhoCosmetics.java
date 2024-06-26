@@ -12,6 +12,7 @@ public class WhoCosmetics {
 
     public static void init() {
         WCItems.ITEMS.register();
+        WCItems.TABS.register();
         Entities.ENTITY_TYPES.register();
         WCBlocks.BLOCKS.register();
         WCBlockEntities.TILES.register();

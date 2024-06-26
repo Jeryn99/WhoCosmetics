@@ -26,34 +26,34 @@ public class WCBlocks {
 
     public static final DeferredRegistry<Block> BLOCKS = DeferredRegistry.create(WhoCosmetics.MOD_ID, Registries.BLOCK);
 
-    public static final RegistrySupplier<Block> CORAL_CHAIR = register("coral_chair", () -> new CoralChairBlock(BlockBehaviour.Properties.copy(Blocks.STONE)), MAIN);
-    public static final RegistrySupplier<Block> ROUNDEL_BLACK = register("roundel_black", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
-    public static final RegistrySupplier<Block> ROUNDEL_BLACK_ELECTRICAL = register("roundel_black_electrical", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
-    public static final RegistrySupplier<Block> ROUNDEL_ELECTRICAL = register("roundel_electrical", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
-    public static final RegistrySupplier<Block> ROUNDEL_FIRE = register("roundel_fire", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
-    public static final RegistrySupplier<Block> ROUNDEL_GOLD_BOXED = register("roundel_gold_boxed", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
-    public static final RegistrySupplier<Block> ROUNDEL_GOLD_HEX = register("roundel_gold_hex", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
-    public static final RegistrySupplier<Block> ROUNDEL_GOLD_INNER = register("roundel_gold_inner", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
-    public static final RegistrySupplier<Block> ROUNDEL_GREY = register("roundel_grey", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
-    public static final RegistrySupplier<Block> ROUNDEL_GREY_CIRCULAR = register("roundel_grey_circurlar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
-    public static final RegistrySupplier<Block> ROUNDEL_GREY_CIRCULAR_2 = register("roundel_grey_circurlar_2", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
-    public static final RegistrySupplier<Block> ROUNDEL_GREY_HEX = register("roundel_grey_hex", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
-    public static final RegistrySupplier<Block> ROUNDEL_TIME = register("roundel_time", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
-    public static final RegistrySupplier<Block> ROUNDEL_CORAL = register("roundel_coral", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
-    public static final RegistrySupplier<Block> ROUNDEL_CRYSTAL = register("roundel_crystal", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
-    public static final RegistrySupplier<Block> ROUNDEL_CLASSIC = register("roundel_classic", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
+    public static final RegistrySupplier<Block> CORAL_CHAIR = register("coral_chair", () -> new CoralChairBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistrySupplier<Block> ROUNDEL_BLACK = register("roundel_black", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_BLACK_ELECTRICAL = register("roundel_black_electrical", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_ELECTRICAL = register("roundel_electrical", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_FIRE = register("roundel_fire", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_GOLD_BOXED = register("roundel_gold_boxed", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_GOLD_HEX = register("roundel_gold_hex", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_GOLD_INNER = register("roundel_gold_inner", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_GREY = register("roundel_grey", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_GREY_CIRCULAR = register("roundel_grey_circurlar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_GREY_CIRCULAR_2 = register("roundel_grey_circurlar_2", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_GREY_HEX = register("roundel_grey_hex", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_TIME = register("roundel_time", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_CORAL = register("roundel_coral", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_CRYSTAL = register("roundel_crystal", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_CLASSIC = register("roundel_classic", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
 
-    public static final RegistrySupplier<Block> ROUNDEL_CLASSIC_HALF = register("roundel_classic_half", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)), MAIN);
+    public static final RegistrySupplier<Block> ROUNDEL_CLASSIC_HALF = register("roundel_classic_half", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
 
-    public static final RegistrySupplier<Block> CLASSIC_DOORS = register("classic_doors", () -> new ClassicDoorsBlock(BlockBehaviour.Properties.copy(Blocks.STONE)), MAIN);
+    public static final RegistrySupplier<Block> CLASSIC_DOORS = register("classic_doors", () -> new ClassicDoorsBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
-    public static final RegistrySupplier<Block> TOYOTA_ROTOR = register("toyota_rotor", () -> new FacingEntityBlock(BlockBehaviour.Properties.copy(Blocks.STONE), ToyotaRotorBlockEntity::new), MAIN);
-    public static final RegistrySupplier<Block> CLASSIC_ROTOR = register("classic_rotor", () -> new FacingEntityBlock(BlockBehaviour.Properties.copy(Blocks.STONE), ClassicRotorBlockEntity::new), MAIN);
-    public static final RegistrySupplier<Block> WHIRLY_GIG = register("whirlygig", () -> new FacingEntityBlock(BlockBehaviour.Properties.copy(Blocks.STONE), WhirlygigBlockEntity::new), MAIN);
+    public static final RegistrySupplier<Block> TOYOTA_ROTOR = register("toyota_rotor", () -> new FacingEntityBlock(BlockBehaviour.Properties.copy(Blocks.STONE), ToyotaRotorBlockEntity::new));
+    public static final RegistrySupplier<Block> CLASSIC_ROTOR = register("classic_rotor", () -> new FacingEntityBlock(BlockBehaviour.Properties.copy(Blocks.STONE), ClassicRotorBlockEntity::new));
+    public static final RegistrySupplier<Block> WHIRLY_GIG = register("whirlygig", () -> new FacingEntityBlock(BlockBehaviour.Properties.copy(Blocks.STONE), WhirlygigBlockEntity::new));
 
-    public static final RegistrySupplier<Block> VICTORIAN_MONITOR = register("victorian_monitor", () -> new MonitorBlock(BlockBehaviour.Properties.of()), MAIN);
-    public static final RegistrySupplier<Block> TUBE_LIGHT = register("tube_light", () -> new HorizontalBlockWC(BlockBehaviour.Properties.of().noOcclusion()), MAIN);
-    public static final RegistrySupplier<Block> NITRO_9 = register("nitro_9", () -> new Nitro9Block(BlockBehaviour.Properties.of().noOcclusion()), MAIN);
+    public static final RegistrySupplier<Block> VICTORIAN_MONITOR = register("victorian_monitor", () -> new MonitorBlock(BlockBehaviour.Properties.of()));
+    public static final RegistrySupplier<Block> TUBE_LIGHT = register("tube_light", () -> new HorizontalBlockWC(BlockBehaviour.Properties.of().noOcclusion()));
+    public static final RegistrySupplier<Block> NITRO_9 = register("nitro_9", () -> new Nitro9Block(BlockBehaviour.Properties.of().noOcclusion()));
 
 
     /**

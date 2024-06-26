@@ -152,7 +152,7 @@ public class DavrosChair extends Mob {
 
         if (this.isAlive()) {
             LivingEntity livingEntity = getControllingPassenger();
-                if (this.isVehicle()) {
+                if (this.isVehicle() && livingEntity != null) {
                     this.setYRot(livingEntity.getYRot());
                     this.yRotO = this.getYRot();
                     this.setXRot(livingEntity.getXRot() * 0.5F);

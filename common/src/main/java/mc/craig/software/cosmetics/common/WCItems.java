@@ -13,10 +13,12 @@ import net.minecraft.world.item.*;
 public class WCItems {
 
     public static final DeferredRegistry<Item> ITEMS = DeferredRegistry.create(WhoCosmetics.MOD_ID, Registries.ITEM);
-    public static CreativeModeTab MAIN = createTab();
     public static Item.Properties GENERIC_PROPERTIES = new Item.Properties().stacksTo(1);
     public static Item.Properties GRENADE_PROP = new Item.Properties().stacksTo(8);
 
+    public static final DeferredRegistry<CreativeModeTab> TABS = DeferredRegistry.create(WhoCosmetics.MOD_ID, Registries.CREATIVE_MODE_TAB);
+    public static final RegistrySupplier<CreativeModeTab> MAIN = TABS.register(WhoCosmetics.MOD_ID, WCItems::createTab);
+    
     public static final String CREATIVE_TAB = "tab." + WhoCosmetics.MOD_ID + ".main";
 
 
