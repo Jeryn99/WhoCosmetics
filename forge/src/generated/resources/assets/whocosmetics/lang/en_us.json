@@ -67,6 +67,5 @@
   "item.whocosmetics.unit_berret_green": "Unit Berret",
   "item.whocosmetics.unit_berret_red": "Unit Berret",
   "item.whocosmetics.velvet_coat": "Velvet Jacket",
-  "itemGroup.whocosmetics": "WhoCosmetics",
-  "itemGroup.whocosmetics.whocosmetics": "WhoCosmetics"
+  "tab.whocosmetics.main": "WhoCosmetics"
 }

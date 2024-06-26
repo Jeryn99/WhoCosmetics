@@ -26,8 +26,8 @@ subprojects {
 task publishMeEverywhere(){
     dependsOn ':forge:publishUnified'
     dependsOn ':fabric:publishUnified'
-    dependsOn ':fabric:publish'
-    dependsOn ':forge:publish'
+/*    dependsOn ':fabric:publish'
+    dependsOn ':forge:publish'*/
 }
 
 
