@@ -41,7 +41,7 @@ dependencies {
 
 unifiedPublishing {
     project {
-        displayName = "[Fabric] - WhoCosmetics - $rootProject.minecraft_version - v$project.version"
+        displayName = "[Fabric] WhoCosmetics - $project.version"
         releaseType = "release"
         changelog = new File("${rootProject.projectDir}/changelog.md").text
         gameVersions = ["1.20.1"]
@@ -68,7 +68,7 @@ unifiedPublishing {
             modrinth {
                 token = MODRINTH_TOKEN
                 id = "Ec3Ed3oz"
-                version = "$project.version+$project.name"
+                version = "fabric-$project.version"
             }
         }
     }
