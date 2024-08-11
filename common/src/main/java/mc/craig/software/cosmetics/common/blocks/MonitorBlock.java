@@ -23,7 +23,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
@@ -51,7 +50,7 @@ public class MonitorBlock extends HorizontalDirectionalBlock implements SimpleWa
 
         if (Platform.isModLoaded("tardis_refined")) {
             if (player instanceof ServerPlayer serverPlayer && level instanceof ServerLevel serverLevel) {
-               //TODO TardisRefinedCompat.openMonitor(serverPlayer, serverLevel);
+                TardisRefinedCompat.openMonitor(serverPlayer, serverLevel);
                 return InteractionResult.SUCCESS;
             }
         }

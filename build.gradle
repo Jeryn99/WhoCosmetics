@@ -57,6 +57,21 @@ allprojects {
         }
 
 
+        maven {
+            url = "https://api.modrinth.com/maven"
+        }
+
+        // Ladysnake Maven, required for CardinalComponents
+        maven {
+            name = 'Ladysnake Mods'
+            url = 'https://maven.ladysnake.org/releases'
+        }
+
+        // Fuzzs Mod Resources, required for ForgeConfigAPIPort
+        maven {
+            name = "Fuzs Mod Resources"
+            url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+        }
 
         // the repository for ImmPtl
         maven { url 'https://jitpack.io' }

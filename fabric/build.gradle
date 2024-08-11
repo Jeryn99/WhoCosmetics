@@ -28,6 +28,13 @@ dependencies {
     modApi "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${rootProject.forge_config_api_port_version}"
     include "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${rootProject.forge_config_api_port_version}"
 
+    // Cardinal Components
+    modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${rootProject.cardinalcomponents_version}"
+    modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-world:${rootProject.cardinalcomponents_version}"
+
+    // Tardis Refined
+    modImplementation "maven.modrinth:tardis-refined:${tardis_refined_version}"
+
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
 }
@@ -36,7 +43,7 @@ unifiedPublishing {
     project {
         displayName = "[Fabric] - WhoCosmetics - $rootProject.minecraft_version - v$project.version"
         releaseType = "release"
-        changelog = new File("${rootProject.projectDir}/changelog.html").text
+        changelog = new File("${rootProject.projectDir}/changelog.md").text
         gameVersions = ["1.20.1"]
         mainPublication tasks.remapJar
         gameLoaders = ["fabric"]

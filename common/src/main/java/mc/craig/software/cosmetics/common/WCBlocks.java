@@ -17,8 +17,10 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.function.Supplier;
+import java.util.function.ToIntFunction;
 
 import static mc.craig.software.cosmetics.common.WCItems.MAIN;
 
@@ -45,14 +47,14 @@ public class WCBlocks {
 
     public static final RegistrySupplier<Block> ROUNDEL_CLASSIC_HALF = register("roundel_classic_half", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
 
-    public static final RegistrySupplier<Block> CLASSIC_DOORS = register("classic_doors", () -> new ClassicDoorsBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistrySupplier<Block> CLASSIC_DOORS = register("classic_doors", () -> new ClassicDoorsBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noCollission()));
 
     public static final RegistrySupplier<Block> TOYOTA_ROTOR = register("toyota_rotor", () -> new FacingEntityBlock(BlockBehaviour.Properties.copy(Blocks.STONE), ToyotaRotorBlockEntity::new));
     public static final RegistrySupplier<Block> CLASSIC_ROTOR = register("classic_rotor", () -> new FacingEntityBlock(BlockBehaviour.Properties.copy(Blocks.STONE), ClassicRotorBlockEntity::new));
     public static final RegistrySupplier<Block> WHIRLY_GIG = register("whirlygig", () -> new FacingEntityBlock(BlockBehaviour.Properties.copy(Blocks.STONE), WhirlygigBlockEntity::new));
 
     public static final RegistrySupplier<Block> VICTORIAN_MONITOR = register("victorian_monitor", () -> new MonitorBlock(BlockBehaviour.Properties.of()));
-    public static final RegistrySupplier<Block> TUBE_LIGHT = register("tube_light", () -> new HorizontalBlockWC(BlockBehaviour.Properties.of().noOcclusion()));
+    public static final RegistrySupplier<Block> TUBE_LIGHT = register("tube_light", () -> new HorizontalBlockWC(BlockBehaviour.Properties.of().noOcclusion().lightLevel(value -> 15)));
     public static final RegistrySupplier<Block> NITRO_9 = register("nitro_9", () -> new Nitro9Block(BlockBehaviour.Properties.of().noOcclusion()));
 
 

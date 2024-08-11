@@ -95,7 +95,7 @@ public class DavrosChair extends Mob {
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes().
                 add(Attributes.FOLLOW_RANGE, 35D).
-                add(Attributes.MOVEMENT_SPEED, 0.23F).
+                add(Attributes.MOVEMENT_SPEED, 0.20F).
                 add(Attributes.ATTACK_DAMAGE, 3F).
                 add(Attributes.MAX_HEALTH, 20D).
                 add(Attributes.ARMOR, 2.0D);

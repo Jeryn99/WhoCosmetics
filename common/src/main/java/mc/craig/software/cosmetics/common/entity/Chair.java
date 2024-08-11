@@ -8,7 +8,9 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundAddEntityPacket;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 
 public class Chair extends Entity {
 
@@ -76,12 +78,14 @@ public class Chair extends Entity {
         }
     }
 
+
     @Override
     public void tick() {
-        super.tick();
         if (getPassengers().isEmpty()) {
-            remove(RemovalReason.DISCARDED);
+            kill();
         }
+
+        super.tick();
     }
 
     @Override

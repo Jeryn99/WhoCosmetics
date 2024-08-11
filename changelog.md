@@ -1,0 +1,6 @@
+- Fixed Classic Doors always having weird placement behaviour, they now work similar to Tardis Refined interior doors 
+- Tardis Refined now compatible with Monitors added by this mod
+- Fixed issue where Victorian Monitor would have rendering issues
+- Tubelights now once again produce light
+- Fixes Aces bat recipe conflict
+- Fixes issues where certain armors would be covered by the players second layer

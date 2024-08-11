@@ -1,4 +1,4 @@
-// 1.20.1	2024-06-26T14:27:19.6666954	Recipes
+// 1.20.1	2024-08-11T12:09:58.9492176	Recipes
 46a836340122658c71723b4d82120b5e786a8147 data/whocosmetics/advancements/recipes/decorations/3d_glasses.json
 be7b6caef13c1e25ac71caf68bc380fd55c6fa60 data/whocosmetics/advancements/recipes/decorations/aces_bat.json
 76abcb2458318e19e12ac1542f05d3f82f28c623 data/whocosmetics/advancements/recipes/decorations/antlers.json
@@ -67,7 +67,7 @@ b566f190b516ca72615075e6e7ea6edb63359e34 data/whocosmetics/advancements/recipes/
 3263203fe9af8e4157fdb3331fc859cfbdbb93f7 data/whocosmetics/advancements/recipes/decorations/victorian_monitor.json
 d7dc55a31e0cd878c1268abfe6ee68f994ef6752 data/whocosmetics/advancements/recipes/decorations/whirlygig.json
 a56c1c37e13d8df2e29371511a0957f233573c75 data/whocosmetics/recipes/3d_glasses.json
-5cf03539692c5d123dc143f21098673751936d18 data/whocosmetics/recipes/aces_bat.json
+6cc379f6bc96502366dcf07de7987a54e28f72a0 data/whocosmetics/recipes/aces_bat.json
 9dc1d3eb9d22bb974c9e86556b08ad37254c4e92 data/whocosmetics/recipes/antlers.json
 03c0161725d996c7a362dd651163904ecd99f69b data/whocosmetics/recipes/astrakhan.json
 591d293012fa3400913ef9371c90b473d0875693 data/whocosmetics/recipes/bowtie.json

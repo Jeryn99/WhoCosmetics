@@ -58,8 +58,8 @@ public class ClientUtil {
         ARMOR_MODELS.put(WCItems.VELVET_COAT.get(), new GenericJacketModel<>(entityModels.bakeLayer(ModelRegistration.JACKET_SLIM)));
         ARMOR_MODELS_STEVE.put(WCItems.VELVET_COAT.get(), new GenericJacketModel<>(entityModels.bakeLayer(ModelRegistration.JACKET)));
 
-        ARMOR_MODELS.put(WCItems.RAINBOW_COAT.get(), new ArmorPlayerModel(entityModels.bakeLayer(ModelLayers.PLAYER), false));
-        ARMOR_MODELS_STEVE.put(WCItems.RAINBOW_COAT.get(), new ArmorPlayerModel(entityModels.bakeLayer(ModelLayers.PLAYER), true));
+        ARMOR_MODELS.put(WCItems.RAINBOW_COAT.get(),  new GenericJacketModel<>(entityModels.bakeLayer(ModelRegistration.JACKET_SLIM)));
+        ARMOR_MODELS_STEVE.put(WCItems.RAINBOW_COAT.get(),  new GenericJacketModel<>(entityModels.bakeLayer(ModelRegistration.JACKET)));
 
 
         ARMOR_MODELS.put(WCItems.CRICKET_JACKET.get(), new GenericJacketModel<>(entityModels.bakeLayer(ModelRegistration.JACKET_SLIM)));

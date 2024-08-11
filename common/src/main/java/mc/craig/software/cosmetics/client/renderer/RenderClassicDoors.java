@@ -35,11 +35,20 @@ public class RenderClassicDoors implements BlockEntityRenderer<ClassicDoorsBlock
         poseStack.pushPose();
 
         BlockState blockstate = blockEntity.getBlockState();
+        poseStack.translate(0.5F, 1.5F, 0.5F);
+        poseStack.mulPose(Axis.ZP.rotationDegrees(180F));
+        float rotation = blockstate.getValue(ClassicDoorsBlock.FACING).toYRot();
+        poseStack.mulPose(Axis.YP.rotationDegrees(rotation));
 
-        poseStack.translate(0,1.5,0);
+        // Render slightly off the wall to prevent z-fighting.
+        poseStack.translate(0, 0, 1);
+        poseStack.translate(0, 0, -0.01);
+
+     /*   poseStack.translate(0,1.5,0);
 
         poseStack.mulPose(Axis.ZP.rotationDegrees(180));
         poseStack.mulPose(Axis.YP.rotationDegrees(-blockstate.getValue(ClassicDoorsBlock.FACING).toYRot()));
+        poseStack.translate(0.5F, 0, 0.5F);*/
 
         classicDoorsModel.renderToBuffer(blockEntity, poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(TEXTURE)), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
         poseStack.popPose();
