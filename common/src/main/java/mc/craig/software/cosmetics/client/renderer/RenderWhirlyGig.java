@@ -22,8 +22,8 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class RenderWhirlyGig implements BlockEntityRenderer<WhirlygigBlockEntity>, BlockEntityRendererProvider<WhirlygigBlockEntity> {
 
-    private static final ResourceLocation TEXTURE = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/block/whirlygig.png");
-    private static final ResourceLocation TEXTURE_GLOW = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/block/whirlygig_glow.png");
+    private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(WhoCosmetics.MOD_ID, "textures/block/whirlygig.png");
+    private static final ResourceLocation TEXTURE_GLOW = ResourceLocation.fromNamespaceAndPath(WhoCosmetics.MOD_ID, "textures/block/whirlygig_glow.png");
     private final WhirlyGigModel whirlyGigModel;
 
     public RenderWhirlyGig(Context context) {

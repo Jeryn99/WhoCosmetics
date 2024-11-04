@@ -37,8 +37,8 @@ public class ClientEvents {
             return -1;
         }, WCItems.TOP_HAT.get());
 
-        ItemProperties.register(WCItems.UMBRELLA.get(), new ResourceLocation("whocosmetics:is_open"), (itemStack, clientWorld, livingEntity, unused) -> UmbrellaItem.getIsOpen(itemStack) ? 1 : 0);
-        ItemProperties.register(WCItems.UMBRELLA_MISSY.get(), new ResourceLocation("whocosmetics:is_open"), (itemStack, clientWorld, livingEntity, unused) -> UmbrellaItem.getIsOpen(itemStack) ? 1 : 0);
+        ItemProperties.register(WCItems.UMBRELLA.get(), ResourceLocation.fromNamespaceAndPath("whocosmetics:is_open"), (itemStack, clientWorld, livingEntity, unused) -> UmbrellaItem.getIsOpen(itemStack) ? 1 : 0);
+        ItemProperties.register(WCItems.UMBRELLA_MISSY.get(), ResourceLocation.fromNamespaceAndPath("whocosmetics:is_open"), (itemStack, clientWorld, livingEntity, unused) -> UmbrellaItem.getIsOpen(itemStack) ? 1 : 0);
     }
 
 }

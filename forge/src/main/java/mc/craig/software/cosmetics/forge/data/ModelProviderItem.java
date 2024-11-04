@@ -3,18 +3,18 @@ package mc.craig.software.cosmetics.forge.data;
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.common.WCBlocks;
 import mc.craig.software.cosmetics.common.WCItems;
+import mc.craig.software.cosmetics.registry.RegistrySupplier;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
+
+import static mc.craig.software.cosmetics.common.WCItems.ITEMS;
 
 public class ModelProviderItem extends ItemModelProvider {
 
@@ -27,8 +27,8 @@ public class ModelProviderItem extends ItemModelProvider {
         basicItem(WCItems.DAVROS_BLACK.get());
         basicItem(WCItems.DAVROS_GOLD.get());
 
-        for (Item value : ForgeRegistries.ITEMS.getValues()) {
-            if(value instanceof BlockItem && getKey(value).getNamespace().matches(WhoCosmetics.MOD_ID)){
+        for (RegistrySupplier<Item> value : ITEMS.getEntries()) {
+            if(value instanceof BlockItem && getKey(value.get()).getNamespace().matches(WhoCosmetics.MOD_ID)){
                 blockItem(Objects.requireNonNull(getKey(value.asItem())));
             }
         }
@@ -49,26 +49,26 @@ public class ModelProviderItem extends ItemModelProvider {
     public ItemModelBuilder toolItem(ResourceLocation item) {
         return getBuilder(item.toString())
                 .parent(new ModelFile.UncheckedModelFile("item/handheld"))
-                .texture("layer0", new ResourceLocation(item.getNamespace(), "item/" + item.getPath()));
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
     }
 
 
     public ItemModelBuilder blockItem(ResourceLocation item) {
         return getBuilder(item.toString())
-                .parent(new ModelFile.UncheckedModelFile(new ResourceLocation(item.getNamespace(), "block/" + item.getPath())));
+                .parent(new ModelFile.UncheckedModelFile(ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "block/" + item.getPath())));
     }
 
     public ItemModelBuilder layeredItem(ResourceLocation destination, ResourceLocation item, ResourceLocation resourceLocation) {
         return getBuilder(destination.toString())
                 .parent(new ModelFile.UncheckedModelFile("item/generated"))
-                .texture("layer0", new ResourceLocation(item.getNamespace(), "item/" + item.getPath()))
-                .texture("layer1", new ResourceLocation(resourceLocation.getNamespace(), "item/" + resourceLocation.getPath()));
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()))
+                .texture("layer1", ResourceLocation.fromNamespaceAndPath(resourceLocation.getNamespace(), "item/" + resourceLocation.getPath()));
     }
 
     public ItemModelBuilder layeredItem(ResourceLocation item, ResourceLocation resourceLocation) {
         return getBuilder(item.toString())
                 .parent(new ModelFile.UncheckedModelFile("item/generated"))
-                .texture("layer0", new ResourceLocation(item.getNamespace(), "item/" + item.getPath()))
-                .texture("layer1", new ResourceLocation(resourceLocation.getNamespace(), "item/" + resourceLocation.getPath()));
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()))
+                .texture("layer1", ResourceLocation.fromNamespaceAndPath(resourceLocation.getNamespace(), "item/" + resourceLocation.getPath()));
     }
 }

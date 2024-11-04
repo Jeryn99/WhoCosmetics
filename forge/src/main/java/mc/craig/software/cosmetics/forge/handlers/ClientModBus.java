@@ -18,14 +18,13 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.client.event.RegisterClientReloadListenersEvent;
-import net.minecraftforge.client.event.RegisterColorHandlersEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
 
-@Mod.EventBusSubscriber(modid = WhoCosmetics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(modid = WhoCosmetics.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientModBus {
 
     @SubscribeEvent
@@ -34,7 +33,7 @@ public class ClientModBus {
     }
 
     @SubscribeEvent
-    public static void onItemColors(RegisterColorHandlersEvent.Item item){
+    public static void onItemColors(net.neoforged.neoforge.client.event.RegisterColorHandlersEvent.Item item){
         item.register((arg, index) -> {
             if (arg.getItem() instanceof ClothingItem clothingItem && index == 0) {
                 if (clothingItem.isColored()) {
@@ -53,8 +52,8 @@ public class ClientModBus {
             return -1;
         }, WCItems.TOP_HAT.get());
 
-        ItemProperties.register(WCItems.UMBRELLA.get(), new ResourceLocation("whocosmetics:is_open"), (itemStack, clientWorld, livingEntity, unused) -> UmbrellaItem.getIsOpen(itemStack) ? 1 : 0);
-        ItemProperties.register(WCItems.UMBRELLA_MISSY.get(), new ResourceLocation("whocosmetics:is_open"), (itemStack, clientWorld, livingEntity, unused) -> UmbrellaItem.getIsOpen(itemStack) ? 1 : 0);
+        ItemProperties.register(WCItems.UMBRELLA.get(), ResourceLocation.parse("whocosmetics:is_open"), (itemStack, clientWorld, livingEntity, unused) -> UmbrellaItem.getIsOpen(itemStack) ? 1 : 0);
+        ItemProperties.register(WCItems.UMBRELLA_MISSY.get(), ResourceLocation.parse("whocosmetics:is_open"), (itemStack, clientWorld, livingEntity, unused) -> UmbrellaItem.getIsOpen(itemStack) ? 1 : 0);
     }
 
     @SubscribeEvent

@@ -7,15 +7,19 @@ import mc.craig.software.cosmetics.common.blocks.FacingEntityBlock;
 import mc.craig.software.cosmetics.common.blocks.MonitorBlock;
 import mc.craig.software.cosmetics.common.blocks.Nitro9Block;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import org.jetbrains.annotations.Nullable;
+import whocraft.tardis_refined.registry.TRBlockRegistry;
+
+import java.util.Map;
 
 public class ModelProviderBlock extends BlockStateProvider {
 
@@ -25,29 +29,29 @@ public class ModelProviderBlock extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        for (Block value : ForgeRegistries.BLOCKS.getValues()) {
-            @Nullable ResourceLocation location = ForgeRegistries.BLOCKS.getKey(value);
+        for (Map.Entry<ResourceKey<Block>, Block> value : TRBlockRegistry.BLOCKS.entrySet()) {
+            @Nullable ResourceLocation location = TRBlockRegistry.BLOCKS.getKey(value.getValue());
             if (location.getNamespace().matches(WhoCosmetics.MOD_ID)) {
 
                 if (value instanceof MonitorBlock monitorBlock) {
-                    ResourceLocation vicMon = new ResourceLocation(WhoCosmetics.MOD_ID, "block/victorian_monitor");
-                    ResourceLocation vicMonHanging = new ResourceLocation(WhoCosmetics.MOD_ID, "block/victorian_monitor_hanging");
+                    ResourceLocation vicMon = ResourceLocation.fromNamespaceAndPath(WhoCosmetics.MOD_ID, "block/victorian_monitor");
+                    ResourceLocation vicMonHanging = ResourceLocation.fromNamespaceAndPath(WhoCosmetics.MOD_ID, "block/victorian_monitor_hanging");
                     threeDeeRotatingHanging(monitorBlock, vicMon, vicMonHanging);
                     continue;
                 }
 
                 if(value instanceof HorizontalDirectionalBlock directionalBlock){
-                    ResourceLocation texture = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath());
+                    ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(WhoCosmetics.MOD_ID, "block/" + location.getPath());
                     threeDeeRotating(directionalBlock, texture);
                     continue;
                 }
 
                 if(value instanceof Nitro9Block nitro9Block){
-                    customLocation(nitro9Block, new ResourceLocation(WhoCosmetics.MOD_ID, "block/nitro_9"));
+                    customLocation(nitro9Block, ResourceLocation.fromNamespaceAndPath(WhoCosmetics.MOD_ID, "block/nitro_9"));
                     continue;
                 }
 
-                simpleBlock(value);
+                simpleBlock(value.getValue());
             }
         }
     }

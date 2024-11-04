@@ -16,7 +16,7 @@ public class WCSounds {
     public static final RegistrySupplier<SoundEvent> SONIC = SOUNDS.register("sonic", () -> setUpSound("sonic"));
 
     private static SoundEvent setUpSound(String soundName) {
-        return  SoundEvent.createFixedRangeEvent(new ResourceLocation(WhoCosmetics.MOD_ID, soundName), 1F);
+        return  SoundEvent.createFixedRangeEvent(ResourceLocation.fromNamespaceAndPath(WhoCosmetics.MOD_ID, soundName), 1F);
     }
 
 }

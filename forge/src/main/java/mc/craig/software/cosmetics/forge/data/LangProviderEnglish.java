@@ -8,7 +8,7 @@ import mc.craig.software.cosmetics.registry.RegistrySupplier;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraftforge.common.data.LanguageProvider;
+import net.neoforged.neoforge.common.data.LanguageProvider;
 
 public class LangProviderEnglish extends LanguageProvider {
 

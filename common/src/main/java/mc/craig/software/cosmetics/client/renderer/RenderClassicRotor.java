@@ -20,7 +20,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class RenderClassicRotor implements BlockEntityRenderer<ClassicRotorBlockEntity>, BlockEntityRendererProvider<ClassicRotorBlockEntity> {
 
-    private static final ResourceLocation TEXTURE = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/block/classic_rotor.png");
+    private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(WhoCosmetics.MOD_ID, "textures/block/classic_rotor.png");
     private final ClassicRotorModel classicRotorModel;
 
     public RenderClassicRotor(Context context) {

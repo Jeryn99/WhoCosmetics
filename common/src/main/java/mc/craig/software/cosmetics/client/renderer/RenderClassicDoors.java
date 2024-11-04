@@ -21,7 +21,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class RenderClassicDoors implements BlockEntityRenderer<ClassicDoorsBlockEntity>, BlockEntityRendererProvider<ClassicDoorsBlockEntity> {
 
-    private static final ResourceLocation TEXTURE = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/block/classic_doors.png");
+    private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(WhoCosmetics.MOD_ID, "textures/block/classic_doors.png");
     private final ClassicDoorsModel classicDoorsModel;
 
     public RenderClassicDoors(Context context) {

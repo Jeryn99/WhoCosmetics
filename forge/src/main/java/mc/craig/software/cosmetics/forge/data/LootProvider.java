@@ -32,6 +32,8 @@ import java.util.function.Supplier;
 
 public class LootProvider extends LootTableProvider {
 
+
+
     public LootProvider(DataGenerator dataGenerator) {
         super(dataGenerator.getPackOutput(), Set.of(), List.of(new LootTableProvider.SubProviderEntry(ModBlockLoot::new, LootContextParamSets.BLOCK)));
     }
@@ -39,7 +41,7 @@ public class LootProvider extends LootTableProvider {
 
     public static class ModBlockLoot extends BlockLootSubProvider {
         protected ModBlockLoot() {
-            super(Set.of(), FeatureFlags.REGISTRY.allFlags());
+            super(Set.of(), FeatureFlags.REGISTRY.allFlags(), );
         }
 
         @Override

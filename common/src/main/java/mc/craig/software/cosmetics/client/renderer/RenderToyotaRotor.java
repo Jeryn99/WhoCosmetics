@@ -18,7 +18,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class RenderToyotaRotor implements BlockEntityRenderer<ToyotaRotorBlockEntity>, BlockEntityRendererProvider<ToyotaRotorBlockEntity> {
 
-    private static final ResourceLocation TEXTURE = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/block/toyota_rotor.png");
+    private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(WhoCosmetics.MOD_ID, "textures/block/toyota_rotor.png");
     private final ToyotaRotorModel toyotaRotorModel;
 
     public RenderToyotaRotor(Context context) {

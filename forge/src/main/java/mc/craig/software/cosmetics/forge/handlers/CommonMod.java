@@ -3,11 +3,12 @@ package mc.craig.software.cosmetics.forge.handlers;
 import mc.craig.software.cosmetics.WhoCosmetics;
 import mc.craig.software.cosmetics.common.WCItems;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class CommonMod {
 
 
