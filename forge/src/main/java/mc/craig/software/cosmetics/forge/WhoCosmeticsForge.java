@@ -30,6 +30,7 @@ public class WhoCosmeticsForge {
         generator.addProvider(true, new LootProvider(generator));
         generator.addProvider(true, new ModelProviderBlock(generator, existingFileHelper));
         generator.addProvider(true, new ModelProviderItem(generator, existingFileHelper));
+        generator.addProvider(true, new BlockTagProvider(generator.getPackOutput(), e.getLookupProvider(), existingFileHelper));
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {

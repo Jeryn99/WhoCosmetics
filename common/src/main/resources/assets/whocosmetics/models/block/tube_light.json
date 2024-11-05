@@ -1,11 +1,11 @@
 {
 	"credit": "Made with Blockbench",
+	"render_type": "translucent",
 	"texture_size": [48, 48],
 	"textures": {
 		"0": "whocosmetics:block/tube_light",
 		"particle": "whocosmetics:block/tube_light"
 	},
-	"render_type" : "translucent",
 	"elements": [
 		{
 			"from": [5, 0, 5],
@@ -110,18 +110,19 @@
 			"rotation": [-5, 164, 0]
 		},
 		"ground": {
-			"rotation": [90, -90, 0],
-			"translation": [0, 0, -2.5]
+			"rotation": [90, 0, 0],
+			"translation": [0, 1.25, 0],
+			"scale": [0.25, 0.25, 0.25]
 		},
 		"gui": {
-			"rotation": [0, -90, 0],
+			"rotation": [0, -144, 0],
 			"translation": [0, -1.75, 0],
 			"scale": [0.71, 0.71, 0.71]
 		},
 		"fixed": {
-			"rotation": [0, 90, 0],
-			"translation": [0, -2, 0.25],
-			"scale": [0.01, 0.86, 1]
+			"rotation": [0, 40, 0],
+			"translation": [0, -1.75, 0],
+			"scale": [0.71, 0.71, 0.71]
 		}
 	},
 	"groups": [
