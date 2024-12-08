@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "whocosmetics:block/roundel_grey_hex_endcap"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "whocosmetics:block/roundel_wargames_top_half"
+    },
+    "type=double": {
+      "model": "whocosmetics:block/roundel_wargames_top_half"
+    },
+    "type=top": {
+      "model": "whocosmetics:block/roundel_wargames_top_half_top"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:iron_nugget"
+    },
+    "X": {
+      "item": "minecraft:black_concrete"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "XSX",
+    "XXX"
+  ],
+  "result": {
+    "count": 8,
+    "item": "whocosmetics:roundel_wargames"
+  },
+  "show_notification": true
+}

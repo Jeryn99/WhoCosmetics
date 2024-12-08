@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "whocosmetics:roundel_fire"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "   ",
+    "   "
+  ],
+  "result": {
+    "count": 6,
+    "item": "whocosmetics:roundel_fire_slab"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "whocosmetics:roundel_classic"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "   ",
+    "   "
+  ],
+  "result": {
+    "count": 6,
+    "item": "whocosmetics:roundel_classic_slab"
+  },
+  "show_notification": true
+}

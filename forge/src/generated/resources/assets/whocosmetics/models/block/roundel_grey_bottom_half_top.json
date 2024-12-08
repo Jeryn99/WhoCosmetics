@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "whocosmetics:block/roundel_grey_top",
+    "side": "whocosmetics:block/roundel_grey_bottom_half",
+    "top": "whocosmetics:block/roundel_grey_top"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "whocosmetics:roundel_grey_circurlar"
+    }
+  },
+  "pattern": [
+    "   ",
+    " S ",
+    "   "
+  ],
+  "result": {
+    "count": 8,
+    "item": "whocosmetics:roundel_grey_circurlar_endcap"
+  },
+  "show_notification": true
+}

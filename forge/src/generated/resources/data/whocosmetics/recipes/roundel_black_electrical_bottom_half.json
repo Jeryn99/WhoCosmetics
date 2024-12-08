@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "whocosmetics:roundel_black_electrical"
+    }
+  },
+  "pattern": [
+    "  S",
+    " S ",
+    "S  "
+  ],
+  "result": {
+    "count": 6,
+    "item": "whocosmetics:roundel_black_electrical_bottom_half"
+  },
+  "show_notification": true
+}

@@ -2,7 +2,6 @@ package mc.craig.software.cosmetics.forge.data;
 
 import com.google.gson.JsonObject;
 import mc.craig.software.cosmetics.WhoCosmetics;
-import mc.craig.software.cosmetics.common.WCBlocks;
 import mc.craig.software.cosmetics.common.blocks.FacingEntityBlock;
 import mc.craig.software.cosmetics.common.blocks.MonitorBlock;
 import mc.craig.software.cosmetics.common.blocks.Nitro9Block;
@@ -39,6 +38,16 @@ public class ModelProviderBlock extends BlockStateProvider {
                     ResourceLocation side = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath().replace("_slab", ""));
                     ResourceLocation top = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath().replace("_slab", "") + "_top");
                     ResourceLocation doubleslab = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath().replace("_slab", ""));
+
+                    if (location.getPath().contains("top_half")) {
+                        side = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath().replace("_slab", ""));
+                        top = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath().replace("_slab", "").replace("_top_half", "") + "_top");
+                    }
+
+                    if (location.getPath().contains("bottom_half")) {
+                        side = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath().replace("_slab", ""));
+                        top = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath().replace("_slab", "").replace("_bottom_half", "") + "_top");
+                    }
 
                     if(location.getPath().contains("gold")){
                         top = gold_top;
