@@ -10,6 +10,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -28,6 +29,28 @@ public class ModelProviderBlock extends BlockStateProvider {
         for (Block value : ForgeRegistries.BLOCKS.getValues()) {
             @Nullable ResourceLocation location = ForgeRegistries.BLOCKS.getKey(value);
             if (location.getNamespace().matches(WhoCosmetics.MOD_ID)) {
+
+                if (value instanceof SlabBlock slabBlock) {
+
+                    ResourceLocation gold_top = new ResourceLocation(WhoCosmetics.MOD_ID, "block/roundel_gold_top");
+                    ResourceLocation grey_top = new ResourceLocation(WhoCosmetics.MOD_ID, "block/roundel_grey_top");
+
+
+                    ResourceLocation side = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath().replace("_slab", ""));
+                    ResourceLocation top = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath().replace("_slab", "") + "_top");
+                    ResourceLocation doubleslab = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath().replace("_slab", ""));
+
+                    if(location.getPath().contains("gold")){
+                        top = gold_top;
+                    }
+
+                    if(location.getPath().contains("grey")){
+                        top = grey_top;
+                    }
+
+                    slabBlock(slabBlock, doubleslab, side, top, top);
+                    continue;
+                }
 
                 if (value instanceof MonitorBlock monitorBlock) {
                     ResourceLocation vicMon = new ResourceLocation(WhoCosmetics.MOD_ID, "block/victorian_monitor");

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "whocosmetics:block/roundel_gold_hex_slab"
+    },
+    "type=double": {
+      "model": "whocosmetics:block/roundel_gold_hex"
+    },
+    "type=top": {
+      "model": "whocosmetics:block/roundel_gold_hex_slab_top"
+    }
+  }
+}

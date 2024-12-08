@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "whocosmetics:block/roundel_coral_slab"
+    },
+    "type=double": {
+      "model": "whocosmetics:block/roundel_coral"
+    },
+    "type=top": {
+      "model": "whocosmetics:block/roundel_coral_slab_top"
+    }
+  }
+}

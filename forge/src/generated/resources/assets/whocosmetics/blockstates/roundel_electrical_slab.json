@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "whocosmetics:block/roundel_electrical_slab"
+    },
+    "type=double": {
+      "model": "whocosmetics:block/roundel_electrical"
+    },
+    "type=top": {
+      "model": "whocosmetics:block/roundel_electrical_slab_top"
+    }
+  }
+}

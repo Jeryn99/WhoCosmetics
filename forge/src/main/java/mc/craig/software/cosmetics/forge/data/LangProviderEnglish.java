@@ -6,9 +6,13 @@ import mc.craig.software.cosmetics.common.WCItems;
 import mc.craig.software.cosmetics.common.blocks.MonitorBlock;
 import mc.craig.software.cosmetics.registry.RegistrySupplier;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraftforge.common.data.LanguageProvider;
+import net.minecraftforge.registries.ForgeRegistries;
+import org.jetbrains.annotations.Nullable;
 
 public class LangProviderEnglish extends LanguageProvider {
 
@@ -81,7 +85,13 @@ public class LangProviderEnglish extends LanguageProvider {
             if(blocksEntry.get() instanceof RotatedPillarBlock rotatedPillarBlock && !(blocksEntry.get() instanceof MonitorBlock)){
                 add(rotatedPillarBlock, "Roundel");
             }
+
+            if (blocksEntry.get() instanceof SlabBlock slabBlock) {
+                add(blocksEntry.get(), "Roundel Slab");
+            }
         }
+
+
 
         add(WCItems.CREATIVE_TAB, "WhoCosmetics");
     }

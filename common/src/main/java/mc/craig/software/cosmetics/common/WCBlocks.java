@@ -12,10 +12,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -44,8 +41,26 @@ public class WCBlocks {
     public static final RegistrySupplier<Block> ROUNDEL_CORAL = register("roundel_coral", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
     public static final RegistrySupplier<Block> ROUNDEL_CRYSTAL = register("roundel_crystal", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
     public static final RegistrySupplier<Block> ROUNDEL_CLASSIC = register("roundel_classic", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
-
     public static final RegistrySupplier<Block> ROUNDEL_CLASSIC_HALF = register("roundel_classic_half", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_WARGAMES = register("roundel_wargames", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+
+    public static final RegistrySupplier<Block> ROUNDEL_BLACK_SLAB = register("roundel_black_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_BLACK_ELECTRICAL_SLAB = register("roundel_black_electrical_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_ELECTRICAL_SLAB = register("roundel_electrical_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_FIRE_SLAB = register("roundel_fire_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_GOLD_BOXED_SLAB = register("roundel_gold_boxed_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_GOLD_HEX_SLAB = register("roundel_gold_hex_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_GOLD_INNER_SLAB = register("roundel_gold_inner_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_GREY_SLAB = register("roundel_grey_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_GREY_CIRCULAR_SLAB = register("roundel_grey_circurlar_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_GREY_CIRCULAR_2_SLAB = register("roundel_grey_circurlar_2_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_GREY_HEX_SLAB = register("roundel_grey_hex_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_TIME_SLAB = register("roundel_time_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_CORAL_SLAB = register("roundel_coral_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_CRYSTAL_SLAB = register("roundel_crystal_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_CLASSIC_SLAB = register("roundel_classic_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+    public static final RegistrySupplier<Block> ROUNDEL_WARGAMES_SLAB = register("roundel_wargames_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F).sound(SoundType.BONE_BLOCK)));
+
 
     public static final RegistrySupplier<Block> CLASSIC_DOORS = register("classic_doors", () -> new ClassicDoorsBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noCollission()));
 
