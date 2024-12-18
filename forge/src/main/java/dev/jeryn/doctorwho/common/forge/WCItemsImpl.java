@@ -10,7 +10,16 @@ public class WCItemsImpl {
 
     public static CreativeModeTab createTab() {
         return CreativeModeTab.builder().title(Component.translatable(WCItems.CREATIVE_TAB)).icon(() -> new ItemStack(WCBlocks.WHIRLY_GIG.get())).build();
+    }
 
+
+    public static CreativeModeTab createRoundelSlabsTab() {
+        return CreativeModeTab.builder().title(Component.translatable(WCItems.CREATIVE_TAB)).icon(() -> new ItemStack(WCBlocks.ROUNDEL_CORAL_SLAB.get())).build();
+    }
+
+
+    public static CreativeModeTab createRoundelTab() {
+        return CreativeModeTab.builder().title(Component.translatable(WCItems.CREATIVE_TAB)).icon(() -> new ItemStack(WCBlocks.ROUNDEL_CORAL.get())).build();
     }
 
 }

@@ -17,7 +17,9 @@ public class WCItems {
 
     public static final DeferredRegistry<CreativeModeTab> TABS = DeferredRegistry.create(WhoCosmetics.MOD_ID, Registries.CREATIVE_MODE_TAB);
     public static final RegistrySupplier<CreativeModeTab> MAIN = TABS.register(WhoCosmetics.MOD_ID, WCItems::createTab);
-    
+    public static final RegistrySupplier<CreativeModeTab> ROUNDELS = TABS.register(WhoCosmetics.MOD_ID + "_roundels", WCItems::createRoundelTab);
+    public static final RegistrySupplier<CreativeModeTab> SLABS = TABS.register(WhoCosmetics.MOD_ID + "_slab_roundels", WCItems::createRoundelSlabsTab);
+
     public static final String CREATIVE_TAB = "tab." + WhoCosmetics.MOD_ID + ".main";
 
 
@@ -81,6 +83,16 @@ public class WCItems {
 
     @ExpectPlatform
     private static CreativeModeTab createTab() {
+        throw new RuntimeException(WhoCosmetics.MAPPING_ERROR);
+    }
+
+    @ExpectPlatform
+    private static CreativeModeTab createRoundelSlabsTab() {
+        throw new RuntimeException(WhoCosmetics.MAPPING_ERROR);
+    }
+
+    @ExpectPlatform
+    private static CreativeModeTab createRoundelTab() {
         throw new RuntimeException(WhoCosmetics.MAPPING_ERROR);
     }
 

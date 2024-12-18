@@ -52,7 +52,7 @@ public class RenderClassicDoors implements BlockEntityRenderer<ClassicDoorsBlock
 
         ResourceLocation blockKey = BuiltInRegistries.BLOCK.getKey(blockstate.getBlock());
 
-        classicDoorsModel.renderToBuffer(blockEntity, poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(createTextureFromBlockState(blockKey))), packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
+        classicDoorsModel.renderToBuffer(blockEntity, poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(createTextureFromBlockState(blockKey))), packedLight, packedOverlay, 1, 1, 1, 1);
         poseStack.popPose();
     }
 

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "whocosmetics:block/roundel_master_slab"
+    },
+    "type=double": {
+      "model": "whocosmetics:block/roundel_master"
+    },
+    "type=top": {
+      "model": "whocosmetics:block/roundel_master_slab_top"
+    }
+  }
+}
