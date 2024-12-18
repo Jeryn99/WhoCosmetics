@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "whocosmetics:roundel_black"
+    }
+  },
+  "pattern": [
+    "AA ",
+    "AA ",
+    "AA "
+  ],
+  "result": {
+    "count": 8,
+    "item": "whocosmetics:classic_doors_black"
+  },
+  "show_notification": true
+}

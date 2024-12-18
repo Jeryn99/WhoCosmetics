@@ -9,17 +9,17 @@
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/whocosmetics",
-    "sources": "https://github.com/Suff99/WhoCosmetics"
+    "sources": "https://github.com/Jeryn99/WhoCosmetics"
   },
-  "license": "https://github.com/Suff99/WhoCosmetics/blob/master/LICENSE",
+  "license": "https://github.com/Jeryn99/WhoCosmetics/blob/master/LICENSE",
   "icon": "assets/whocosmetics/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "mc.craig.software.cosmetics.fabric.fabric.WhoCosmeticsFabric"
+      "dev.jeryn.doctorwho.fabric.fabric.WhoCosmeticsFabric"
     ],
     "client": [
-      "mc.craig.software.cosmetics.fabric.fabric.WhoCosmeticsClientFabric"
+      "dev.jeryn.doctorwho.fabric.fabric.WhoCosmeticsClientFabric"
     ]
   },
   "mixins": [

@@ -1,7 +1,7 @@
 modLoader = "javafml"
 loaderVersion = "[43,)"
 #issueTrackerURL = ""
-license = "https://github.com/Suff99/WhoCosmetics/blob/master/LICENSE"
+license = "https://github.com/Jeryn99/WhoCosmetics/blob/master/LICENSE"
 
 [[mods]]
 modId = "whocosmetics"

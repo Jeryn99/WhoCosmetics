@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "whocosmetics:roundel_hartnell"
+    }
+  },
+  "pattern": [
+    "AA ",
+    "AA ",
+    "AA "
+  ],
+  "result": {
+    "count": 8,
+    "item": "whocosmetics:classic_doors_hartnell"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "whocosmetics:block/classic_doors_master"
+  }
+}
