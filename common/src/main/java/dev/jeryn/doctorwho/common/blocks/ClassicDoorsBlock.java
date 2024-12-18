@@ -7,23 +7,30 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.*;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import static net.minecraft.core.Direction.NORTH;
 
 public class ClassicDoorsBlock extends Block implements EntityBlock {
 
     public static BooleanProperty OPEN = BlockStateProperties.OPEN;
     public static DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+    public static final BooleanProperty OFFSET = BooleanProperty.create("offset");
 
     protected static final VoxelShape NORTH_AABB = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 32.0D, 0.25D);
     protected static final VoxelShape SOUTH_AABB = Block.box(0.0D, 0.0D, 15.75D, 16.0D, 32.0D, 16.0D);
@@ -33,6 +40,7 @@ public class ClassicDoorsBlock extends Block implements EntityBlock {
 
     public ClassicDoorsBlock(Properties properties) {
         super(properties.noOcclusion());
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, NORTH).setValue(OPEN, false).setValue(OFFSET, false));
     }
 
     @Override
@@ -43,6 +51,17 @@ public class ClassicDoorsBlock extends Block implements EntityBlock {
             case NORTH -> NORTH_AABB;
             default -> SOUTH_AABB;
         };
+    }
+
+    @Override
+    public BlockState getStateForPlacement(@NotNull BlockPlaceContext blockPlaceContext) {
+        BlockState state = super.getStateForPlacement(blockPlaceContext);
+        return state.setValue(FACING, blockPlaceContext.getHorizontalDirection()).setValue(OPEN, false).setValue(OFFSET, blockPlaceContext.getPlayer().isCrouching());
+    }
+
+    @Override
+    public @NotNull BlockState rotate(BlockState state, Rotation rot) {
+        return state.setValue(FACING, rot.rotate(state.getValue(FACING)));
     }
 
     @Override
@@ -112,7 +131,7 @@ public class ClassicDoorsBlock extends Block implements EntityBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, OPEN);
+        builder.add(FACING, OPEN, OFFSET);
     }
 
     @Override
