@@ -540,6 +540,128 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, WCBlocks.ROUNDEL_HARTNELL_HALF.get(), 8)
+                .pattern("   ")
+                .pattern(" S ")
+                .pattern("   ")
+                .define('S', WCBlocks.ROUNDEL_HARTNELL.get())
+                .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, WCBlocks.ROUNDEL_MASTER_HALF.get(), 8)
+                .pattern("   ")
+                .pattern(" S ")
+                .pattern("   ")
+                .define('S', WCBlocks.ROUNDEL_MASTER.get())
+                .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, WCBlocks.ROUNDEL_MASTER_BLACK_HALF.get(), 8)
+                .pattern("   ")
+                .pattern(" S ")
+                .pattern("   ")
+                .define('S', WCBlocks.ROUNDEL_MASTER_BLACK.get())
+                .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, WCBlocks.ROUNDEL_HARTNELL_HALF_ENDCAP.get(), 8)
+                .pattern("   ")
+                .pattern(" S ")
+                .pattern("   ")
+                .define('S', WCBlocks.ROUNDEL_HARTNELL.get())
+                .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, WCBlocks.ROUNDEL_MASTER_ENDCAP.get(), 8)
+                .pattern("   ")
+                .pattern(" S ")
+                .pattern("   ")
+                .define('S', WCBlocks.ROUNDEL_MASTER.get())
+                .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, WCBlocks.ROUNDEL_MASTER_BLACK_ENDCAP.get(), 8)
+                .pattern("   ")
+                .pattern(" S ")
+                .pattern("   ")
+                .define('S', WCBlocks.ROUNDEL_MASTER_BLACK.get())
+                .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, WCBlocks.ROUNDEL_HARTNELL_SLAB.get(), 6)
+                .pattern("SSS")
+                .pattern("   ")
+                .pattern("   ")
+                .define('S', WCBlocks.ROUNDEL_HARTNELL.get())
+                .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, WCBlocks.ROUNDEL_MASTER_SLAB.get(), 6)
+                .pattern("SSS")
+                .pattern("   ")
+                .pattern("   ")
+                .define('S', WCBlocks.ROUNDEL_MASTER.get())
+                .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, WCBlocks.ROUNDEL_MASTER_BLACK_SLAB.get(), 6)
+                .pattern("SSS")
+                .pattern("   ")
+                .pattern("   ")
+                .define('S', WCBlocks.ROUNDEL_MASTER_BLACK.get())
+                .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, WCBlocks.ROUNDEL_HARTNELL_TOP_HALF.get(), 8)
+                .pattern("   ")
+                .pattern(" S ")
+                .pattern("   ")
+                .define('S', WCBlocks.ROUNDEL_HARTNELL.get())
+                .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, WCBlocks.ROUNDEL_MASTER_TOP_HALF.get(), 8)
+                .pattern("   ")
+                .pattern(" S ")
+                .pattern("   ")
+                .define('S', WCBlocks.ROUNDEL_MASTER.get())
+                .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, WCBlocks.ROUNDEL_MASTER_BLACK_TOP_HALF.get(), 8)
+                .pattern("   ")
+                .pattern(" S ")
+                .pattern("   ")
+                .define('S', WCBlocks.ROUNDEL_MASTER_BLACK.get())
+                .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, WCBlocks.ROUNDEL_HARTNELL_BOTTOM_HALF.get(), 8)
+                .pattern("   ")
+                .pattern(" S ")
+                .pattern("   ")
+                .define('S', WCBlocks.ROUNDEL_HARTNELL.get())
+                .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, WCBlocks.ROUNDEL_MASTER_BOTTOM_HALF.get(), 8)
+                .pattern("   ")
+                .pattern(" S ")
+                .pattern("   ")
+                .define('S', WCBlocks.ROUNDEL_MASTER.get())
+                .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, WCBlocks.ROUNDEL_MASTER_BLACK_BOTTOM_HALF.get(), 8)
+                .pattern("   ")
+                .pattern(" S ")
+                .pattern("   ")
+                .define('S', WCBlocks.ROUNDEL_MASTER_BLACK.get())
+                .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(consumer);
+
+
+
 
     }
 

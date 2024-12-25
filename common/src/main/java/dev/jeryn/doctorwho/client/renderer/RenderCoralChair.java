@@ -2,7 +2,7 @@ package dev.jeryn.doctorwho.client.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import dev.jeryn.doctorwho.WhoCosmetics;
+import dev.jeryn.doctorwho.DoctorWhoDeco;
 import dev.jeryn.doctorwho.client.models.ModelRegistration;
 import dev.jeryn.doctorwho.client.models.block.TenthDoctorChairModel;
 import dev.jeryn.doctorwho.common.blockentity.CoralChairBlockEntity;
@@ -18,7 +18,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class RenderCoralChair implements BlockEntityRenderer<CoralChairBlockEntity>, BlockEntityRendererProvider<CoralChairBlockEntity> {
 
 
-    private static final ResourceLocation TEXTURE = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/block/coral_chair.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation(DoctorWhoDeco.MOD_ID, "textures/block/coral_chair.png");
     private final TenthDoctorChairModel chair;
 
     public RenderCoralChair(Context context) {

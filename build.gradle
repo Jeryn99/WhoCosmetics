@@ -42,6 +42,10 @@ allprojects {
 
     repositories {
 
+        flatDir {
+            dirs '../mods'
+        }
+
         maven {
             name = "Fuzs Mod Resources"
             url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"

@@ -2,7 +2,7 @@ package dev.jeryn.doctorwho.client.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import dev.jeryn.doctorwho.WhoCosmetics;
+import dev.jeryn.doctorwho.DoctorWhoDeco;
 import dev.jeryn.doctorwho.client.models.ModelRegistration;
 import dev.jeryn.doctorwho.client.models.block.WhirlyGigModel;
 import dev.jeryn.doctorwho.common.blockentity.WhirlygigBlockEntity;
@@ -15,8 +15,8 @@ import net.minecraft.resources.ResourceLocation;
 
 public class RenderWhirlyGig implements BlockEntityRenderer<WhirlygigBlockEntity>, BlockEntityRendererProvider<WhirlygigBlockEntity> {
 
-    private static final ResourceLocation TEXTURE = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/block/whirlygig.png");
-    private static final ResourceLocation TEXTURE_GLOW = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/block/whirlygig_glow.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation(DoctorWhoDeco.MOD_ID, "textures/block/whirlygig.png");
+    private static final ResourceLocation TEXTURE_GLOW = new ResourceLocation(DoctorWhoDeco.MOD_ID, "textures/block/whirlygig_glow.png");
     private final WhirlyGigModel whirlyGigModel;
 
     public RenderWhirlyGig(Context context) {

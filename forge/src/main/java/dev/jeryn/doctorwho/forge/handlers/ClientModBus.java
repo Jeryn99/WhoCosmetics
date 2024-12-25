@@ -1,6 +1,6 @@
 package dev.jeryn.doctorwho.forge.handlers;
 
-import dev.jeryn.doctorwho.WhoCosmetics;
+import dev.jeryn.doctorwho.DoctorWhoDeco;
 import dev.jeryn.doctorwho.client.ArmorModelManager;
 import dev.jeryn.doctorwho.client.models.forge.ModelRegistrationImpl;
 import dev.jeryn.doctorwho.client.renderer.*;
@@ -22,7 +22,7 @@ import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = WhoCosmetics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = DoctorWhoDeco.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientModBus {
 
     @SubscribeEvent

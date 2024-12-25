@@ -1,7 +1,7 @@
 package dev.jeryn.doctorwho.common;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
-import dev.jeryn.doctorwho.WhoCosmetics;
+import dev.jeryn.doctorwho.DoctorWhoDeco;
 import dev.jeryn.doctorwho.common.entity.DavrosChair;
 import dev.jeryn.doctorwho.common.items.*;
 import dev.jeryn.doctorwho.registry.DeferredRegistry;
@@ -11,16 +11,16 @@ import net.minecraft.world.item.*;
 
 public class WCItems {
 
-    public static final DeferredRegistry<Item> ITEMS = DeferredRegistry.create(WhoCosmetics.MOD_ID, Registries.ITEM);
+    public static final DeferredRegistry<Item> ITEMS = DeferredRegistry.create(DoctorWhoDeco.MOD_ID, Registries.ITEM);
     public static Item.Properties GENERIC_PROPERTIES = new Item.Properties().stacksTo(1);
     public static Item.Properties GRENADE_PROP = new Item.Properties().stacksTo(8);
 
-    public static final DeferredRegistry<CreativeModeTab> TABS = DeferredRegistry.create(WhoCosmetics.MOD_ID, Registries.CREATIVE_MODE_TAB);
-    public static final RegistrySupplier<CreativeModeTab> MAIN = TABS.register(WhoCosmetics.MOD_ID, WCItems::createTab);
-    public static final RegistrySupplier<CreativeModeTab> ROUNDELS = TABS.register(WhoCosmetics.MOD_ID + "_roundels", WCItems::createRoundelTab);
-    public static final RegistrySupplier<CreativeModeTab> SLABS = TABS.register(WhoCosmetics.MOD_ID + "_slab_roundels", WCItems::createRoundelSlabsTab);
+    public static final DeferredRegistry<CreativeModeTab> TABS = DeferredRegistry.create(DoctorWhoDeco.MOD_ID, Registries.CREATIVE_MODE_TAB);
+    public static final RegistrySupplier<CreativeModeTab> MAIN = TABS.register(DoctorWhoDeco.MOD_ID, WCItems::createTab);
+    public static final RegistrySupplier<CreativeModeTab> ROUNDELS = TABS.register(DoctorWhoDeco.MOD_ID + "_roundels", WCItems::createRoundelTab);
+    public static final RegistrySupplier<CreativeModeTab> SLABS = TABS.register(DoctorWhoDeco.MOD_ID + "_slab_roundels", WCItems::createRoundelSlabsTab);
 
-    public static final String CREATIVE_TAB = "tab." + WhoCosmetics.MOD_ID + ".main";
+    public static final String CREATIVE_TAB = "tab." + DoctorWhoDeco.MOD_ID + ".main";
 
 
     public static final RegistrySupplier<Item> FEZ = ITEMS.register("fez", () -> new ClothingItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET, true, DyeColor.RED.getMapColor().col));
@@ -83,17 +83,17 @@ public class WCItems {
 
     @ExpectPlatform
     private static CreativeModeTab createTab() {
-        throw new RuntimeException(WhoCosmetics.MAPPING_ERROR);
+        throw new RuntimeException(DoctorWhoDeco.MAPPING_ERROR);
     }
 
     @ExpectPlatform
     private static CreativeModeTab createRoundelSlabsTab() {
-        throw new RuntimeException(WhoCosmetics.MAPPING_ERROR);
+        throw new RuntimeException(DoctorWhoDeco.MAPPING_ERROR);
     }
 
     @ExpectPlatform
     private static CreativeModeTab createRoundelTab() {
-        throw new RuntimeException(WhoCosmetics.MAPPING_ERROR);
+        throw new RuntimeException(DoctorWhoDeco.MAPPING_ERROR);
     }
 
 }

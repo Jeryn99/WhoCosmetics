@@ -1,6 +1,6 @@
 package dev.jeryn.doctorwho.client.renderer;
 
-import dev.jeryn.doctorwho.WhoCosmetics;
+import dev.jeryn.doctorwho.DoctorWhoDeco;
 import dev.jeryn.doctorwho.client.models.vehicle.DavrosChairModel;
 import dev.jeryn.doctorwho.client.models.ModelRegistration;
 import dev.jeryn.doctorwho.common.entity.DavrosChair;
@@ -17,6 +17,6 @@ public class RenderDavrosChair extends MobRenderer<DavrosChair, DavrosChairModel
     @Override
     public ResourceLocation getTextureLocation(DavrosChair entity) {
         DavrosChair.Variant variant = entity.getVariantEnum();
-        return new ResourceLocation(WhoCosmetics.MOD_ID, "textures/entity/" + variant.getTexture() + ".png");
+        return new ResourceLocation(DoctorWhoDeco.MOD_ID, "textures/entity/" + variant.getTexture() + ".png");
     }
 }

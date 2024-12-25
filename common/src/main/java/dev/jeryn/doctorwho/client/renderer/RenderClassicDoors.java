@@ -3,17 +3,14 @@ package dev.jeryn.doctorwho.client.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import dev.jeryn.doctorwho.WhoCosmetics;
 import dev.jeryn.doctorwho.client.models.block.ClassicDoorsModel;
 import dev.jeryn.doctorwho.client.models.ModelRegistration;
 import dev.jeryn.doctorwho.common.blockentity.ClassicDoorsBlockEntity;
 import dev.jeryn.doctorwho.common.blocks.ClassicDoorsBlock;
-import dev.jeryn.doctorwho.common.blocks.FacingEntityBlock;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
-import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.DoorBlock;

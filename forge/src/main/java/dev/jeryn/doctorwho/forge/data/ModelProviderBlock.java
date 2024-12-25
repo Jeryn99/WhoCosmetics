@@ -1,7 +1,7 @@
 package dev.jeryn.doctorwho.forge.data;
 
 import com.google.gson.JsonObject;
-import dev.jeryn.doctorwho.WhoCosmetics;
+import dev.jeryn.doctorwho.DoctorWhoDeco;
 import dev.jeryn.doctorwho.common.blocks.FacingEntityBlock;
 import dev.jeryn.doctorwho.common.blocks.MonitorBlock;
 import dev.jeryn.doctorwho.common.blocks.Nitro9Block;
@@ -20,34 +20,34 @@ import org.jetbrains.annotations.Nullable;
 public class ModelProviderBlock extends BlockStateProvider {
 
     public ModelProviderBlock(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator.getPackOutput(), WhoCosmetics.MOD_ID, existingFileHelper);
+        super(generator.getPackOutput(), DoctorWhoDeco.MOD_ID, existingFileHelper);
     }
 
     @Override
     protected void registerStatesAndModels() {
         for (Block value : ForgeRegistries.BLOCKS.getValues()) {
             @Nullable ResourceLocation location = ForgeRegistries.BLOCKS.getKey(value);
-            if (location.getNamespace().matches(WhoCosmetics.MOD_ID)) {
+            if (location.getNamespace().matches(DoctorWhoDeco.MOD_ID)) {
 
 
                 if (value instanceof SlabBlock slabBlock) {
 
-                    ResourceLocation gold_top = new ResourceLocation(WhoCosmetics.MOD_ID, "block/roundel_gold_top");
-                    ResourceLocation grey_top = new ResourceLocation(WhoCosmetics.MOD_ID, "block/roundel_grey_top");
+                    ResourceLocation gold_top = new ResourceLocation(DoctorWhoDeco.MOD_ID, "block/roundel_gold_top");
+                    ResourceLocation grey_top = new ResourceLocation(DoctorWhoDeco.MOD_ID, "block/roundel_grey_top");
 
 
-                    ResourceLocation side = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath().replace("_slab", ""));
-                    ResourceLocation top = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath().replace("_slab", "") + "_top");
-                    ResourceLocation doubleslab = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath().replace("_slab", ""));
+                    ResourceLocation side = new ResourceLocation(DoctorWhoDeco.MOD_ID, "block/" + location.getPath().replace("_slab", ""));
+                    ResourceLocation top = new ResourceLocation(DoctorWhoDeco.MOD_ID, "block/" + location.getPath().replace("_slab", "") + "_top");
+                    ResourceLocation doubleslab = new ResourceLocation(DoctorWhoDeco.MOD_ID, "block/" + location.getPath().replace("_slab", ""));
 
                     if (location.getPath().contains("top_half")) {
-                        side = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath().replace("_slab", ""));
-                        top = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath().replace("_slab", "").replace("_top_half", "") + "_top");
+                        side = new ResourceLocation(DoctorWhoDeco.MOD_ID, "block/" + location.getPath().replace("_slab", ""));
+                        top = new ResourceLocation(DoctorWhoDeco.MOD_ID, "block/" + location.getPath().replace("_slab", "").replace("_top_half", "") + "_top");
                     }
 
                     if (location.getPath().contains("bottom_half")) {
-                        side = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath().replace("_slab", ""));
-                        top = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath().replace("_slab", "").replace("_bottom_half", "") + "_top");
+                        side = new ResourceLocation(DoctorWhoDeco.MOD_ID, "block/" + location.getPath().replace("_slab", ""));
+                        top = new ResourceLocation(DoctorWhoDeco.MOD_ID, "block/" + location.getPath().replace("_slab", "").replace("_bottom_half", "") + "_top");
                     }
 
                     if(location.getPath().contains("gold")){
@@ -63,20 +63,20 @@ public class ModelProviderBlock extends BlockStateProvider {
                 }
 
                 if (value instanceof MonitorBlock monitorBlock) {
-                    ResourceLocation vicMon = new ResourceLocation(WhoCosmetics.MOD_ID, "block/victorian_monitor");
-                    ResourceLocation vicMonHanging = new ResourceLocation(WhoCosmetics.MOD_ID, "block/victorian_monitor_hanging");
+                    ResourceLocation vicMon = new ResourceLocation(DoctorWhoDeco.MOD_ID, "block/victorian_monitor");
+                    ResourceLocation vicMonHanging = new ResourceLocation(DoctorWhoDeco.MOD_ID, "block/victorian_monitor_hanging");
                     threeDeeRotatingHanging(monitorBlock, vicMon, vicMonHanging);
                     continue;
                 }
 
                 if(value instanceof HorizontalDirectionalBlock directionalBlock){
-                    ResourceLocation texture = new ResourceLocation(WhoCosmetics.MOD_ID, "block/" + location.getPath());
+                    ResourceLocation texture = new ResourceLocation(DoctorWhoDeco.MOD_ID, "block/" + location.getPath());
                     threeDeeRotating(directionalBlock, texture);
                     continue;
                 }
 
                 if(value instanceof Nitro9Block nitro9Block){
-                    customLocation(nitro9Block, new ResourceLocation(WhoCosmetics.MOD_ID, "block/nitro_9"));
+                    customLocation(nitro9Block, new ResourceLocation(DoctorWhoDeco.MOD_ID, "block/nitro_9"));
                     continue;
                 }
 

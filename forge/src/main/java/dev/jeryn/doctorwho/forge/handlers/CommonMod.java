@@ -1,11 +1,10 @@
 package dev.jeryn.doctorwho.forge.handlers;
 
-import dev.jeryn.doctorwho.WhoCosmetics;
+import dev.jeryn.doctorwho.DoctorWhoDeco;
 import dev.jeryn.doctorwho.common.WCItems;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -18,7 +17,7 @@ public class CommonMod {
     @SubscribeEvent
     public static void buildContents(BuildCreativeModeTabContentsEvent buildEvent) {
         CreativeModeTab tab = buildEvent.getTab();
-        String modNamespace = WhoCosmetics.MOD_ID;
+        String modNamespace = DoctorWhoDeco.MOD_ID;
 
         BuiltInRegistries.ITEM.iterator().forEachRemaining(item -> {
             String namespace = BuiltInRegistries.ITEM.getKey(item).getNamespace();

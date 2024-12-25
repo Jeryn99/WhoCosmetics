@@ -1,6 +1,6 @@
 package dev.jeryn.doctorwho.forge.data;
 
-import dev.jeryn.doctorwho.WhoCosmetics;
+import dev.jeryn.doctorwho.DoctorWhoDeco;
 import dev.jeryn.doctorwho.common.WCBlocks;
 import dev.jeryn.doctorwho.registry.RegistrySupplier;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -41,7 +41,7 @@ public class LootProvider extends LootTableProvider {
             ArrayList<@NotNull Block> blocks = new ArrayList<>();
             for (RegistrySupplier<Block> entry : WCBlocks.BLOCKS.getEntries()) {
                 ResourceLocation blockId = BuiltInRegistries.BLOCK.getKey(entry.get());
-                if (blockId.toString().contains(WhoCosmetics.MOD_ID)) {
+                if (blockId.toString().contains(DoctorWhoDeco.MOD_ID)) {
                     blocks.add(entry.get());
                 }
             }

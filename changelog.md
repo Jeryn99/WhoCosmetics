@@ -1,2 +1,3 @@
-- Fixed Blocks not being correctly mineable
-- Fixed Dyed clothing changing the fog colour
+- Added Tons of roundels
+- Added more classic doors
+- Classic doors can now be placed at a offset while sneaking

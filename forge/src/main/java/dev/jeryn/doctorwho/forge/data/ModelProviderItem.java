@@ -1,6 +1,6 @@
 package dev.jeryn.doctorwho.forge.data;
 
-import dev.jeryn.doctorwho.WhoCosmetics;
+import dev.jeryn.doctorwho.DoctorWhoDeco;
 import dev.jeryn.doctorwho.common.WCBlocks;
 import dev.jeryn.doctorwho.common.WCItems;
 import net.minecraft.data.DataGenerator;
@@ -19,7 +19,7 @@ import java.util.Objects;
 public class ModelProviderItem extends ItemModelProvider {
 
     public ModelProviderItem(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator.getPackOutput(), WhoCosmetics.MOD_ID, existingFileHelper);
+        super(generator.getPackOutput(), DoctorWhoDeco.MOD_ID, existingFileHelper);
     }
 
     @Override
@@ -28,7 +28,7 @@ public class ModelProviderItem extends ItemModelProvider {
         basicItem(WCItems.DAVROS_GOLD.get());
 
         for (Item value : ForgeRegistries.ITEMS.getValues()) {
-            if(value instanceof BlockItem && getKey(value).getNamespace().matches(WhoCosmetics.MOD_ID)){
+            if(value instanceof BlockItem && getKey(value).getNamespace().matches(DoctorWhoDeco.MOD_ID)){
                 blockItem(Objects.requireNonNull(getKey(value.asItem())));
             }
         }

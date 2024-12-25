@@ -1,6 +1,6 @@
 package dev.jeryn.doctorwho.common;
 
-import dev.jeryn.doctorwho.WhoCosmetics;
+import dev.jeryn.doctorwho.DoctorWhoDeco;
 import dev.jeryn.doctorwho.common.blockentity.ClassicRotorBlockEntity;
 import dev.jeryn.doctorwho.common.blockentity.ToyotaRotorBlockEntity;
 import dev.jeryn.doctorwho.common.blockentity.WhirlygigBlockEntity;
@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 
 public class WCBlocks {
 
-    public static final DeferredRegistry<Block> BLOCKS = DeferredRegistry.create(WhoCosmetics.MOD_ID, Registries.BLOCK);
+    public static final DeferredRegistry<Block> BLOCKS = DeferredRegistry.create(DoctorWhoDeco.MOD_ID, Registries.BLOCK);
 
     public static final RegistrySupplier<Block> CORAL_CHAIR = register("coral_chair", () -> new CoralChairBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 

@@ -1,6 +1,6 @@
 package dev.jeryn.doctorwho.forge.data;
 
-import dev.jeryn.doctorwho.WhoCosmetics;
+import dev.jeryn.doctorwho.DoctorWhoDeco;
 import dev.jeryn.doctorwho.common.WCBlocks;
 import dev.jeryn.doctorwho.common.WCItems;
 import net.minecraft.data.DataGenerator;
@@ -9,7 +9,7 @@ import net.minecraftforge.common.data.LanguageProvider;
 public class LangProviderEnglish extends LanguageProvider {
 
     public LangProviderEnglish(DataGenerator gen) {
-        super(gen.getPackOutput(), WhoCosmetics.MOD_ID, "en_us");
+        super(gen.getPackOutput(), DoctorWhoDeco.MOD_ID, "en_us");
     }
 
     @Override
@@ -171,6 +171,34 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCBlocks.ROUNDEL_CLASSIC_BOTTOM_HALF.get(), "Roundel Classic Bottom Half");
         add(WCBlocks.ROUNDEL_WARGAMES_BOTTOM_HALF.get(), "Roundel War Games Bottom Half");
 
-        add(WCItems.CREATIVE_TAB, "WhoCosmetics");
+        add(WCItems.CREATIVE_TAB, "Doctor Who: Deco");
+
+
+        add(WCBlocks.ROUNDEL_VICTORIAN.get(), "Roundel Victorian");
+        add(WCBlocks.ROUNDEL_MASTER.get(), "Roundel Master");
+        add(WCBlocks.ROUNDEL_MASTER_BLACK.get(), "Roundel Master Black");
+        add(WCBlocks.ROUNDEL_CORAL_QUAD.get(), "Roundel Coral Quad");
+        add(WCBlocks.HARTNELL_WARGAMES_WALL.get(), "Hartnell Wargames Wall");
+
+        add(WCBlocks.ROUNDEL_HARTNELL_HALF.get(), "Roundel Hartnell Half");
+        add(WCBlocks.ROUNDEL_MASTER_HALF.get(), "Roundel Master Half");
+        add(WCBlocks.ROUNDEL_MASTER_BLACK_HALF.get(), "Roundel Master Black Half");
+
+        add(WCBlocks.ROUNDEL_HARTNELL_HALF_ENDCAP.get(), "Roundel Hartnell Half Endcap");
+        add(WCBlocks.ROUNDEL_MASTER_ENDCAP.get(), "Roundel Master Endcap");
+        add(WCBlocks.ROUNDEL_MASTER_BLACK_ENDCAP.get(), "Roundel Master Black Endcap");
+
+        add(WCBlocks.ROUNDEL_HARTNELL_SLAB.get(), "Roundel Hartnell Slab");
+        add(WCBlocks.ROUNDEL_MASTER_SLAB.get(), "Roundel Master Slab");
+        add(WCBlocks.ROUNDEL_MASTER_BLACK_SLAB.get(), "Roundel Master Black Slab");
+        add(WCBlocks.ROUNDEL_HARTNELL_TOP_HALF.get(), "Roundel Hartnell Top Half");
+        add(WCBlocks.ROUNDEL_MASTER_TOP_HALF.get(), "Roundel Master Top Half");
+        add(WCBlocks.ROUNDEL_MASTER_BLACK_TOP_HALF.get(), "Roundel Master Black Top Half");
+
+        add(WCBlocks.ROUNDEL_HARTNELL_BOTTOM_HALF.get(), "Roundel Hartnell Bottom Half");
+        add(WCBlocks.ROUNDEL_MASTER_BOTTOM_HALF.get(), "Roundel Master Bottom Half");
+        add(WCBlocks.ROUNDEL_MASTER_BLACK_BOTTOM_HALF.get(), "Roundel Master Black Bottom Half");
+
+
     }
 }

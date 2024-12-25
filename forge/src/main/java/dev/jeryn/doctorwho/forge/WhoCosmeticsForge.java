@@ -1,6 +1,6 @@
 package dev.jeryn.doctorwho.forge;
 
-import dev.jeryn.doctorwho.WhoCosmetics;
+import dev.jeryn.doctorwho.DoctorWhoDeco;
 import dev.jeryn.doctorwho.client.models.ModelRegistration;
 import dev.jeryn.doctorwho.forge.data.*;
 import net.minecraft.data.DataGenerator;
@@ -11,10 +11,10 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-@Mod(WhoCosmetics.MOD_ID)
+@Mod(DoctorWhoDeco.MOD_ID)
 public class WhoCosmeticsForge {
     public WhoCosmeticsForge() {
-        WhoCosmetics.init();
+        DoctorWhoDeco.init();
         IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
         modBus.addListener(this::clientSetup);
         modBus.addListener(this::onGatherData);

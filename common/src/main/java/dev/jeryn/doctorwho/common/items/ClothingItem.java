@@ -1,7 +1,7 @@
 package dev.jeryn.doctorwho.common.items;
 
 
-import dev.jeryn.doctorwho.WhoCosmetics;
+import dev.jeryn.doctorwho.DoctorWhoDeco;
 import dev.jeryn.doctorwho.client.ClientUtil;
 import dev.jeryn.doctorwho.common.WCItems;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -45,11 +45,11 @@ public class ClothingItem extends ArmorItem implements DyeableLeatherItem {
     public ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
         String textureLocation = overrideTexture == null ? BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath() : overrideTexture;
 
-        ResourceLocation baseResourceLocation = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/entity/armor/" + textureLocation + ".png");
+        ResourceLocation baseResourceLocation = new ResourceLocation(DoctorWhoDeco.MOD_ID, "textures/entity/armor/" + textureLocation + ".png");
 
         if(alexSupport){
-            ResourceLocation steveLocation = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/entity/armor/steve_" + textureLocation + ".png");
-            ResourceLocation alexLocation = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/entity/armor/slim_" + textureLocation + ".png");
+            ResourceLocation steveLocation = new ResourceLocation(DoctorWhoDeco.MOD_ID, "textures/entity/armor/steve_" + textureLocation + ".png");
+            ResourceLocation alexLocation = new ResourceLocation(DoctorWhoDeco.MOD_ID, "textures/entity/armor/slim_" + textureLocation + ".png");
             return ClientUtil.isAlex(entity) ? alexLocation : steveLocation;
         }
         return baseResourceLocation;

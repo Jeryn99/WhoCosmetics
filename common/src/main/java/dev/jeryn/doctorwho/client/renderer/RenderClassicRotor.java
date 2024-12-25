@@ -2,7 +2,7 @@ package dev.jeryn.doctorwho.client.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import dev.jeryn.doctorwho.WhoCosmetics;
+import dev.jeryn.doctorwho.DoctorWhoDeco;
 import dev.jeryn.doctorwho.client.models.ModelRegistration;
 import dev.jeryn.doctorwho.client.models.block.ClassicRotorModel;
 import dev.jeryn.doctorwho.common.blockentity.ClassicRotorBlockEntity;
@@ -17,7 +17,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class RenderClassicRotor implements BlockEntityRenderer<ClassicRotorBlockEntity>, BlockEntityRendererProvider<ClassicRotorBlockEntity> {
 
-    private static final ResourceLocation TEXTURE = new ResourceLocation(WhoCosmetics.MOD_ID, "textures/block/classic_rotor.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation(DoctorWhoDeco.MOD_ID, "textures/block/classic_rotor.png");
     private final ClassicRotorModel classicRotorModel;
 
     public RenderClassicRotor(Context context) {
