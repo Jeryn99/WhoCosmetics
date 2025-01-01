@@ -35,9 +35,10 @@ public class SonicItem extends Item {
             level.gameEvent(player, GameEvent.ITEM_INTERACT_FINISH, blockPos);
             ParticleUtils.spawnParticlesOnBlockFaces(level, blockPos, ParticleTypes.WAX_OFF, UniformInt.of(3, 5));
             player.getCooldowns().addCooldown(this, 100);
+            return sonicResult;
         }
 
-
+        player.playSound(WCSounds.SONIC.get());
         return sonicResult;
     }
 

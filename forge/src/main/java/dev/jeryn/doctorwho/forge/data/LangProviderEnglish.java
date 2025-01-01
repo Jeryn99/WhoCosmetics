@@ -43,6 +43,7 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCItems.UMBRELLA.get(), "Umbrella");
 
         add(WCItems.SONIC_10.get(), "Sonic Screwdriver");
+        add(WCItems.SONIC_11.get(), "Sonic Screwdriver");
         add(WCItems.SONIC_12.get(), "Sonic Screwdriver");
         add(WCItems.SONIC_13.get(), "Sonic Screwdriver");
         add(WCItems.SONIC_14.get(), "Sonic Screwdriver");
@@ -67,6 +68,12 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCBlocks.TOYOTA_ROTOR.get(), "Toyota Rotor");
         add(WCBlocks.VICTORIAN_MONITOR.get(), "Victorian Monitor");
         add(WCBlocks.CLASSIC_DOORS.get(), "Classic Doors");
+        add(WCBlocks.CLASSIC_DOORS_VICTORIAN.get(), "Victorian Doors");
+        add(WCBlocks.CLASSIC_DOORS_MASTER.get(), "Master Doors");
+        add(WCBlocks.CLASSIC_DOORS_GREY.get(), "Classic Doors (Grey)");
+        add(WCBlocks.CLASSIC_DOORS_HARTNELL.get(), "Hartwell Doors");
+        add(WCBlocks.CLASSIC_DOORS_WARGAMES.get(), "War Games Doors");
+        add(WCBlocks.CLASSIC_DOORS_BLACK.get(), "Classic Doors (Black)");
         add(WCBlocks.CLASSIC_ROTOR.get(), "Classic Rotor");
         add(WCBlocks.WHIRLY_GIG.get(), "Whirlygig");
         add(WCBlocks.TUBE_LIGHT.get(), "Tube Light");
@@ -88,6 +95,7 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCBlocks.ROUNDEL_CRYSTAL.get(), "Roundel Crystal");
         add(WCBlocks.ROUNDEL_CLASSIC.get(), "Roundel Classic");
         add(WCBlocks.ROUNDEL_WARGAMES.get(), "Roundel War Games");
+        add(WCBlocks.ROUNDEL_HARTNELL.get(), "Roundel Hartnell");
 
         add(WCBlocks.ROUNDEL_CLASSIC_HALF.get(), "Roundel Classic Half");
         add(WCBlocks.ROUNDEL_WARGAMES_HALF.get(), "Roundel War Games Half");

@@ -1,3 +1,5 @@
-- Added Tons of roundels
-- Added more classic doors
-- Classic doors can now be placed at a offset while sneaking
+- Tardis Refined Sonic Screw Compatibility
+- Fixed some textures being wrong
+- Fixed Mipmaps being lowered by texture not following power of 2
+- Added 11s Sonic Screwdriver
+- 

@@ -9,7 +9,8 @@
   ],
   "mixins": [
     "LivingEntityMixin",
-    "MultiPlayerGameModeMixin"
+    "MultiPlayerGameModeMixin",
+    "ScrewdriverItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1

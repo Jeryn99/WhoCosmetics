@@ -2,12 +2,15 @@ package dev.jeryn.doctorwho.common;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import dev.jeryn.doctorwho.DoctorWhoDeco;
+import dev.jeryn.doctorwho.Platform;
 import dev.jeryn.doctorwho.common.entity.DavrosChair;
 import dev.jeryn.doctorwho.common.items.*;
+import dev.jeryn.doctorwho.compat.TardisRefinedCompat;
 import dev.jeryn.doctorwho.registry.DeferredRegistry;
 import dev.jeryn.doctorwho.registry.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.*;
+import org.jetbrains.annotations.NotNull;
 
 public class WCItems {
 
@@ -72,13 +75,23 @@ public class WCItems {
 
     public static final RegistrySupplier<Item> UMBRELLA_MISSY = ITEMS.register("missy_umbrella", () -> new UmbrellaItem(GENERIC_PROPERTIES));
 
-    public static final RegistrySupplier<Item> SONIC_10 = ITEMS.register("sonic_10", () -> new SonicItem(GENERIC_PROPERTIES));
-    public static final RegistrySupplier<Item> SONIC_12 = ITEMS.register("sonic_12", () -> new SonicItem(GENERIC_PROPERTIES));
-    public static final RegistrySupplier<Item> SONIC_13 = ITEMS.register("sonic_13", () -> new SonicItem(GENERIC_PROPERTIES));
-    public static final RegistrySupplier<Item> SONIC_TROWEL = ITEMS.register("sonic_trowel", () -> new SonicItem(GENERIC_PROPERTIES));
-    public static final RegistrySupplier<Item> SONIC_RIVER = ITEMS.register("sonic_river", () -> new SonicItem(GENERIC_PROPERTIES));
-    public static final RegistrySupplier<Item> SONIC_14 = ITEMS.register("sonic_14", () -> new SonicItem(GENERIC_PROPERTIES));
+    public static final RegistrySupplier<Item> SONIC_10 = ITEMS.register("sonic_10", WCItems::createSonicItem);
+    public static final RegistrySupplier<Item> SONIC_12 = ITEMS.register("sonic_12", WCItems::createSonicItem);
+    public static final RegistrySupplier<Item> SONIC_13 = ITEMS.register("sonic_13", WCItems::createSonicItem);
+    public static final RegistrySupplier<Item> SONIC_TROWEL = ITEMS.register("sonic_trowel", WCItems::createSonicItem);
+    public static final RegistrySupplier<Item> SONIC_RIVER = ITEMS.register("sonic_river", WCItems::createSonicItem);
+    public static final RegistrySupplier<Item> SONIC_14 = ITEMS.register("sonic_14", WCItems::createSonicItem);
+    public static final RegistrySupplier<Item> SONIC_11 = ITEMS.register("sonic_11", WCItems::createSonicItem);
     public static final RegistrySupplier<Item> GRENADE = ITEMS.register("grenade", () -> new GrenadeItem(GRENADE_PROP));
+
+    private static @NotNull Item createSonicItem() {
+
+        if (Platform.isModLoaded("tardis_refined")) {
+            return TardisRefinedCompat.getSonicItem();
+        }
+
+        return new SonicItem(GENERIC_PROPERTIES);
+    }
 
 
     @ExpectPlatform
