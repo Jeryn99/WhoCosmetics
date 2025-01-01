@@ -47,7 +47,7 @@ dependencies {
 
 unifiedPublishing {
     project {
-        displayName = "[Fabric] WhoCosmetics - $project.version"
+        displayName = "[Fabric] Doctor Who: Deco - $project.version"
         releaseType = "release"
         changelog = new File("${rootProject.projectDir}/changelog.md").text
         gameVersions = ["1.20.1"]

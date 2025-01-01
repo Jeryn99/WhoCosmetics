@@ -1,8 +1,10 @@
 package dev.jeryn.doctorwho.compat;
 
 
+import dev.jeryn.doctorwho.Platform;
 import dev.jeryn.doctorwho.common.SonicHandler;
 import dev.jeryn.doctorwho.common.WCSounds;
+import dev.jeryn.doctorwho.common.items.SonicItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -19,6 +21,8 @@ import whocraft.tardis_refined.common.capability.tardis.TardisLevelOperator;
 import whocraft.tardis_refined.common.items.ScrewdriverItem;
 import whocraft.tardis_refined.common.items.ScrewdriverMode;
 import whocraft.tardis_refined.common.network.messages.screens.S2COpenMonitor;
+
+import static dev.jeryn.doctorwho.common.WCItems.GENERIC_PROPERTIES;
 
 public class TardisRefinedCompat {
 
@@ -51,8 +55,12 @@ public class TardisRefinedCompat {
         return InteractionResult.CONSUME;
     }
 
-    public static ScrewdriverItem getSonicItem() {
-        return new ScrewdriverItem(new Item.Properties().stacksTo(1));
+
+    public static Item getSonicItem() {
+        if (Platform.isModLoaded("tardis_refined")) {
+            return new ScrewdriverItem(new Item.Properties().stacksTo(1));
+        }
+        return new SonicItem(GENERIC_PROPERTIES);
     }
 
 }

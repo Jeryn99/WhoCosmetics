@@ -45,7 +45,7 @@ dependencies {
 
 unifiedPublishing {
     project {
-        displayName = "[Forge] Tardis Refined - $project.version"
+        displayName = "[Forge] Doctor Who: Deco - $project.version"
         releaseType = "release"
         changelog = new File("${rootProject.projectDir}/changelog.md").text
         gameVersions = ["1.20.1"]

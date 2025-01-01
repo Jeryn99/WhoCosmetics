@@ -86,11 +86,11 @@ public class WCItems {
 
     private static @NotNull Item createSonicItem() {
 
-        if (Platform.isModLoaded("tardis_refined")) {
-            return TardisRefinedCompat.getSonicItem();
+        if (!Platform.isModLoaded("tardis_refined")) {
+            return new SonicItem(GENERIC_PROPERTIES);
         }
 
-        return new SonicItem(GENERIC_PROPERTIES);
+        return TardisRefinedCompat.getSonicItem();
     }
 
 

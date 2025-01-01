@@ -2,4 +2,4 @@
 - Fixed some textures being wrong
 - Fixed Mipmaps being lowered by texture not following power of 2
 - Added 11s Sonic Screwdriver
-- 
+- Fixed Crash issue
