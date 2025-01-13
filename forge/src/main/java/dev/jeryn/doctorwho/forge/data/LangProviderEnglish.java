@@ -68,12 +68,16 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCBlocks.TOYOTA_ROTOR.get(), "Toyota Rotor");
         add(WCBlocks.VICTORIAN_MONITOR.get(), "Victorian Monitor");
         add(WCBlocks.CLASSIC_DOORS.get(), "Classic Doors");
-        add(WCBlocks.CLASSIC_DOORS_VICTORIAN.get(), "Victorian Doors");
-        add(WCBlocks.CLASSIC_DOORS_MASTER.get(), "Master Doors");
-        add(WCBlocks.CLASSIC_DOORS_GREY.get(), "Classic Doors (Grey)");
-        add(WCBlocks.CLASSIC_DOORS_HARTNELL.get(), "Hartwell Doors");
-        add(WCBlocks.CLASSIC_DOORS_WARGAMES.get(), "War Games Doors");
         add(WCBlocks.CLASSIC_DOORS_BLACK.get(), "Classic Doors (Black)");
+        add(WCBlocks.CLASSIC_DOORS_GREY.get(), "Classic Doors (Grey)");
+        add(WCBlocks.CLASSIC_DOORS_HARTNELL.get(), "Classic Doors (Hartnell)");
+        add(WCBlocks.CLASSIC_DOORS_MASTER.get(), "Classic Doors (Master)");
+        add(WCBlocks.CLASSIC_DOORS_VICTORIAN.get(), "Classic Doors (Victorian)");
+        add(WCBlocks.CLASSIC_DOORS_WARGAMES.get(), "Classic Doors (War Games)");
+        add(WCBlocks.CLASSIC_DOORS_ROUNDEL_SOLID.get(), "Classic Doors (Roundel Solid)");
+        add(WCBlocks.CLASSIC_DOORS_ROUNDEL_GREY_CIRCULAR.get(), "Classic Doors (Roundel Grey Circular)");
+        add(WCBlocks.CLASSIC_DOORS_ROUNDEL_GOLD_INNER.get(), "Classic Doors (Roundel Gold Inner)");
+
         add(WCBlocks.CLASSIC_ROTOR.get(), "Classic Rotor");
         add(WCBlocks.WHIRLY_GIG.get(), "Whirlygig");
         add(WCBlocks.TUBE_LIGHT.get(), "Tube Light");
@@ -206,6 +210,20 @@ public class LangProviderEnglish extends LanguageProvider {
         add(WCBlocks.ROUNDEL_HARTNELL_BOTTOM_HALF.get(), "Roundel Hartnell Bottom Half");
         add(WCBlocks.ROUNDEL_MASTER_BOTTOM_HALF.get(), "Roundel Master Bottom Half");
         add(WCBlocks.ROUNDEL_MASTER_BLACK_BOTTOM_HALF.get(), "Roundel Master Black Bottom Half");
+
+
+        add(WCBlocks.ROUNDEL_GREY_SOLID.get(), "Roundel Grey Solid");
+        add(WCBlocks.ROUNDEL_GREY_SOLID_BASE.get(), "Roundel Grey Solid Base");
+        add(WCBlocks.ROUNDEL_GREY_SOLID_BASE_ALT.get(), "Roundel Grey Solid Base Alternate");
+        add(WCBlocks.ROUNDEL_GREY_MONITOR.get(), "Roundel Grey Monitor");
+        add(WCBlocks.ROUNDEL_GREY_MONITOR_BOTTOM_HALF.get(), "Roundel Grey Monitor Bottom Half");
+        add(WCBlocks.ROUNDEL_GREY_SOLID_TOPHALF.get(), "Roundel Grey Solid Top Half");
+        add(WCBlocks.ROUNDEL_GREY_SOLID_BOWLHALF.get(), "Roundel Grey Solid Bowl Half");
+        add(WCBlocks.ROUNDEL_GREY_SOLID_HALF.get(), "Roundel Grey Solid Half");
+        add(WCBlocks.ROUNDEL_GREY_MONITOR_HALF.get(), "Roundel Grey Monitor Half");
+        add(WCBlocks.ROUNDEL_GREY_MONITOR_HALF_ALT.get(), "Roundel Grey Monitor Half Alternate");
+        add(WCBlocks.HAT_STAND.get(), "Hat Stand");
+
 
 
     }

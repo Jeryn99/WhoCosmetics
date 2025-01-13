@@ -1,8 +1,11 @@
 
 package dev.jeryn.doctorwho.common.blocks;
 
+import dev.jeryn.doctorwho.common.WCSounds;
 import dev.jeryn.doctorwho.common.blockentity.ClassicDoorsBlockEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
@@ -114,6 +117,8 @@ public class ClassicDoorsBlock extends Block implements EntityBlock {
             boolean open = isOpen(state);
 
             if (level.getBlockEntity(pos) instanceof ClassicDoorsBlockEntity classicDoorsBlockEntity) {
+
+                level.playSound(null, player.getX(), player.getY(), player.getZ(), WCSounds.CLASSIC_DOORS.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
 
                 if (open && !classicDoorsBlockEntity.ANIM_OPEN.isStarted()) {
                     classicDoorsBlockEntity.ANIM_OPEN.start(player.tickCount);

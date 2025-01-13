@@ -17,6 +17,7 @@ public class ClientEvents {
 
         BlockRenderLayerMap.INSTANCE.putBlock(WCBlocks.TUBE_LIGHT.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(WCBlocks.VICTORIAN_MONITOR.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(WCBlocks.HAT_STAND.get(), RenderType.translucent());
 
 
         ColorProviderRegistry.ITEM.register((itemStack, index) -> {

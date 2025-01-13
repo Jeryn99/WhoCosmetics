@@ -129,6 +129,14 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
                 .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, WCBlocks.HAT_STAND.get(), 8)
+                .pattern("SSS")
+                .pattern(" S ")
+                .pattern("SSS")
+                .define('S', Items.STICK)
+                .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, WCBlocks.ROUNDEL_BLACK_HALF.get(), 8)
                 .pattern("   ")
                 .pattern(" S ")

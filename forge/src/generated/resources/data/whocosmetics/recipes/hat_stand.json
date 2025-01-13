@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "SSS",
+    " S ",
+    "SSS"
+  ],
+  "result": {
+    "count": 8,
+    "item": "whocosmetics:hat_stand"
+  },
+  "show_notification": true
+}

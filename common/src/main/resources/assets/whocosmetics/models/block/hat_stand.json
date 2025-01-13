@@ -1,0 +1,135 @@
+{
+	"credit": "audrey (@LocalToybot) made this!",
+	"texture_size": [32, 32],
+	"render_type": "cutout",
+	"textures": {
+		"0": "whocosmetics:block/hat_stand",
+		"particle": "whocosmetics:block/hat_stand"
+	},
+	"elements": [
+		{
+			"name": "MainStick",
+			"from": [7.5, 4, 7.5],
+			"to": [8.5, 32, 8.5],
+			"faces": {
+				"north": {"uv": [9.5, 0, 10, 14], "texture": "#0"},
+				"east": {"uv": [9.5, 0, 10, 14], "texture": "#0"},
+				"south": {"uv": [9.5, 0, 10, 14], "texture": "#0"},
+				"west": {"uv": [9.5, 0, 10, 14], "texture": "#0"},
+				"up": {"uv": [10, 0.5, 9.5, 0], "texture": "#0"},
+				"down": {"uv": [10, 14, 9.5, 13.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "FrontLegs",
+			"from": [8, 0, 2.5],
+			"to": [8, 10, 13.5],
+			"faces": {
+				"east": {"uv": [3.5, 0, 9, 5], "texture": "#0"},
+				"west": {"uv": [3.5, 0, 9, 5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "SideLegs",
+			"from": [2.5, 0, 8],
+			"to": [13.5, 10, 8],
+			"faces": {
+				"north": {"uv": [3.5, 0, 9, 5], "texture": "#0"},
+				"south": {"uv": [3.5, 0, 9, 5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Arms1",
+			"from": [2.5, 24, 8],
+			"to": [13.5, 31, 8],
+			"faces": {
+				"north": {"uv": [0, 7, 5.5, 10.5], "texture": "#0"},
+				"south": {"uv": [5.5, 7, 0, 10.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Arms2",
+			"from": [2.5, 24, 8],
+			"to": [13.5, 31, 8],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 27.5, 8]},
+			"faces": {
+				"north": {"uv": [0, 7, 5.5, 10.5], "texture": "#0"},
+				"south": {"uv": [5.5, 7, 0, 10.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Arms3",
+			"from": [2.5, 24, 8],
+			"to": [13.5, 31, 8],
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [0, 7, 5.5, 10.5], "texture": "#0"},
+				"south": {"uv": [5.5, 7, 0, 10.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "BottomRing",
+			"from": [5.5, 2, 5.5],
+			"to": [10.5, 2, 10.5],
+			"faces": {
+				"up": {"uv": [2.5, 6.5, 0, 4], "texture": "#0"},
+				"down": {"uv": [2.5, 6.5, 0, 4], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"name": "TopRing",
+			"from": [5.5, 29, 5.5],
+			"to": [10.5, 29, 10.5],
+			"faces": {
+				"up": {"uv": [2.5, 6.5, 0, 4], "texture": "#0"},
+				"down": {"uv": [2.5, 6.5, 0, 4], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"name": "MiddleRing",
+			"from": [4.5, 10, 4.5],
+			"to": [11.5, 10, 11.5],
+			"faces": {
+				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+				"down": {"uv": [3.5, 3.5, 0, 0], "rotation": 90, "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, -12.5, 0.5]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, -12.5, 0.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [-22.5, 0, 5],
+			"translation": [0, -3.5, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-22.5, 0, 5],
+			"translation": [0, -3.5, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"ground": {
+			"rotation": [90, 0, 0],
+			"translation": [0, 0, -6.25],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"translation": [0, -3, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"head": {
+			"translation": [0, 19.25, 0],
+			"scale": [1.6, 1.6, 1.6]
+		},
+		"fixed": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, 0, -16],
+			"scale": [2, 2, 2]
+		}
+	}
+}

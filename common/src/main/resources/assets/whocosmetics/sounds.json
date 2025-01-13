@@ -26,5 +26,15 @@
         "stream": false
       }
     ]
+  },
+  "classic_doors": {
+    "category": "ambient",
+    "subtitle": "whocosmetics.subtitles.classic_doors",
+    "sounds": [
+      {
+        "name": "whocosmetics:classic_doors",
+        "stream": false
+      }
+    ]
   }
 }

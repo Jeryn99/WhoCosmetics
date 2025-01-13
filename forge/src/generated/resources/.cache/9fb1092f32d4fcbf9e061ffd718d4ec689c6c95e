@@ -1,4 +1,4 @@
-// 1.20.1	2024-12-25T13:52:34.2089832	Recipes
+// 1.20.1	2025-01-06T17:47:37.3912086	Recipes
 46a836340122658c71723b4d82120b5e786a8147 data/whocosmetics/advancements/recipes/decorations/3d_glasses.json
 be7b6caef13c1e25ac71caf68bc380fd55c6fa60 data/whocosmetics/advancements/recipes/decorations/aces_bat.json
 76abcb2458318e19e12ac1542f05d3f82f28c623 data/whocosmetics/advancements/recipes/decorations/antlers.json
@@ -23,6 +23,7 @@ e70d0bf2bab5531d75597d02ba001bcab56a8d10 data/whocosmetics/advancements/recipes/
 a175cf532c453a035ba27eab1ae86042a740650e data/whocosmetics/advancements/recipes/decorations/fruit_hat.json
 1aad7e8fbf81684e0b8ea599bf07aeae27096bcf data/whocosmetics/advancements/recipes/decorations/gas_mask.json
 c827b871c47dea75471cc8571333ced17c2614f4 data/whocosmetics/advancements/recipes/decorations/grenade.json
+06ed2f84f9f908b4702c3cf7f8753f88b2e5c9b5 data/whocosmetics/advancements/recipes/decorations/hat_stand.json
 c3e4415f1d9a31da443f1102bf963462d3a182c1 data/whocosmetics/advancements/recipes/decorations/magnoli_clothiers.json
 fb7f217ed765b6ff28dfb5cb0bf57b9f0adcc720 data/whocosmetics/advancements/recipes/decorations/missy_umbrella.json
 88126c26575e4f6f3ec7146f73c52d5fabb61fd8 data/whocosmetics/advancements/recipes/decorations/mondas.json
@@ -164,6 +165,7 @@ d7011398b6b7d4423c879a444813cd11978fa2ba data/whocosmetics/recipes/classic_doors
 9401ef677fc688611ec798493fcc9a1c12d54b9b data/whocosmetics/recipes/fruit_hat.json
 7c001d8a58c546bbd89a3a46575f61b5ccc159fe data/whocosmetics/recipes/gas_mask.json
 e140f3ee8c559959bdac50a8eb70dabf429c4441 data/whocosmetics/recipes/grenade.json
+e5fd40998431ac7229eeee69e2af8c269b2b0cda data/whocosmetics/recipes/hat_stand.json
 3c32c5006ee6f07e0f8cfe303b59b264587f3d1b data/whocosmetics/recipes/magnoli_clothiers.json
 137cf04752792a36cf2dce9bfa205d14c9520b13 data/whocosmetics/recipes/missy_umbrella.json
 3ac2d744e1b84ed501fc1b0a40f8c5bdd2f65b10 data/whocosmetics/recipes/mondas.json

@@ -43,7 +43,10 @@ public class ModelProviderItem extends ItemModelProvider {
         basicItem(Objects.requireNonNull(getKey(WCBlocks.CLASSIC_DOORS_MASTER.get().asItem())));
         basicItem(Objects.requireNonNull(getKey(WCBlocks.CLASSIC_DOORS_HARTNELL.get().asItem())));
         basicItem(Objects.requireNonNull(getKey(WCBlocks.CLASSIC_DOORS_WARGAMES.get().asItem())));
+        basicItem(Objects.requireNonNull(getKey(WCBlocks.CLASSIC_DOORS_ROUNDEL_GOLD_INNER.get().asItem())));
+        basicItem(Objects.requireNonNull(getKey(WCBlocks.CLASSIC_DOORS_ROUNDEL_GREY_CIRCULAR.get().asItem())));
         basicItem(Objects.requireNonNull(getKey(WCBlocks.WHIRLY_GIG.get().asItem())));
+        basicItem(Objects.requireNonNull(getKey(WCBlocks.CLASSIC_DOORS_ROUNDEL_SOLID.get().asItem())));
 
 
     }

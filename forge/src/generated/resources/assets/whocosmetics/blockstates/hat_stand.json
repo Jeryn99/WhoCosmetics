@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "whocosmetics:block/hat_stand",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "whocosmetics:block/hat_stand",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "whocosmetics:block/hat_stand"
+    },
+    "facing=west": {
+      "model": "whocosmetics:block/hat_stand",
+      "y": 90
+    }
+  }
+}
